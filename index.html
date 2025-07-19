@@ -7,8 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900 p-6">
-  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
-    <h1 class="text-2xl font-bold mb-4">Email Your MSP</h1>
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow space-y-6">
+    <h1 class="text-3xl font-bold">Email Your MSP</h1>
+
+    <p class="text-sm text-gray-700">
+      Fill in your details, tick the issues that affect your street (or would if the ban was introduced), and send your custom email to your councillors and MSPs. You can also choose to copy in Scotland’s party leaders.
+    </p>
 
     <form id="emailForm" class="space-y-4">
       <div>
@@ -23,22 +27,52 @@
         <label class="block text-sm font-medium">Postcode</label>
         <input type="text" id="postcode" class="w-full border border-gray-300 p-2 rounded" required>
       </div>
+      <div>
+        <label class="block text-sm font-medium">Tick the issues your street is (or would be) affected by:</label>
+        <div class="mt-2 space-y-1 text-sm">
+          <label><input type="checkbox" value="Emergency vehicles could be blocked"> 🚑 Emergency vehicles could be blocked</label><br>
+          <label><input type="checkbox" value="People with accessibility needs have no nearby parking alternatives"> ♿️ People with accessibility needs have no nearby parking alternatives</label><br>
+          <label><input type="checkbox" value="Children and prams are forced to share road space with traffic"> 🧒 Children and prams are forced to share road space with traffic</label><br>
+          <label><input type="checkbox" value="Bin collections are (or could be) missed due to narrow access"> 🚮 Bin collections are (or could be) missed due to narrow access</label><br>
+          <label><input type="checkbox" value="Police and ambulance access is delayed or restricted"> 🚓 Police and ambulance access is delayed or restricted</label><br>
+          <label><input type="checkbox" value="No safe or legal alternative parking nearby"> 🚫 No safe or legal alternative parking nearby</label><br>
+          <label><input type="checkbox" value="Elderly residents struggle with distance to parked cars"> 🧓 Elderly residents struggle with distance to parked cars</label><br>
+          <label><input type="checkbox" value="Full on-road parking increases risk and congestion"> 🔄 Full on-road parking increases risk and congestion</label><br>
+          <label><input type="checkbox" value="Visitor and tradesperson parking is impossible"> 🏠 Visitor and tradesperson parking is impossible</label><br>
+          <label><input type="checkbox" value="Pavement parking has never caused problems on our street"> 🚗 Pavement parking has never caused problems on our street</label><br>
+          <label><input type="checkbox" value="The ban is making things more dangerous, not safer"> ⚠️ The ban is making things more dangerous, not safer</label><br>
+          <label><input type="checkbox" value="Pavements are already blocked by council bins on collection days"> 🗑️ Pavements are already blocked by council bins on collection days</label><br>
+          <label><input type="checkbox" value="Our council has installed nearside traffic lights that blind residents cannot safely use"> 🚦 Our council has installed nearside traffic lights that blind residents cannot safely use</label><br>
+          <label><input type="checkbox" value="There has been no consultation with residents"> 🧾 There has been no consultation with residents</label><br>
+          <label><input type="checkbox" value="Blanket enforcement is not justified"> ❌ Blanket enforcement is not justified</label><br>
+          <label><input type="checkbox" value="Practical, shared use is being replaced with dangerous congestion"> 💡 Practical, shared use is being replaced with dangerous congestion</label><br>
+          <label><input type="checkbox" value="Residents may be forced to pave gardens, harming the environment and increasing flood risk"> 🌱 Residents may be forced to pave gardens, harming the environment and increasing flood risk</label><br>
+          <label><input type="checkbox" value="Constant fear of fines is causing stress and anxiety"> 🧠 Constant fear of fines is causing stress and anxiety</label><br>
+          <label><input type="checkbox" value="Our homes weren’t built to support this kind of policy"> 🏘️ Our homes weren’t built to support this kind of policy</label><br>
+          <label><input type="checkbox" value="The council still parks on pavements and contradicts its own messaging"> 🤷 The council still parks on pavements and contradicts its own messaging</label><br>
+          <label><input type="checkbox" value="Creating conflict over parking damages social cohesion in our community"> 🧱 Creating conflict over parking damages social cohesion in our community</label>
+        </div>
+      </div>
 
       <div>
-        <label class="block text-sm font-medium">Select issues affecting your street:</label>
-        <div class="mt-2 space-y-1">
-          <label><input type="checkbox" value="Emergency vehicle access blocked"> Emergency vehicle access blocked</label><br>
-          <label><input type="checkbox" value="Bins not collected due to parking"> Bins not collected</label><br>
-          <label><input type="checkbox" value="No disabled parking options"> No disabled parking</label><br>
-          <label><input type="checkbox" value="Children forced into road"> Children forced into road</label>
-        </div>
+        <label class="block text-sm font-medium mt-4">Optional:</label>
+        <label class="text-sm"><input type="checkbox" id="ccLeaders"> Also send this to party leaders (SNP, Labour, Conservative, Green, Lib Dem, Alba)</label>
       </div>
 
       <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate Email</button>
     </form>
-
     <div id="output" class="mt-6 hidden">
       <p class="font-semibold">Your email will open shortly. If not, <a id="mailtoLink" class="text-blue-600 underline" href="#">click here</a>.</p>
+    </div>
+
+    <div class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400">
+      <h2 class="font-bold text-lg mb-2">Why this matters</h2>
+      <p class="text-sm">
+        Councils already had powers to deal with obstructive parking — they simply chose not to use them. Now, instead of targeting the minority of bad parkers, they’re punishing everyone.
+      </p>
+      <p class="text-sm mt-2">
+        Policing what was, until now, decades of common-sense parking will cost millions. If enforcement demands this level of expense, confusion, and social conflict — then the legislation should be scrapped.
+      </p>
     </div>
   </div>
 
@@ -59,15 +93,29 @@
       const address = document.getElementById('address').value.trim();
       const postcode = document.getElementById('postcode').value.trim();
       const issues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+      const ccLeaders = document.getElementById('ccLeaders').checked;
 
-      // 🔧 Replace this with real fetch from MapIt
+      // Placeholder MSP email for now — to be replaced with live MapIt data
       const mspEmails = ["example.msp@parliament.scot"];
+
+      const ccEmails = ccLeaders ? [
+        "john.swinney.msp@parliament.scot",
+        "anas.sarwar.msp@parliament.scot",
+        "russell.findlay.msp@parliament.scot",
+        "patrick.harvie.msp@parliament.scot",
+        "lorna.slater.msp@parliament.scot",
+        "alex.cole-hamilton.msp@parliament.scot",
+        "kenny.macaskill.msp@parliament.scot"
+      ] : [];
 
       const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-      const body = `Dear MSP,%0D%0A%0D%0AMy name is ${name}, and I live at ${address}, ${postcode}.%0D%0A%0D%0AOur street is seriously affected by the new pavement parking ban. Specifically:%0D%0A- ${issues.join('%0D%0A- ')}%0D%0A%0D%0AI urge you to raise this issue in Parliament and push for a pause and rethink.%0D%0A%0D%0ARegards,%0D%0A${name}`;
+      const body = `Dear MSP,%0D%0A%0D%0AMy name is ${name}, and I live at ${address}, ${postcode}.%0D%0A%0D%0AOur street is or would be seriously affected by the pavement parking ban. Specific concerns include:%0D%0A- ${issues.join('%0D%0A- ')}%0D%0A%0D%0AI urge you to raise these issues in Parliament and push for a pause and rethink.%0D%0A%0D%0ARegards,%0D%0A${name}`;
 
-      const mailtoLink = `mailto:${mspEmails.join(',')}?subject=${encodeURIComponent(subject)}&body=${body}`;
+      const mailtoLink = `mailto:${mspEmails.join(',')}` +
+        (ccEmails.length ? `?cc=${ccEmails.join(',')}` : '?') +
+        `&subject=${encodeURIComponent(subject)}&body=${body}`;
+
       document.getElementById('mailtoLink').href = mailtoLink;
       document.getElementById('output').classList.remove('hidden');
       window.location.href = mailtoLink;
