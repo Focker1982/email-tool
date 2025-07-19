@@ -3,6 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Challenge the Pavement Parking Ban</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+    }
+    .issue-list label {
+      display: block;
+      margin: 5px 0;
+    }
+    #mailtoLink {
+      display: block;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <h1>Challenge the Pavement Parking Ban</h1>
@@ -14,145 +35,157 @@
     <label>Other Comment (optional):<br>
       <textarea id="otherText" rows="4" cols="50"></textarea>
     </label><br><br>
+
     <fieldset class="issue-list">
-  <legend>Select issues that affect your street:</legend>
-  <label><input type="checkbox" value="emergency"> Emergency services may be delayed</label>
-  <label><input type="checkbox" value="children"> Children and prams pushed into danger</label>
-  <label><input type="checkbox" value="bins"> Bin collection disrupted and vehicles damaged</label>
-  <label><input type="checkbox" value="visitors"> Visitor and tradesperson parking impossible</label>
-  <label><input type="checkbox" value="danger"> The ban is making things worse, not safer</label>
-  <label><input type="checkbox" value="blocked"> Pavements already blocked by bins</label>
-  <label><input type="checkbox" value="gardens"> Residents ripping up gardens for driveways</label>
-  <label><input type="checkbox" value="blanket"> Blanket enforcement punishes everyone</label>
-  <label><input type="checkbox" value="consultation"> No consultation with residents</label>
-  <label><input type="checkbox" value="cohesion"> Policy is damaging social cohesion</label>
-</fieldset><br>
+      <legend>Select issues that affect your street:</legend>
+      <label><input type="checkbox" value="emergency"> Emergency services may be delayed</label>
+      <label><input type="checkbox" value="children"> Children and prams pushed into danger</label>
+      <label><input type="checkbox" value="bins"> Bin collection disrupted and vehicles damaged</label>
+      <label><input type="checkbox" value="visitors"> Visitor and tradesperson parking impossible</label>
+      <label><input type="checkbox" value="danger"> The ban is making things worse, not safer</label>
+      <label><input type="checkbox" value="blocked"> Pavements already blocked by bins</label>
+      <label><input type="checkbox" value="gardens"> Residents ripping up gardens for driveways</label>
+      <label><input type="checkbox" value="blanket"> Blanket enforcement punishes everyone</label>
+      <label><input type="checkbox" value="consultation"> No consultation with residents</label>
+      <label><input type="checkbox" value="cohesion"> Policy is damaging social cohesion</label>
+    </fieldset><br>
 
     <button type="button" onclick="generateEmail()">Generate Email</button>
   </form>
 
-  <br>
-  <a id="mailtoLink" href="#" style="font-size: 18px; font-weight: bold;"></a>
+  <a id="mailtoLink" href="#"></a>
 
-  <script>
-    const subjectLines = [
-      "Concerns about pavement parking ban on my street",
-      "Please raise this issue in Parliament",
-      "Request for review of pavement parking policy",
-      "A serious local issue caused by the parking ban",
-      "Parking ban is making our street dangerous",
-      "Is this really safer for pedestrians?",
-      "Blanket enforcement is hurting residents",
-      "Street access is being damaged by new policy",
-      "Accessibility is worse — not better",
-      "What’s happening on our street isn’t working",
-      "Please hear from someone living this policy",
-      "Real-world problems caused by a one-size-fits-all rule",
-      "Urgent concerns from your constituent",
-      "The ban is causing real harm on our street",
-      "When policy ignores street realities",
-      "This is making things worse, not better",
-      "A practical rethink is urgently needed",
-      "Our quiet street is now full of conflict",
-      "These unintended consequences are real",
-      "Please raise our concerns in Parliament",
-      "Parking enforcement without compassion",
-      "Council bins block pavements too — what now?",
-      "Policy failure you need to hear about",
-      "A resident’s view from the ground",
-      "This approach isn’t working where I live",
-      "Local consequences of a national decision",
-      "This isn't sustainable for our neighbourhood",
-      "I support fairness — not blanket rules",
-      "A frustrating turn for our community",
-      "These rules don’t fit our street",
-      "Nobody asked us — but we’re living it",
-      "Local people left out of parking decisions",
-      "We've gone from safe to stressful",
-      "Please help pause this policy",
-      "Why this policy needs urgent reform",
-      "A working street made worse by new rules",
-      "This isn’t what accessibility looks like",
-      "Time to rethink how this is applied",
-      "Community trust is being eroded",
-      "Who’s really being helped by this ban?",
-      "We need a smarter, fairer approach",
-      "What we’re seeing isn’t safer",
-      "Please listen to residents like me",
-      "This has gone too far",
-      "Let’s fix the law — or scrap it",
-      "I’m struggling with new parking rules",
-      "The ban is making life harder",
-      "Help bring common sense back",
-      "Practicality must be part of policy",
-      "This law is punishing the wrong people"
-    ];
+<script>
+const subjectLines = [
+  "Concerns about pavement parking ban on my street",
+  "Please raise this issue in Parliament",
+  "Request for review of pavement parking policy",
+  "A serious local issue caused by the parking ban",
+  "Parking ban is making our street dangerous",
+  "Is this really safer for pedestrians?",
+  "Blanket enforcement is hurting residents",
+  "Street access is being damaged by new policy",
+  "Accessibility is worse — not better",
+  "What’s happening on our street isn’t working",
+  "Please hear from someone living this policy",
+  "Real-world problems caused by a one-size-fits-all rule",
+  "Urgent concerns from your constituent",
+  "The ban is causing real harm on our street",
+  "When policy ignores street realities",
+  "This is making things worse, not better",
+  "A practical rethink is urgently needed",
+  "Our quiet street is now full of conflict",
+  "These unintended consequences are real",
+  "Please raise our concerns in Parliament",
+  "Parking enforcement without compassion",
+  "Council bins block pavements too — what now?",
+  "Policy failure you need to hear about",
+  "A resident’s view from the ground",
+  "This approach isn’t working where I live",
+  "Local consequences of a national decision",
+  "This isn't sustainable for our neighbourhood",
+  "I support fairness — not blanket rules",
+  "A frustrating turn for our community",
+  "These rules don’t fit our street",
+  "Nobody asked us — but we’re living it",
+  "Local people left out of parking decisions",
+  "We've gone from safe to stressful",
+  "Please help pause this policy",
+  "Why this policy needs urgent reform",
+  "A working street made worse by new rules",
+  "This isn’t what accessibility looks like",
+  "Time to rethink how this is applied",
+  "Community trust is being eroded",
+  "Who’s really being helped by this ban?",
+  "We need a smarter, fairer approach",
+  "What we’re seeing isn’t safer",
+  "Please listen to residents like me",
+  "This has gone too far",
+  "Let’s fix the law — or scrap it",
+  "I’m struggling with new parking rules",
+  "The ban is making life harder",
+  "Help bring common sense back",
+  "Practicality must be part of policy",
+  "This law is punishing the wrong people"
+];
 
-    const issueParagraphs = {
-      "Emergency vehicles could be blocked": [
-        "I’m seriously concerned we’ll see situations where emergency services are delayed due to restricted access.",
-        "On narrow streets like ours, any reduction in available space puts emergency access at risk.",
-        "If a fire engine or ambulance can’t get through quickly, the consequences could be severe."
-      ],
-      "People with accessibility needs have no nearby parking alternatives": [
-        "Residents with limited mobility or recovering from injury may have no nearby legal parking options.",
-        "The ban adds new difficulty for those with walking aids, health conditions, or pushchairs — particularly on hilly or uneven streets.",
-        "Those who rely on shorter walking distances now face unfair barriers in daily life."
-      ],
-      "Children and prams are pushed into more dangerous roads where pavements are already inaccessible": [
-        "On residential streets where pavements are already obstructed or uneven, the road has often been the safest path — especially during poor weather.",
-        "For years, shared space worked without incident. But with full on-road parking, that same space becomes narrower and far more dangerous.",
-        "Parents and carers are now navigating tighter roadways with children — a change that undermines the safety this policy claims to protect."
-      ],
-      "Bin collections missed or disrupted due to narrow access": [
-        "It’s clear that bin collection routes will be harder to service under these conditions.",
-        "Streets with reduced access risk more frequent missed collections and increased conflict between council services and residents.",
-        "The likelihood of accidental damage rises, as bin lorries may be forced to mount the kerb to pass parked vehicles."
-      ],
-      "Elderly residents struggle with the distance to parked cars": [
-        "For older residents, having to walk further with shopping or mobility issues is a serious challenge. The policy ignores this reality and forces a level of physical strain that many simply can’t manage day-to-day.",
-        "When parking moves further away, carrying groceries or simply reaching the car becomes a serious obstacle for many.",
-        "Instead of increasing accessibility, this rule penalises those who move more slowly or depend on nearby access."
-      ],
-      "Visitor and tradesperson parking is impossible": [
-        "We’re seeing far fewer visitors, tradespeople, and home support workers because there’s nowhere practical to park.",
-        "The new layout raises barriers for basic services and home support.",
-        "Essential services are being disrupted. Without local parking, it's harder for tradespeople, carers or delivery workers to stop — especially on tight streets with time-sensitive work."
-      ]
-    };
+const issueParagraphs = {
+  emergency: [
+    "I’m seriously concerned we’ll see situations where emergency services are delayed. On narrow streets like ours, full on-road parking restricts access and could endanger lives in a crisis.",
+    "This policy risks delaying ambulances and fire engines when every second matters. Residents should not have to wonder whether help can get through in an emergency.",
+    "Streets like ours were never designed for this kind of traffic squeeze. It’s only a matter of time before emergency vehicles are blocked — with consequences no one wants to see."
+  ],
+  children: [
+    "For years, partially using the pavement allowed families to move safely. Now, with full on-road parking, prams and children are squeezed into dangerous, reduced spaces.",
+    "Residential streets already have narrow pavements and poor visibility. With no safe walking margin, parents are being forced into live traffic lanes with buggies and toddlers.",
+    "This creates a daily risk to children. In bad weather, or with limited sightlines, parents are stuck choosing between walking in traffic or staying indoors."
+  ],
+  bins: [
+    "Waste collection is clearly going to be disrupted. Narrowed access means bin lorries will likely be forced to mount pavements, scraping past parked cars, or skipping homes altogether.",
+    "The result is predictable: missed bins, annoyed residents, and more complaints. And when collections do happen, the risk of vehicle damage rises dramatically.",
+    "This is already leading to strained services. Drivers now have to navigate tighter spaces — risking property damage and slower routes."
+  ],
+  visitors: [
+    "Friends and relatives now struggle to visit, and tradespeople are cancelling jobs. Not every home has a drive or space for off-road access.",
+    "People shouldn’t have to decline family visits or turn away essential repairs because there’s nowhere legal to stop.",
+    "This policy is isolating the elderly, new parents, and people reliant on carers. It’s simply not realistic in many parts of the country."
+  ],
+  danger: [
+    "By forcing all parking onto the road, the policy increases the chance of collisions and close calls — particularly where visibility is already limited.",
+    "Instead of improving safety, this layout has increased tension on the road. Visibility is worse, space is tighter, and stress is up for drivers and pedestrians.",
+    "The safety trade-off is backwards. A system that looked manageable before is now frustrating and unpredictable."
+  ],
+  blocked: [
+    "The ban claims to protect pedestrian access, yet bins — placed or left by the council — already make many pavements impassable several days a week.",
+    "Even before the ban, residents had to navigate around multiple council bins left out on narrow pavements. Penalising residents while ignoring that reality feels unfair.",
+    "Pavements in our area are regularly obstructed by council bins — especially on collection days. It’s frustrating to be told we’re causing access issues when the pavement isn’t usable in the first place."
+  ],
+  gardens: [
+    "The pressure to find legal parking is leading some neighbours to pave over their front gardens. This damages local drainage and reduces greenery.",
+    "We’ve seen more gardens replaced with concrete. It’s an environmental trade-off that hurts biodiversity and increases flood risk — and it’s a direct result of inflexible policy.",
+    "Driveway conversions are becoming more common, not because residents want them, but because they feel forced. That’s not sustainable."
+  ],
+  blanket: [
+    "The same rule is being applied to all streets, no matter their layout or history of issues. That’s not enforcement — that’s automation. Residents deserve better.",
+    "By criminalising parking that worked safely for years, this policy alienates responsible residents. Enforcement should be focused on real obstructions — not practical habits.",
+    "A universal ban treats all situations the same, regardless of context. We need flexibility and discretion — not robotic enforcement that ignores lived experience."
+  ],
+  consultation: [
+    "This policy was introduced without meaningful consultation at the street level. Residents like us have been left out of the discussion entirely.",
+    "There’s been no honest engagement with our community. People were not asked how the ban would impact them — they were simply told after the fact.",
+    "A major change like this should include local voices. Instead, it’s been rolled out from the top down, with no opportunity to raise concerns before it hit the ground."
+  ],
+  cohesion: [
+    "Where neighbours once worked things out informally, we’re now seeing complaints, arguments, and resentment. The sense of community is being eroded.",
+    "This policy has increased hostility. People are reporting each other, questioning who left what note — and that’s not how strong neighbourhoods are built.",
+    "Parking used to be managed with common sense and courtesy. Now it’s turning into a wedge between people who live side-by-side."
+  ]
+};
 
-    function getRandomSubject() {
-      return subjectLines[Math.floor(Math.random() * subjectLines.length)];
-    }
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
-    function getRandomElement(array) {
-      return array[Math.floor(Math.random() * array.length)];
-    }
+function generateEmail() {
+  const name = document.getElementById('name').value;
+  const address = document.getElementById('address').value;
+  const postcode = document.getElementById('postcode').value;
+  const otherText = document.getElementById('otherText').value;
+  const checked = document.querySelectorAll('input[type=checkbox]:checked');
+  const issues = Array.from(checked).map(el => el.value);
 
-    function generateEmail() {
-      const name = document.getElementById('name').value;
-      const address = document.getElementById('address').value;
-      const postcode = document.getElementById('postcode').value;
-      const otherText = document.getElementById('otherText').value;
+  const intro = `My name is ${name}, and I live at ${address} (${postcode}).\n\nThe pavement parking ban has created serious challenges on our street.`;
+  const paragraphBlock = issues.map(issue => getRandomElement(issueParagraphs[issue])).join("\n\n");
+  const closing = `\n\nThe proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.`;
 
-      const subject = encodeURIComponent(getRandomSubject());
-      const body = encodeURIComponent(
-        `My name is ${name}, and I live at ${address} (${postcode}).
+  const otherComment = otherText ? `\n\nOne resident adds: “${otherText}”` : "";
 
-The pavement parking ban has created serious challenges on our street.
+  const subject = encodeURIComponent(getRandomElement(subjectLines));
+  const body = encodeURIComponent(`${intro}\n\n${paragraphBlock}${otherComment}${closing}`);
 
-${Object.keys(issueParagraphs).map(issue => 
-  `${getRandomElement(issueParagraphs[issue])}`).join("\n\n")}
-
-${otherText ? `One resident adds: “${otherText}”\n\n` : ""}
-The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.`
-      );
-
-      const mailtoLink = `mailto:?subject=${subject}&body=${body}`;
-      const link = document.getElementById('mailtoLink');
-      link.href = mailtoLink;
-      link.textContent = "Click here to open your email client and send";
-    }
-  </script>
+  document.getElementById('mailtoLink').href = `mailto:?subject=${subject}&body=${body}`;
+  document.getElementById('mailtoLink').textContent = "Click here to open your email client and send";
+}
+</script>
 </body>
 </html>
