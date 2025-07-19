@@ -118,37 +118,37 @@
     </p>
   </div>
 
-  <form id="emailForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required />
+<form id="emailForm">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" required />
 
-    <label for="address">Address:</label>
-    <input type="text" id="address" required />
+  <label for="address">Your Address:</label>
+  <input type="text" id="address" required />
 
-    <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" required />
+  <label for="postcode">Your Postcode:</label>
+  <input type="text" id="postcode" required />
 
-    <label for="otherText">Other Comment (optional):</label>
-    <textarea id="otherText" placeholder="You can add a personal story or concern here..."></textarea>
+  <label for="otherText">Optional Message:</label>
+  <textarea id="otherText" placeholder="Add a personal comment or concern if you'd like..."></textarea>
 
-    <fieldset class="checkboxes">
-      <legend><strong>Select issues that affect your street:</strong></legend>
-      <label><input type="checkbox" value="emergency" /> Emergency services may be delayed</label>
-      <label><input type="checkbox" value="children" /> Children and prams pushed into danger</label>
-      <label><input type="checkbox" value="bins" /> Bin collection disrupted and vehicles damaged</label>
-      <label><input type="checkbox" value="visitors" /> Visitor and tradesperson parking impossible</label>
-      <label><input type="checkbox" value="danger" /> The ban is making things worse, not safer</label>
-      <label><input type="checkbox" value="blocked" /> Pavements already blocked by bins</label>
-      <label><input type="checkbox" value="gardens" /> Residents ripping up gardens for driveways</label>
-      <label><input type="checkbox" value="blanket" /> Blanket enforcement punishes everyone</label>
-      <label><input type="checkbox" value="consultation" /> No consultation with residents</label>
-      <label><input type="checkbox" value="cohesion" /> Policy is damaging social cohesion</label>
-    </fieldset>
+  <div class="issue-list">
+    <strong>Tick all that apply:</strong><br><br>
+    <label><input type="checkbox" value="emergency" /> 🚑 Emergency vehicles could be blocked</label>
+    <label><input type="checkbox" value="children" /> 🧒 Children and prams pushed into the road</label>
+    <label><input type="checkbox" value="bins" /> 🚮 Bin collections disrupted or causing damage</label>
+    <label><input type="checkbox" value="visitors" /> 🏠 Visitors or tradespeople can’t park</label>
+    <label><input type="checkbox" value="danger" /> ⚠️ Road danger has actually increased</label>
+    <label><input type="checkbox" value="blocked" /> 🚫 Pavements already blocked by bins</label>
+    <label><input type="checkbox" value="gardens" /> 🏡 Gardens being ripped up for driveways</label>
+    <label><input type="checkbox" value="blanket" /> ❌ Blanket enforcement punishes everyone</label>
+    <label><input type="checkbox" value="consultation" /> 📢 No local consultation with residents</label>
+    <label><input type="checkbox" value="cohesion" /> 🤝 Harms trust and social cohesion</label>
+  </div>
 
-    <button type="button" onclick="generateEmail()">Generate Email</button>
-  </form>
+  <button type="button" onclick="generateEmail()">Generate Email</button>
+</form>
 
-  <a id="mailtoLink" href="#"></a>
+<a id="mailtoLink" href="#"></a>
 
   <footer>
     <p><strong>Why this matters:</strong><br>
