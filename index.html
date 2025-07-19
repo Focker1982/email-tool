@@ -32,26 +32,23 @@
         <div class="mt-2 space-y-1 text-sm">
           <label><input type="checkbox" value="Emergency vehicles could be blocked"> 🚑 Emergency vehicles could be blocked</label><br>
           <label><input type="checkbox" value="People with accessibility needs have no nearby parking alternatives"> ♿️ People with accessibility needs have no nearby parking alternatives</label><br>
-          <label><input type="checkbox" value="Children and prams are forced to share road space with traffic"> 🧒 Children and prams are forced to share road space with traffic</label><br>
-          <label><input type="checkbox" value="Bin collections are (or could be) missed due to narrow access"> 🚮 Bin collections are (or could be) missed due to narrow access</label><br>
-          <label><input type="checkbox" value="Police and ambulance access is delayed or restricted"> 🚓 Police and ambulance access is delayed or restricted</label><br>
-          <label><input type="checkbox" value="No safe or legal alternative parking nearby"> 🚫 No safe or legal alternative parking nearby</label><br>
-          <label><input type="checkbox" value="Elderly residents struggle with distance to parked cars"> 🧓 Elderly residents struggle with distance to parked cars</label><br>
-          <label><input type="checkbox" value="Full on-road parking increases risk and congestion"> 🔄 Full on-road parking increases risk and congestion</label><br>
+          <label><input type="checkbox" value="Children and prams are pushed into more dangerous roads where pavements are already inaccessible"> 🧒 Children and prams are pushed into more dangerous roads where pavements are already inaccessible</label><br>
+          <label><input type="checkbox" value="Bin collections missed or disrupted due to narrow access"> 🚮 Bin collections missed or disrupted due to narrow access</label><br>
+          <label><input type="checkbox" value="Elderly residents struggle with the distance to parked cars"> 🧓 Elderly residents struggle with the distance to parked cars</label><br>
           <label><input type="checkbox" value="Visitor and tradesperson parking is impossible"> 🏠 Visitor and tradesperson parking is impossible</label><br>
-          <label><input type="checkbox" value="Pavement parking has never caused problems on our street"> 🚗 Pavement parking has never caused problems on our street</label><br>
           <label><input type="checkbox" value="The ban is making things more dangerous, not safer"> ⚠️ The ban is making things more dangerous, not safer</label><br>
           <label><input type="checkbox" value="Pavements are already blocked by council bins on collection days"> 🗑️ Pavements are already blocked by council bins on collection days</label><br>
-          <label><input type="checkbox" value="Our council has installed nearside traffic lights that blind residents cannot safely use"> 🚦 Our council has installed nearside traffic lights that blind residents cannot safely use</label><br>
+          <label><input type="checkbox" value="People are ripping up gardens to install driveways, increasing flood risk and harming the environment"> 🌱 People are ripping up gardens to install driveways, increasing flood risk and harming the environment</label><br>
+          <label><input type="checkbox" value="Blanket enforcement punishes everyone for a minority of bad parkers"> ❌ Blanket enforcement punishes everyone for a minority of bad parkers</label><br>
           <label><input type="checkbox" value="There has been no consultation with residents"> 🧾 There has been no consultation with residents</label><br>
-          <label><input type="checkbox" value="Blanket enforcement is not justified"> ❌ Blanket enforcement is not justified</label><br>
-          <label><input type="checkbox" value="Practical, shared use is being replaced with dangerous congestion"> 💡 Practical, shared use is being replaced with dangerous congestion</label><br>
-          <label><input type="checkbox" value="Residents may be forced to pave gardens, harming the environment and increasing flood risk"> 🌱 Residents may be forced to pave gardens, harming the environment and increasing flood risk</label><br>
-          <label><input type="checkbox" value="Constant fear of fines is causing stress and anxiety"> 🧠 Constant fear of fines is causing stress and anxiety</label><br>
-          <label><input type="checkbox" value="Our homes weren’t built to support this kind of policy"> 🏘️ Our homes weren’t built to support this kind of policy</label><br>
-          <label><input type="checkbox" value="The council still parks on pavements and contradicts its own messaging"> 🤷 The council still parks on pavements and contradicts its own messaging</label><br>
-          <label><input type="checkbox" value="Creating conflict over parking damages social cohesion in our community"> 🧱 Creating conflict over parking damages social cohesion in our community</label>
+          <label><input type="checkbox" value="Creating conflict over parking damages social cohesion in our community"> 🧱 Creating conflict over parking damages social cohesion in our community</label><br>
         </div>
+      </div>
+
+      <div class="mt-4">
+        <label class="block text-sm font-medium mb-1">Other (optional)</label>
+        <label class="text-sm"><input type="checkbox" id="otherCheckbox"> I want to add a custom concern</label>
+        <textarea id="otherText" class="w-full border border-gray-300 p-2 mt-2 rounded hidden" rows="3" placeholder="Add your comment here..."></textarea>
       </div>
 
       <div>
@@ -59,7 +56,7 @@
         <label class="text-sm"><input type="checkbox" id="ccLeaders"> Also send this to party leaders (SNP, Labour, Conservative, Green, Lib Dem, Alba)</label>
       </div>
 
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate Email</button>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2">Generate Email</button>
     </form>
     <div id="output" class="mt-6 hidden">
       <p class="font-semibold">Your email will open shortly. If not, <a id="mailtoLink" class="text-blue-600 underline" href="#">click here</a>.</p>
@@ -86,17 +83,27 @@
       "You Need to See What's Happening Here"
     ];
 
+    document.getElementById('otherCheckbox').addEventListener('change', function () {
+      document.getElementById('otherText').classList.toggle('hidden', !this.checked);
+    });
+
     document.getElementById('emailForm').addEventListener('submit', function (e) {
       e.preventDefault();
 
       const name = document.getElementById('name').value.trim();
       const address = document.getElementById('address').value.trim();
       const postcode = document.getElementById('postcode').value.trim();
-      const issues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
-      const ccLeaders = document.getElementById('ccLeaders').checked;
+      const issues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+        .filter(cb => cb.id !== 'ccLeaders' && cb.id !== 'otherCheckbox')
+        .map(cb => cb.value);
 
-      // Placeholder MSP email for now — to be replaced with live MapIt data
-      const mspEmails = ["example.msp@parliament.scot"];
+      const otherText = document.getElementById('otherText').value.trim();
+      if (document.getElementById('otherCheckbox').checked && otherText) {
+        issues.push(otherText);
+      }
+
+      const ccLeaders = document.getElementById('ccLeaders').checked;
+      const mspEmails = ["example.msp@parliament.scot"]; // Placeholder
 
       const ccEmails = ccLeaders ? [
         "john.swinney.msp@parliament.scot",
