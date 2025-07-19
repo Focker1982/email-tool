@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge the Pavement Parking Ban</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -52,10 +53,17 @@
       margin-top: 20px;
       border-radius: 5px;
     }
-    .issue-list label {
-      font-weight: normal;
-      margin: 5px 0;
-      display: block;
+.issue-list label {
+  font-weight: 600;
+  margin: 8px 0;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+}
+.issue-list input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
     }
     button {
       margin-top: 25px;
@@ -85,6 +93,24 @@
       font-size: 0.95em;
       color: #444;
     }
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  label {
+    font-size: 1.05em;
+  }
+  input[type="text"],
+  textarea {
+    font-size: 1em;
+    padding: 12px;
+  }
+  button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+}
+
   </style>
 </head>
 <body>
