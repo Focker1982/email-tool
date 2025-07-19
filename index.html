@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Challenge the Pavement Parking Ban</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
     }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
     textarea {
       width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+      font-size: 1rem;
     }
-    .issue-list label {
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    .checkboxes label {
       display: block;
       margin: 5px 0;
     }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
     #mailtoLink {
       display: block;
       margin-top: 20px;
-      font-size: 18px;
       font-weight: bold;
+      font-size: 1.1rem;
+      color: blue;
     }
   </style>
 </head>
@@ -29,33 +67,42 @@
   <h1>Challenge the Pavement Parking Ban</h1>
 
   <form id="emailForm">
-    <label>Name: <input type="text" id="name" required></label><br><br>
-    <label>Address: <input type="text" id="address" required></label><br><br>
-    <label>Postcode: <input type="text" id="postcode" required></label><br><br>
-    <label>Other Comment (optional):<br>
-      <textarea id="otherText" rows="4" cols="50"></textarea>
-    </label><br><br>
+    <label>Name:
+      <input type="text" id="name" required />
+    </label>
 
-    <fieldset class="issue-list">
+    <label>Address:
+      <input type="text" id="address" required />
+    </label>
+
+    <label>Postcode:
+      <input type="text" id="postcode" required />
+    </label>
+
+    <label>Other Comment (optional):
+      <textarea id="otherText" rows="4" placeholder="You can add a personal story or concern here..."></textarea>
+    </label>
+
+    <fieldset class="checkboxes">
       <legend>Select issues that affect your street:</legend>
-      <label><input type="checkbox" value="emergency"> Emergency services may be delayed</label>
-      <label><input type="checkbox" value="children"> Children and prams pushed into danger</label>
-      <label><input type="checkbox" value="bins"> Bin collection disrupted and vehicles damaged</label>
-      <label><input type="checkbox" value="visitors"> Visitor and tradesperson parking impossible</label>
-      <label><input type="checkbox" value="danger"> The ban is making things worse, not safer</label>
-      <label><input type="checkbox" value="blocked"> Pavements already blocked by bins</label>
-      <label><input type="checkbox" value="gardens"> Residents ripping up gardens for driveways</label>
-      <label><input type="checkbox" value="blanket"> Blanket enforcement punishes everyone</label>
-      <label><input type="checkbox" value="consultation"> No consultation with residents</label>
-      <label><input type="checkbox" value="cohesion"> Policy is damaging social cohesion</label>
-    </fieldset><br>
+      <label><input type="checkbox" value="emergency" /> Emergency services may be delayed</label>
+      <label><input type="checkbox" value="children" /> Children and prams pushed into danger</label>
+      <label><input type="checkbox" value="bins" /> Bin collection disrupted and vehicles damaged</label>
+      <label><input type="checkbox" value="visitors" /> Visitor and tradesperson parking impossible</label>
+      <label><input type="checkbox" value="danger" /> The ban is making things worse, not safer</label>
+      <label><input type="checkbox" value="blocked" /> Pavements already blocked by bins</label>
+      <label><input type="checkbox" value="gardens" /> Residents ripping up gardens for driveways</label>
+      <label><input type="checkbox" value="blanket" /> Blanket enforcement punishes everyone</label>
+      <label><input type="checkbox" value="consultation" /> No consultation with residents</label>
+      <label><input type="checkbox" value="cohesion" /> Policy is damaging social cohesion</label>
+    </fieldset>
 
     <button type="button" onclick="generateEmail()">Generate Email</button>
   </form>
 
   <a id="mailtoLink" href="#"></a>
 
-<script>
+  <script>
 const subjectLines = [
   "Concerns about pavement parking ban on my street",
   "Please raise this issue in Parliament",
