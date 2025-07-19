@@ -2,81 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Challenge the Pavement Parking Ban</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+      color: #333;
     }
     h1 {
+      font-size: 2.5rem;
       text-align: center;
-      font-size: 2.4em;
+      margin-top: 40px;
+      color: #0044cc;
     }
     .intro {
-      margin-bottom: 25px;
+      text-align: center;
+      font-size: 1.1rem;
+      margin: 20px auto 40px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
     }
     label {
-      display: block;
-      margin: 12px 0 6px;
       font-weight: bold;
+      margin-top: 15px;
+      display: block;
     }
     input[type="text"], textarea {
       width: 100%;
-      padding: 8px;
-      font-size: 1em;
-      margin-bottom: 10px;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
     }
     textarea {
-      resize: vertical;
+      height: 120px;
     }
-    .issue-list {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-top: 20px;
+    fieldset {
+      border: 2px solid #0044cc;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
     }
-    .issue-list label {
-      font-weight: normal;
+    .checkboxes label {
       display: block;
-      margin: 8px 0;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .checkboxes input {
+      position: absolute;
+      left: 0;
+      top: 3px;
     }
     button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      font-size: 1.1em;
-      background-color: #0051a3;
+      background-color: #0044cc;
       color: white;
+      font-size: 1.1rem;
+      padding: 12px 25px;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 4px;
+      transition: background-color 0.3s;
+      display: block;
+      margin: 0 auto;
     }
     button:hover {
-      background-color: #003f81;
+      background-color: #003399;
     }
     #mailtoLink {
       display: block;
-      margin-top: 25px;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 30px;
+      color: #0044cc;
       font-weight: bold;
-      font-size: 1.1em;
+      text-decoration: none;
     }
     footer {
+      text-align: center;
       margin-top: 50px;
-      border-top: 1px solid #ddd;
-      padding-top: 20px;
-      font-size: 0.95em;
-      color: #444;
+      font-size: 1rem;
+      color: #555;
+      padding: 20px;
+      background-color: #fff;
+      border-top: 2px solid #0044cc;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer strong {
+      font-size: 1.2rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
   <h1>Challenge the Pavement Parking Ban</h1>
 
-  <p class="intro">
-    Scotland’s blanket pavement parking ban is affecting communities in ways the government didn’t anticipate. Many streets are now less safe, less accessible, and more stressful for everyday families — all while councils continue to block pavements with bins and fail to provide alternatives.<br><br>
-    Use this tool to email your MSP or councillor with real, lived concerns — in your own words — about what’s happening on your street.
-  </p>
+  <div class="intro">
+    <p>
+      Use this tool to tell your MSP and local councillors how the pavement parking ban is affecting — or will affect — your street.
+    </p>
+    <p>
+      This email builder helps you personalise your message, making it harder for politicians to ignore the real-world impact.
+    </p>
+  </div>
 
   <form id="emailForm">
     <label for="name">Name:</label>
@@ -89,20 +129,20 @@
     <input type="text" id="postcode" required />
 
     <label for="otherText">Other Comment (optional):</label>
-    <textarea id="otherText" rows="4"></textarea>
+    <textarea id="otherText" placeholder="You can add a personal story or concern here..."></textarea>
 
-    <fieldset class="issue-list">
+    <fieldset class="checkboxes">
       <legend><strong>Select issues that affect your street:</strong></legend>
-      <label><input type="checkbox" value="emergency"> Emergency services may be delayed</label>
-      <label><input type="checkbox" value="children"> Children and prams pushed into danger</label>
-      <label><input type="checkbox" value="bins"> Bin collection disrupted and vehicles damaged</label>
-      <label><input type="checkbox" value="visitors"> Visitor and tradesperson parking impossible</label>
-      <label><input type="checkbox" value="danger"> The ban is making things worse, not safer</label>
-      <label><input type="checkbox" value="blocked"> Pavements already blocked by bins</label>
-      <label><input type="checkbox" value="gardens"> Residents ripping up gardens for driveways</label>
-      <label><input type="checkbox" value="blanket"> Blanket enforcement punishes everyone</label>
-      <label><input type="checkbox" value="consultation"> No consultation with residents</label>
-      <label><input type="checkbox" value="cohesion"> Policy is damaging social cohesion</label>
+      <label><input type="checkbox" value="emergency" /> Emergency services may be delayed</label>
+      <label><input type="checkbox" value="children" /> Children and prams pushed into danger</label>
+      <label><input type="checkbox" value="bins" /> Bin collection disrupted and vehicles damaged</label>
+      <label><input type="checkbox" value="visitors" /> Visitor and tradesperson parking impossible</label>
+      <label><input type="checkbox" value="danger" /> The ban is making things worse, not safer</label>
+      <label><input type="checkbox" value="blocked" /> Pavements already blocked by bins</label>
+      <label><input type="checkbox" value="gardens" /> Residents ripping up gardens for driveways</label>
+      <label><input type="checkbox" value="blanket" /> Blanket enforcement punishes everyone</label>
+      <label><input type="checkbox" value="consultation" /> No consultation with residents</label>
+      <label><input type="checkbox" value="cohesion" /> Policy is damaging social cohesion</label>
     </fieldset>
 
     <button type="button" onclick="generateEmail()">Generate Email</button>
@@ -112,11 +152,11 @@
 
   <footer>
     <p><strong>Why this matters:</strong><br>
-    Practical shared use of space is being criminalised in favour of one-size-fits-all enforcement. Streets that functioned safely for years are now seeing bin delays, blocked driveways, prams pushed into traffic, and rising neighbour conflict. Councils already had powers to act on genuinely obstructive parking — this new law punishes everyone for the actions of a few.<br><br>
-    If the cost of enforcing this approach outweighs the benefit, the legislation must be changed or scrapped entirely.</p>
+      The pavement parking ban was designed with good intentions, but it’s causing real-world harm on residential streets. Emergency access, bin collections, and social cohesion are being put at risk, while councils overlook their own pavement obstructions. If the cost of policing this law is social division, unsafe streets, and unworkable living conditions, then it must be rethought.
+    </p>
   </footer>
 
-<script>
+  <script>
 const subjectLines = [
   "Concerns about pavement parking ban on my street",
   "Please raise this issue in Parliament",
