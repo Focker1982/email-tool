@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Your MSP – The Pavement Trap</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 p-6">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h1 class="text-2xl font-bold mb-4">Email Your MSP</h1>
+
+    <form id="emailForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Name</label>
+        <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" required>
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Address</label>
+        <input type="text" id="address" class="w-full border border-gray-300 p-2 rounded" required>
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Postcode</label>
+        <input type="text" id="postcode" class="w-full border border-gray-300 p-2 rounded" required>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Select issues affecting your street:</label>
+        <div class="mt-2 space-y-1">
+          <label><input type="checkbox" value="Emergency vehicle access blocked"> Emergency vehicle access blocked</label><br>
+          <label><input type="checkbox" value="Bins not collected due to parking"> Bins not collected</label><br>
+          <label><input type="checkbox" value="No disabled parking options"> No disabled parking</label><br>
+          <label><input type="checkbox" value="Children forced into road"> Children forced into road</label>
+        </div>
+      </div>
+
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate Email</button>
+    </form>
+
+    <div id="output" class="mt-6 hidden">
+      <p class="font-semibold">Your email will open shortly. If not, <a id="mailtoLink" class="text-blue-600 underline" href="#">click here</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    const subjectLines = [
+      "Time to Rethink the Pavement Ban",
+      "This Ban Doesn’t Work for Our Street",
+      "Real Lives, Real Impact – Please Read",
+      "Pavement Ban Chaos in My Area",
+      "Where Should We Park Now?",
+      "You Need to See What's Happening Here"
+    ];
+
+    document.getElementById('emailForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const postcode = document.getElementById('postcode').value.trim();
+      const issues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+
+      // 🔧 Replace this with real fetch from MapIt
+      const mspEmails = ["example.msp@parliament.scot"];
+
+      const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
+
+      const body = `Dear MSP,%0D%0A%0D%0AMy name is ${name}, and I live at ${address}, ${postcode}.%0D%0A%0D%0AOur street is seriously affected by the new pavement parking ban. Specifically:%0D%0A- ${issues.join('%0D%0A- ')}%0D%0A%0D%0AI urge you to raise this issue in Parliament and push for a pause and rethink.%0D%0A%0D%0ARegards,%0D%0A${name}`;
+
+      const mailtoLink = `mailto:${mspEmails.join(',')}?subject=${encodeURIComponent(subject)}&body=${body}`;
+      document.getElementById('mailtoLink').href = mailtoLink;
+      document.getElementById('output').classList.remove('hidden');
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>
