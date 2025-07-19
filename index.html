@@ -14,6 +14,20 @@
     <label>Other Comment (optional):<br>
       <textarea id="otherText" rows="4" cols="50"></textarea>
     </label><br><br>
+    <fieldset class="issue-list">
+  <legend>Select issues that affect your street:</legend>
+  <label><input type="checkbox" value="emergency"> Emergency services may be delayed</label>
+  <label><input type="checkbox" value="children"> Children and prams pushed into danger</label>
+  <label><input type="checkbox" value="bins"> Bin collection disrupted and vehicles damaged</label>
+  <label><input type="checkbox" value="visitors"> Visitor and tradesperson parking impossible</label>
+  <label><input type="checkbox" value="danger"> The ban is making things worse, not safer</label>
+  <label><input type="checkbox" value="blocked"> Pavements already blocked by bins</label>
+  <label><input type="checkbox" value="gardens"> Residents ripping up gardens for driveways</label>
+  <label><input type="checkbox" value="blanket"> Blanket enforcement punishes everyone</label>
+  <label><input type="checkbox" value="consultation"> No consultation with residents</label>
+  <label><input type="checkbox" value="cohesion"> Policy is damaging social cohesion</label>
+</fieldset><br>
+
     <button type="button" onclick="generateEmail()">Generate Email</button>
   </form>
 
