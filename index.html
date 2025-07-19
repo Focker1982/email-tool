@@ -148,16 +148,17 @@
 
   <form onsubmit="generateEmail(); return false;">
     <label for="name">Your Name:</label>
-    <input type="text" id="name" placeholder="e.g. David Drover" required>
+    <input type="text" id="name" placeholder="e.g. Robert Bruce" required>
 
     <label for="address">Your Address:</label>
-    <input type="text" id="address" placeholder="e.g. 56 Hawthorn Avenue" required>
+    <input type="text" id="address" placeholder="e.g. 6 Charlotte Square" required>
 
     <label for="postcode">Postcode:</label>
-    <input type="text" id="postcode" placeholder="e.g. G61 3NQ" required>
+    <input type="text" id="postcode" placeholder="e.g. EH2 4DR" required>
 
-    <div class="issue-list">
-      <strong>Select the concerns that affect your street:</strong>
+<div class="issue-list">
+  <strong>Select the concerns that affect your street:</strong>
+  <label><input type="checkbox" id="selectAll" onclick="toggleAllIssues(this)"> 🔘 Select all</label>
       <label><input type="checkbox" value="emergency"> 🚑 Emergency vehicles could be blocked</label>
       <label><input type="checkbox" value="accessibility"> ♿️ Accessibility needs not considered</label>
       <label><input type="checkbox" value="prams"> 🧒 Children and prams forced into the road</label>
@@ -175,10 +176,8 @@
     <label for="other">Other Comments:</label>
 <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
 
-    <button type="submit">Generate Email</button>
+    <button type="button" onclick="generateEmail()">Open Email</button>
   </form>
-
- <a id="mailtoLink" href="#" target="_blank" style="display: none;"></a>
 
   <footer>
     <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban. You can personalise the content further once it opens in your email client.</p>
@@ -301,6 +300,13 @@
   ];
 </script>
 <script>
+  function toggleAllIssues(source) {
+    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    checkboxes.forEach(cb => {
+      if (cb !== source) cb.checked = source.checked;
+    });
+  }
+  
   function generateEmail() {
     const name = document.getElementById("name").value.trim();
     const address = document.getElementById("address").value.trim();
@@ -332,10 +338,8 @@
 
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${message}`;
-    document.getElementById("mailtoLink").href = mailtoLink;
-    document.getElementById("mailtoLink").innerText = "Click here to open your email client and send the message";
-    document.getElementById("mailtoLink").style.display = "inline-block";
+const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${message}`;
+window.location.href = mailtoLink;
   }
 </script>
 <div class="intro" style="background: #f0f5ff; border-left: 5px solid #003f7d; margin-top: 40px;">
