@@ -11,11 +11,17 @@
       margin: 0 auto;
       padding: 40px 20px;
       line-height: 1.6;
+      background-color: #f9f9f9;
     }
 
     h1 {
       text-align: center;
       font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      font-size: 1.1rem;
       margin-bottom: 30px;
     }
 
@@ -61,10 +67,21 @@
       font-size: 1.1rem;
       color: blue;
     }
+
+    .footer-blurb {
+      margin-top: 40px;
+      font-size: 0.95rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <h1>Challenge the Pavement Parking Ban</h1>
+
+  <div class="intro">
+    Use this tool to tell your MSP and local councillors how the pavement parking ban is affecting — or will affect — your street. 
+    This email builder helps you personalise your message and makes it harder for politicians to ignore.
+  </div>
 
   <form id="emailForm">
     <label>Name:
@@ -101,6 +118,12 @@
   </form>
 
   <a id="mailtoLink" href="#"></a>
+
+  <div class="footer-blurb">
+    <strong>Why this matters:</strong> The pavement parking ban was designed with good intentions, but it’s causing real-world harm on residential streets. 
+    Emergency access, bin collections, and social cohesion are being put at risk, while councils overlook their own pavement obstructions. 
+    If the cost of policing this law is social division, unsafe streets, and unworkable living conditions, then it must be rethought.
+  </div>
 
   <script>
 const subjectLines = [
