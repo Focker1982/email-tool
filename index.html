@@ -299,28 +299,31 @@
 </script>
 <script>
   function toggleAllIssues(source) {
-    const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
 const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
     checkboxes.forEach(cb => {
       if (cb !== source) cb.checked = source.checked;
     });
   }
 
-  function generateEmail() {
-    const name = document.getElementById("name").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const postcode = document.getElementById("postcode").value.trim();
-    const other = document.getElementById("other").value.trim();
-    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']:checked");
+function generateEmail() {
+  const name = document.getElementById("name").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const postcode = document.getElementById("postcode").value.trim();
+  const other = document.getElementById("other").value.trim();
 
-    if (!name || !address || !postcode) {
-      alert("Please fill in your name, address, and postcode.");
-      return;
-    }
+  const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+  const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
 
-    if (checkboxes.length === 0 && !other) {
-      alert("Please select at least one concern or fill in the other box.");
-      return;
+  if (!name || !address || !postcode) {
+    alert("Please fill in your name, address, and postcode.");
+    return;
+  }
+
+  if (checkboxes.length === 0 && !other) {
+    alert("Please select at least one concern or fill in the other box.");
+    return;
     }
 
     const newline = '\n\n';
