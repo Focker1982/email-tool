@@ -341,7 +341,12 @@
 
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    // Replace with your actual recipient or test address
+    const recipient = "msp@parliament.scot";
+
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    
+    // Open email client
     const tempLink = document.createElement("a");
     tempLink.href = mailtoLink;
     tempLink.style.display = "none";
@@ -349,9 +354,10 @@
     tempLink.click();
     document.body.removeChild(tempLink);
 
+    // Optional fallback in case it doesn't trigger
     setTimeout(() => {
       alert("If your email app didn’t open, please check your browser settings or copy the text manually.");
-    }, 1200);
+    }, 1000);
   }
 </script>
 </body>
