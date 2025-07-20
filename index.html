@@ -354,13 +354,13 @@
 
         const data = await response.json();
 
-                const posts = Object.values(data.posts);
-        const emails = posts
-          .filter(post => post.person && post.person.email && (
-            post.role.includes("Member of the Scottish Parliament") ||
-            post.role.includes("Councillor")
-          ))
-          .map(post => post.person.email);
+const emails = data.people
+  .filter(person =>
+    person.email &&
+    (person.memberships.some(m => m.post && m.post.label.includes("Scottish Parliament")) ||
+     person.memberships.some(m => m.post && m.post.label.includes("Councillor")))
+  )
+  .map(person => person.email);
 
         if (emails.length === 0) {
           alert("We couldn’t find any email contacts for that postcode.");
