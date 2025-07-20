@@ -356,12 +356,12 @@
         console.log("API response:", data);
 
 const emails = (data.memberships || [])
-  .filter(m => 
+  .filter(m =>
     m.post && m.post.label &&
     (
-      m.post.label.includes("MSP") ||
-      m.post.label.includes("Scottish Parliament") ||
-      m.post.label.includes("Councillor")
+      m.post.label.toLowerCase().includes("msp") ||
+      m.post.label.toLowerCase().includes("scottish parliament") ||
+      m.post.label.toLowerCase().includes("councillor")
     ) &&
     m.person && m.person.email
   )
