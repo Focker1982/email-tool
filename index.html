@@ -329,7 +329,9 @@
       return;
     }
 
-    const selectedSubjects = [...checkboxes].map(cb => cb.value);
+    const selectedSubjects = [...checkboxes]
+  .map(cb => cb.value)
+  .filter(value => issues.hasOwnProperty(value));
     const chosenLines = selectedSubjects.map(issue => {
       const options = issues[issue];
       return options[Math.floor(Math.random() * options.length)];
