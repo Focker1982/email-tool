@@ -353,14 +353,19 @@
         if (!response.ok) throw new Error("Postcode lookup failed");
 
         const data = await response.json();
+        console.log("API response:", data);
 
-const emails = data.people
-  .filter(person =>
-    person.email &&
-    (person.memberships.some(m => m.post && m.post.label.includes("Scottish Parliament")) ||
-     person.memberships.some(m => m.post && m.post.label.includes("Councillor")))
+const emails = (data.memberships || [])
+  .filter(m => 
+    m.post && m.post.label &&
+    (
+      m.post.label.includes("MSP") ||
+      m.post.label.includes("Scottish Parliament") ||
+      m.post.label.includes("Councillor")
+    ) &&
+    m.person && m.person.email
   )
-  .map(person => person.email);
+  .map(m => m.person.email);
 
         if (emails.length === 0) {
           alert("We couldn’t find any email contacts for that postcode.");
