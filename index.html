@@ -61,17 +61,17 @@
       margin-top: 20px;
       border-radius: 5px;
     }
-    .issue-list label {
-      font-weight: 600;
-      margin: 8px 0;
-      font-size: 1.05em;
-      display: flex;
-      align-items: center;
-    }
-    .issue-list input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.2);
-    }
+.issue-list label {
+  font-weight: 600;
+  margin: 8px 0;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+}
+.issue-list input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
     button {
       margin-top: 25px;
       padding: 14px 24px;
@@ -111,29 +111,22 @@
       color: #444;
     }
     @media (max-width: 600px) {
-      body {
-        padding: 20px;
-        font-size: 1.05em;
-        line-height: 1.6;
-      }
-      .issue-list {
-        padding: 15px;
-        margin-bottom: 20px;
-      }
-      input[type="text"],
-      textarea {
-        font-size: 1em;
-        padding: 12px;
-        min-height: 44px;
-      }
-      button {
-        font-size: 1.05em;
-        padding: 14px 22px;
-        width: 100%;
-      }
-      label {
-        font-size: 1.05em;
-        margin-bottom: 6px;
+  body {
+    padding: 20px;
+  }
+  label {
+    font-size: 1.05em;
+  }
+  input[type="text"],
+  textarea {
+    font-size: 1em;
+    padding: 12px;
+  }
+  button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+}
       }
     }
   </style>
@@ -332,7 +325,7 @@
     const newline = '\n\n';
 
     const selectedSubjects = [...checkboxes]
-      .filter(cb => cb.value !== 'selectAll') // skip "select all"
+      .filter(cb => cb.value !== 'selectAll')
       .map(cb => cb.value);
 
     const chosenLines = selectedSubjects.map(issue => {
@@ -349,7 +342,16 @@
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
     const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-    window.location.href = mailtoLink;
+    const tempLink = document.createElement("a");
+    tempLink.href = mailtoLink;
+    tempLink.style.display = "none";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+
+    setTimeout(() => {
+      alert("If your email app didn’t open, please check your browser settings or copy the text manually.");
+    }, 1200);
   }
 </script>
 </body>
