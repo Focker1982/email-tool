@@ -311,13 +311,13 @@
       if (cb !== source) cb.checked = source.checked;
     });
   }
-  
+
   function generateEmail() {
     const name = document.getElementById("name").value.trim();
     const address = document.getElementById("address").value.trim();
     const postcode = document.getElementById("postcode").value.trim();
     const other = document.getElementById("other").value.trim();
-    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']:checked");
 
     if (!name || !address || !postcode) {
       alert("Please fill in your name, address, and postcode.");
@@ -329,9 +329,12 @@
       return;
     }
 
+    const newline = '\n\n';
+
     const selectedSubjects = [...checkboxes]
-  .map(cb => cb.value)
-  .filter(value => issues.hasOwnProperty(value));
+      .filter(cb => cb.value !== 'selectAll') // skip "select all"
+      .map(cb => cb.value);
+
     const chosenLines = selectedSubjects.map(issue => {
       const options = issues[issue];
       return options[Math.floor(Math.random() * options.length)];
@@ -341,12 +344,12 @@
 
     const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.";
 
-    const message = `Dear MSP,%0D%0A%0D%0AMy name is ${name}, and I live at ${address}, ${postcode}.%0D%0A%0D%0AOur street is or would be seriously affected by the pavement parking ban. Specific concerns include:%0D%0A%0D%0A${chosenLines.join("%0D%0A%0D%0A")}%0D%0A%0D%0A${mitigation}%0D%0A%0D%0ARegards,%0D%0A${name}`;
+    const message = `Dear MSP,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
 
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
   }
 </script>
 </body>
