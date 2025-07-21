@@ -324,19 +324,19 @@ async function fetchReps(postcode) {
   return { spc, diw, uta };
 }
 async function getEmailsFromPostcode(postcode) {
-const spcKey = Object.keys(mspData).find(key => key.toLowerCase() === spc?.toLowerCase().trim());
-const msp = spcKey ? mspData[spcKey] : null;
+  const { spc, diw, uta } = await fetchReps(postcode);
 
-  // Load MSP and councillor data
   const mspData = await fetch('mspContacts.json').then(res => res.json());
   const cllrData = await fetch('councillors.json').then(res => res.json());
 
-  // Add debug logs
   console.log("SPC from MapIt:", spc);
   console.log("Looking for MSP key:", spc?.toUpperCase().trim());
   console.log("Available MSP keys in mspContacts.json:", Object.keys(mspData));
 
-  const msp = mspData[spc?.toUpperCase().trim()] || null;
+  const spcKey = Object.keys(mspData).find(
+    key => key.toLowerCase().trim() === spc?.toLowerCase().trim()
+  );
+  const msp = spcKey ? mspData[spcKey] : null;
   const councillors = cllrData[diw] || cllrData[uta] || [];
 
   return {
@@ -387,11 +387,12 @@ const msp = spcKey ? mspData[spcKey] : null;
       const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
       try {
-        const { msp, councillors } = await getEmailsFromPostcode(postcode);
+const repData = await getEmailsFromPostcode(postcode);
 const emails = [];
 
-if (msp && msp.email) emails.push(msp.email);
-councillors.forEach(c => {
+if (repData.msp && repData.msp.email) emails.push(repData.msp.email);
+
+repData.councillors.forEach(c => {
   if (c.email) emails.push(c.email);
 });
 
