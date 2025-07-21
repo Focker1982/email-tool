@@ -333,10 +333,10 @@ async function getEmailsFromPostcode(postcode) {
   console.log("Looking for MSP key:", spc?.toUpperCase().trim());
   console.log("Available MSP keys in mspContacts.json:", Object.keys(mspData));
 
-  const spcKey = Object.keys(mspData).find(
-    key => key.toLowerCase().trim() === spc?.toLowerCase().trim()
-  );
-  const msp = spcKey ? mspData[spcKey] : null;
+  const msp = Object.values(mspData).find(entry =>
+  entry.constituency?.toUpperCase().trim() === spc?.toUpperCase().trim()
+) || null;
+console.log("Found MSP:", msp);
   const councillors = cllrData[diw] || cllrData[uta] || [];
 
   return {
