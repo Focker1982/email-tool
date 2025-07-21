@@ -344,11 +344,11 @@
       try {
         const apiKey = "Token 6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
 
-        const response = await fetch(`https://candidates.democracyclub.org.uk/api/next/postcode/${encodeURIComponent(postcode)}/`, {
-          headers: {
-            "Authorization": apiKey
-          }
-        });
+const response = await fetch(`https://candidates.democracyclub.org.uk/api/v1/postcode/${encodeURIComponent(postcode)}/`, {
+  headers: {
+    "Authorization": apiKey
+  }
+});
 
         if (!response.ok) throw new Error("Postcode lookup failed");
 
