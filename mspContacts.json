@@ -1,392 +1,1058 @@
 {
-  "1735": {
-    "email": "Angela.Constance.msp@parliament.scot"
-  },
-  "1742": {
-    "email": "Annabelle.Ewing.msp@parliament.scot"
-  },
-  "1756": {
-    "email": "Christine.Grahame.msp@parliament.scot"
-  },
-  "5110": {
-    "email": "John.Mason.msp@parliament.scot"
-  },
-  "5119": {
-    "email": "Alex.Rowley.msp@parliament.scot"
-  },
-  "5106": {
-    "email": "Kevin.Stewart.msp@parliament.scot"
-  },
-  "5107": {
-    "email": "Graeme.Dey.msp@parliament.scot"
-  },
-  "5060": {
-    "email": "Neil.Bibby.msp@parliament.scot"
-  },
-  "5074": {
-    "email": "Gordon.MacDonald.msp@parliament.scot"
-  },
-  "5075": {
-    "email": "David.Torrance.msp@parliament.scot"
-  },
-  "5009": {
-    "email": "Willie.Rennie.msp@parliament.scot"
-  },
-  "5042": {
-    "email": "Mark.Griffin.msp@parliament.scot"
-  },
-  "4941": {
-    "email": "Humza.Yousaf.msp@parliament.scot"
-  },
-  "4934": {
-    "email": "Alison.Johnstone.msp@parliament.scot"
-  },
-  "4940": {
-    "email": "Clare.Adamson.msp@parliament.scot"
-  },
-  "3824": {
-    "email": "Margaret.McDougall.msp@parliament.scot"
-  },
-  "3896": {
-    "email": "Liam.McArthur.msp@parliament.scot"
-  },
-  "3901": {
-    "email": "Joe.Fitzpatrick.msp@parliament.scot"
-  },
-  "3907": {
-    "email": "Willie.Coffey.msp@parliament.scot"
-  },
-  "4014": {
-    "email": "Elizabeth.Smith.msp@parliament.scot"
-  },
-  "3763": {
-    "email": "Stuart.McMillan.msp@parliament.scot"
-  },
-  "3771": {
-    "email": "Bob.Doris.msp@parliament.scot"
-  },
-  "3129": {
-    "email": "Bill.Kidd.msp@parliament.scot"
-  },
-  "3751": {
-    "email": "Colin.Beattie.msp@parliament.scot"
-  },
-  "3758": {
-    "email": "Jamie.Hepburn.msp@parliament.scot"
-  },
-  "2678": {
-    "email": "Jackson.Carlaw.msp@parliament.scot"
-  },
-  "2826": {
-    "email": "James.Dornan.msp@parliament.scot"
-  },
-  "2892": {
-    "email": "Patrick.Harvie.msp@parliament.scot"
-  },
-  "2615": {
-    "email": "George.Adam.msp@parliament.scot"
-  },
-  "2633": {
-    "email": "Claire.Baker.msp@parliament.scot"
-  },
-  "2641": {
-    "email": "Alasdair.Allan.msp@parliament.scot"
-  },
-  "2394": {
-    "email": "Murdo.Fraser.msp@parliament.scot"
-  },
-  "2180": {
-    "email": "Richard.Lochhead.msp@parliament.scot"
-  },
-  "2110": {
-    "email": "Kenneth.Gibson.msp@parliament.scot"
-  },
-  "2133": {
-    "email": "Michael.Matheson.msp@parliament.scot"
-  },
-  "2098": {
-    "email": "John.Swinney.msp@parliament.scot"
-  },
-  "2103": {
-    "email": "Keith.Brown.msp@parliament.scot"
-  },
-  "1994": {
-    "email": "Fergus.Ewing.msp@parliament.scot"
-  },
-  "1870": {
-    "email": "dundee@shona.robison.scot"
-  },
-  "1848": {
-    "email": "Nicola.Sturgeon.msp@parliament.scot"
-  },
-  "1860": {
-    "email": "Rhoda.Grant.msp@parliament.scot"
-  },
-  "1773": {
-    "email": "Fiona.Hyslop.msp@parliament.scot"
-  },
-  "1783": {
-    "email": "Jackie.Baillie.msp@parliament.scot"
-  },
-  "1857": {
-    "email": "Pauline.McNeill.msp@parliament.scot"
-  },
-  "2127": {
-    "email": "Mark.Ruskell.msp@parliament.scot"
-  },
-  "3750": {
-    "email": "Shirley-Anne.Somerville.msp@parliament.scot"
-  },
-  "5618": {
-    "email": "Clare.Haughey.msp@parliament.scot"
-  },
-  "5613": {
-    "email": "Jenny.Gilruth.msp@parliament.scot"
-  },
-  "5608": {
-    "email": "Ben.Macpherson.msp@parliament.scot"
-  },
-  "5622": {
-    "email": "Rona.Mackay.msp@parliament.scot"
-  },
-  "5578": {
-    "email": "Gillian.Martin.msp@parliament.scot"
-  },
-  "5815": {
-    "email": "Alex.Cole-Hamilton.msp@parliament.scot"
-  },
-  "5605": {
-    "email": "Ash.Regan.msp@parliament.scot"
-  },
-  "5709": {
-    "email": "Oliver.Mundell.msp@parliament.scot"
-  },
-  "5665": {
-    "email": "Alexander.Burnett.msp@parliament.scot"
-  },
-  "5604": {
-    "email": "Daniel.Johnson.msp@parliament.scot"
-  },
-  "5868": {
-    "email": "Tom.Arthur.msp@parliament.scot"
-  },
-  "5782": {
-    "email": "Finlay.Carson.msp@parliament.scot"
-  },
-  "5612": {
-    "email": "Ivan.McKee.msp@parliament.scot"
-  },
-  "5587": {
-    "email": "Mairi.Gougeon.msp@parliament.scot"
-  },
-  "5596": {
-    "email": "Fulton.MacGregor.msp@parliament.scot"
-  },
-  "5598": {
-    "email": "Ruth.Maguire.msp@parliament.scot"
-  },
-  "5621": {
-    "email": "Kate.Forbes.msp@parliament.scot"
-  },
-  "4987": {
-    "email": "Miles.Briggs.msp@parliament.scot"
-  },
-  "5877": {
-    "email": "Jeremy.Balfour.msp@parliament.scot"
-  },
-  "5586": {
-    "email": "Anas.Sarwar.msp@parliament.scot"
-  },
-  "5788": {
-    "email": "Annie.Wells.msp@parliament.scot"
-  },
-  "5866": {
-    "email": "Alexander.Stewart.msp@parliament.scot"
-  },
-  "3983": {
-    "email": "Maurice.Golden.msp@parliament.scot"
-  },
-  "5698": {
-    "email": "Jamie.Greene.msp@parliament.scot"
-  },
-  "5757": {
-    "email": "Ross.Greer.msp@parliament.scot"
-  },
-  "4981": {
-    "email": "Douglas.Ross.msp@parliament.scot"
-  },
-  "4982": {
-    "email": "Edward.Mountain.msp@parliament.scot"
-  },
-  "5669": {
-    "email": "Maree.Todd.msp@parliament.scot"
-  },
-  "5651": {
-    "email": "Liam.Kerr.msp@parliament.scot"
-  },
-  "5638": {
-    "email": "Colin.Smyth.msp@parliament.scot"
-  },
-  "5769": {
-    "email": "Rachael.Hamilton.msp@parliament.scot"
-  },
-  "5771": {
-    "email": "Emma.Harper.msp@parliament.scot"
-  },
-  "3994": {
-    "email": "Graham.Simpson.msp@parliament.scot"
-  },
-  "5579": {
-    "email": "Richard.Leonard.msp@parliament.scot"
-  },
-  "5580": {
-    "email": "Monica.Lennon.msp@parliament.scot"
-  },
-  "5793": {
-    "email": "Brian.Whittle.msp@parliament.scot"
-  },
-  "1866": {
-    "email": "sarah.boyack.msp@parliament.scot"
-  },
-  "5800": {
-    "email": "Jamie.HalcroJohnston.msp@parliament.scot"
-  },
-  "15631": {
-    "email": "Beatrice.Wishart.msp@parliament.scot"
-  },
-  "16175": {
-    "email": "Jackie.Dunbar.msp@parliament.scot"
-  },
-  "16176": {
-    "email": "Marie.McNair.msp@parliament.scot"
-  },
-  "16177": {
-    "email": "Karen.Adam.msp@parliament.scot"
-  },
-  "16178": {
-    "email": "Michelle.Thomson.msp@parliament.scot"
-  },
-  "16179": {
-    "email": "Paul.McLennan.msp@parliament.scot"
-  },
-  "16180": {
-    "email": "Neil.Gray.msp@parliament.scot"
-  },
-  "16181": {
-    "email": "natalie.don-innes.msp@parliament.scot"
-  },
-  "16182": {
-    "email": "Evelyn.Tweed.msp@parliament.scot"
-  },
-  "16183": {
-    "email": "Siobhian.Brown.msp@parliament.scot"
-  },
-  "16184": {
-    "email": "Jenni.Minto.msp@parliament.scot"
-  },
-  "16185": {
-    "email": "Angus.Robertson.msp@parliament.scot"
-  },
-  "16186": {
-    "email": "Audrey.Nicoll.msp@parliament.scot"
-  },
-  "16187": {
-    "email": "Jim.Fairlie.msp@parliament.scot"
-  },
-  "16188": {
-    "email": "Stephanie.Callaghan.msp@parliament.scot"
-  },
-  "16189": {
-    "email": "Elena.Whitham.msp@parliament.scot"
-  },
-  "16190": {
-    "email": "Mairi.McAllan.msp@parliament.scot"
-  },
-  "16191": {
-    "email": "Collette.Stevenson.msp@parliament.scot"
-  },
-  "16192": {
-    "email": "Kaukab.Stewart.msp@parliament.scot"
-  },
-  "16193": {
-    "email": "Stephen.Kerr.msp@parliament.scot"
-  },
-  "16194": {
-    "email": "Meghan.Gallacher.msp@parliament.scot"
-  },
-  "16195": {
-    "email": "Gillian.Mackay.msp@parliament.scot"
-  },
-  "16196": {
-    "email": "Ariane.Burgess.msp@parliament.scot"
-  },
-  "16197": {
-    "email": "Emma.Roddick.msp@parliament.scot"
-  },
-  "16198": {
-    "email": "Paul.Sweeney.msp@parliament.scot"
-  },
-  "16199": {
-    "email": "Pam.Duncan-Glancy.msp@parliament.scot"
-  },
-  "16200": {
-    "email": "Sandesh.Gulhane.msp@parliament.scot"
-  },
-  "16201": {
-    "email": "Russell.Findlay.msp@parliament.scot"
-  },
-  "16202": {
-    "email": "Katy.Clark.msp@parliament.scot"
-  },
-  "16203": {
-    "email": "Paul.O'Kane.msp@parliament.scot"
-  },
-  "16204": {
-    "email": "Pam.Gosal.msp@parliament.scot"
-  },
-  "16205": {
-    "email": "Michael.Marra.msp@parliament.scot"
-  },
-  "16206": {
-    "email": "Douglas.Lumsden.msp@parliament.scot"
-  },
-  "16207": {
-    "email": "Maggie.Chapman.msp@parliament.scot"
-  },
-  "16208": {
-    "email": "Tess.White.msp@parliament.scot"
-  },
-  "16209": {
-    "email": "Mercedes.Villalba.msp@parliament.scot"
-  },
-  "16210": {
-    "email": "Craig.Hoy.msp@parliament.scot"
-  },
-  "16211": {
-    "email": "Carol.Mochan.msp@parliament.scot"
-  },
-  "16212": {
-    "email": "Sharon.Dowey.msp@parliament.scot"
-  },
-  "16213": {
-    "email": "Martin.Whitfield.msp@parliament.scot"
-  },
-  "16214": {
-    "email": "Sue.Webber.msp@parliament.scot"
-  },
-  "16215": {
-    "email": "Lorna.Slater.msp@parliament.scot"
-  },
-  "16216": {
-    "email": "Foysol.Choudhury.msp@parliament.scot"
-  },
-  "16970": {
-    "email": "Roz.McCall.msp@parliament.scot"
-  },
-  "17689": {
-    "email": "Tim.Eagle.msp@parliament.scot"
-  },
-  "18360": {
-    "email": "Davy.Russell.msp@parliament.scot"
+  "MSP CONTACT DETAILS": {
+    "name": "SPICe Fact Sheet",
+    "party": "Duilleagan Fiosrachaidh SPICe",
+    "constituency": "MSP contact details",
+    "email": "This Fact Sheet lists the contact details for all current Members of the Scottish"
+  },
+  "THE MAJORITY OF MSPS HAVE AN OFFICE IN BOTH THE SCOTTISH PARLIAMENT AND IN THEIR": {
+    "name": "Parliament (MSPs). The information is displayed alphabetically by MSP with a note",
+    "party": "of the party and the constituency (C) or region (R) that they represent.",
+    "constituency": "The majority of MSPs have an office in both the Scottish Parliament and in their",
+    "email": "constituency or region. While most MSPs are happy for you to contact them at either"
+  },
+  "ADDRESS AND CONTACT TELEPHONE NUMBER IS LISTED HERE.": {
+    "name": "the Parliament or at their constituency or region address, some have a preferred",
+    "party": "address and contact telephone number. Where this is the case, the preferred",
+    "constituency": "address and contact telephone number is listed here.",
+    "email": "Published on 20 June 2025"
+  },
+  "PARTY ABBREVIATION": {
+    "name": "by the authority of the Scottish Parliament",
+    "party": "MSP contact details 1",
+    "constituency": "Party Abbreviation",
+    "email": "Alba Party Alba"
+  },
+  "SCOTTISH LABOUR LAB": {
+    "name": "Scottish Conservative and Unionist Party Con",
+    "party": "Scottish Green Party Green",
+    "constituency": "Scottish Labour Lab",
+    "email": "Scottish Liberal Democrats LD"
+  },
+  "NO PARTY AFFILIATION NPA": {
+    "name": "Scottish National Party SNP",
+    "party": "Independent MSPs Ind",
+    "constituency": "No Party Affiliation NPA",
+    "email": "George Adam (SNP)"
+  },
+  "THE SCOTTISH PARLIAMENT, EDINBURGH EH99 1SP": {
+    "name": "Paisley (C)",
+    "party": "Parliamentary contact details:",
+    "constituency": "The Scottish Parliament, Edinburgh EH99 1SP",
+    "email": "Email: George.Adam.msp@parliament.scot"
+  },
+  "TEL: 0141 889 5032F": {
+    "name": "Constituency contact details:",
+    "party": "Anchor One, Unit 14, 7 Thread Street, Paisley, PA1 1JR",
+    "constituency": "Tel: 0141 889 5032F",
+    "email": "Karen Adam (SNP)"
+  },
+  "THE SCOTTISH PARLIAMENT, EDINBURGH, EH99 1SP": {
+    "name": "Glasgow Pollock (C)",
+    "party": "Parliamentary contact details:",
+    "constituency": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "email": "Email: Humza.Yousaf.msp@parliament.scot"
+  },
+  "20 CHAPEL STREET, PETERHEAD, AB42 1TL": {
+    "name": "Email: Karen.Adam.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "20 Chapel Street, Peterhead, AB42 1TL",
+    "email": "Tel: 01779 400601"
+  },
+  "PARLIAMENTARY CONTACT DETAILS:": {
+    "name": "Beatrice Wishart (LD)",
+    "party": "Shetland Islands (C)",
+    "constituency": "Parliamentary contact details:",
+    "email": "The Scottish Parliament, Edinburgh, EH99 1SP"
+  },
+  "CONSTITUENCY CONTACT DETAILS:": {
+    "name": "Tel: 0131 348 5088",
+    "party": "Email: Evelyn.Tweed.msp@parliament.scot",
+    "constituency": "Constituency contact details:",
+    "email": "Stirling Business Centre, Wellgreen Place, Stirling, FK8 2DZ"
+  },
+  "ALASDAIR ALLAN (SNP)": {
+    "name": "Tel: 01698 337540",
+    "party": "MSP contact details 2",
+    "constituency": "Alasdair Allan (SNP)",
+    "email": "Na h-Eileanan an Iar (C)"
+  },
+  "EMAIL: ALASDAIR.ALLAN.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Alasdair.Allan.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "TOM ARTHUR (SNP)": {
+    "name": "20 Kenneth Street, Stornoway, HS1 2DR",
+    "party": "Tel: 01851 700357green",
+    "constituency": "Tom Arthur (SNP)",
+    "email": "Renfrewshire South (C)"
+  },
+  "TEL: 0131 348 5863": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5863",
+    "email": "Email: Tom.Arthur.msp@parliament.scot"
+  },
+  "TEL: 01505 331990": {
+    "name": "Constituency contact details:",
+    "party": "49 High Street, Johnstone, PA5 8AJ",
+    "constituency": "Tel: 01505 331990",
+    "email": "Jackie Baillie (Lab)"
+  },
+  "11 CASTLE STREET, DUMBARTON, G82 1QS": {
+    "name": "Email: Jackie.Baillie.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "11 Castle Street, Dumbarton, G82 1QS",
+    "email": "Tel: 01389 734214"
+  },
+  "MSP CONTACT DETAILS 3": {
+    "name": "Fife, KY5 9AF",
+    "party": "Tel: 01592 786 726",
+    "constituency": "MSP contact details 3",
+    "email": "Jeremy Balfour (Con)"
+  },
+  "MIDLOTHIAN NORTH AND MUSSELBURGH (C)": {
+    "name": "Email: Jeremy.Balfour.msp@parliament.scot",
+    "party": "Colin Beattie (SNP)",
+    "constituency": "Midlothian North and Musselburgh (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: COLIN.BEATTIE.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6373",
+    "constituency": "Email: Colin.Beattie.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "NEIL BIBBY (LAB)": {
+    "name": "164 High Street, Dalkeith, EH22 1AY",
+    "party": "Tel: 0131 454 0204",
+    "constituency": "Neil Bibby (Lab)",
+    "email": "West Scotland (R)"
+  },
+  "TEL: 0131 348 6385": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6385",
+    "email": "Email: Neil.Bibby.msp@parliament.scot"
+  },
+  "TEL: 0141 889 0457": {
+    "name": "Constituency contact details:",
+    "party": "Suite 1002, Mile End Mill, 12 Seedhill Road, Paisley, PA1 1JS",
+    "constituency": "Tel: 0141 889 0457",
+    "email": "Sarah Boyack (Lab)"
+  },
+  "LOTHIAN (R)": {
+    "name": "Email: Sarah.Boyack.msp@parliament.scot",
+    "party": "Miles Briggs (Con)",
+    "constituency": "Lothian (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: MILES.BRIGGS.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5944",
+    "constituency": "Email: Miles.Briggs.msp@parliament.scot",
+    "email": "MSP contact details 4"
+  },
+  "OFFICE 2.5, THE E-CENTRE, COOPERAGE WAY, ALLOA, FK10 3LP": {
+    "name": "Email: Keith.Brown.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Office 2.5, The E-Centre, Cooperage Way, Alloa, FK10 3LP",
+    "email": "Tel: 01259 219333"
+  },
+  "HIGHLANDS AND ISLANDS (R)": {
+    "name": "Tel: 01382 903219",
+    "party": "Emma Roddick (SNP)",
+    "constituency": "Highlands and Islands (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: ARIANE.BURGESS.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6330",
+    "constituency": "Email: Ariane.Burgess.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "ABERDEENSHIRE WEST (C)": {
+    "name": "Tel: 07385 930565",
+    "party": "Alexander Burnett (Con)",
+    "constituency": "Aberdeenshire West (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: ALEXANDER.BURNETT.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5642",
+    "constituency": "Email: Alexander.Burnett.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "STEPHANIE CALLAGHAN (SNP)": {
+    "name": "8 Castle Street, Huntly, Aberdeenshire, AB54 8BP",
+    "party": "MSP contact details 5",
+    "constituency": "Stephanie Callaghan (SNP)",
+    "email": "Uddingston and Bellshill (C)"
+  },
+  "TEL: 0131 348 5493": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5493",
+    "email": "Email: Stephanie.Callaghan.msp@parliament.scot"
+  },
+  "TEL: 01698 849 888": {
+    "name": "Constituency contact details:",
+    "party": "40b Grovewood Business Centre, Strathclyde Business Park, Bellshill, ML4 3NQ",
+    "constituency": "Tel: 01698 849 888",
+    "email": "Donald Cameron"
+  },
+  "CONTACT HIS OFFICE.": {
+    "name": "Donald Cameron resigned as a Member of the Scottish Parliament on 9 February",
+    "party": "2024. If you need to discuss the closure or transfer of existing casework, please",
+    "constituency": "contact his office.",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: DONALD.CAMERON.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6990",
+    "constituency": "Email: Donald.Cameron.msp@parliament.scot",
+    "email": "Jackson Carlaw (Con)"
+  },
+  "SPIERSBRIDGE HOUSE, 1 SPIERSBRIDGE WAY, THORNLIEBANK, G46 8NG": {
+    "name": "Email: Jackson.Carlaw.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Spiersbridge House, 1 Spiersbridge Way, Thornliebank, G46 8NG",
+    "email": "Tel: 0141 465 6611"
+  },
+  "107 KING STREET, CASTLE DOUGLAS, DG7 1LZ": {
+    "name": "Email: Finlay.Carson.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "107 King Street, Castle Douglas, DG7 1LZ",
+    "email": "Tel: 01556 504991"
+  },
+  "NORTH EAST SCOTLAND (R)": {
+    "name": "Tel: 01786 235255",
+    "party": "Mercedes Villalba (Lab)",
+    "constituency": "North East Scotland (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: MAGGIE.CHAPMAN.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6332",
+    "constituency": "Email: Maggie.Chapman.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "FOYSOL CHOUDHURY (LAB)": {
+    "name": "10 Panmure Street, Dundee, DD1 2BW",
+    "party": "Tel: 01382 279991",
+    "constituency": "Foysol Choudhury (Lab)",
+    "email": "Lothian (R)"
+  },
+  "TEL: 0131 348 6761": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6761",
+    "email": "Email: Foysol.Choudhury.msp@parliament.scot"
+  },
+  "KATY CLARK (LAB)": {
+    "name": "Constituency contact details:",
+    "party": "Tel: 0131 348 6896",
+    "constituency": "Katy Clark (Lab)",
+    "email": "West Scotland (R)"
+  },
+  "EMAIL: KATY.CLARK.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Katy.Clark.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "WILLIE COFFEY (SNP)": {
+    "name": "Tel: 01294 605655",
+    "party": "29B Harbour Street Ardrossan KA22 8BU",
+    "constituency": "Willie Coffey (SNP)",
+    "email": "Kilmarnock and Irvine Valley (C)"
+  },
+  "EMAIL: WILLIE.COFFEY.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Willie.Coffey.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MSP CONTACT DETAILS 7": {
+    "name": "62 John Finnie Street, Kilmarnock, KA1 1BS",
+    "party": "Tel: 01563 537300",
+    "constituency": "MSP contact details 7",
+    "email": "Alex Cole-Hamilton (LD)"
+  },
+  "151 ST JOHN\u2019S ROAD, CORSTORPHINE, EDINBURGH, EH12 7SD": {
+    "name": "Email: Alex.Cole-Hamilton.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "151 St John\u2019s Road, Corstorphine, Edinburgh, EH12 7SD",
+    "email": "Tel: 0131 334 1814"
+  },
+  "ANGUS SOUTH (C)": {
+    "name": "Tel: 01506 460403",
+    "party": "Graeme Dey (SNP)",
+    "constituency": "Angus South (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "TEL: 0131 348 5864": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Email: Graeme.Dey.msp@parliament.scot",
+    "constituency": "Tel: 0131 348 5864",
+    "email": "Constituency contact details:"
+  },
+  "NATALIE DON-INNES (SNP)": {
+    "name": "282-284 High Street, Arbroath, DD11 1JF",
+    "party": "Tel: 01241 873058",
+    "constituency": "Natalie Don-Innes (SNP)",
+    "email": "Renfrewshire North and West (C)"
+  },
+  "MSP CONTACT DETAILS 8": {
+    "name": "Constituency contact details:",
+    "party": "1A Paisley Road, Renfrew, PA4 8JH",
+    "constituency": "MSP contact details 8",
+    "email": "Tel: 0141 587 5049"
+  },
+  "MARYHILL BURGH HALLS, 10-24 GAIRBRAID AVENUE, GLASGOW, G20 8YE": {
+    "name": "Email: Bob.Doris.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Maryhill Burgh Halls, 10-24 Gairbraid Avenue, Glasgow, G20 8YE",
+    "email": "Tel: 0141 946 7700"
+  },
+  "SOUTH SCOTLAND (R)": {
+    "name": "Tel: 0141 632 5238",
+    "party": "Sharon Dowey (Con)",
+    "constituency": "South Scotland (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: SHARON.DOWEY.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6980",
+    "constituency": "Email: Sharon.Dowey.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "JACKIE DUNBAR (SNP)": {
+    "name": "18 Wellington Square, Ayr, KA7 1EZ",
+    "party": "Tel: 01292 839130",
+    "constituency": "Jackie Dunbar (SNP)",
+    "email": "Aberdeen Donside (C)"
+  },
+  "TEL: 0131 348 5067": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5067",
+    "email": "Email: Jackie.Dunbar.msp@parliament.scot"
+  },
+  "TEL: 01224 011936": {
+    "name": "Constituency contact details:",
+    "party": "12a Mastrick Shopping Centre, Greenfern Place, Mastrick, Aberdeen, AB16 6JR",
+    "constituency": "Tel: 01224 011936",
+    "email": "MSP contact details 9"
+  },
+  "EMAIL: TIM.EAGLE.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6989",
+    "constituency": "Email: Tim.Eagle.msp@parliament.scot",
+    "email": "Annabelle Ewing (SNP)"
+  },
+  "COWDENBEATH CONSTITUENCY OFFICE, 253-257 HIGH STREET, COWDENBEATH, KY4 9QF": {
+    "name": "Email: Annabelle.Ewing.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Cowdenbeath Constituency Office, 253-257 High Street, Cowdenbeath, KY4 9QF",
+    "email": "Tel: 01383 611067"
+  },
+  "112 CHURCH STREET, INVERNESS, IV1 1EP": {
+    "name": "Email: Fergus.Ewing.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "112 Church Street, Inverness, IV1 1EP",
+    "email": "Tel: 01463 713004"
+  },
+  "PERTHSHIRE SOUTH AND KINROSS-SHIRE (C)": {
+    "name": "Jim Fairlie (SNP)",
+    "party": "MSP contact details 10",
+    "constituency": "Perthshire South and Kinross-shire (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "WEST SCOTLAND (R)": {
+    "name": "Tel: 01236 439630",
+    "party": "Jamie Greene (LD)",
+    "constituency": "West Scotland (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: RUSSELL.FINDLAY.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6975",
+    "constituency": "Email: Russell.Findlay.msp@parliament.scot",
+    "email": "Joe FitzPatrick (SNP)"
+  },
+  "TEL: 01382 843244": {
+    "name": "Constituency contact details:",
+    "party": "37 Dock Street, Dundee, DD1 3DR",
+    "constituency": "Tel: 01382 843244",
+    "email": "Kate Forbes (SNP)"
+  },
+  "TEL: 01349 863 888": {
+    "name": "Constituency contact details:",
+    "party": "12 High Street, Dingwall, IV15 9RU",
+    "constituency": "Tel: 01349 863 888",
+    "email": "Murdo Fraser (Con)"
+  },
+  "CENTRAL SCOTLAND (R)": {
+    "name": "80 Rosemount Place, Aberdeen, AB25 2XN",
+    "party": "Stephen Kerr (Con)",
+    "constituency": "Central Scotland (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: MEGHAN.GALLACHER.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5633",
+    "constituency": "Email: Meghan.Gallacher.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "CUNNINGHAME NORTH (C)": {
+    "name": "Room 36, Airdrie Business Centre, 1 Chapel Lane, Airdrie, ML6 6GX",
+    "party": "Kenneth Gibson (SNP)",
+    "constituency": "Cunninghame North (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: KENNETH.GIBSON.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6536",
+    "constituency": "Email: Kenneth.Gibson.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "JENNY GILRUTH (SNP)": {
+    "name": "15 Main Street, Dalry, KA24 5DL",
+    "party": "Tel: 01294 833687",
+    "constituency": "Jenny Gilruth (SNP)",
+    "email": "Mid Fife and Glenrothes (C)"
+  },
+  "EMAIL: JENNY.GILRUTH.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Jenny.Gilruth.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MAURICE GOLDEN (CON)": {
+    "name": "12 Commercial Street, Markinch, KY7 6DE",
+    "party": "Tel: 01592 764815",
+    "constituency": "Maurice Golden (Con)",
+    "email": "MSP contact details 12"
+  },
+  "80 ROSEMOUNT PLACE, ABERDEEN AB25 2XN": {
+    "name": "Email: Maurice.Golden.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "80 Rosemount Place, Aberdeen AB25 2XN",
+    "email": "Pam Gosal (Con)"
+  },
+  "SUITE F, EXCHANGE HOUSE BUSINESS CENTRE, 50 DRYMEN ROAD, BEARSDEN, G62 2RH": {
+    "name": "Email: Pam.Gosal.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Suite F, Exchange House Business Centre, 50 Drymen Road, Bearsden, G62 2RH",
+    "email": "Mairi Gougeon (SNP)"
+  },
+  "CHRISTINE GRAHAME (SNP)": {
+    "name": "Constituency contact details:",
+    "party": "Tel: 01356 626942",
+    "constituency": "Christine Grahame (SNP)",
+    "email": "Midlothian South, Tweeddale and Lauderdale (C)"
+  },
+  "TEL: 0131 348 5729": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5729",
+    "email": "Email: Christine.Grahame.msp@parliament.scot"
+  },
+  "AIRDRIE AND SHOTTS (C)": {
+    "name": "MSP contact details 13",
+    "party": "Neil Gray (SNP)",
+    "constituency": "Airdrie and Shotts (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: JAMIE.GREENE.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6137",
+    "constituency": "Email: Jamie.Greene.msp@parliament.scot",
+    "email": "Ross Greer (Green)"
+  },
+  "EMAIL: MARK.GRIFFIN.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6397",
+    "constituency": "Email: Mark.Griffin.msp@parliament.scot",
+    "email": "Dr. Sandesh Gulhane (Con)"
+  },
+  "1018 MARYHILL ROAD, GLASGOW, G20 9TE": {
+    "name": "Email: Sandesh.Gulhane.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "1018 Maryhill Road, Glasgow, G20 9TE",
+    "email": "Tel: 0141 946 3335"
+  },
+  "MSP CONTACT DETAILS 14": {
+    "name": "Jamie Halcro Johnston (Con)",
+    "party": "Highlands and Islands (R)",
+    "constituency": "MSP contact details 14",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: JAMIE.HALCROJOHNSTON.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6140",
+    "constituency": "Email: Jamie.HalcroJohnston.msp@parliament.scot",
+    "email": "Rachel Hamilton (Con)"
+  },
+  "7 ABBEY COURT, KELSO, TD5 7JA": {
+    "name": "Email: Rachael.Hamilton.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "7 Abbey Court, Kelso, TD5 7JA",
+    "email": "Tel: 01573 224862"
+  },
+  "LOWER AND GROUND FLOOR, HOLYWOOD TRUST BUILDING, OLD ASSEMBLY CLOSE, IRISH STREET,": {
+    "name": "Email: Emma.Harper.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Lower and Ground Floor, Holywood Trust Building, Old Assembly Close, Irish Street,",
+    "email": "Dumfries, DG1 2PH"
+  },
+  "GLASGOW (R)": {
+    "name": "Email: Sue.Webber.msp@parliament.scot",
+    "party": "Annie Wells (Con)",
+    "constituency": "Glasgow (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "MSP CONTACT DETAILS 15": {
+    "name": "Email: Clare.Haughey.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "MSP contact details 15",
+    "email": "85 Main Street, Rutherglen, Glasgow, G73 2JQ"
+  },
+  "CUMBERNAULD AND KILSYTH (C)": {
+    "name": "Tel: 0141 561 5131",
+    "party": "Jamie Hepburn (SNP)",
+    "constituency": "Cumbernauld and Kilsyth (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "LINLITHGOW (C)": {
+    "name": "Tel: 01620 849350",
+    "party": "Fiona Hyslop (SNP)",
+    "constituency": "Linlithgow (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: FIONA.HYSLOP.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5921",
+    "constituency": "Email: Fiona.Hyslop.msp@parliament.scot",
+    "email": "Daniel Johnson (Lab)"
+  },
+  "TEL: 0131 541 2145": {
+    "name": "Constituency contact details:",
+    "party": "134 Comiston Road, Edinburgh, EH10 5QN",
+    "constituency": "Tel: 0131 541 2145",
+    "email": "Alison Johnstone (NPA)"
+  },
+  "EMAIL: LIAM.KERR.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6973",
+    "constituency": "Email: Liam.Kerr.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "EMAIL: STEPHEN.KERR.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5647",
+    "constituency": "Email: Stephen.Kerr.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "BILL KIDD (SNP)": {
+    "name": "Room 35-36, Airdrie Business Centre, 1 Chapel Lane, Airdrie, ML6 6GX",
+    "party": "Tel: 01236 439562",
+    "constituency": "Bill Kidd (SNP)",
+    "email": "Glasgow Anniesland (C)"
+  },
+  "TEL: 0131 348 6592": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6592",
+    "email": "Email: Bill.Kidd.msp@parliament.scot"
+  },
+  "RICHARD LEONARD (LAB)": {
+    "name": "Tel: 0131 348 6484",
+    "party": "Email: Monica.Lennon.msp@parliament.scot",
+    "constituency": "Richard Leonard (Lab)",
+    "email": "Central Scotland (R)"
+  },
+  "MORAY (C)": {
+    "name": "Email: Richard.Leonard.msp@parliament.scot",
+    "party": "Richard Lochhead (SNP)",
+    "constituency": "Moray (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: DOUGLAS.LUMSDEN.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5967",
+    "constituency": "Email: Douglas.Lumsden.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "EDINBURGH PENTLANDS (C)": {
+    "name": "80 Rosemount Place, Aberdeen, AB25 2XN",
+    "party": "Gordon MacDonald (SNP)",
+    "constituency": "Edinburgh Pentlands (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: GORDON.MACDONALD.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5741",
+    "constituency": "Email: Gordon.MacDonald.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MSP CONTACT DETAILS 18": {
+    "name": "9 Kingsknowe Park, Edinburgh, EH14 2JQ",
+    "party": "Tel: 0131 443 0595",
+    "constituency": "MSP contact details 18",
+    "email": "Fulton MacGregor (SNP)"
+  },
+  "ATRIUM BUSINESS CENTRE, NORTH CALDEEN ROAD, COATBRIDGE, ML5 4EF": {
+    "name": "Email: Fulton.MacGregor.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Atrium Business Centre, North Caldeen Road, Coatbridge, ML5 4EF",
+    "email": "Tel: 01236 897540"
+  },
+  "RONA MACKAY (SNP)": {
+    "name": "Tel: 0131 348 6341",
+    "party": "Email: Gillian.Mackay.msp@parliament.scot",
+    "constituency": "Rona Mackay (SNP)",
+    "email": "Strathkelvin and Bearsden (C)"
+  },
+  "TEL: 0131 348 5789": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5789",
+    "email": "Email: Rona.Mackay.msp@parliament.scot"
+  },
+  "TEL: 0141 776 1561": {
+    "name": "Constituency contact details:",
+    "party": "Enterprise House, Southbank Business Park, Kirkintilloch, G66 1XQ",
+    "constituency": "Tel: 0141 776 1561",
+    "email": "Ben Macpherson (SNP)"
+  },
+  "TEL: 0131 600 0134": {
+    "name": "Constituency contact details:",
+    "party": "34 Constitution Street, Leith, Edinburgh, EH6 6RS",
+    "constituency": "Tel: 0131 600 0134",
+    "email": "Ruth Maguire (SNP)"
+  },
+  "CALEDONIAN HOUSE, 100 HIGH STREET, IRVINE, KA12 0AX": {
+    "name": "Email: Ruth.Maguire.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Caledonian House, 100 High Street, Irvine, KA12 0AX",
+    "email": "Tel: 01294 276730"
+  },
+  "ABERDEENSHIRE EAST (C)": {
+    "name": "staff will get back to you.",
+    "party": "Gillian Martin (SNP)",
+    "constituency": "Aberdeenshire East (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: GILLIAN.MARTIN.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6956",
+    "constituency": "Email: Gillian.Martin.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "JOHN MASON (IND)": {
+    "name": "Suite A, Unit 6, Colpy Business Park, Oldmeldrum, Aberdeenshire, AB51 0FU",
+    "party": "Tel: 01651 871750",
+    "constituency": "John Mason (Ind)",
+    "email": "Glasgow Shettleston (C)"
+  },
+  "EMAIL: JOHN.MASON.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: John.Mason.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MSP CONTACT DETAILS 20": {
+    "name": "1335 Gallowgate, Glasgow, G31 4DN",
+    "party": "Tel: 0141 550 4327",
+    "constituency": "MSP contact details 20",
+    "email": "Michael Matheson (SNP)"
+  },
+  "TEL: 01324 629271": {
+    "name": "Constituency contact details:",
+    "party": "Suite 5, Brightstone Spaces, Williamson Street, Falkirk, FK1 1PR",
+    "constituency": "Tel: 01324 629271",
+    "email": "M\u00e0iri McAllan (SNP)"
+  },
+  "TEL: 01555 664243": {
+    "name": "Constituency contact details:",
+    "party": "12 St Vincent Place, Lanark, South Lanarkshire, ML11 7LA",
+    "constituency": "Tel: 01555 664243",
+    "email": "Liam McArthur (LD)"
+  },
+  "14 PALACE ROAD, KIRKWALL, ORKNEY ISLANDS, KW15 1PA": {
+    "name": "Email: Liam.McArthur.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "14 Palace Road, Kirkwall, Orkney Islands, KW15 1PA",
+    "email": "Tel: 01856 876541"
+  },
+  "31 CANMORE STREET, DUNFERMLINE, FIFE, KY12 7NU": {
+    "name": "Email: Roz.McCall.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "31 Canmore Street, Dunfermline, Fife, KY12 7NU",
+    "email": "Roz McCall became regional member for Mid Scotland and Fife on 6 September"
+  },
+  "IVAN MCKEE (SNP)": {
+    "name": "2022. She replaced Dean Lockhart.",
+    "party": "MSP contact details 21",
+    "constituency": "Ivan McKee (SNP)",
+    "email": "Glasgow Provan (C)"
+  },
+  "TEL: 0131 348 6950": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6950",
+    "email": "Email: Ivan.McKee.msp@parliament.scot"
+  },
+  "TEL: 0141 556 4441": {
+    "name": "Constituency contact details:",
+    "party": "12 Hillfoot Street, Dennistoun, Glasgow, G31 2LF",
+    "constituency": "Tel: 0141 556 4441",
+    "email": "Paul McLennan (SNP)"
+  },
+  "5A MITCHELL\u2019S CLOSE, HADDINGTON, EH41 3NB": {
+    "name": "Email: Paul.McLennan.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "5a Mitchell\u2019s Close, Haddington, EH41 3NB",
+    "email": "Tel: 01620 849240"
+  },
+  "26 GREY PLACE, GREENOCK, INVERCLYDE, PA15 1YF": {
+    "name": "Email: Stuart.McMillan.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "26 Grey Place, Greenock, Inverclyde, PA15 1YF",
+    "email": "Tel: 01475 720930"
+  },
+  "MSP CONTACT DETAILS 22": {
+    "name": "1BF",
+    "party": "Tel: 0141 737 8010",
+    "constituency": "MSP contact details 22",
+    "email": "Pauline McNeill (Lab)"
+  },
+  "ARGYLL AND BUTE (C)": {
+    "name": "Email: Pauline.McNeill.msp@parliament.scot",
+    "party": "Jenni Minto (SNP)",
+    "constituency": "Argyll and Bute (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: JENNI.MINTO.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5106",
+    "constituency": "Email: Jenni.Minto.msp@parliament.scot",
+    "email": "Carol Mochan (Lab)"
+  },
+  "CURRENTLY WORKING FROM HOME, PLEASE USE PO BOX 8526, PRESTWICK, KA9 9BA": {
+    "name": "Email: Carol.Mochan.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Currently working from home, please use PO Box 8526, Prestwick, KA9 9BA",
+    "email": "Tel: 07554 546 938"
+  },
+  "OLIVER MUNDELL (CON)": {
+    "name": "Tel: 01463 230777",
+    "party": "MSP contact details 23",
+    "constituency": "Oliver Mundell (Con)",
+    "email": "Dumfriesshire (C)"
+  },
+  "TEL: 0131 348 5631": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5631",
+    "email": "Email: Oliver.Mundell.msp@parliament.scot"
+  },
+  "TEL: 01683 222770": {
+    "name": "Constituency contact details:",
+    "party": "Monro House, Duncan Drive, Moffat, DG10 9JW",
+    "constituency": "Tel: 01683 222770",
+    "email": "Audrey Nicoll (SNP)"
+  },
+  "51 VICTORIA ROAD, ABERDEEN, AB11 9LS": {
+    "name": "Email: Audrey.Nicoll.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "51 Victoria Road, Aberdeen, AB11 9LS",
+    "email": "Tel: 01224 876743"
+  },
+  "NAME CHANGED FROM ASH DENHAM TO ASH REGAN ON 13 OCTOBER 2021": {
+    "name": "Ash Regan (Alba)",
+    "party": "Edinburgh Eastern (C)",
+    "constituency": "Name changed from Ash Denham to Ash Regan on 13 October 2021",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: ASH.REGAN.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 659 4707",
+    "constituency": "Email: Ash.Regan.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MSP CONTACT DETAILS 24": {
+    "name": "18 Niddrie Mains Road, Edinburgh, EH16 4GB",
+    "party": "Tel: 0131 661 4888",
+    "constituency": "MSP contact details 24",
+    "email": "Willie Rennie (LD)"
+  },
+  "UNIT G1, GRANARY BUSINESS CENTRE, COAL ROAD, CUPAR, KY15 5YQ": {
+    "name": "Email: Willie.Rennie.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "Unit G1, Granary Business Centre, Coal Road, Cupar, KY15 5YQ",
+    "email": "Tel: 01334 656361"
+  },
+  "DUNDEE CITY EAST (C)": {
+    "name": "Tel: 0131 605 1947",
+    "party": "Shona Robison (SNP)",
+    "constituency": "Dundee City East (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: EMMA.RODDICK.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6328",
+    "constituency": "Email: Emma.Roddick.msp@parliament.scot",
+    "email": "MSP contact details 25"
+  },
+  "MID SCOTLAND AND FIFE (R)": {
+    "name": "Tel: 01463 230777",
+    "party": "Alex Rowley (Lab)",
+    "constituency": "Mid Scotland and Fife (R)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: ALEX.ROWLEY.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6826",
+    "constituency": "Email: Alex.Rowley.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "MARK RUSKELL (GREEN)": {
+    "name": "Ore Valley Business Centre, 93 Main Street, Lochgelly, KY5 9AF",
+    "party": "Tel: 01592 786725",
+    "constituency": "Mark Ruskell (Green)",
+    "email": "Mid Scotland and Fife (R)"
+  },
+  "TEL: 0131 348 6468": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6468",
+    "email": "Email: Mark.Ruskell.msp@parliament.scot"
+  },
+  "TEL: 01786 448203": {
+    "name": "Constituency contact details:",
+    "party": "Unit 23, Stirling Business Centre, Wellgreen, Stirling, FK8 2DZ",
+    "constituency": "Tel: 01786 448203",
+    "email": "Davy Russell (Lab)"
+  },
+  "ANAS SARWAR (LAB)": {
+    "name": "Email: Davy.Russell.msp@parliament.scot",
+    "party": "MSP contact details 26",
+    "constituency": "Anas Sarwar (Lab)",
+    "email": "Glasgow (R)"
+  },
+  "TEL: 0131 348 5830": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5830",
+    "email": "Email: Anas.Sarwar.msp@parliament.scot"
+  },
+  "LIZ SMITH (CON)": {
+    "name": "Tel: 0131 348 6997",
+    "party": "Email: Lorna.Slater.msp@parliament.scot",
+    "constituency": "Liz Smith (Con)",
+    "email": "Mid Scotland and Fife (R)"
+  },
+  "TEL: 0131 348 6762": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6762",
+    "email": "Email: Elizabeth.Smith.msp@parliament.scot"
+  },
+  "TEL: 01738 553990": {
+    "name": "Constituency contact details:",
+    "party": "The Control Tower, Perth Airport, Scone, Perth, PH2 6PL",
+    "constituency": "Tel: 01738 553990",
+    "email": "MSP contact details 27"
+  },
+  "DUNFERMLINE (C)": {
+    "name": "Tel: 01387 279205",
+    "party": "Shirley-Anne Somerville (SNP)",
+    "constituency": "Dunfermline (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EAST KILBRIDE (C)": {
+    "name": "Tel: 01383 871986",
+    "party": "Collette Stevenson (SNP)",
+    "constituency": "East Kilbride (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: COLLETTE.STEVENSON.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5502",
+    "constituency": "Email: Collette.Stevenson.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "ALEXANDER STEWART (CON)": {
+    "name": "1/3 Strathmore House, East Kilbride, Glasgow, G74 1LF",
+    "party": "Tel: 01355 232800",
+    "constituency": "Alexander Stewart (Con)",
+    "email": "Mid Scotland and Fife (R)"
+  },
+  "TEL: 0131 348 6134": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6134",
+    "email": "Email: Alexander.Stewart.msp@parliament.scot"
+  },
+  "TEL: 01383 720530": {
+    "name": "Constituency contact details:",
+    "party": "31 Canmore Street, Dunfermline, Fife, KY12 7NU",
+    "constituency": "Tel: 01383 720530",
+    "email": "MSP contact details 28"
+  },
+  "KEVIN STEWART (SNP)": {
+    "name": "Tel: 0131 348 5503",
+    "party": "Email: Kaukab.Stewart.msp@parliament.scot",
+    "constituency": "Kevin Stewart (SNP)",
+    "email": "Aberdeen Central (C)"
+  },
+  "EMAIL: KEVIN.STEWART.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Kevin.Stewart.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "NICOLA STURGEON (SNP)": {
+    "name": "Suite L1, Woodburn House, 4/5 Golden Square, Aberdeen, AB10 1RD",
+    "party": "Tel. 01224 624719",
+    "constituency": "Nicola Sturgeon (SNP)",
+    "email": "Glasgow Southside (C)"
+  },
+  "EMAIL: NICOLA.STURGEON.MSP@PARLIAMENT.SCOT": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Email: Nicola.Sturgeon.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "PAUL SWEENEY (LAB)": {
+    "name": "Unit 3, Govanhill Workspace, 69 Dixon Road, Glasgow, G42 8AT",
+    "party": "Tel: 0141 424 1174",
+    "constituency": "Paul Sweeney (Lab)",
+    "email": "Glasgow (R)"
+  },
+  "TEL: 0131 348 6388": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6388",
+    "email": "Email: Paul.Sweeney.msp@parliament.scot"
+  },
+  "MSP CONTACT DETAILS 29": {
+    "name": "Constituency contact details:",
+    "party": "Brunswick House, 51 Wilson Street, Glasgow, G1 1UZ",
+    "constituency": "MSP contact details 29",
+    "email": "John Swinney (SNP)"
+  },
+  "17-19 LESLIE STREET, BLAIRGOWRIE, PH10 6AH": {
+    "name": "Email: John.Swinney.msp@parliament.scot",
+    "party": "Constituency contact details:",
+    "constituency": "17-19 Leslie Street, Blairgowrie, PH10 6AH",
+    "email": "Tel: 01250 876576"
+  },
+  "CAITHNESS, SUTHERLAND AND ROSS (C)": {
+    "name": "Tel: 01324 357373",
+    "party": "Maree Todd (SNP)",
+    "constituency": "Caithness, Sutherland and Ross (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: MAREE.TODD.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6944",
+    "constituency": "Email: Maree.Todd.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "DAVID TORRANCE (SNP)": {
+    "name": "31 High Street, Alness, Ross-shire, IV17 0PT",
+    "party": "Tel: 01349 888281",
+    "constituency": "David Torrance (SNP)",
+    "email": "Kirkcaldy (C)"
+  },
+  "TEL: 0131 348 6892": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6892",
+    "email": "Email: David.Torrance.msp@parliament.scot"
+  },
+  "TEL: 01592 200349": {
+    "name": "Constituency contact details:",
+    "party": "53 Kirk Wynd, Kirkcaldy, KY1 1EH",
+    "constituency": "Tel: 01592 200349",
+    "email": "MSP contact details 30"
+  },
+  "EMAIL: MERCEDES.VILLALBA.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 6390",
+    "constituency": "Email: Mercedes.Villalba.msp@parliament.scot",
+    "email": "Sue Webber (Con)"
+  },
+  "EMAIL: ANNIE.WELLS.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5991",
+    "constituency": "Email: Annie.Wells.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "TESS WHITE (CON)": {
+    "name": "1018 Maryhill Road, Glasgow, G20 9TE",
+    "party": "MSP contact details 31",
+    "constituency": "Tess White (Con)",
+    "email": "North East Scotland (R)"
+  },
+  "TEL: 0131 348 6218": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 6218",
+    "email": "Email: Tess.White.msp@parliament.scot"
+  },
+  "TEL: 01224 640152": {
+    "name": "Constituency contact details:",
+    "party": "80 Rosemount Place, Aberdeen, AB25 2XN",
+    "constituency": "Tel: 01224 640152",
+    "email": "Martin Whitfield (Lab)"
+  },
+  "CARRICK, CUMNOCK AND DOON VALLEY (C)": {
+    "name": "Email: Martin.Whitfield.msp@parliament.scot",
+    "party": "Elena Whitham (SNP)",
+    "constituency": "Carrick, Cumnock and Doon Valley (C)",
+    "email": "Parliamentary contact details:"
+  },
+  "EMAIL: ELENA.WHITHAM.MSP@PARLIAMENT.SCOT": {
+    "name": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "party": "Tel: 0131 348 5494",
+    "constituency": "Email: Elena.Whitham.msp@parliament.scot",
+    "email": "Constituency contact details:"
+  },
+  "BRIAN WHITTLE (CON)": {
+    "name": "46-48 Glaisnock Street, Cumnock, East Ayrshire, KA18 1BY",
+    "party": "Tel: 01290 319126",
+    "constituency": "Brian Whittle (Con)",
+    "email": "South Scotland (R)"
+  },
+  "TEL: 0131 348 5623": {
+    "name": "Parliamentary contact details:",
+    "party": "The Scottish Parliament, Edinburgh, EH99 1SP",
+    "constituency": "Tel: 0131 348 5623",
+    "email": "Email: Brian.Whittle.msp@parliament.scot"
+  },
+  "MSP CONTACT DETAILS 32": {
+    "name": "Tel: 0131 348 6296",
+    "party": "Email: Beatrice.Wishart.msp@parliament.scot",
+    "constituency": "MSP contact details 32",
+    "email": "Humza Yousaf (SNP)"
+  },
+  "TEL: 0141 882 4647": {
+    "name": "Constituency contact details:",
+    "party": "Suite 14, Fairfield Heritage Centre, 1048 Govan Road, Glasgow, G51 4XS",
+    "constituency": "Tel: 0141 882 4647",
+    "email": "About SPICe"
+  },
+  "FOR MORE INFORMATION, PLEASE VISIT OUR WEBSITE AT WWW.PARLIAMENT.SCOT/CHAMBER-AND-": {
+    "name": "The Scottish Parliament Information Centre (SPICe) provides impartial, factual,",
+    "party": "accurate and timely information and analysis for the Parliament.",
+    "constituency": "For more information, please visit our website at www.parliament.scot/chamber-and-",
+    "email": "committees/research-prepared-for-parliament"
   }
 }
