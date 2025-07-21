@@ -325,6 +325,9 @@ async function fetchReps(postcode) {
 }
 async function getEmailsFromPostcode(postcode) {
 const { spc, diw, uta } = await fetchReps(postcode.toUpperCase().trim());
+console.log("SPC:", spc);
+console.log("Looking for key:", spc?.toUpperCase().trim());
+console.log("Available keys in mspContacts.json:", Object.keys(mspData));
 
   // Load MSP and councillor data (can also preload it)
   const mspData = await fetch('mspContacts.json').then(res => res.json());
