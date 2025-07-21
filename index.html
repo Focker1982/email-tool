@@ -324,13 +324,13 @@ async function fetchReps(postcode) {
   return { spc, diw, uta };
 }
 async function getEmailsFromPostcode(postcode) {
-  const { spc, diw, uta } = await fetchReps(postcode);
+const { spc, diw, uta } = await fetchReps(postcode.toUpperCase().trim());
 
   // Load MSP and councillor data (can also preload it)
   const mspData = await fetch('mspContacts.json').then(res => res.json());
   const cllrData = await fetch('councillors.json').then(res => res.json());
 
-  const msp = mspData[spc] || null;
+const msp = mspData[spc?.toUpperCase().trim()] || null;
   const councillors = cllrData[diw] || cllrData[uta] || [];
 
   return {
