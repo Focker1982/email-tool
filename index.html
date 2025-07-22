@@ -354,19 +354,34 @@ console.log("Found MSP:", msp);
       });
     }
 
-    async function generateEmail() {
-      const name = document.getElementById("name").value.trim();
-      const address = document.getElementById("address").value.trim();
-      const postcode = document.getElementById("postcode").value.trim();
-      const other = document.getElementById("other").value.trim();
+    async function getEmailsFromPostcode(postcode) {
+  const { spc, diw, uta } = await fetchReps(postcode);
 
-      const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-      const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
+  const mspData = await fetch('mspContacts.json').then(res => res.json());
+  const cllrData = await fetch('councillors.json').then(res => res.json());
 
-      if (!name || !address || !postcode) {
-        alert("Please fill in your name, address, and postcode.");
-        return;
-      }
+  const normalise = str =>
+    str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+
+  const spcKey = Object.keys(mspData).find(
+    key => normalise(key) === normalise(spc)
+  );
+  const msp = spcKey ? mspData[spcKey] : null;
+
+  const diwKey = Object.keys(cllrData).find(
+    key => normalise(key) === normalise(diw)
+  );
+  const utaKey = Object.keys(cllrData).find(
+    key => normalise(key) === normalise(uta)
+  );
+
+  const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
+
+  return {
+    msp,
+    councillors
+  };
+}
 
       if (checkboxes.length === 0 && !other) {
         alert("Please select at least one concern or fill in the other box.");
