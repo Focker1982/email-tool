@@ -369,9 +369,9 @@
 
     if (other) chosenLines.push(other);
 
-    const newline = '\\n\\n';
+    const newline = '\n\\n';
     const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.";
-    const message = `Dear MSP,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
+    const message = `Dear MSPs & Councillors,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards.`;
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
     try {
