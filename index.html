@@ -298,145 +298,113 @@
     <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban. You can personalise the content further once it opens in your email client.</p>
   </footer>
 
-  <script>
-async function fetchReps(postcode) {
-  const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
-  const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
-
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Postcode lookup failed.");
-  
-  const data = await res.json();
-  const areas = data.areas;
-
-  // Extract names
-  let spc = null; // Scottish Parliament Constituency
-  let diw = null; // Council Ward
-  let uta = null; // Council
-
-  for (const area of Object.values(areas)) {
-    if (area.type === "SPC") spc = area.name;
-    if (area.type === "DIW") diw = area.name;
-    if (area.type === "UTA") uta = area.name;
+<script>
+  function toggleAllIssues(source) {
+    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    checkboxes.forEach(cb => {
+      if (cb.id !== 'selectAll') {
+        cb.checked = source.checked;
+      }
+    });
   }
 
-  return { spc, diw, uta };
-}
-async function getEmailsFromPostcode(postcode) {
-  const { spc, diw, uta } = await fetchReps(postcode);
+  async function fetchReps(postcode) {
+    const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+    const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Postcode lookup failed.");
+    const data = await res.json();
+    const areas = data.areas;
 
-  const mspData = await fetch('mspContacts.json').then(res => res.json());
-  const cllrData = await fetch('councillors.json').then(res => res.json());
-
-  console.log("SPC from MapIt:", spc);
-  console.log("Looking for MSP key:", spc?.toUpperCase().trim());
-  console.log("Available MSP keys in mspContacts.json:", Object.keys(mspData));
-
-  const msp = Object.values(mspData).find(entry =>
-  entry.constituency?.toUpperCase().trim() === spc?.toUpperCase().trim()
-) || null;
-console.log("Found MSP:", msp);
-  const councillors = cllrData[diw] || cllrData[uta] || [];
-
-  return {
-    msp,
-    councillors
-  };
-}
-
-    function toggleAllIssues(source) {
-  const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-  checkboxes.forEach(cb => {
-    if (cb !== source) {
-      cb.checked = source.checked;
+    let spc = null, diw = null, uta = null;
+    for (const area of Object.values(areas)) {
+      if (area.type === "SPC") spc = area.name;
+      if (area.type === "DIW") diw = area.name;
+      if (area.type === "UTA") uta = area.name;
     }
-  });
-}
 
-    async function getEmailsFromPostcode(postcode) {
-  const { spc, diw, uta } = await fetchReps(postcode);
+    return { spc, diw, uta };
+  }
 
-  const mspData = await fetch('mspContacts.json').then(res => res.json());
-  const cllrData = await fetch('councillors.json').then(res => res.json());
+  async function getEmailsFromPostcode(postcode) {
+    const { spc, diw, uta } = await fetchReps(postcode);
+    const mspData = await fetch('mspContacts.json').then(res => res.json());
+    const cllrData = await fetch('councillors.json').then(res => res.json());
 
-  const normalise = str =>
-    str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+    const normalise = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+    const spcKey = Object.keys(mspData).find(key => normalise(key) === normalise(spc));
+    const msp = spcKey ? mspData[spcKey] : null;
 
-  const spcKey = Object.keys(mspData).find(
-    key => normalise(key) === normalise(spc)
-  );
-  const msp = spcKey ? mspData[spcKey] : null;
+    const diwKey = Object.keys(cllrData).find(key => normalise(key) === normalise(diw));
+    const utaKey = Object.keys(cllrData).find(key => normalise(key) === normalise(uta));
+    const councillors = cllrData[diwKey] || cllrData[utaKey] || [];
 
-  const diwKey = Object.keys(cllrData).find(
-    key => normalise(key) === normalise(diw)
-  );
-  const utaKey = Object.keys(cllrData).find(
-    key => normalise(key) === normalise(uta)
-  );
+    return { msp, councillors };
+  }
 
-  const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
+  async function generateEmail() {
+    const name = document.getElementById("name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const postcode = document.getElementById("postcode").value.trim();
+    const other = document.getElementById("other").value.trim();
 
-  return {
-    msp,
-    councillors
-  };
-}
+    const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
 
-      if (checkboxes.length === 0 && !other) {
-        alert("Please select at least one concern or fill in the other box.");
+    if (!name || !address || !postcode) {
+      alert("Please fill in your name, address, and postcode.");
+      return;
+    }
+
+    if (checkboxes.length === 0 && !other) {
+      alert("Please select at least one concern or fill in the other box.");
+      return;
+    }
+
+    const selectedSubjects = checkboxes.map(cb => cb.value);
+    const chosenLines = selectedSubjects.map(issue => {
+      const options = issues[issue];
+      return options[Math.floor(Math.random() * options.length)];
+    });
+
+    if (other) chosenLines.push(other);
+
+    const newline = '\\n\\n';
+    const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.";
+    const message = `Dear MSP,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
+    const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
+
+    try {
+      const repData = await getEmailsFromPostcode(postcode);
+      const emails = [];
+      if (repData.msp?.email) emails.push(repData.msp.email);
+      repData.councillors?.forEach(c => {
+        if (c.email) emails.push(c.email);
+      });
+
+      if (emails.length === 0) {
+        alert("We couldn’t find any email contacts for that postcode.");
         return;
       }
 
-      const newline = '\n\n';
-      const selectedSubjects = checkboxes.map(cb => cb.value);
-      const chosenLines = selectedSubjects.map(issue => {
-        const options = issues[issue];
-        return options[Math.floor(Math.random() * options.length)];
-      });
+      const ccAddress = "pavementparkingwatch@gmail.com";
+      const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-      if (other) chosenLines.push(other);
+      const tempLink = document.createElement("a");
+      tempLink.href = mailtoLink;
+      tempLink.style.display = "none";
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
 
-      const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.";
-      const message = `Dear MSP,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
-      const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
-
-      try {
-const repData = await getEmailsFromPostcode(postcode);
-console.log("Rep data:", repData);
-
-if (!repData) {
-  alert("No representative data returned.");
-  return;
-}
-if (!repData.msp && (!repData.councillors || repData.councillors.length === 0)) {
-  alert("We couldn’t find any email contacts for that postcode.");
-  return;
-}
-
-        if (emails.length === 0) {
-          alert("We couldn’t find any email contacts for that postcode.");
-          return;
-        }
-
-        const ccAddress = "pavementparkingwatch@gmail.com";
-        const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-
-        const tempLink = document.createElement("a");
-        tempLink.href = mailtoLink;
-        tempLink.style.display = "none";
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-
-        setTimeout(() => {
-          alert("If your email app didn’t open, please check your browser settings or copy the text manually.");
-        }, 1000);
-
-      } catch (error) {
-        console.error("Error fetching representatives:", error);
-        alert("Something went wrong looking up your representatives. Please double-check the postcode.");
-      }
+      setTimeout(() => {
+        alert("If your email app didn’t open, please check your browser settings or copy the text manually.");
+      }, 1000);
+    } catch (err) {
+      console.error("Error fetching data:", err);
+      alert("There was a problem looking up your representatives. Please check your postcode and try again.");
     }
-  </script>
+  }
+</script>
 </body>
 </html>
