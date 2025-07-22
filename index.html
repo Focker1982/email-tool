@@ -406,13 +406,16 @@ console.log("Found MSP:", msp);
 
       try {
 const repData = await getEmailsFromPostcode(postcode);
-const emails = [];
+console.log("Rep data:", repData);
 
-if (repData.msp && repData.msp.email) emails.push(repData.msp.email);
-
-repData.councillors.forEach(c => {
-  if (c.email) emails.push(c.email);
-});
+if (!repData) {
+  alert("No representative data returned.");
+  return;
+}
+if (!repData.msp && (!repData.councillors || repData.councillors.length === 0)) {
+  alert("We couldn’t find any email contacts for that postcode.");
+  return;
+}
 
         if (emails.length === 0) {
           alert("We couldn’t find any email contacts for that postcode.");
