@@ -346,10 +346,13 @@ console.log("Found MSP:", msp);
 }
 
     function toggleAllIssues(source) {
-      const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-      checkboxes.forEach(cb => {
-        if (cb.id !== 'selectAll') {
-          cb.checked = source.checked;
+  const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+  checkboxes.forEach(cb => {
+    if (cb !== source) {
+      cb.checked = source.checked;
+    }
+  });
+}
         }
       });
     }
