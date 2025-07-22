@@ -392,7 +392,8 @@
       }
 
       const ccAddress = "pavementparkingwatch@gmail.com";
-      const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      const body = message.replace(/\n/g, '%0D%0A');
+      const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${body}`;
 
       const tempLink = document.createElement("a");
       tempLink.href = mailtoLink;
