@@ -323,23 +323,49 @@
     return { spc, diw, uta };
   }
 
-  async function getEmailsFromPostcode(postcode) {
-    const { spc, diw, uta } = await fetchReps(postcode);
-    const mspData = await fetch('mspContacts.json').then(res => res.json());
-    const cllrData = await fetch('councillors.json').then(res => res.json());
+async function getEmailsFromPostcode(postcode) {
+  const { spc, diw, uta, spe } = await (async function fetchReps(postcode) {
+    const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+    const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Postcode lookup failed.");
+    const data = await res.json();
+    const areas = data.areas;
 
-    const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+    let spc = null, diw = null, uta = null, spe = null;
 
-    const spcKey = Object.keys(mspData).find(key => normalize(key) === normalize(spc));
-    const msp = spcKey ? mspData[spcKey] : null;
+    for (const area of Object.values(areas)) {
+      if (area.type === "SPC") spc = area.name;
+      if (area.type === "DIW") diw = area.name;
+      if (area.type === "UTA") uta = area.name;
+      if (area.type === "SPE") spe = area.name;
+    }
+    return { spc, diw, uta, spe };
+  })(postcode);
 
-    const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
-    const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
+  const mspData = await fetch('mspContacts.json').then(res => res.json());
+  const cllrData = await fetch('councillors.json').then(res => res.json());
 
-    const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
+  const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
-    return { msp, councillors };
-  }
+  const constituencyMSP = Object.values(mspData).find(
+    entry => normalize(entry.constituency || '') === normalize(spc)
+  );
+
+  const regionalMSPs = Object.values(mspData).filter(
+    entry => normalize(entry.region || '') === normalize(spe)
+  );
+
+  const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
+  const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
+
+  const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
+
+  return {
+    msps: [constituencyMSP, ...regionalMSPs].filter(Boolean),
+    councillors
+  };
+}
 
   async function generateEmail() {
     const name = document.getElementById("name").value.trim();
@@ -377,14 +403,19 @@
       const repData = await getEmailsFromPostcode(postcode);
       console.log("Rep data:", repData);
 
-      const emails = [];
+const emails = [];
 
-      if (repData.msp?.email) emails.push(repData.msp.email);
-      if (repData.councillors?.length) {
-        repData.councillors.forEach(c => {
-          if (c.email) emails.push(c.email);
-        });
-      }
+if (repData.msps?.length) {
+  repData.msps.forEach(msp => {
+    if (msp.email) emails.push(msp.email);
+  });
+}
+
+if (repData.councillors?.length) {
+  repData.councillors.forEach(c => {
+    if (c.email) emails.push(c.email);
+  });
+}
 
       if (emails.length === 0) {
         alert("We couldn’t find any email contacts for that postcode.");
