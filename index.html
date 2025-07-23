@@ -333,7 +333,6 @@ async function getEmailsFromPostcode(postcode) {
     const areas = data.areas;
 
     let spc = null, diw = null, uta = null, spe = null;
-
     for (const area of Object.values(areas)) {
       if (area.type === "SPC") spc = area.name;
       if (area.type === "DIW") diw = area.name;
@@ -348,21 +347,15 @@ async function getEmailsFromPostcode(postcode) {
 
   const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
-  const constituencyMSP = Object.values(mspData).find(
-    entry => normalize(entry.constituency || '') === normalize(spc)
-  );
-
-  const regionalMSPs = Object.values(mspData).filter(
-    entry => normalize(entry.region || '') === normalize(spe)
-  );
+  const msp = mspData.constituencies[normalize(spc)];
+  const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
   const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
   const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
-
   const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
 
   return {
-    msps: [constituencyMSP, ...regionalMSPs].filter(Boolean),
+    msps: [msp, ...regionalMSPs].filter(Boolean),
     councillors
   };
 }
