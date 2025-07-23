@@ -347,12 +347,16 @@ async function getEmailsFromPostcode(postcode) {
 
   const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
-  const msp = mspData.constituencies[normalize(spc)];
+  const mspKey = Object.keys(mspData.constituencies).find(key => normalize(key) === normalize(spc));
+const msp = mspKey ? mspData.constituencies[mspKey] : null;
   const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
   const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
   const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
-  const councillors = (cllrData[diwKey] || cllrData[utaKey]) || [];
+  const councillors =
+  (diwKey && cllrData[diwKey]) ||
+  (utaKey && cllrData[utaKey]) ||
+  [];
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
