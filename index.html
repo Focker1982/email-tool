@@ -344,6 +344,12 @@ async function getEmailsFromPostcode(postcode) {
 
   const mspData = await fetch('mspContacts.json').then(res => res.json());
   const cllrData = await fetch('councillors.json').then(res => res.json());
+Object.keys(cllrData).forEach(originalKey => {
+  const cleaned = normalize(originalKey);
+  if (cleaned !== originalKey) {
+    cllrData[cleaned] = cllrData[originalKey];
+  }
+});
 
   const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
