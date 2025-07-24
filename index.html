@@ -306,22 +306,23 @@
     });
   }
 
-  async function fetchReps(postcode) {
-    const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
-    const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("Postcode lookup failed.");
-    const data = await res.json();
-    const areas = data.areas;
+async function fetchReps(postcode) {
+  const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+  const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Postcode lookup failed.");
+  const data = await res.json();
+  const areas = data.areas;
 
-    let spc = null, diw = null, uta = null;
-    for (const area of Object.values(areas)) {
-      if (area.type === "SPC") spc = area.name;
-      if (area.type === "DIW") diw = area.name;
-      if (area.type === "UTA") uta = area.name;
-    }
-    return { spc, diw, uta };
+  let spc = null, diw = null, uta = null, spe = null;
+  for (const area of Object.values(areas)) {
+    if (area.type === "SPC") spc = area.name;
+    if (area.type === "DIW") diw = area.name;
+    if (area.type === "UTA") uta = area.name;
+    if (area.type === "SPE") spe = area.name;
   }
+  return { spc, diw, uta, spe };
+}
 
 async function getEmailsFromPostcode(postcode) {
   const { spc, diw, uta, spe } = await (async function fetchReps(postcode) {
