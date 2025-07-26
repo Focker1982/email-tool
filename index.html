@@ -346,6 +346,11 @@ async function getEmailsFromPostcode(postcode) {
   const mspData = await fetch('mspContacts.json').then(res => res.json());
   const cllrData = await fetch('councillors.json').then(res => res.json());
   const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+  const normalizedRegions = {};
+Object.keys(mspData.regions).forEach(regionName => {
+  normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
+});
+mspData.regions = normalizedRegions;
 
   Object.keys(cllrData).forEach(originalKey => {
     const cleaned = normalize(originalKey);
