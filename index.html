@@ -324,6 +324,24 @@ async function fetchReps(postcode) {
   return { spc, diw, uta, spe };
 }
 
+const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+
+const mspData = await fetch('mspContacts.json').then(res => res.json());
+const cllrData = await fetch('councillors.json').then(res => res.json());
+
+const normalizedRegions = {};
+Object.keys(mspData.regions).forEach(regionName => {
+  normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
+});
+mspData.regions = normalizedRegions;
+
+Object.keys(cllrData).forEach(originalKey => {
+  const cleaned = normalize(originalKey);
+  if (cleaned !== originalKey) {
+    cllrData[cleaned] = cllrData[originalKey];
+  }
+});
+
 async function getEmailsFromPostcode(postcode) {
   const { spc, diw, uta, spe } = await (async function fetchReps(postcode) {
     const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
@@ -343,32 +361,22 @@ async function getEmailsFromPostcode(postcode) {
     return { spc, diw, uta, spe };
   })(postcode);
 
-  const mspData = await fetch('mspContacts.json').then(res => res.json());
-  const cllrData = await fetch('councillors.json').then(res => res.json());
-  const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
-  const normalizedRegions = {};
-Object.keys(mspData.regions).forEach(regionName => {
-  normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
-});
-mspData.regions = normalizedRegions;
-
-  Object.keys(cllrData).forEach(originalKey => {
-    const cleaned = normalize(originalKey);
-    if (cleaned !== originalKey) {
-      cllrData[cleaned] = cllrData[originalKey];
-    }
-  });
-
   const mspKey = Object.keys(mspData.constituencies).find(key => normalize(key) === normalize(spc));
-const msp = mspKey ? mspData.constituencies[mspKey] : null;
+  const msp = mspKey ? mspData.constituencies[mspKey] : null;
   const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
   const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
   const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
   const councillors =
-  (diwKey && cllrData[diwKey]) ||
-  (utaKey && cllrData[utaKey]) ||
-  [];
+    (diwKey && cllrData[diwKey]) ||
+    (utaKey && cllrData[utaKey]) ||
+    [];
+
+  console.log("Normalized SPE:", normalize(spe));
+  console.log("Region MSPs found:", regionalMSPs);
+  console.log("Constituency MSP:", msp);
+  console.log("DIW:", diw, "UTA:", uta);
+  console.log("Councillors found:", councillors);
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
