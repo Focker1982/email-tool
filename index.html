@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tell Them This Isn't Working</title>
+  <title>Tell Them This Isn’t Working</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -61,17 +61,17 @@
       margin-top: 20px;
       border-radius: 5px;
     }
-.issue-list label {
-  font-weight: 600;
-  margin: 8px 0;
-  font-size: 1.05em;
-  display: flex;
-  align-items: center;
-}
-.issue-list input[type="checkbox"] {
-  margin-right: 10px;
-  transform: scale(1.2);
-}
+    .issue-list label {
+      font-weight: 600;
+      margin: 8px 0;
+      font-size: 1.05em;
+      display: flex;
+      align-items: center;
+    }
+    .issue-list input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
     button {
       margin-top: 25px;
       padding: 14px 24px;
@@ -111,50 +111,47 @@
       color: #444;
     }
     @media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
-  label {
-    font-size: 1.05em;
-  }
-  input[type="text"],
-  textarea {
-    font-size: 1em;
-    padding: 12px;
-  }
-  button {
-    font-size: 1em;
-    padding: 12px 20px;
-  }
-}
-
+      body {
+        padding: 20px;
+      }
+      label {
+        font-size: 1.05em;
+      }
+      input[type="text"],
+      textarea {
+        font-size: 1em;
+        padding: 12px;
+      }
+      button {
+        font-size: 1em;
+        padding: 12px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-<div style="background: linear-gradient(90deg, #0051a3, #0077cc); padding: 30px 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  <h1 style="color: white; font-size: 2.5em; margin: 0;">Tell Them This Isn’t Working</h1>
-  <p style="color: #e0f0ff; font-size: 1.1em; margin-top: 8px;">
-    Real Voices. Real Streets. Real Problems.
-  </p>
-  
-</div>
-<div class="intro" style="background: #f0f5ff; border-left: 5px solid #003f7d; margin-top: 40px;">
-  <strong>Why does this tool exist?</strong><br><br>
-  This tool makes it easy to add your voice to the campaign — without needing to write from scratch. Every message it creates is unique, personal, and harder for MSPs and councillors to ignore or dismiss as copy-and-paste. That’s intentional. We want them to feel the pressure, hear the variety of real-life concerns, and see the volume of opposition that’s building.
-</div>
+  <div style="background: linear-gradient(90deg, #0051a3, #0077cc); padding: 30px 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <h1 style="color: white; font-size: 2.5em; margin: 0;">Tell Them This Isn’t Working</h1>
+    <p style="color: #e0f0ff; font-size: 1.1em; margin-top: 8px;">Real Voices. Real Streets. Real Problems.</p>
+  </div>
+
+  <div class="intro" style="background: #f0f5ff; border-left: 5px solid #003f7d; margin-top: 40px;">
+    <strong>Why does this tool exist?</strong><br><br>
+    This tool makes it easy to add your voice to the campaign — without needing to write from scratch. Every message it creates is unique, personal, and harder for MSPs and councillors to ignore or dismiss as copy-and-paste. That’s intentional. We want them to feel the pressure, hear the variety of real-life concerns, and see the volume of opposition that’s building.
+  </div>
   <form>
-<label for="name">Your Name:</label>
-<input type="text" id="name" placeholder="e.g. Robert Bruce" autocomplete="name" required>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="e.g. Robert Bruce" autocomplete="name" required>
 
-<label for="address">Your Address:</label>
-<input type="text" id="address" placeholder="e.g. 6 Charlotte Square" autocomplete="street-address" required>
+    <label for="address">Your Address:</label>
+    <input type="text" id="address" placeholder="e.g. 6 Charlotte Square" autocomplete="street-address" required>
 
-<label for="postcode">Postcode:</label>
-<input type="text" id="postcode" placeholder="e.g. EH2 4DR" autocomplete="postal-code" required>
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" placeholder="e.g. EH2 4DR" autocomplete="postal-code" required>
 
-<div class="issue-list">
-  <strong>Select the concerns that affect your street:</strong>
-  <label><input type="checkbox" id="selectAll" onclick="toggleAllIssues(this)"> 🔘 Select all</label>
+    <div class="issue-list">
+      <strong>Select the concerns that affect your street:</strong>
+      <label><input type="checkbox" id="selectAll" onclick="toggleAllIssues(this)"> 🔘 Select all</label>
       <label><input type="checkbox" value="emergency"> 🚑 Emergency vehicles could be blocked</label>
       <label><input type="checkbox" value="accessibility"> ♿️ Accessibility needs not considered</label>
       <label><input type="checkbox" value="prams"> 🧒 Children and prams forced to share reduced road space</label>
@@ -170,10 +167,14 @@
     </div>
 
     <label for="other">Write your own concerns:</label>
-<textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
+    <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
 
+    <button type="button" onclick="generateEmail()">Open Email</button>
   </form>
 
+  <footer>
+    <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban. You can personalise the content further once it opens in your email client.</p>
+  </footer>
 <script>
   const issues = {
     emergency: [
@@ -210,7 +211,11 @@
       "Instead of improving safety, the new layout has increased tension on the road. Visibility is worse, space is tighter, and what used to be a calm residential route now feels more stressful for drivers and pedestrians alike.",
       "This policy hasn’t made our street safer. It’s created narrower lanes, reduced escape space for pedestrians, and made passing or reversing more dangerous than before.",
       "By forcing all parking onto the road, the policy increases the chance of collisions and close calls — particularly where visibility is already limited. That’s not what safer streets look like."
-    ],
+    ]
+  };
+</script>
+<script>
+  Object.assign(issues, {
     blocked: [
       "Pavements in our area are regularly obstructed by council bins — especially on collection days. It’s frustrating to be told we’re creating access issues when the pavement isn’t usable in the first place.",
       "Even before the ban, residents had to navigate around multiple council bins left out on narrow pavements. Penalising residents while ignoring that reality feels inconsistent and unfair.",
@@ -236,7 +241,7 @@
       "This policy has increased hostility. People are reporting each other, questioning who left what note — and that’s not how strong neighbourhoods are built.",
       "Something as basic as parking used to be managed with common sense and courtesy. Now it’s turning into a wedge between people who live side-by-side."
     ]
-  };
+  });
 
   const subjectLines = [
     "Real concerns from my street",
@@ -291,13 +296,6 @@
     "I support access — but not this way"
   ];
 </script>
-    <button type="button" onclick="generateEmail()">Open Email</button>
-  </form>
-
-  <footer>
-    <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban. You can personalise the content further once it opens in your email client.</p>
-  </footer>
-
 <script>
   async function init() {
     const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
@@ -418,9 +416,16 @@
         alert("Something went wrong looking up your representatives. Please double-check the postcode.");
       }
     };
+
+    document.getElementById("selectAll").addEventListener("click", function () {
+      const isChecked = this.checked;
+      const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+      checkboxes.forEach(cb => {
+        if (cb.id !== 'selectAll') cb.checked = isChecked;
+      });
+    });
   }
 
   init();
 </script>
 </body>
-</html>
