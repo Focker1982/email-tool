@@ -1,471 +1,493 @@
 {
   "constituencies": {
-    "paisley": {
-      "name": "George Adam",
-      "email": "George.Adam.msp@parliament.scot",
-      "constituency": "Paisley",
-      "type": "C"
-    },
-    "banffshireandbuchancoast": {
-      "name": "Karen Adam",
-      "email": "Karen.Adam.msp@parliament.scot",
-      "constituency": "Banffshire and Buchan Coast",
-      "type": "C"
-    },
-    "motherwellandwishaw": {
-      "name": "Clare Adamson",
-      "email": "Clare.Adamson.msp@parliament.scot",
-      "constituency": "Motherwell and Wishaw",
-      "type": "C"
-    },
-    "naheileanananiar": {
-      "name": "Alasdair Allan",
-      "email": "Alasdair.Allan.msp@parliament.scot",
-      "constituency": "Na h-Eileanan an Iar",
-      "type": "C"
-    },
-    "dumbarton": {
+    "Dumbarton": {
       "name": "Jackie Baillie",
-      "email": "Jackie.Baillie.msp@parliament.scot",
-      "constituency": "Dumbarton",
-      "type": "C"
+      "email": "Jackie.Baillie.msp@parliament.scot"
     },
-    "midlothiannorthandmusselburgh": {
+    "Midlothian North and Musselburgh": {
       "name": "Colin Beattie",
-      "email": "Colin.Beattie.msp@parliament.scot",
-      "constituency": "Midlothian North and Musselburgh",
-      "type": "C"
+      "email": "Colin.Beattie.msp@parliament.scot"
     },
-    "clackmannanshireanddunblane": {
+    "Clackmannanshire and Dunblane": {
       "name": "Keith Brown",
-      "email": "Keith.Brown.msp@parliament.scot",
-      "constituency": "Clackmannanshire and Dunblane",
-      "type": "C"
+      "email": "Keith.Brown.msp@parliament.scot"
     },
-    "ayr": {
+    "Ayr": {
       "name": "Siobhian Brown",
-      "email": "Siobhian.Brown.msp@parliament.scot",
-      "constituency": "Ayr",
-      "type": "C"
+      "email": "Siobhian.Brown.msp@parliament.scot"
     },
-    "uddingstonandbellshill": {
+    "Aberdeenshire West": {
+      "name": "Alexander Burnett",
+      "email": "Alexander.Burnett.msp@parliament.scot"
+    },
+    "Uddingston and Bellshill": {
       "name": "Stephanie Callaghan",
-      "email": "Stephanie.Callaghan.msp@parliament.scot",
-      "constituency": "Uddingston and Bellshill",
-      "type": "C"
+      "email": "Stephanie.Callaghan.msp@parliament.scot"
     },
-    "eastwood": {
+    "Eastwood": {
       "name": "Jackson Carlaw",
-      "email": "Jackson.Carlaw.msp@parliament.scot",
-      "constituency": "Eastwood",
-      "type": "C"
+      "email": "Jackson.Carlaw.msp@parliament.scot"
     },
-    "gallowayandwestdumfries": {
+    "Galloway and West Dumfries": {
       "name": "Finlay Carson",
-      "email": "Finlay.Carson.msp@parliament.scot",
-      "constituency": "Galloway and West Dumfries",
-      "type": "C"
+      "email": "Finlay.Carson.msp@parliament.scot"
     },
-    "kilmarnockandirvinevalley": {
+    "Kilmarnock and Irvine Valley": {
       "name": "Willie Coffey",
-      "email": "Willie.Coffey.msp@parliament.scot",
-      "constituency": "Kilmarnock and Irvine Valley",
-      "type": "C"
+      "email": "Willie.Coffey.msp@parliament.scot"
     },
-    "renfrewshirenorthandwest": {
-      "name": "Angus South",
-      "email": "Graeme.Dey.msp@parliament.scot",
-      "constituency": "Renfrewshire North and West",
-      "type": "C"
+    "Edinburgh Western": {
+      "name": "Alex Cole-Hamilton",
+      "email": "Alex.Cole-Hamilton.msp@parliament.scot"
     },
-    "glasgowmaryhillandspringburn": {
+    "Almond Valley": {
+      "name": "Angela Constance",
+      "email": "Angela.Constance.msp@parliament.scot"
+    },
+    "Angus South": {
+      "name": "Graeme Dey",
+      "email": "Graeme.Dey.msp@parliament.scot"
+    },
+    "Glasgow Maryhill and Springburn": {
       "name": "Bob Doris",
-      "email": "Bob.Doris.msp@parliament.scot",
-      "constituency": "Glasgow Maryhill and Springburn",
-      "type": "C"
+      "email": "Bob.Doris.msp@parliament.scot"
     },
-    "cowdenbeath": {
+    "Glasgow Cathcart": {
+      "name": "James Dornan",
+      "email": "James.Dornan.msp@parliament.scot"
+    },
+    "Aberdeen Donside": {
+      "name": "Jackie Dunbar",
+      "email": "Jackie.Dunbar.msp@parliament.scot"
+    },
+    "Cowdenbeath": {
       "name": "Annabelle Ewing",
-      "email": "Annabelle.Ewing.msp@parliament.scot",
-      "constituency": "Cowdenbeath",
-      "type": "C"
+      "email": "Annabelle.Ewing.msp@parliament.scot"
     },
-    "invernessandnairn": {
+    "Inverness and Nairn": {
       "name": "Fergus Ewing",
-      "email": "Fergus.Ewing.msp@parliament.scot",
-      "constituency": "Inverness and Nairn",
-      "type": "C"
+      "email": "Fergus.Ewing.msp@parliament.scot"
     },
-    "perthshiresouthandkinrossshire": {
+    "Perthshire South and Kinross-shire": {
       "name": "Jim Fairlie",
-      "email": "Jim.Fairlie.msp@parliament.scot",
-      "constituency": "Perthshire South and Kinross-shire",
-      "type": "C"
+      "email": "Jim.Fairlie.msp@parliament.scot"
     },
-    "dundeecitywest": {
-      "name": "West Scotland",
-      "email": "Russell.Findlay.msp@parliament.scot",
-      "constituency": "Dundee City West",
-      "type": "C"
+    "Dundee City West": {
+      "name": "Joe FitzPatrick",
+      "email": "Joe.Fitzpatrick.msp@parliament.scot"
     },
-    "skye,lochaberandbadenoch": {
+    "Skye, Lochaber and Badenoch": {
       "name": "Kate Forbes",
-      "email": "Kate.Forbes.msp@parliament.scot",
-      "constituency": "Skye, Lochaber and Badenoch",
-      "type": "C"
+      "email": "Kate.Forbes.msp@parliament.scot"
     },
-    "midfifeandglenrothes": {
+    "Cunninghame North": {
+      "name": "Kenneth Gibson",
+      "email": "Kenneth.Gibson.msp@parliament.scot"
+    },
+    "Mid Fife and Glenrothes": {
       "name": "Jenny Gilruth",
-      "email": "Jenny.Gilruth.msp@parliament.scot",
-      "constituency": "Mid Fife and Glenrothes",
-      "type": "C"
+      "email": "Jenny.Gilruth.msp@parliament.scot"
     },
-    "angusnorthandmearns": {
+    "Angus North and Mearns": {
       "name": "Mairi Gougeon",
-      "email": "Mairi.Gougeon.msp@parliament.scot",
-      "constituency": "Angus North and Mearns",
-      "type": "C"
+      "email": "Mairi.Gougeon.msp@parliament.scot"
     },
-    "midlothiansouth,tweeddaleandlauderdale": {
+    "Midlothian South, Tweeddale and Lauderdale": {
       "name": "Christine Grahame",
-      "email": "Christine.Grahame.msp@parliament.scot",
-      "constituency": "Midlothian South, Tweeddale and Lauderdale",
-      "type": "C"
+      "email": "Christine.Grahame.msp@parliament.scot"
     },
-    "airdrieandshotts": {
+    "Airdrie and Shotts": {
       "name": "Neil Gray",
-      "email": "Neil.Gray.msp@parliament.scot",
-      "constituency": "Airdrie and Shotts",
-      "type": "C"
+      "email": "Neil.Gray.msp@parliament.scot"
     },
-    "ettrick,roxburghandberwickshire": {
+    "Ettrick, Roxburgh and Berwickshire": {
       "name": "Rachel Hamilton",
-      "email": "Rachael.Hamilton.msp@parliament.scot",
-      "constituency": "Ettrick, Roxburgh and Berwickshire",
-      "type": "C"
+      "email": "Rachael.Hamilton.msp@parliament.scot"
     },
-    "rutherglen": {
+    "Rutherglen": {
       "name": "Clare Haughey",
-      "email": "Clare.Haughey.msp@parliament.scot",
-      "constituency": "Rutherglen",
-      "type": "C"
+      "email": "Clare.Haughey.msp@parliament.scot"
     },
-    "cumbernauldandkilsyth": {
+    "Cumbernauld and Kilsyth": {
       "name": "Jamie Hepburn",
-      "email": "Jamie.Hepburn.msp@parliament.scot",
-      "constituency": "Cumbernauld and Kilsyth",
-      "type": "C"
+      "email": "Jamie.Hepburn.msp@parliament.scot"
     },
-    "linlithgow": {
+    "Linlithgow": {
       "name": "Fiona Hyslop",
-      "email": "Fiona.Hyslop.msp@parliament.scot",
-      "constituency": "Linlithgow",
-      "type": "C"
+      "email": "Fiona.Hyslop.msp@parliament.scot"
     },
-    "moray": {
-      "name": "Richard Lochhead",
-      "email": "Richard.Lochhead.msp@parliament.scot",
-      "constituency": "Moray",
-      "type": "C"
+    "Edinburgh Southern": {
+      "name": "Daniel Johnson",
+      "email": "Daniel.Johnson.msp@parliament.scot"
     },
-    "coatbridgeandchryston": {
-      "name": "Edinburgh Pentlands",
-      "email": "Gordon.MacDonald.msp@parliament.scot",
-      "constituency": "Coatbridge and Chryston",
-      "type": "C"
+    "Glasgow Anniesland": {
+      "name": "Bill Kidd",
+      "email": "Bill.Kidd.msp@parliament.scot"
     },
-    "strathkelvinandbearsden": {
+    "Edinburgh Pentlands": {
+      "name": "Gordon MacDonald",
+      "email": "Gordon.MacDonald.msp@parliament.scot"
+    },
+    "Coatbridge and Chryston": {
+      "name": "Fulton MacGregor",
+      "email": "Fulton.MacGregor.msp@parliament.scot"
+    },
+    "Strathkelvin and Bearsden": {
       "name": "Rona Mackay",
-      "email": "Rona.Mackay.msp@parliament.scot",
-      "constituency": "Strathkelvin and Bearsden",
-      "type": "C"
+      "email": "Rona.Mackay.msp@parliament.scot"
     },
-    "edinburghnorthernandleith": {
+    "Edinburgh Northern and Leith": {
       "name": "Ben Macpherson",
-      "email": "Ben.Macpherson.msp@parliament.scot",
-      "constituency": "Edinburgh Northern and Leith",
-      "type": "C"
+      "email": "Ben.Macpherson.msp@parliament.scot"
     },
-    "clydesdale": {
-      "name": "Falkirk West",
-      "email": "Michael.Matheson.msp@parliament.scot",
-      "constituency": "Clydesdale",
-      "type": "C"
+    "Cunninghame South": {
+      "name": "Ruth Maguire",
+      "email": "Ruth.Maguire.msp@parliament.scot"
     },
-    "greenockandinverclyde": {
-      "name": "East Lothian",
-      "email": "Paul.McLennan.msp@parliament.scot",
-      "constituency": "Greenock and Inverclyde",
-      "type": "C"
+    "Aberdeenshire East": {
+      "name": "Gillian Martin",
+      "email": "Gillian.Martin.msp@parliament.scot"
     },
-    "argyllandbute": {
+    "Glasgow Shettleston": {
+      "name": "John Mason",
+      "email": "John.Mason.msp@parliament.scot"
+    },
+    "Falkirk West": {
+      "name": "Michael Matheson",
+      "email": "Michael.Matheson.msp@parliament.scot"
+    },
+    "Clydesdale": {
+      "name": "McAllan",
+      "email": "Mairi.McAllan.msp@parliament.scot"
+    },
+    "Orkney Islands": {
+      "name": "Liam McArthur",
+      "email": "Liam.McArthur.msp@parliament.scot"
+    },
+    "Glasgow Provan": {
+      "name": "Ivan McKee",
+      "email": "Ivan.McKee.msp@parliament.scot"
+    },
+    "East Lothian": {
+      "name": "Paul McLennan",
+      "email": "Paul.McLennan.msp@parliament.scot"
+    },
+    "Greenock and Inverclyde": {
+      "name": "Stuart McMillan",
+      "email": "Stuart.McMillan.msp@parliament.scot"
+    },
+    "Clydebank and Milngavie": {
+      "name": "Marie McNair",
+      "email": "Marie.McNair.msp@parliament.scot"
+    },
+    "Argyll and Bute": {
       "name": "Jenni Minto",
-      "email": "Jenni.Minto.msp@parliament.scot",
-      "constituency": "Argyll and Bute",
-      "type": "C"
+      "email": "Jenni.Minto.msp@parliament.scot"
     },
-    "dumfriesshire": {
-      "name": "Oliver Mundell",
-      "email": "Oliver.Mundell.msp@parliament.scot",
-      "constituency": "Dumfriesshire",
-      "type": "C"
-    },
-    "aberdeensouthandnorthkincardine": {
+    "Aberdeen South and North Kincardine": {
       "name": "Audrey Nicoll",
-      "email": "Audrey.Nicoll.msp@parliament.scot",
-      "constituency": "Aberdeen South and North Kincardine",
-      "type": "C"
+      "email": "Audrey.Nicoll.msp@parliament.scot"
     },
-    "northeastfife": {
+    "North East Fife": {
       "name": "Willie Rennie",
-      "email": "Willie.Rennie.msp@parliament.scot",
-      "constituency": "North East Fife",
-      "type": "C"
+      "email": "Willie.Rennie.msp@parliament.scot"
     },
-    "hamilton,larkhallandstonehouse": {
+    "Dundee City East": {
+      "name": "Shona Robison",
+      "email": "dundee@shona.robison.scot"
+    },
+    "Hamilton, Larkhall and Stonehouse": {
       "name": "Davy Russell",
-      "email": "Davy.Russell.msp@parliament.scot",
-      "constituency": "Hamilton, Larkhall and Stonehouse",
-      "type": "C"
+      "email": "Davy.Russell.msp@parliament.scot"
     },
-    "dunfermline": {
-      "name": "South Scotland",
-      "email": "Colin.Smyth.msp@parliament.scot",
-      "constituency": "Dunfermline",
-      "type": "C"
+    "Dunfermline": {
+      "name": "Shirley-Anne Somerville",
+      "email": "Shirley-Anne.Somerville.msp@parliament.scot"
     },
-    "caithness,sutherlandandross": {
+    "East Kilbride": {
+      "name": "Collette Stevenson",
+      "email": "Collette.Stevenson.msp@parliament.scot"
+    },
+    "Glasgow Kelvin": {
+      "name": "Kaukab Stewart",
+      "email": "Kaukab.Stewart.msp@parliament.scot"
+    },
+    "Aberdeen Central": {
+      "name": "Kevin Stewart",
+      "email": "Kevin.Stewart.msp@parliament.scot"
+    },
+    "Glasgow Southside": {
+      "name": "Nicola Sturgeon",
+      "email": "Nicola.Sturgeon.msp@parliament.scot"
+    },
+    "Falkirk East": {
+      "name": "Michelle Thomson",
+      "email": "Michelle.Thomson.msp@parliament.scot"
+    },
+    "Caithness, Sutherland and Ross": {
       "name": "Maree Todd",
-      "email": "Maree.Todd.msp@parliament.scot",
-      "constituency": "Caithness, Sutherland and Ross",
-      "type": "C"
+      "email": "Maree.Todd.msp@parliament.scot"
     },
-    "kirkcaldy": {
+    "Kirkcaldy": {
       "name": "David Torrance",
-      "email": "David.Torrance.msp@parliament.scot",
-      "constituency": "Kirkcaldy",
-      "type": "C"
+      "email": "David.Torrance.msp@parliament.scot"
     },
-    "stirling": {
+    "Stirling": {
       "name": "Evelyn Tweed",
-      "email": "Evelyn.Tweed.msp@parliament.scot",
-      "constituency": "Stirling",
-      "type": "C"
+      "email": "Evelyn.Tweed.msp@parliament.scot"
     },
-    "carrick,cumnockanddoonvalley": {
+    "Carrick, Cumnock and Doon Valley": {
       "name": "Elena Whitham",
-      "email": "Elena.Whitham.msp@parliament.scot",
-      "constituency": "Carrick, Cumnock and Doon Valley",
-      "type": "C"
+      "email": "Elena.Whitham.msp@parliament.scot"
+    },
+    "Shetland Islands": {
+      "name": "Beatrice Wishart",
+      "email": "Beatrice.Wishart.msp@parliament.scot"
+    },
+    "Glasgow Pollock": {
+      "name": "Humza Yousaf",
+      "email": "Humza.Yousaf.msp@parliament.scot"
     }
   },
   "regions": {
-    "midscotlandandfife": [
+    "Mid Scotland and Fife": [
       {
         "name": "Claire Baker",
-        "email": "Claire.Baker.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Claire.Baker.msp@parliament.scot"
       },
       {
         "name": "Murdo Fraser",
-        "email": "Murdo.Fraser.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Murdo.Fraser.msp@parliament.scot"
       },
       {
-        "name": "Orkney Islands",
-        "email": "Liam.McArthur.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "name": "Roz McCall",
+        "email": "Roz.McCall.msp@parliament.scot"
       },
       {
         "name": "Alex Rowley",
-        "email": "Alex.Rowley.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Alex.Rowley.msp@parliament.scot"
       },
       {
         "name": "Mark Ruskell",
-        "email": "Mark.Ruskell.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Mark.Ruskell.msp@parliament.scot"
       },
       {
         "name": "Liz Smith",
-        "email": "Elizabeth.Smith.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Elizabeth.Smith.msp@parliament.scot"
       },
       {
         "name": "Alexander Stewart",
-        "email": "Alexander.Stewart.msp@parliament.scot",
-        "region": "Mid Scotland and Fife",
-        "type": "R"
+        "email": "Alexander.Stewart.msp@parliament.scot"
       }
     ],
-    "lothian": [
+    "Lothian": [
       {
         "name": "Jeremy Balfour",
-        "email": "Jeremy.Balfour.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Jeremy.Balfour.msp@parliament.scot"
       },
       {
         "name": "Sarah Boyack",
-        "email": "Sarah.Boyack.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Sarah.Boyack.msp@parliament.scot"
       },
       {
         "name": "Miles Briggs",
-        "email": "Miles.Briggs.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Miles.Briggs.msp@parliament.scot"
       },
       {
         "name": "Foysol Choudhury",
-        "email": "Foysol.Choudhury.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Foysol.Choudhury.msp@parliament.scot"
       },
       {
         "name": "Alison Johnstone",
-        "email": "Alison.Johnstone.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Alison.Johnstone.msp@parliament.scot"
       },
       {
         "name": "Lorna Slater",
-        "email": "Lorna.Slater.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Lorna.Slater.msp@parliament.scot"
       },
       {
         "name": "Sue Webber",
-        "email": "Sue.Webber.msp@parliament.scot",
-        "region": "Lothian",
-        "type": "R"
+        "email": "Sue.Webber.msp@parliament.scot"
       }
     ],
-    "highlandsandislands": [
+    "West Scotland": [
+      {
+        "name": "Neil Bibby",
+        "email": "Neil.Bibby.msp@parliament.scot"
+      },
+      {
+        "name": "Katy Clark",
+        "email": "Katy.Clark.msp@parliament.scot"
+      },
+      {
+        "name": "Russell Findlay",
+        "email": "Russell.Findlay.msp@parliament.scot"
+      },
+      {
+        "name": "Pam Gosal",
+        "email": "Pam.Gosal.msp@parliament.scot"
+      },
+      {
+        "name": "Jamie Greene",
+        "email": "Jamie.Greene.msp@parliament.scot"
+      },
+      {
+        "name": "Ross Greer",
+        "email": "Ross.Greer.msp@parliament.scot"
+      },
+      {
+        "name": "Kane",
+        "email": "Paul.O\u2019Kane.msp@parliament.scot"
+      }
+    ],
+    "Highlands and Islands": [
       {
         "name": "Ariane Burgess",
-        "email": "Ariane.Burgess.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Ariane.Burgess.msp@parliament.scot"
       },
       {
         "name": "Tim Eagle",
-        "email": "Tim.Eagle.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Tim.Eagle.msp@parliament.scot"
       },
       {
         "name": "Rhoda Grant",
-        "email": "Rhoda.Grant.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Rhoda.Grant.msp@parliament.scot"
+      },
+      {
+        "name": "Jamie Halcro Johnston",
+        "email": "Jamie.HalcroJohnston.msp@parliament.scot"
       },
       {
         "name": "Edward Mountain",
-        "email": "Edward.Mountain.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Edward.Mountain.msp@parliament.scot"
       },
       {
         "name": "Emma Roddick",
-        "email": "Emma.Roddick.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Emma.Roddick.msp@parliament.scot"
       },
       {
         "name": "Douglas Ross",
-        "email": "Douglas.Ross.msp@parliament.scot",
-        "region": "Highlands and Islands",
-        "type": "R"
+        "email": "Douglas.Ross.msp@parliament.scot"
       }
     ],
-    "northeastscotland": [
+    "North East Scotland": [
       {
         "name": "Maggie Chapman",
-        "email": "Maggie.Chapman.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Maggie.Chapman.msp@parliament.scot"
       },
       {
         "name": "Maurice Golden",
-        "email": "Maurice.Golden.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Maurice.Golden.msp@parliament.scot"
       },
       {
         "name": "Liam Kerr",
-        "email": "Liam.Kerr.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Liam.Kerr.msp@parliament.scot"
       },
       {
         "name": "Douglas Lumsden",
-        "email": "Douglas.Lumsden.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Douglas.Lumsden.msp@parliament.scot"
       },
       {
         "name": "Michael Marra",
-        "email": "Michael.Marra.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Michael.Marra.msp@parliament.scot"
       },
       {
         "name": "Mercedes Villalba",
-        "email": "Mercedes.Villalba.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Mercedes.Villalba.msp@parliament.scot"
       },
       {
         "name": "Tess White",
-        "email": "Tess.White.msp@parliament.scot",
-        "region": "North East Scotland",
-        "type": "R"
+        "email": "Tess.White.msp@parliament.scot"
       }
     ],
-    "glasgow": [
+    "South Scotland": [
       {
-        "name": "Aberdeen Donside",
-        "email": "Jackie.Dunbar.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "name": "Sharon Dowey",
+        "email": "Sharon.Dowey.msp@parliament.scot"
       },
       {
-        "name": "Central Scotland",
-        "email": "Mark.Griffin.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "name": "Emma Harper",
+        "email": "Emma.Harper.msp@parliament.scot"
+      },
+      {
+        "name": "Craig Hoy",
+        "email": "Craig.Hoy.msp@parliament.scot"
+      },
+      {
+        "name": "Carol Mochan",
+        "email": "Carol.Mochan.msp@parliament.scot"
+      },
+      {
+        "name": "Colin Smyth",
+        "email": "Colin.Smyth.msp@parliament.scot"
+      },
+      {
+        "name": "Martin Whitfield",
+        "email": "Martin.Whitfield.msp@parliament.scot"
+      },
+      {
+        "name": "Brian Whittle",
+        "email": "Brian.Whittle.msp@parliament.scot"
+      }
+    ],
+    "Glasgow": [
+      {
+        "name": "Pam Duncan-Glancy",
+        "email": "Pam.Duncan-Glancy.msp@parliament.scot"
+      },
+      {
+        "name": "Dr. Sandesh Gulhane",
+        "email": "Sandesh.Gulhane.msp@parliament.scot"
       },
       {
         "name": "Patrick Harvie",
-        "email": "Patrick.Harvie.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "email": "Patrick.Harvie.msp@parliament.scot"
+      },
+      {
+        "name": "Pauline McNeill",
+        "email": "Pauline.McNeill.msp@parliament.scot"
       },
       {
         "name": "Anas Sarwar",
-        "email": "Anas.Sarwar.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "email": "Anas.Sarwar.msp@parliament.scot"
       },
       {
         "name": "Paul Sweeney",
-        "email": "Paul.Sweeney.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "email": "Paul.Sweeney.msp@parliament.scot"
       },
       {
         "name": "Annie Wells",
-        "email": "Annie.Wells.msp@parliament.scot",
-        "region": "Glasgow",
-        "type": "R"
+        "email": "Annie.Wells.msp@parliament.scot"
+      }
+    ],
+    "Central Scotland": [
+      {
+        "name": "Meghan Gallacher",
+        "email": "Meghan.Gallacher.msp@parliament.scot"
+      },
+      {
+        "name": "Mark Griffin",
+        "email": "Mark.Griffin.msp@parliament.scot"
+      },
+      {
+        "name": "Stephen Kerr",
+        "email": "Stephen.Kerr.msp@parliament.scot"
+      },
+      {
+        "name": "Monica Lennon",
+        "email": "Monica.Lennon.msp@parliament.scot"
+      },
+      {
+        "name": "Richard Leonard",
+        "email": "Richard.Leonard.msp@parliament.scot"
+      },
+      {
+        "name": "Gillian Mackay",
+        "email": "Gillian.Mackay.msp@parliament.scot"
+      },
+      {
+        "name": "Graham Simpson",
+        "email": "Graham.Simpson.msp@parliament.scot"
       }
     ]
   }
