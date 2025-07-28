@@ -341,8 +341,8 @@ Object.keys(rawCllrData).forEach(key => {
       const msp = mspKey ? mspData.constituencies[mspKey] : null;
       const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
-const compositeKey = normalize(`${uta}:${diw}`);
-const councillors = cllrData[compositeKey] || [];
+const wardKey = normalize(diw);
+const councillors = cllrData[wardKey] || [];
 
       return {
         msps: [msp, ...regionalMSPs].filter(Boolean),
