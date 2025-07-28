@@ -337,11 +337,8 @@
       const msp = mspKey ? mspData.constituencies[mspKey] : null;
       const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
-      const diwKey = Object.keys(cllrData).find(key => normalize(key) === normalize(diw));
-      const utaKey = Object.keys(cllrData).find(key => normalize(key) === normalize(uta));
-      const councillors =
-        (diwKey && cllrData[diwKey]) ||
-        (utaKey && cllrData[utaKey]) || [];
+const compositeKey = normalize(`${uta}:${diw}`);
+const councillors = cllrData[compositeKey] || [];
 
       return {
         msps: [msp, ...regionalMSPs].filter(Boolean),
