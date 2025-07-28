@@ -1,5 +1,5 @@
 {
-  "aberdeencity": [
+  "airyhallbroomhillgarthdee": [
     {
       "name": "Ian Yuill",
       "party": "Liberal Democrats",
@@ -17,7 +17,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Airyhall/Broomhill/Garthdee",
       "email": "derdavidson@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "bridgeofdon": [
     {
       "name": "Nurul Hoque Ali",
       "party": "Labour Party",
@@ -41,7 +43,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Bridge of Don",
       "email": "jemennie@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "dycebucksburndanestone": [
     {
       "name": "Gill Al-Samarai",
       "party": "Scottish National Party (SNP)",
@@ -65,7 +69,9 @@
       "party": "Independent / Other",
       "ward": "Dyce/Bucksburn/Danestone",
       "email": "bcrockett@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "georgestharbour": [
     {
       "name": "Sandra Macdonald",
       "party": "Labour Party",
@@ -89,7 +95,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "George St/Harbour",
       "email": "mihutchison@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "hazleheadqueenscrosscountesswells": [
     {
       "name": "Ken McLeod",
       "party": "Conservative and Unionist",
@@ -113,7 +121,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Hazlehead/Queens Cross/Countesswells",
       "email": "jcooke@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "hiltonwoodsidestockethill": [
     {
       "name": "Neil Copland",
       "party": "Scottish National Party (SNP)",
@@ -131,7 +141,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Hilton/Woodside/Stockethill",
       "email": "hacameron@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "kincorthniggcove": [
     {
       "name": "Richard Brooks",
       "party": "Conservative and Unionist",
@@ -149,7 +161,9 @@
       "party": "Independent / Other",
       "ward": "Kincorth/Nigg/Cove",
       "email": "anicoll@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "kingswellssheddocksleysummerhill": [
     {
       "name": "Kate Blake",
       "party": "Labour Party",
@@ -167,7 +181,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kingswells/Sheddocksley/Summerhill",
       "email": "dacameron@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "lowerdeeside": [
     {
       "name": "Marie Boulton",
       "party": "Independent / Other",
@@ -185,7 +201,9 @@
       "party": "Labour Party",
       "ward": "Lower Deeside",
       "email": "mmalik@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "midstocketrosemount": [
     {
       "name": "Bill Cormie",
       "party": "Scottish National Party (SNP)",
@@ -209,7 +227,9 @@
       "party": "Labour Party",
       "ward": "Midstocket/Rosemount",
       "email": "lythomson@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "northfieldmastricknorth": [
     {
       "name": "Donna Clark",
       "party": "Scottish National Party (SNP)",
@@ -227,7 +247,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Northfield/Mastrick North",
       "email": "cimcrae@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "tillydroneseatonoldaberdeen": [
     {
       "name": "Kairin Van Sweeden",
       "party": "Scottish National Party (SNP)",
@@ -245,7 +267,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Tillydrone/Seaton/Old Aberdeen",
       "email": "amclellan@aberdeencity.gov.uk"
-    },
+    }
+  ],
+  "torryferryhill": [
     {
       "name": "Simon Watson",
       "party": "Labour Party",
@@ -277,7 +301,7 @@
       "email": "lfairfull@aberdeencity.gov.uk"
     }
   ],
-  "aberdeenshire": [
+  "aboyne,upperdeesideanddonside": [
     {
       "name": "Sarah Brown",
       "party": "Conservative and Unionist",
@@ -301,7 +325,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Aboyne, Upper Deeside and Donside",
       "email": "cllr.a.kloppert@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "banchoryandmiddeeside": [
     {
       "name": "Eileen Durno",
       "party": "Scottish National Party (SNP)",
@@ -319,7 +345,9 @@
       "party": "Liberal Democrats",
       "ward": "Banchory and Mid Deeside",
       "email": "cllr.y.chouturvey@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "banffanddistrict": [
     {
       "name": "John Cox",
       "party": "Reform UK",
@@ -337,7 +365,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Banff and District",
       "email": "cllr.g.reynolds@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "centralbuchan": [
     {
       "name": "Peter Chapman",
       "party": "Conservative and Unionist",
@@ -367,7 +397,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Central Buchan",
       "email": "cllr.g.crowson@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "eastgarioch": [
     {
       "name": "Jim Gifford",
       "party": "Independent / Other",
@@ -391,7 +423,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "East Garioch",
       "email": "cllr.g.reid@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "ellonanddistrict": [
     {
       "name": "John Crawley",
       "party": "Reform UK",
@@ -415,7 +449,9 @@
       "party": "Liberal Democrats",
       "ward": "Ellon and District",
       "email": "cllr.i.davidson@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "fraserburghanddistrict": [
     {
       "name": "Doreen Mair",
       "party": "Independent / Other",
@@ -445,7 +481,9 @@
       "party": "Conservative and Unionist",
       "ward": "Fraserburgh and District",
       "email": "cllr.i.sutherland2@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "huntly,strathbogieandhoweofalford": [
     {
       "name": "Robbie Withey",
       "party": "Independent / Other",
@@ -469,7 +507,9 @@
       "party": "Liberal Democrats",
       "ward": "Huntly, Strathbogie and Howe of Alford",
       "email": "cllr.j.goodhall@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "inverurieanddistrict": [
     {
       "name": "Neil Baillie",
       "party": "Scottish National Party (SNP)",
@@ -493,7 +533,9 @@
       "party": "Liberal Democrats",
       "ward": "Inverurie and District",
       "email": "cllr.m.ewenson@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "mearns": [
     {
       "name": "Alison Evison",
       "party": "Independent / Other",
@@ -523,7 +565,9 @@
       "party": "Conservative and Unionist",
       "ward": "Mearns",
       "email": "cllr.g.carr@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "midformartine": [
     {
       "name": "Andrew Hassan",
       "party": "Liberal Democrats",
@@ -547,7 +591,9 @@
       "party": "Conservative and Unionist",
       "ward": "Mid Formartine",
       "email": "cllr.d.ritchie@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "northkincardine": [
     {
       "name": "Mel Sullivan",
       "party": "Liberal Democrats",
@@ -571,7 +617,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "North Kincardine",
       "email": "cllr.d.aitchison@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "peterheadnorthandrattray": [
     {
       "name": "Dianne Beagrie",
       "party": "Independent / Other",
@@ -595,7 +643,9 @@
       "party": "Conservative and Unionist",
       "ward": "Peterhead North and Rattray",
       "email": "cllr.m.james@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "peterheadsouthandcruden": [
     {
       "name": "Stephen Smith",
       "party": "Scottish National Party (SNP)",
@@ -613,7 +663,9 @@
       "party": "Liberal Democrats",
       "ward": "Peterhead South and Cruden",
       "email": "cllr.c.simpson@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "stonehavenandlowerdeeside": [
     {
       "name": "Sarah Dickinson",
       "party": "Liberal Democrats",
@@ -637,7 +689,9 @@
       "party": "Conservative and Unionist",
       "ward": "Stonehaven and Lower Deeside",
       "email": "cllr.a.turner@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "troup": [
     {
       "name": "Richard Menard",
       "party": "Conservative and Unionist",
@@ -655,7 +709,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Troup",
       "email": "cllr.r.cassie@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "turriffanddistrict": [
     {
       "name": "Iain Taylor",
       "party": "Conservative and Unionist",
@@ -679,7 +735,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Turriff and District",
       "email": "cllr.a.forsyth@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "westgarioch": [
     {
       "name": "Sam Payne",
       "party": "Conservative and Unionist",
@@ -697,7 +755,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "West Garioch",
       "email": "cllr.m.grant@aberdeenshire.gov.uk"
-    },
+    }
+  ],
+  "westhillanddistrict": [
     {
       "name": "Ron McKail",
       "party": "Conservative and Unionist",
@@ -723,7 +783,7 @@
       "email": "cllr.f.joji@aberdeenshire.gov.uk"
     }
   ],
-  "angus": [
+  "arbroatheastandlunan": [
     {
       "name": "Lois Speed",
       "party": "Independent / Other",
@@ -741,7 +801,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Arbroath East and Lunan",
       "email": "cllrdurno@angus.gov.uk"
-    },
+    }
+  ],
+  "arbroathwest,lethamandfriockheim": [
     {
       "name": "Jack Cruickshanks",
       "party": "Conservative and Unionist",
@@ -765,7 +827,9 @@
       "party": "Independent / Other",
       "ward": "Arbroath West, Letham and Friockheim",
       "email": "cllrcowdy@angus.gov.uk"
-    },
+    }
+  ],
+  "brechinandedzell": [
     {
       "name": "Chris Beattie",
       "party": "Scottish National Party (SNP)",
@@ -783,7 +847,9 @@
       "party": "Independent / Other",
       "ward": "Brechin and Edzell",
       "email": "cllrscott@angus.gov.uk"
-    },
+    }
+  ],
+  "carnoustieanddistrict": [
     {
       "name": "David Cheape",
       "party": "Independent / Other",
@@ -801,7 +867,9 @@
       "party": "Independent / Other",
       "ward": "Carnoustie and District",
       "email": "cllrboyd@angus.gov.uk"
-    },
+    }
+  ],
+  "forfaranddistrict": [
     {
       "name": "Ian McLaren",
       "party": "Independent / Other",
@@ -825,7 +893,9 @@
       "party": "Conservative and Unionist",
       "ward": "Forfar and District",
       "email": "cllrgreig@angus.gov.uk"
-    },
+    }
+  ],
+  "kirriemuiranddean": [
     {
       "name": "George Meechan",
       "party": "Independent / Other",
@@ -843,7 +913,9 @@
       "party": "Conservative and Unionist",
       "ward": "Kirriemuir and Dean",
       "email": "cllrproctor@angus.gov.uk"
-    },
+    }
+  ],
+  "monifiethandsidlaw": [
     {
       "name": "Heather Doran",
       "party": "Labour Party",
@@ -867,7 +939,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Monifieth and Sidlaw",
       "email": "cllrwhiteside@angus.gov.uk"
-    },
+    }
+  ],
+  "montroseanddistrict": [
     {
       "name": "Bill Duff",
       "party": "Scottish National Party (SNP)",
@@ -893,7 +967,7 @@
       "email": "cllrgall@angus.gov.uk"
     }
   ],
-  "argyllandbute": [
+  "cowal": [
     {
       "name": "Yvonne McNeilly",
       "party": "Conservative and Unionist",
@@ -911,7 +985,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Cowal",
       "email": "gordon.blair@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "dunoon": [
     {
       "name": "Daniel Hampsey",
       "party": "Conservative and Unionist",
@@ -929,7 +1005,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Dunoon",
       "email": "audreye.forrest@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "helensburghandlomondsouth": [
     {
       "name": "Math Campbell-Sturgess",
       "party": "Scottish National Party (SNP)",
@@ -947,7 +1025,9 @@
       "party": "Conservative and Unionist",
       "ward": "Helensburgh and Lomond South",
       "email": "gemma.penfold@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "helensburghcentral": [
     {
       "name": "Ian MacQuire",
       "party": "Scottish National Party (SNP)",
@@ -971,7 +1051,9 @@
       "party": "Labour Party",
       "ward": "Helensburgh Central",
       "email": "fiona.howard@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "isleofbute": [
     {
       "name": "Liz McCabe",
       "party": "Independent / Other",
@@ -989,7 +1071,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Isle of Bute",
       "email": "reeni.kennedy-boyle@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "kintyreandtheislands": [
     {
       "name": "Alastair Redman",
       "party": "Independent / Other",
@@ -1007,7 +1091,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kintyre and the Islands",
       "email": "anne.horn@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "lomondnorth": [
     {
       "name": "Maurice Corry",
       "party": "Conservative and Unionist",
@@ -1031,7 +1117,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Lomond North",
       "email": "iainshonny.paterson@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "midargyll": [
     {
       "name": "Dougie Philand",
       "party": "Independent / Other",
@@ -1049,7 +1137,9 @@
       "party": "Conservative and Unionist",
       "ward": "Mid Argyll",
       "email": "garret.corner@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "obannorthandlorn": [
     {
       "name": "Julie McKenzie",
       "party": "Scottish National Party (SNP)",
@@ -1073,7 +1163,9 @@
       "party": "Scottish Green Party",
       "ward": "Oban North and Lorn",
       "email": "luna.martin@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "obansouthandtheisles": [
     {
       "name": "Amanda Hampsey",
       "party": "Conservative and Unionist",
@@ -1097,7 +1189,9 @@
       "party": "Independent / Other",
       "ward": "Oban South and the Isles",
       "email": "andrew.kain@argyll-bute.gov.uk"
-    },
+    }
+  ],
+  "southkintyre": [
     {
       "name": "Jennifer Kean",
       "party": "Independent / Other",
@@ -1117,7 +1211,7 @@
       "email": "john.armour@argyll-bute.gov.uk"
     }
   ],
-  "clackmannanshire": [
+  "clackmannanshirecentral": [
     {
       "name": "Janine Rennie",
       "party": "Labour Party",
@@ -1135,7 +1229,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Clackmannanshire Central",
       "email": "jmctaggart@clacks.gov.uk"
-    },
+    }
+  ],
+  "clackmannanshireeast": [
     {
       "name": "Kathleen Martin",
       "party": "Labour Party",
@@ -1153,7 +1249,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Clackmannanshire East",
       "email": "sharrison@clacks.gov.uk"
-    },
+    }
+  ],
+  "clackmannanshirenorth": [
     {
       "name": "Martha Benny",
       "party": "Conservative and Unionist",
@@ -1177,7 +1275,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Clackmannanshire North",
       "email": "flaw@clacks.gov.uk"
-    },
+    }
+  ],
+  "clackmannanshiresouth": [
     {
       "name": "Craig Holden",
       "party": "Independent / Other",
@@ -1201,7 +1301,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Clackmannanshire South",
       "email": "eforson@clacks.gov.uk"
-    },
+    }
+  ],
+  "clackmannanshirewest": [
     {
       "name": "Mark McLuckie",
       "party": "Labour Party",
@@ -1227,7 +1329,7 @@
       "email": "pfairlie@clacks.gov.uk"
     }
   ],
-  "dumfriesandgalloway": [
+  "abbey": [
     {
       "name": "Davie Stitt",
       "party": "Labour Party",
@@ -1245,7 +1347,9 @@
       "party": "Conservative and Unionist",
       "ward": "Abbey",
       "email": "ian.blake@dumgal.gov.uk"
-    },
+    }
+  ],
+  "annandaleeastandeskdale": [
     {
       "name": "Denis Male",
       "party": "Independent / Other",
@@ -1263,7 +1367,9 @@
       "party": "Conservative and Unionist",
       "ward": "Annandale East and Eskdale",
       "email": "karen.carruthers3@dumgal.gov.uk"
-    },
+    }
+  ],
+  "annandalenorth": [
     {
       "name": "Gail Macgregor",
       "party": "Conservative and Unionist",
@@ -1287,7 +1393,9 @@
       "party": "Labour Party",
       "ward": "Annandale North",
       "email": "carolyne.wilson@dumgal.gov.uk"
-    },
+    }
+  ],
+  "annandalesouth": [
     {
       "name": "George Jamieson",
       "party": "Scottish National Party (SNP)",
@@ -1311,7 +1419,9 @@
       "party": "Labour Party",
       "ward": "Annandale South",
       "email": "sean.marshall@dumgal.gov.uk"
-    },
+    }
+  ],
+  "castledouglasandcrocketford": [
     {
       "name": "Pauline Drysdale",
       "party": "Conservative and Unionist",
@@ -1335,7 +1445,9 @@
       "party": "Independent / Other",
       "ward": "Castle Douglas and Crocketford",
       "email": "iain.howie@dumgal.gov.uk"
-    },
+    }
+  ],
+  "deeandglenkens": [
     {
       "name": "John Denerley",
       "party": "Independent / Other",
@@ -1353,7 +1465,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Dee and Glenkens",
       "email": "andy.mcfarlane@dumgal.gov.uk"
-    },
+    }
+  ],
+  "lochar": [
     {
       "name": "Linda Dorward",
       "party": "Labour Party",
@@ -1377,7 +1491,9 @@
       "party": "Conservative and Unionist",
       "ward": "Lochar",
       "email": "ivor.hyslop@dumgal.gov.uk"
-    },
+    }
+  ],
+  "midanduppernithsdale": [
     {
       "name": "Jim Dempster",
       "party": "Independent / Other",
@@ -1395,7 +1511,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Mid and Upper Nithsdale",
       "email": "tony.berretti@dumgal.gov.uk"
-    },
+    }
+  ],
+  "midgallowayandwigtownwest": [
     {
       "name": "Katie Hagmann",
       "party": "Scottish National Party (SNP)",
@@ -1419,7 +1537,9 @@
       "party": "Independent / Other",
       "ward": "Mid Galloway and Wigtown West",
       "email": "richard.marsh@dumgal.gov.uk"
-    },
+    }
+  ],
+  "nith": [
     {
       "name": "Keith Walters",
       "party": "Labour Party",
@@ -1443,7 +1563,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Nith",
       "email": "john.campbell@dumgal.gov.uk"
-    },
+    }
+  ],
+  "northwestdumfries": [
     {
       "name": "Andy Ferguson",
       "party": "Scottish National Party (SNP)",
@@ -1467,7 +1589,9 @@
       "party": "Labour Party",
       "ward": "North West Dumfries",
       "email": "emma.jordan@dumgal.gov.uk"
-    },
+    }
+  ],
+  "stranraerandtherhins": [
     {
       "name": "Chrissie Hill",
       "party": "Independent / Other",
@@ -1493,7 +1617,7 @@
       "email": "ben.dashper@dumgal.gov.uk"
     }
   ],
-  "dundeecity": [
+  "coldside": [
     {
       "name": "Mark Flynn",
       "party": "Scottish National Party (SNP)",
@@ -1517,7 +1641,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Coldside",
       "email": "heather.anderson@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "eastend": [
     {
       "name": "Will Dawson",
       "party": "Scottish National Party (SNP)",
@@ -1535,7 +1661,9 @@
       "party": "Labour Party",
       "ward": "East End",
       "email": "dorothy.mchugh@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "lochee": [
     {
       "name": "Siobhan Tolland",
       "party": "Scottish National Party (SNP)",
@@ -1559,7 +1687,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Lochee",
       "email": "roisin.smith@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "maryfield": [
     {
       "name": "Ken Lynn",
       "party": "Scottish National Party (SNP)",
@@ -1577,7 +1707,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Maryfield",
       "email": "lynne.short@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "northeast": [
     {
       "name": "Willie Sawers",
       "party": "Scottish National Party (SNP)",
@@ -1596,6 +1728,26 @@
       "ward": "North East",
       "email": "steven.rome@dundeecity.gov.uk"
     },
+    {
+      "name": "Donna McGill",
+      "party": "Scottish National Party (SNP)",
+      "ward": "North East",
+      "email": "donna.mcgill@glasgow.gov.uk"
+    },
+    {
+      "name": "Ruairi Kelly",
+      "party": "Scottish National Party (SNP)",
+      "ward": "North East",
+      "email": "ruairi.kelly@glasgow.gov.uk"
+    },
+    {
+      "name": "Sharon Greer",
+      "party": "Labour Party",
+      "ward": "North East",
+      "email": "sharon.greer@glasgow.gov.uk"
+    }
+  ],
+  "strathmartine": [
     {
       "name": "Daniel Coleman",
       "party": "Liberal Democrats",
@@ -1619,7 +1771,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Strathmartine",
       "email": "stewart.hunter@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "theferry": [
     {
       "name": "Craig Duncan",
       "party": "Liberal Democrats",
@@ -1643,7 +1797,9 @@
       "party": "Labour Party",
       "ward": "The Ferry",
       "email": "pete.shears@dundeecity.gov.uk"
-    },
+    }
+  ],
+  "westend": [
     {
       "name": "Nadia El-Nakla",
       "party": "Scottish National Party (SNP)",
@@ -1669,7 +1825,7 @@
       "email": "bill.campbell@dundeecity.gov.uk"
     }
   ],
-  "eastayrshire": [
+  "annick": [
     {
       "name": "Ellen Freel",
       "party": "Independent / Other",
@@ -1693,7 +1849,9 @@
       "party": "Independent / Other",
       "ward": "Annick",
       "email": "john.mcghee@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "ballochmyle": [
     {
       "name": "Alyson Simmons",
       "party": "Conservative and Unionist",
@@ -1717,7 +1875,9 @@
       "party": "Labour Party",
       "ward": "Ballochmyle",
       "email": "linda.mabon@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "cumnockandnewcumnock": [
     {
       "name": "Jim McMahon",
       "party": "Scottish National Party (SNP)",
@@ -1741,7 +1901,9 @@
       "party": "Labour Party",
       "ward": "Cumnock and New Cumnock",
       "email": "james.kyle@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "doonvalley": [
     {
       "name": "Drew Filson",
       "party": "Independent / Other",
@@ -1759,7 +1921,9 @@
       "party": "Labour Party",
       "ward": "Doon Valley",
       "email": "june.kyle@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "irvinevalley": [
     {
       "name": "Sally Cogley",
       "party": "The Rubbish Party",
@@ -1777,7 +1941,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Irvine Valley",
       "email": "beverley.clark@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "kilmarnockeastandhurlford": [
     {
       "name": "Graham Barton",
       "party": "Scottish National Party (SNP)",
@@ -1801,7 +1967,9 @@
       "party": "Labour Party",
       "ward": "Kilmarnock East and Hurlford",
       "email": "barry.douglas@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "kilmarnocknorth": [
     {
       "name": "David Richardson",
       "party": "Scottish National Party (SNP)",
@@ -1819,7 +1987,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kilmarnock North",
       "email": "caroline.barton@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "kilmarnocksouth": [
     {
       "name": "Jim Todd",
       "party": "Scottish National Party (SNP)",
@@ -1837,7 +2007,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kilmarnock South",
       "email": "clare.maitland@east-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "kilmarnockwestandcrosshouse": [
     {
       "name": "Iain Linton",
       "party": "Scottish National Party (SNP)",
@@ -1869,7 +2041,7 @@
       "email": "jayne.sangster@east-ayrshire.gov.uk"
     }
   ],
-  "eastdunbartonshire": [
+  "bearsdennorth": [
     {
       "name": "Calum Smith",
       "party": "Scottish National Party (SNP)",
@@ -1893,7 +2065,9 @@
       "party": "Liberal Democrats",
       "ward": "Bearsden North",
       "email": "alan.reid@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "bearsdensouth": [
     {
       "name": "Andrew Polson",
       "party": "Independent / Other",
@@ -1911,7 +2085,9 @@
       "party": "Liberal Democrats",
       "ward": "Bearsden South",
       "email": "vaughan.moody@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "bishopbriggsnorthandcampsie": [
     {
       "name": "Billy Hendry",
       "party": "Conservative and Unionist",
@@ -1935,7 +2111,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Bishopbriggs North and Campsie",
       "email": "paul.ferretti@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "bishopbriggssouth": [
     {
       "name": "Alan Moir",
       "party": "Labour Party",
@@ -1953,7 +2131,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Bishopbriggs South",
       "email": "gordan.low@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "kirkintillocheastandnorthandtwechar": [
     {
       "name": "Aidan Marshall",
       "party": "Labour Party",
@@ -1971,7 +2151,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kirkintilloch East and North and Twechar",
       "email": "pamela.marshall@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "lenzieandkirkintillochsouth": [
     {
       "name": "Callum McNally",
       "party": "Labour Party",
@@ -1989,7 +2171,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Lenzie and Kirkintilloch South",
       "email": "gillian.renwick@eastdunbarton.gov.uk"
-    },
+    }
+  ],
+  "milngavie": [
     {
       "name": "Aileen Polson",
       "party": "Liberal Democrats",
@@ -2009,7 +2193,7 @@
       "email": "alix.mathieson@eastdunbarton.gov.uk"
     }
   ],
-  "eastlothian": [
+  "dunbarandeastlinton": [
     {
       "name": "Donna Collins",
       "party": "Conservative and Unionist",
@@ -2027,7 +2211,9 @@
       "party": "Labour Party",
       "ward": "Dunbar and East Linton",
       "email": "nhampshire@eastlothian.gov.uk"
-    },
+    }
+  ],
+  "haddingtonandlammermuir": [
     {
       "name": "Tom Trotter",
       "party": "Scottish National Party (SNP)",
@@ -2051,7 +2237,9 @@
       "party": "Labour Party",
       "ward": "Haddington and Lammermuir",
       "email": "jmcmillan@eastlothian.gov.uk"
-    },
+    }
+  ],
+  "musselburgh": [
     {
       "name": "Andrew Forrest",
       "party": "Labour Party",
@@ -2075,7 +2263,9 @@
       "party": "Labour Party",
       "ward": "Musselburgh",
       "email": "rbennett@eastlothian.gov.uk"
-    },
+    }
+  ],
+  "northberwickcoastal": [
     {
       "name": "Liz Allan",
       "party": "Scottish National Party (SNP)",
@@ -2093,7 +2283,9 @@
       "party": "Conservative and Unionist",
       "ward": "North Berwick Coastal",
       "email": "jfindlay@eastlothian.gov.uk"
-    },
+    }
+  ],
+  "preston,setonandgosford": [
     {
       "name": "Neil Gilbert",
       "party": "Scottish National Party (SNP)",
@@ -2117,7 +2309,9 @@
       "party": "Labour Party",
       "ward": "Preston, Seton and Gosford",
       "email": "britchie@eastlothian.gov.uk"
-    },
+    }
+  ],
+  "tranent,wallyfordandmacmerry": [
     {
       "name": "Lee-Anne Menzies",
       "party": "Scottish National Party (SNP)",
@@ -2143,7 +2337,7 @@
       "email": "fdugdale@lambeth.gov.uk"
     }
   ],
-  "eastrenfrewshire": [
+  "barrhead,libosideanduplawmoor": [
     {
       "name": "Chris Lunday",
       "party": "Scottish National Party (SNP)",
@@ -2161,7 +2355,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Barrhead, Liboside and Uplawmoor",
       "email": "angela.convery@eastrenfrewshire.gov.uk"
-    },
+    }
+  ],
+  "clarkston,netherleeandwilliamwood": [
     {
       "name": "Katie Pragnell",
       "party": "Labour Party",
@@ -2185,7 +2381,9 @@
       "party": "Conservative and Unionist",
       "ward": "Clarkston, Netherlee and Williamwood",
       "email": "kate.campbell@eastrenfrewshire.gov.uk"
-    },
+    }
+  ],
+  "giffnockandthornliebank": [
     {
       "name": "Mary Montague",
       "party": "Labour Party",
@@ -2203,7 +2401,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Giffnock and Thornliebank",
       "email": "colm.merrick@eastrenfrewshire.gov.uk"
-    },
+    }
+  ],
+  "newtonmearnsnorthandneilston": [
     {
       "name": "Owen O\\'Donnell",
       "party": "Labour Party",
@@ -2221,7 +2421,9 @@
       "party": "Conservative and Unionist",
       "ward": "Newton Mearns North and Neilston",
       "email": "andrew.morrison@eastrenfrewshire.gov.uk"
-    },
+    }
+  ],
+  "newtonmearnssouthandeaglesham": [
     {
       "name": "Paul Edlin",
       "party": "Conservative and Unionist",
@@ -2247,7 +2449,7 @@
       "email": "caroline.bamforth@eastrenfrewshire.gov.uk"
     }
   ],
-  "edinburgh": [
+  "almond": [
     {
       "name": "Louise Young",
       "party": "Liberal Democrats",
@@ -2271,7 +2473,9 @@
       "party": "Liberal Democrats",
       "ward": "Almond",
       "email": "kevin.lang@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "citycentre": [
     {
       "name": "Joanna Mowat",
       "party": "Conservative and Unionist",
@@ -2295,7 +2499,9 @@
       "party": "Labour Party",
       "ward": "City Centre",
       "email": "cllr.margaret.graham@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "colintonfairmilehead": [
     {
       "name": "Conor Savage",
       "party": "Labour Party",
@@ -2313,7 +2519,9 @@
       "party": "Conservative and Unionist",
       "ward": "Colinton/Fairmilehead",
       "email": "cllr.neil.cuthbert@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "corstorphinemurrayfield": [
     {
       "name": "Alan Beal",
       "party": "Liberal Democrats",
@@ -2331,7 +2539,9 @@
       "party": "Liberal Democrats",
       "ward": "Corstorphine/Murrayfield",
       "email": "cllr.fiona.bennett@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "craigentinnyduddingston": [
     {
       "name": "Iain Whyte",
       "party": "Conservative and Unionist",
@@ -2361,7 +2571,9 @@
       "party": "Labour Party",
       "ward": "Craigentinny/Duddingston",
       "email": "joan.griffiths@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "drumbraegyle": [
     {
       "name": "Euan Hyslop",
       "party": "Scottish National Party (SNP)",
@@ -2379,7 +2591,9 @@
       "party": "Liberal Democrats",
       "ward": "Drum Brae/Gyle",
       "email": "cllr.edward.thornley@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "forth": [
     {
       "name": "Stuart Dobbin",
       "party": "Scottish National Party (SNP)",
@@ -2403,7 +2617,9 @@
       "party": "Scottish Green Party",
       "ward": "Forth",
       "email": "cllr.kayleigh.kinross-o'neill@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "fountainbridgecraiglockhart": [
     {
       "name": "David Key",
       "party": "Scottish National Party (SNP)",
@@ -2421,7 +2637,9 @@
       "party": "Liberal Democrats",
       "ward": "Fountainbridge/Craiglockhart",
       "email": "cllr.kevin.mckay@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "inverleith": [
     {
       "name": "Jule Bandel",
       "party": "Scottish Green Party",
@@ -2445,7 +2663,9 @@
       "party": "Liberal Democrats",
       "ward": "Inverleith",
       "email": "hal.osler@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "leith": [
     {
       "name": "Katrina Faccenda",
       "party": "Labour Party",
@@ -2463,7 +2683,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Leith",
       "email": "adam.nols-mcvey@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "leithwalk": [
     {
       "name": "James Dalgleish",
       "party": "Labour Party",
@@ -2487,7 +2709,9 @@
       "party": "Scottish Green Party",
       "ward": "Leith Walk",
       "email": "susan.rae@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "libertongilmerton": [
     {
       "name": "Phil Doggart",
       "party": "Conservative and Unionist",
@@ -2517,7 +2741,9 @@
       "party": "Labour Party",
       "ward": "Liberton/Gilmerton",
       "email": "lezleymarion.cameron@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "morningside": [
     {
       "name": "Neil Ross",
       "party": "Liberal Democrats",
@@ -2541,7 +2767,9 @@
       "party": "Labour Party",
       "ward": "Morningside",
       "email": "mandy.watt@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "pentlandhills": [
     {
       "name": "Stephen Jenkinson",
       "party": "Labour Party",
@@ -2565,7 +2793,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Pentland Hills",
       "email": "neil.gardiner@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "portobellocraigmillar": [
     {
       "name": "Alys Mumford",
       "party": "Scottish Green Party",
@@ -2589,7 +2819,9 @@
       "party": "Labour Party",
       "ward": "Portobello/Craigmillar",
       "email": "cllr.jane.meagher@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "sighthillgorgie": [
     {
       "name": "Dan Heap",
       "party": "Scottish Green Party",
@@ -2613,7 +2845,9 @@
       "party": "Independent / Other",
       "ward": "Sighthill/Gorgie",
       "email": "cllr.ross.mckenzie@edinburgh.gov.uk"
-    },
+    }
+  ],
+  "southsidenewington": [
     {
       "name": "Tim Pogson",
       "party": "Labour Party",
@@ -2639,7 +2873,7 @@
       "email": "cllr.simita.kumar@edinburgh.gov.uk"
     }
   ],
-  "falkirk": [
+  "bonessandblackness": [
     {
       "name": "Ann Ritchie",
       "party": "Independent / Other",
@@ -2657,7 +2891,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Bo'ness and Blackness",
       "email": "stacey.devine@falkirk.gov.uk"
-    },
+    }
+  ],
+  "bonnybridgeandlarbert": [
     {
       "name": "Bryan Deakin",
       "party": "Scottish National Party (SNP)",
@@ -2675,7 +2911,9 @@
       "party": "Independent / Other",
       "ward": "Bonnybridge and Larbert",
       "email": "william.buchanan@falkirk.gov.uk"
-    },
+    }
+  ],
+  "carse,kinnairdandtryst": [
     {
       "name": "Jim Flynn",
       "party": "Conservative and Unionist",
@@ -2699,7 +2937,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Carse, Kinnaird and Tryst",
       "email": "gary.bouse@falkirk.gov.uk"
-    },
+    }
+  ],
+  "dennyandbanknock": [
     {
       "name": "Brian McCabe",
       "party": "Independent / Other",
@@ -2723,7 +2963,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Denny and Banknock",
       "email": "fiona.collie@falkirk.gov.uk"
-    },
+    }
+  ],
+  "falkirknorth": [
     {
       "name": "Robert Bissett",
       "party": "Labour Party",
@@ -2747,7 +2989,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Falkirk North",
       "email": "cecil.meiklejohn@falkirk.gov.uk"
-    },
+    }
+  ],
+  "falkirksouth": [
     {
       "name": "Sarah Patrick",
       "party": "Conservative and Unionist",
@@ -2765,7 +3009,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Falkirk South",
       "email": "lorna.binnie@falkirk.gov.uk"
-    },
+    }
+  ],
+  "grangemouth": [
     {
       "name": "Alan Nimmo",
       "party": "Labour Party",
@@ -2789,7 +3035,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Grangemouth",
       "email": "david.balfour@falkirk.gov.uk"
-    },
+    }
+  ],
+  "lowerbraes": [
     {
       "name": "Anne Hannah",
       "party": "Labour Party",
@@ -2807,7 +3055,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Lower Braes",
       "email": "gordon.forrest@falkirk.gov.uk"
-    },
+    }
+  ],
+  "upperbraes": [
     {
       "name": "Claire Brown",
       "party": "Reform UK",
@@ -2827,13 +3077,33 @@
       "email": "jim.robertson@falkirk.gov.uk"
     }
   ],
-  "fife": [
+  "standrews": [
     {
       "name": "Al Clark",
       "party": "Liberal Democrats",
       "ward": "St Andrews",
       "email": "cllr.al.clark@fife.gov.uk"
     },
+    {
+      "name": "Ann Verner",
+      "party": "Scottish National Party (SNP)",
+      "ward": "St Andrews",
+      "email": "cllr.ann.verner@fife.gov.uk"
+    },
+    {
+      "name": "Jane Ann Liston",
+      "party": "Liberal Democrats",
+      "ward": "St Andrews",
+      "email": "cllr.janeann.liston@fife.gov.uk"
+    },
+    {
+      "name": "Robin Lawson",
+      "party": "Reform UK",
+      "ward": "St Andrews",
+      "email": "cllr.robin.lawson@fife.gov.uk"
+    }
+  ],
+  "cowdenbeath": [
     {
       "name": "Alex Campbell",
       "party": "Labour Party",
@@ -2847,11 +3117,39 @@
       "email": "cllr.alistair.bain@fife.gov.uk"
     },
     {
+      "name": "Bailey-Lee Robb",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Cowdenbeath",
+      "email": "cllr.bailey-lee.robb@fife.gov.uk"
+    },
+    {
+      "name": "Darren Watt",
+      "party": "Conservative and Unionist",
+      "ward": "Cowdenbeath",
+      "email": "cllr.darren.watt@fife.gov.uk"
+    }
+  ],
+  "kirkcaldycentral": [
+    {
       "name": "Alistair Cameron",
       "party": "Labour Party",
       "ward": "Kirkcaldy Central",
       "email": "cllr.alistair.cameron@fife.gov.uk"
     },
+    {
+      "name": "Blair Allan",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Kirkcaldy Central",
+      "email": "cllr.blair.allan@fife.gov.uk"
+    },
+    {
+      "name": "Judy Hamilton",
+      "party": "Labour Party",
+      "ward": "Kirkcaldy Central",
+      "email": "cllr.judy.hamilton@fife.gov.uk"
+    }
+  ],
+  "leven,kennowayandlargo": [
     {
       "name": "Alistair Suttie",
       "party": "Scottish National Party (SNP)",
@@ -2859,11 +3157,45 @@
       "email": "cllr.alistair.suttie@fife.gov.uk"
     },
     {
+      "name": "Colin Davidson",
+      "party": "Labour Party",
+      "ward": "Leven, Kennoway and Largo",
+      "email": "cllr.colin.davidson@fife.gov.uk"
+    },
+    {
+      "name": "David Alexander",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Leven, Kennoway and Largo",
+      "email": "cllr.david.alexander@fife.gov.uk"
+    },
+    {
+      "name": "Eugene Clarke",
+      "party": "Liberal Democrats",
+      "ward": "Leven, Kennoway and Largo",
+      "email": "cllr.eugene.clarke@fife.gov.uk"
+    }
+  ],
+  "taybridgehead": [
+    {
       "name": "Allan Knox",
       "party": "Liberal Democrats",
       "ward": "Tay Bridgehead",
       "email": "cllr.allan.knox@fife.gov.uk"
     },
+    {
+      "name": "Jonny Tepp",
+      "party": "Liberal Democrats",
+      "ward": "Tay Bridgehead",
+      "email": "cllr.jonny.tepp@fife.gov.uk"
+    },
+    {
+      "name": "Louise Kennedy-Dalby",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Tay Bridgehead",
+      "email": "cllr.louise.kennedy-dalby@fife.gov.uk"
+    }
+  ],
+  "glenrotheswestandkinglassie": [
     {
       "name": "Altany Craik",
       "party": "Labour Party",
@@ -2871,11 +3203,39 @@
       "email": "cllr.altany.craik@fife.gov.uk"
     },
     {
+      "name": "Craig Walker",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Glenrothes West and Kinglassie",
+      "email": "cllr.craig.walker@fife.gov.uk"
+    },
+    {
+      "name": "Julie Ford",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Glenrothes West and Kinglassie",
+      "email": "cllr.julie.ford@fife.gov.uk"
+    }
+  ],
+  "eastneukandlandward": [
+    {
       "name": "Alycia Hayes",
       "party": "Scottish National Party (SNP)",
       "ward": "East Neuk and Landward",
       "email": "cllr.alycia.hayes@fife.gov.uk"
     },
+    {
+      "name": "Fiona Corps",
+      "party": "Liberal Democrats",
+      "ward": "East Neuk and Landward",
+      "email": "cllr.fiona.corps@fife.gov.uk"
+    },
+    {
+      "name": "Sean Dillon",
+      "party": "Liberal Democrats",
+      "ward": "East Neuk and Landward",
+      "email": "cllr.sean.dillon@fife.gov.uk"
+    }
+  ],
+  "rosyth": [
     {
       "name": "Andrew Verrecchia",
       "party": "Labour Party",
@@ -2889,11 +3249,13 @@
       "email": "cllr.andy.jackson@fife.gov.uk"
     },
     {
-      "name": "Ann Verner",
+      "name": "Brian Goodall",
       "party": "Scottish National Party (SNP)",
-      "ward": "St Andrews",
-      "email": "cllr.ann.verner@fife.gov.uk"
-    },
+      "ward": "Rosyth",
+      "email": "cllr.brian.goodall@fife.gov.uk"
+    }
+  ],
+  "dunfermlinecentral": [
     {
       "name": "Aude Boubaker-Calder",
       "party": "Liberal Democrats",
@@ -2901,178 +3263,10 @@
       "email": "cllr.aude.boubaker-calder@fife.gov.uk"
     },
     {
-      "name": "Auxi Barrera",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Dunfermline North",
-      "email": "cllr.auxi.barrera@fife.gov.uk"
-    },
-    {
-      "name": "Bailey-Lee Robb",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Cowdenbeath",
-      "email": "cllr.bailey-lee.robb@fife.gov.uk"
-    },
-    {
-      "name": "Blair Allan",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Kirkcaldy Central",
-      "email": "cllr.blair.allan@fife.gov.uk"
-    },
-    {
-      "name": "Brian Goodall",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Rosyth",
-      "email": "cllr.brian.goodall@fife.gov.uk"
-    },
-    {
-      "name": "Cara Hilton",
-      "party": "Labour Party",
-      "ward": "Dunfermline South",
-      "email": "cllr.cara.hilton@fife.gov.uk"
-    },
-    {
-      "name": "Carol Lindsay",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Kirkcaldy North",
-      "email": "cllr.carol.lindsay@fife.gov.uk"
-    },
-    {
-      "name": "Colin Davidson",
-      "party": "Labour Party",
-      "ward": "Leven, Kennoway and Largo",
-      "email": "cllr.colin.davidson@fife.gov.uk"
-    },
-    {
-      "name": "Conner Young",
-      "party": "Conservative and Unionist",
-      "ward": "West Fife and Coastal Villages",
-      "email": "cllr.conner.young@fife.gov.uk"
-    },
-    {
-      "name": "Craig Walker",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes West and Kinglassie",
-      "email": "cllr.craig.walker@fife.gov.uk"
-    },
-    {
-      "name": "Daniel Wilson",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes Central and Thornton",
-      "email": "cllr.daniel.wilson@fife.gov.uk"
-    },
-    {
-      "name": "Darren Watt",
-      "party": "Conservative and Unionist",
-      "ward": "Cowdenbeath",
-      "email": "cllr.darren.watt@fife.gov.uk"
-    },
-    {
-      "name": "Dave Dempsey",
-      "party": "Conservative and Unionist",
-      "ward": "Inverkeithing and Dalgety Bay",
-      "email": "cllr.dave.dempsey@fife.gov.uk"
-    },
-    {
-      "name": "David Alexander",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Leven, Kennoway and Largo",
-      "email": "cllr.david.alexander@fife.gov.uk"
-    },
-    {
-      "name": "David Barratt",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverkeithing and Dalgety Bay",
-      "email": "cllr.david.barratt@fife.gov.uk"
-    },
-    {
-      "name": "David MacDiarmid",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Howe of Fife and Tay Coast",
-      "email": "cllr.david.macdiarmid@fife.gov.uk"
-    },
-    {
-      "name": "David Ross",
-      "party": "Labour Party",
-      "ward": "Kirkcaldy North",
-      "email": "cllr.david.ross@fife.gov.uk"
-    },
-    {
       "name": "Derek Glen",
       "party": "Scottish National Party (SNP)",
       "ward": "Dunfermline Central",
       "email": "cllr.derek.glen@fife.gov.uk"
-    },
-    {
-      "name": "Derek Noble",
-      "party": "Labour Party",
-      "ward": "Glenrothes Central and Thornton",
-      "email": "cllr.derek.noble@fife.gov.uk"
-    },
-    {
-      "name": "Donald Lothian",
-      "party": "Liberal Democrats",
-      "ward": "Howe of Fife and Tay Coast",
-      "email": "cllr.donald.lothian@fife.gov.uk"
-    },
-    {
-      "name": "Eugene Clarke",
-      "party": "Liberal Democrats",
-      "ward": "Leven, Kennoway and Largo",
-      "email": "cllr.eugene.clarke@fife.gov.uk"
-    },
-    {
-      "name": "Fiona Corps",
-      "party": "Liberal Democrats",
-      "ward": "East Neuk and Landward",
-      "email": "cllr.fiona.corps@fife.gov.uk"
-    },
-    {
-      "name": "Gary Holt",
-      "party": "Liberal Democrats",
-      "ward": "Howe of Fife and Tay Coast",
-      "email": "cllr.gary.holt@fife.gov.uk"
-    },
-    {
-      "name": "Gavin Ellis",
-      "party": "Conservative and Unionist",
-      "ward": "Dunfermline North",
-      "email": "cllr.gavin.ellis@fife.gov.uk"
-    },
-    {
-      "name": "Gordon Pryde",
-      "party": "Labour Party",
-      "ward": "Dunfermline North",
-      "email": "cllr.gordon.pryde@fife.gov.uk"
-    },
-    {
-      "name": "Ian Cameron",
-      "party": "Labour Party",
-      "ward": "Kirkcaldy East",
-      "email": "cllr.ian.cameron@fife.gov.uk"
-    },
-    {
-      "name": "James Calder",
-      "party": "Liberal Democrats",
-      "ward": "Dunfermline South",
-      "email": "cllr.james.calder@fife.gov.uk"
-    },
-    {
-      "name": "James Leslie",
-      "party": "Conservative and Unionist",
-      "ward": "Kirkcaldy North",
-      "email": "cllr.james.leslie@fife.gov.uk"
-    },
-    {
-      "name": "Jan Wincott",
-      "party": "Labour Party",
-      "ward": "Glenrothes North, Leslie and Markinch",
-      "email": "cllr.jan.wincott@fife.gov.uk"
-    },
-    {
-      "name": "Jane Ann Liston",
-      "party": "Liberal Democrats",
-      "ward": "St Andrews",
-      "email": "cllr.janeann.liston@fife.gov.uk"
     },
     {
       "name": "Jean Muir",
@@ -3085,96 +3279,40 @@
       "party": "Labour Party",
       "ward": "Dunfermline Central",
       "email": "cllr.jim.leishman@fife.gov.uk"
-    },
+    }
+  ],
+  "dunfermlinenorth": [
     {
-      "name": "John Beare",
+      "name": "Auxi Barrera",
       "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes North, Leslie and Markinch",
-      "email": "cllr.john.beare@fife.gov.uk"
+      "ward": "Dunfermline North",
+      "email": "cllr.auxi.barrera@fife.gov.uk"
     },
     {
-      "name": "John Caffrey",
-      "party": "Liberal Democrats",
-      "ward": "Cupar",
-      "email": "cllr.john.caffrey@fife.gov.uk"
-    },
-    {
-      "name": "John O\\'Brien",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Buckhaven, Methil and Wemyss Villages",
-      "email": "cllr.john.obrien@fife.gov.uk"
-    },
-    {
-      "name": "Jonny Tepp",
-      "party": "Liberal Democrats",
-      "ward": "Tay Bridgehead",
-      "email": "cllr.jonny.tepp@fife.gov.uk"
-    },
-    {
-      "name": "Judy Hamilton",
-      "party": "Labour Party",
-      "ward": "Kirkcaldy Central",
-      "email": "cllr.judy.hamilton@fife.gov.uk"
-    },
-    {
-      "name": "Julie Ford",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes West and Kinglassie",
-      "email": "cllr.julie.ford@fife.gov.uk"
-    },
-    {
-      "name": "Julie MacDougall",
-      "party": "Independent / Other",
-      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
-      "email": "cllr.julie.macdougall@fife.gov.uk"
-    },
-    {
-      "name": "Karen Beaton",
-      "party": "Labour Party",
-      "ward": "West Fife and Coastal Villages",
-      "email": "cllr.karen.beaton@fife.gov.uk"
-    },
-    {
-      "name": "Kathleen Leslie",
+      "name": "Gavin Ellis",
       "party": "Conservative and Unionist",
-      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
-      "email": "cllr.kathleen.leslie@fife.gov.uk"
+      "ward": "Dunfermline North",
+      "email": "cllr.gavin.ellis@fife.gov.uk"
     },
     {
-      "name": "Ken Caldwell",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Buckhaven, Methil and Wemyss Villages",
-      "email": "cllr.ken.caldwell@fife.gov.uk"
-    },
-    {
-      "name": "Lea McLelland",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Lochgelly, Cardenden and Benarty",
-      "email": "cllr.lea.mclelland@fife.gov.uk"
-    },
-    {
-      "name": "Lesley Backhouse",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
-      "email": "cllr.lesley.backhouse@fife.gov.uk"
-    },
-    {
-      "name": "Linda Erskine",
+      "name": "Gordon Pryde",
       "party": "Labour Party",
-      "ward": "Lochgelly, Cardenden and Benarty",
-      "email": "cllr.linda.erskine@fife.gov.uk"
+      "ward": "Dunfermline North",
+      "email": "cllr.gordon.pryde@fife.gov.uk"
+    }
+  ],
+  "dunfermlinesouth": [
+    {
+      "name": "Cara Hilton",
+      "party": "Labour Party",
+      "ward": "Dunfermline South",
+      "email": "cllr.cara.hilton@fife.gov.uk"
     },
     {
-      "name": "Louise Kennedy-Dalby",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Tay Bridgehead",
-      "email": "cllr.louise.kennedy-dalby@fife.gov.uk"
-    },
-    {
-      "name": "Lynda Holton",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes Central and Thornton",
-      "email": "cllr.lynda.holton@fife.gov.uk"
+      "name": "James Calder",
+      "party": "Liberal Democrats",
+      "ward": "Dunfermline South",
+      "email": "cllr.james.calder@fife.gov.uk"
     },
     {
       "name": "Lynn Ballantyne-Wardlaw",
@@ -3183,34 +3321,84 @@
       "email": "cllr.lynn.ballantyne-wardlaw@fife.gov.uk"
     },
     {
-      "name": "Lynn Mowatt",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Glenrothes North, Leslie and Markinch",
-      "email": "cllr.lynn.mowatt@fife.gov.uk"
-    },
-    {
-      "name": "Margaret Kennedy",
-      "party": "Liberal Democrats",
-      "ward": "Cupar",
-      "email": "cllr.margaret.kennedy@fife.gov.uk"
-    },
-    {
-      "name": "Mary Lockhart",
-      "party": "Labour Party",
-      "ward": "Lochgelly, Cardenden and Benarty",
-      "email": "cllr.mary.lockhart@fife.gov.uk"
-    },
-    {
       "name": "Naz Anis-Miah",
       "party": "Scottish National Party (SNP)",
       "ward": "Dunfermline South",
       "email": "cllr.anis.miah@fife.gov.uk"
+    }
+  ],
+  "kirkcaldynorth": [
+    {
+      "name": "Carol Lindsay",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Kirkcaldy North",
+      "email": "cllr.carol.lindsay@fife.gov.uk"
     },
     {
-      "name": "Nicola Patrick",
+      "name": "David Ross",
+      "party": "Labour Party",
+      "ward": "Kirkcaldy North",
+      "email": "cllr.david.ross@fife.gov.uk"
+    },
+    {
+      "name": "James Leslie",
+      "party": "Conservative and Unionist",
+      "ward": "Kirkcaldy North",
+      "email": "cllr.james.leslie@fife.gov.uk"
+    }
+  ],
+  "westfifeandcoastalvillages": [
+    {
+      "name": "Conner Young",
+      "party": "Conservative and Unionist",
+      "ward": "West Fife and Coastal Villages",
+      "email": "cllr.conner.young@fife.gov.uk"
+    },
+    {
+      "name": "Karen Beaton",
+      "party": "Labour Party",
+      "ward": "West Fife and Coastal Villages",
+      "email": "cllr.karen.beaton@fife.gov.uk"
+    },
+    {
+      "name": "Sam Steele",
       "party": "Scottish National Party (SNP)",
-      "ward": "Kirkcaldy East",
-      "email": "cllr.nicola.patrick@fife.gov.uk"
+      "ward": "West Fife and Coastal Villages",
+      "email": "cllr.sam.steele@fife.gov.uk"
+    }
+  ],
+  "glenrothescentralandthornton": [
+    {
+      "name": "Daniel Wilson",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Glenrothes Central and Thornton",
+      "email": "cllr.daniel.wilson@fife.gov.uk"
+    },
+    {
+      "name": "Derek Noble",
+      "party": "Labour Party",
+      "ward": "Glenrothes Central and Thornton",
+      "email": "cllr.derek.noble@fife.gov.uk"
+    },
+    {
+      "name": "Lynda Holton",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Glenrothes Central and Thornton",
+      "email": "cllr.lynda.holton@fife.gov.uk"
+    }
+  ],
+  "inverkeithinganddalgetybay": [
+    {
+      "name": "Dave Dempsey",
+      "party": "Conservative and Unionist",
+      "ward": "Inverkeithing and Dalgety Bay",
+      "email": "cllr.dave.dempsey@fife.gov.uk"
+    },
+    {
+      "name": "David Barratt",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Inverkeithing and Dalgety Bay",
+      "email": "cllr.david.barratt@fife.gov.uk"
     },
     {
       "name": "Patrick Browne",
@@ -3219,52 +3407,110 @@
       "email": "cllr.patrick.browne@fife.gov.uk"
     },
     {
-      "name": "Peter Gulline",
-      "party": "Conservative and Unionist",
-      "ward": "Glenrothes North, Leslie and Markinch",
-      "email": "cllr.peter.gulline@fife.gov.uk"
+      "name": "Sarah Neal",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Inverkeithing and Dalgety Bay",
+      "email": "cllr.sarah.neal@fife.gov.uk"
+    }
+  ],
+  "howeoffifeandtaycoast": [
+    {
+      "name": "David MacDiarmid",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Howe of Fife and Tay Coast",
+      "email": "cllr.david.macdiarmid@fife.gov.uk"
     },
     {
-      "name": "Robin Lawson",
-      "party": "Reform UK",
-      "ward": "St Andrews",
-      "email": "cllr.robin.lawson@fife.gov.uk"
+      "name": "Donald Lothian",
+      "party": "Liberal Democrats",
+      "ward": "Howe of Fife and Tay Coast",
+      "email": "cllr.donald.lothian@fife.gov.uk"
+    },
+    {
+      "name": "Gary Holt",
+      "party": "Liberal Democrats",
+      "ward": "Howe of Fife and Tay Coast",
+      "email": "cllr.gary.holt@fife.gov.uk"
+    }
+  ],
+  "kirkcaldyeast": [
+    {
+      "name": "Ian Cameron",
+      "party": "Labour Party",
+      "ward": "Kirkcaldy East",
+      "email": "cllr.ian.cameron@fife.gov.uk"
+    },
+    {
+      "name": "Nicola Patrick",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Kirkcaldy East",
+      "email": "cllr.nicola.patrick@fife.gov.uk"
     },
     {
       "name": "Rod Cavanagh",
       "party": "Scottish National Party (SNP)",
       "ward": "Kirkcaldy East",
       "email": "cllr.rod.cavanagh@fife.gov.uk"
+    }
+  ],
+  "glenrothesnorth,leslieandmarkinch": [
+    {
+      "name": "Jan Wincott",
+      "party": "Labour Party",
+      "ward": "Glenrothes North, Leslie and Markinch",
+      "email": "cllr.jan.wincott@fife.gov.uk"
     },
     {
-      "name": "Rosemary Liewald",
+      "name": "John Beare",
       "party": "Scottish National Party (SNP)",
-      "ward": "Lochgelly, Cardenden and Benarty",
-      "email": "cllr.rosemary.liewald@fife.gov.uk"
+      "ward": "Glenrothes North, Leslie and Markinch",
+      "email": "cllr.john.beare@fife.gov.uk"
     },
     {
-      "name": "Sam Steele",
+      "name": "Lynn Mowatt",
       "party": "Scottish National Party (SNP)",
-      "ward": "West Fife and Coastal Villages",
-      "email": "cllr.sam.steele@fife.gov.uk"
+      "ward": "Glenrothes North, Leslie and Markinch",
+      "email": "cllr.lynn.mowatt@fife.gov.uk"
     },
     {
-      "name": "Sarah Neal",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverkeithing and Dalgety Bay",
-      "email": "cllr.sarah.neal@fife.gov.uk"
-    },
+      "name": "Peter Gulline",
+      "party": "Conservative and Unionist",
+      "ward": "Glenrothes North, Leslie and Markinch",
+      "email": "cllr.peter.gulline@fife.gov.uk"
+    }
+  ],
+  "cupar": [
     {
-      "name": "Sean Dillon",
+      "name": "John Caffrey",
       "party": "Liberal Democrats",
-      "ward": "East Neuk and Landward",
-      "email": "cllr.sean.dillon@fife.gov.uk"
+      "ward": "Cupar",
+      "email": "cllr.john.caffrey@fife.gov.uk"
+    },
+    {
+      "name": "Margaret Kennedy",
+      "party": "Liberal Democrats",
+      "ward": "Cupar",
+      "email": "cllr.margaret.kennedy@fife.gov.uk"
     },
     {
       "name": "Stefan Hoggan",
       "party": "Scottish National Party (SNP)",
       "ward": "Cupar",
       "email": "cllr.stefan.hoggan@fife.gov.uk"
+    }
+  ],
+  "buckhaven,methilandwemyssvillages": [
+    {
+      "name": "John O\\'Brien",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Buckhaven, Methil and Wemyss Villages",
+      "email": "cllr.john.obrien@fife.gov.uk"
+    },
+    {
+      "name": "Ken Caldwell",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Buckhaven, Methil and Wemyss Villages",
+      "email": "cllr.ken.caldwell@fife.gov.uk"
     },
     {
       "name": "Tom Adams",
@@ -3273,198 +3519,58 @@
       "email": "cllr.tom.adams@fife.gov.uk"
     }
   ],
-  "glasgowcity": [
+  "burntisland,kinghornandwesternkirkcaldy": [
+    {
+      "name": "Julie MacDougall",
+      "party": "Independent / Other",
+      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
+      "email": "cllr.julie.macdougall@fife.gov.uk"
+    },
+    {
+      "name": "Kathleen Leslie",
+      "party": "Conservative and Unionist",
+      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
+      "email": "cllr.kathleen.leslie@fife.gov.uk"
+    },
+    {
+      "name": "Lesley Backhouse",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Burntisland, Kinghorn and Western Kirkcaldy",
+      "email": "cllr.lesley.backhouse@fife.gov.uk"
+    }
+  ],
+  "lochgelly,cardendenandbenarty": [
+    {
+      "name": "Lea McLelland",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Lochgelly, Cardenden and Benarty",
+      "email": "cllr.lea.mclelland@fife.gov.uk"
+    },
+    {
+      "name": "Linda Erskine",
+      "party": "Labour Party",
+      "ward": "Lochgelly, Cardenden and Benarty",
+      "email": "cllr.linda.erskine@fife.gov.uk"
+    },
+    {
+      "name": "Mary Lockhart",
+      "party": "Labour Party",
+      "ward": "Lochgelly, Cardenden and Benarty",
+      "email": "cllr.mary.lockhart@fife.gov.uk"
+    },
+    {
+      "name": "Rosemary Liewald",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Lochgelly, Cardenden and Benarty",
+      "email": "cllr.rosemary.liewald@fife.gov.uk"
+    }
+  ],
+  "maryhill": [
     {
       "name": "Abdul Bostani",
       "party": "Scottish National Party (SNP)",
       "ward": "Maryhill",
       "email": "abdul.bostani@glasgow.gov.uk"
-    },
-    {
-      "name": "Alex Kerr",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Baillieston",
-      "email": "alex.kerr@glasgow.gov.uk"
-    },
-    {
-      "name": "Alex Wilson",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Cardonald",
-      "email": "alex.wilson@glasgow.gov.uk"
-    },
-    {
-      "name": "Alexander Belic",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Southside Central",
-      "email": "alexander.belic@glasgow.gov.uk"
-    },
-    {
-      "name": "Allan Casey",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Dennistoun",
-      "email": "allan.casey@glasgow.gov.uk"
-    },
-    {
-      "name": "Allan Gow",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Canal",
-      "email": "allan.gow@glasgow.gov.uk"
-    },
-    {
-      "name": "Angus Millar",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Anderston/City/Yorkhill",
-      "email": "angus.millar@glasgow.gov.uk"
-    },
-    {
-      "name": "Ann Jenkins",
-      "party": "Labour Party",
-      "ward": "East Centre",
-      "email": "ann.jenkins@glasgow.gov.uk"
-    },
-    {
-      "name": "Anne McTaggart",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Drumchapel/Anniesland",
-      "email": "anne.mctaggart@glasgow.gov.uk"
-    },
-    {
-      "name": "Annette Christie",
-      "party": "Scottish National Party (SNP)",
-      "ward": "East Centre",
-      "email": "annette.christie@glasgow.gov.uk"
-    },
-    {
-      "name": "Anthony Carroll",
-      "party": "Scottish Green Party",
-      "ward": "Dennistoun",
-      "email": "anthony.carroll@glasgow.gov.uk"
-    },
-    {
-      "name": "Audrey Dempsey",
-      "party": "Independent / Other",
-      "ward": "Springburn/Robroyston",
-      "email": "audrey.dempsey@glasgow.gov.uk"
-    },
-    {
-      "name": "Bill Butler",
-      "party": "Labour Party",
-      "ward": "Garscadden/Scotstounhill",
-      "email": "bill.butler@glasgow.gov.uk"
-    },
-    {
-      "name": "Blair Anderson",
-      "party": "Scottish Green Party",
-      "ward": "Partick East/Kelvindale",
-      "email": "blair.anderson@glasgow.gov.uk"
-    },
-    {
-      "name": "Catherine Vallis",
-      "party": "Labour Party",
-      "ward": "Linn",
-      "email": "catherine.vallis@glasgow.gov.uk"
-    },
-    {
-      "name": "Cecilia O\\'Lone",
-      "party": "Labour Party",
-      "ward": "Calton",
-      "email": "cecilia.o'lone@glasgow.gov.uk"
-    },
-    {
-      "name": "Chris Cunningham",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Garscadden/Scotstounhill",
-      "email": "chris.cunningham@glasgow.gov.uk"
-    },
-    {
-      "name": "Christina Cannon",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Springburn/Robroyston",
-      "email": "christina.cannon@glasgow.gov.uk"
-    },
-    {
-      "name": "Christy Mearns",
-      "party": "Scottish Green Party",
-      "ward": "Anderston/City/Yorkhill",
-      "email": "christy.mearns@glasgow.gov.uk"
-    },
-    {
-      "name": "Dan Hutchison",
-      "party": "Scottish Green Party",
-      "ward": "Govan",
-      "email": "dan.hutchison@glasgow.gov.uk"
-    },
-    {
-      "name": "Davena Rankin",
-      "party": "Labour Party",
-      "ward": "Drumchapel/Anniesland",
-      "email": "davena.rankin@glasgow.gov.uk"
-    },
-    {
-      "name": "Declan Blench",
-      "party": "Scottish National Party (SNP)",
-      "ward": "East Centre",
-      "email": "declan.blench@glasgow.gov.uk"
-    },
-    {
-      "name": "Donna McGill",
-      "party": "Scottish National Party (SNP)",
-      "ward": "North East",
-      "email": "donna.mcgill@glasgow.gov.uk"
-    },
-    {
-      "name": "Elaine Gallagher",
-      "party": "Scottish Green Party",
-      "ward": "Southside Central",
-      "email": "elaine.gallagher@glasgow.gov.uk"
-    },
-    {
-      "name": "Elaine McDougall",
-      "party": "Labour Party",
-      "ward": "Dennistoun",
-      "email": "elaine.mcdougall@glasgow.gov.uk"
-    },
-    {
-      "name": "Elaine McSporran",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Cardonald",
-      "email": "elaine.mcsporran@glasgow.gov.uk"
-    },
-    {
-      "name": "Eunis Jassemi",
-      "party": "Labour Party",
-      "ward": "Victoria Park",
-      "email": "eunis.jassemi@glasgow.gov.uk"
-    },
-    {
-      "name": "Eva Bolander",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Anderston/City/Yorkhill",
-      "email": "eva.bolander@glasgow.gov.uk"
-    },
-    {
-      "name": "Eva Murray",
-      "party": "Labour Party",
-      "ward": "Garscadden/Scotstounhill",
-      "email": "eva.murray@glasgow.gov.uk"
-    },
-    {
-      "name": "Feargal Dalton",
-      "party": "Independent / Other",
-      "ward": "Victoria Park",
-      "email": "feargal.dalton@glasgow.gov.uk"
-    },
-    {
-      "name": "Fiona Higgins",
-      "party": "Labour Party",
-      "ward": "Canal",
-      "email": "fiona.higgins@glasgow.gov.uk"
-    },
-    {
-      "name": "Frank McAveety",
-      "party": "Independent / Other",
-      "ward": "Shettleston",
-      "email": "frank.mcaveety@glasgow.gov.uk"
     },
     {
       "name": "Franny Scally",
@@ -3473,16 +3579,226 @@
       "email": "franny.scally@glasgow.gov.uk"
     },
     {
+      "name": "Marie Garrity",
+      "party": "Labour Party",
+      "ward": "Maryhill",
+      "email": "marie.garrity2@glasgow.gov.uk"
+    },
+    {
+      "name": "Marie Garrity",
+      "party": "Labour Party",
+      "ward": "Maryhill",
+      "email": "marie.garrity2@glasgow.gov.uk"
+    }
+  ],
+  "baillieston": [
+    {
+      "name": "Alex Kerr",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Baillieston",
+      "email": "alex.kerr@glasgow.gov.uk"
+    },
+    {
+      "name": "John Daly",
+      "party": "Conservative and Unionist",
+      "ward": "Baillieston",
+      "email": "john.daly3@glasgow.gov.uk"
+    },
+    {
+      "name": "Kevin Lalley",
+      "party": "Labour Party",
+      "ward": "Baillieston",
+      "email": "kevin.lalley@glasgow.gov.uk"
+    }
+  ],
+  "cardonald": [
+    {
+      "name": "Alex Wilson",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Cardonald",
+      "email": "alex.wilson@glasgow.gov.uk"
+    },
+    {
+      "name": "Elaine McSporran",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Cardonald",
+      "email": "elaine.mcsporran@glasgow.gov.uk"
+    },
+    {
+      "name": "Jim Kavanagh",
+      "party": "Labour Party",
+      "ward": "Cardonald",
+      "email": "jim.kavanagh@glasgow.gov.uk"
+    },
+    {
+      "name": "Matt Kerr",
+      "party": "Labour Party",
+      "ward": "Cardonald",
+      "email": "matthew.kerr@glasgow.gov.uk"
+    }
+  ],
+  "southsidecentral": [
+    {
+      "name": "Alexander Belic",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Southside Central",
+      "email": "alexander.belic@glasgow.gov.uk"
+    },
+    {
+      "name": "Elaine Gallagher",
+      "party": "Scottish Green Party",
+      "ward": "Southside Central",
+      "email": "elaine.gallagher@glasgow.gov.uk"
+    },
+    {
+      "name": "Mhairi Hunter",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Southside Central",
+      "email": "mhairi.hunter@glasgow.gov.uk"
+    },
+    {
+      "name": "Soryia Siddique",
+      "party": "Labour Party",
+      "ward": "Southside Central",
+      "email": "soryia.siddique@glasgow.gov.uk"
+    }
+  ],
+  "dennistoun": [
+    {
+      "name": "Allan Casey",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Dennistoun",
+      "email": "allan.casey@glasgow.gov.uk"
+    },
+    {
+      "name": "Anthony Carroll",
+      "party": "Scottish Green Party",
+      "ward": "Dennistoun",
+      "email": "anthony.carroll@glasgow.gov.uk"
+    },
+    {
+      "name": "Elaine McDougall",
+      "party": "Labour Party",
+      "ward": "Dennistoun",
+      "email": "elaine.mcdougall@glasgow.gov.uk"
+    }
+  ],
+  "canal": [
+    {
+      "name": "Allan Gow",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Canal",
+      "email": "allan.gow@glasgow.gov.uk"
+    },
+    {
+      "name": "Fiona Higgins",
+      "party": "Labour Party",
+      "ward": "Canal",
+      "email": "fiona.higgins@glasgow.gov.uk"
+    },
+    {
+      "name": "Jacqueline McLaren",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Canal",
+      "email": "jacqueline.mclaren@glasgow.gov.uk"
+    },
+    {
+      "name": "Robert Mooney",
+      "party": "Labour Party",
+      "ward": "Canal",
+      "email": "robert.mooney@glasgow.gov.uk"
+    }
+  ],
+  "anderstoncityyorkhill": [
+    {
+      "name": "Angus Millar",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Anderston/City/Yorkhill",
+      "email": "angus.millar@glasgow.gov.uk"
+    },
+    {
+      "name": "Christy Mearns",
+      "party": "Scottish Green Party",
+      "ward": "Anderston/City/Yorkhill",
+      "email": "christy.mearns@glasgow.gov.uk"
+    },
+    {
+      "name": "Eva Bolander",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Anderston/City/Yorkhill",
+      "email": "eva.bolander@glasgow.gov.uk"
+    },
+    {
+      "name": "Philip Braat",
+      "party": "Independent / Other",
+      "ward": "Anderston/City/Yorkhill",
+      "email": "philip.braat@glasgow.gov.uk"
+    }
+  ],
+  "eastcentre": [
+    {
+      "name": "Ann Jenkins",
+      "party": "Labour Party",
+      "ward": "East Centre",
+      "email": "ann.jenkins@glasgow.gov.uk"
+    },
+    {
+      "name": "Annette Christie",
+      "party": "Scottish National Party (SNP)",
+      "ward": "East Centre",
+      "email": "annette.christie@glasgow.gov.uk"
+    },
+    {
+      "name": "Declan Blench",
+      "party": "Scottish National Party (SNP)",
+      "ward": "East Centre",
+      "email": "declan.blench@glasgow.gov.uk"
+    },
+    {
+      "name": "Kieran Turner",
+      "party": "Labour Party",
+      "ward": "East Centre",
+      "email": "kieran.turner@glasgow.gov.uk"
+    }
+  ],
+  "drumchapelanniesland": [
+    {
+      "name": "Anne McTaggart",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Drumchapel/Anniesland",
+      "email": "anne.mctaggart@glasgow.gov.uk"
+    },
+    {
+      "name": "Davena Rankin",
+      "party": "Labour Party",
+      "ward": "Drumchapel/Anniesland",
+      "email": "davena.rankin@glasgow.gov.uk"
+    },
+    {
       "name": "Fyeza Ikhlaq",
       "party": "Scottish National Party (SNP)",
       "ward": "Drumchapel/Anniesland",
       "email": "fyeza.ikhlaq@glasgow.gov.uk"
     },
     {
-      "name": "George Redmond",
+      "name": "Paul Carey",
       "party": "Labour Party",
-      "ward": "Calton",
-      "email": "george.redmond@glasgow.gov.uk"
+      "ward": "Drumchapel/Anniesland",
+      "email": "paul.carey@glasgow.gov.uk"
+    }
+  ],
+  "springburnrobroyston": [
+    {
+      "name": "Audrey Dempsey",
+      "party": "Independent / Other",
+      "ward": "Springburn/Robroyston",
+      "email": "audrey.dempsey@glasgow.gov.uk"
+    },
+    {
+      "name": "Christina Cannon",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Springburn/Robroyston",
+      "email": "christina.cannon@glasgow.gov.uk"
     },
     {
       "name": "Graham Campbell",
@@ -3491,34 +3807,44 @@
       "email": "graham.campbell@glasgow.gov.uk"
     },
     {
-      "name": "Greg Hepburn",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Calton",
-      "email": "greg.hepburn@glasgow.gov.uk"
-    },
-    {
-      "name": "Hanif Raja",
+      "name": "Thomas Rannachan",
       "party": "Labour Party",
-      "ward": "Pollokshields",
-      "email": "hanif.raja@glasgow.gov.uk"
+      "ward": "Springburn/Robroyston",
+      "email": "thomas.rannachan@glasgow.gov.uk"
+    }
+  ],
+  "garscaddenscotstounhill": [
+    {
+      "name": "Bill Butler",
+      "party": "Labour Party",
+      "ward": "Garscadden/Scotstounhill",
+      "email": "bill.butler@glasgow.gov.uk"
     },
     {
-      "name": "Holly Bruce",
+      "name": "Chris Cunningham",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Garscadden/Scotstounhill",
+      "email": "chris.cunningham@glasgow.gov.uk"
+    },
+    {
+      "name": "Eva Murray",
+      "party": "Labour Party",
+      "ward": "Garscadden/Scotstounhill",
+      "email": "eva.murray@glasgow.gov.uk"
+    },
+    {
+      "name": "Malcolm Mitchell",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Garscadden/Scotstounhill",
+      "email": "malcolm.mitchell@glasgow.gov.uk"
+    }
+  ],
+  "partickeastkelvindale": [
+    {
+      "name": "Blair Anderson",
       "party": "Scottish Green Party",
-      "ward": "Langside",
-      "email": "holly.bruce@glasgow.gov.uk"
-    },
-    {
-      "name": "Imran Alam",
-      "party": "Labour Party",
-      "ward": "Govan",
-      "email": "imran.alam@glasgow.gov.uk"
-    },
-    {
-      "name": "Jacqueline McLaren",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Canal",
-      "email": "jacqueline.mclaren@glasgow.gov.uk"
+      "ward": "Partick East/Kelvindale",
+      "email": "blair.anderson@glasgow.gov.uk"
     },
     {
       "name": "James Adams",
@@ -3539,16 +3865,18 @@
       "email": "jill.brown@glasgow.gov.uk"
     },
     {
-      "name": "Jill Pidgeon",
+      "name": "Lilith Johnstone",
       "party": "Labour Party",
-      "ward": "Shettleston",
-      "email": "jill.pidgeon@glasgow.gov.uk"
-    },
+      "ward": "Partick East/Kelvindale",
+      "email": "lilith.johnstone@glasgow.gov.uk"
+    }
+  ],
+  "linn": [
     {
-      "name": "Jim Kavanagh",
+      "name": "Catherine Vallis",
       "party": "Labour Party",
-      "ward": "Cardonald",
-      "email": "jim.kavanagh@glasgow.gov.uk"
+      "ward": "Linn",
+      "email": "catherine.vallis@glasgow.gov.uk"
     },
     {
       "name": "John Carson",
@@ -3557,142 +3885,56 @@
       "email": "john.carson@glasgow.gov.uk"
     },
     {
-      "name": "John Daly",
-      "party": "Conservative and Unionist",
-      "ward": "Baillieston",
-      "email": "john.daly3@glasgow.gov.uk"
-    },
-    {
-      "name": "Jon Molyneux",
-      "party": "Scottish Green Party",
-      "ward": "Pollokshields",
-      "email": "jon.molyneux@glasgow.gov.uk"
-    },
-    {
-      "name": "Ken Andrew",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Hillhead",
-      "email": "ken.andrew@glasgow.gov.uk"
-    },
-    {
-      "name": "Kevin Lalley",
-      "party": "Labour Party",
-      "ward": "Baillieston",
-      "email": "kevin.lalley@glasgow.gov.uk"
-    },
-    {
-      "name": "Kieran Turner",
-      "party": "Labour Party",
-      "ward": "East Centre",
-      "email": "kieran.turner@glasgow.gov.uk"
-    },
-    {
-      "name": "Lana Reid-McConnell",
-      "party": "Scottish Green Party",
-      "ward": "Victoria Park",
-      "email": "lana.reidmcconnell@glasgow.gov.uk"
-    },
-    {
-      "name": "Laura Doherty",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Shettleston",
-      "email": "laura.doherty@glasgow.gov.uk"
-    },
-    {
-      "name": "Leodhas Massie",
-      "party": "Scottish Green Party",
-      "ward": "Newlands/Auldburn",
-      "email": "leodhas.massie@glasgow.gov.uk"
-    },
-    {
-      "name": "Lilith Johnstone",
-      "party": "Labour Party",
-      "ward": "Partick East/Kelvindale",
-      "email": "lilith.johnstone@glasgow.gov.uk"
-    },
-    {
-      "name": "Linda Pike",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Calton",
-      "email": "linda.pike@glasgow.gov.uk"
-    },
-    {
-      "name": "Malcolm Mitchell",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Garscadden/Scotstounhill",
-      "email": "malcolm.mitchell@glasgow.gov.uk"
-    },
-    {
       "name": "Margaret Morgan",
       "party": "Scottish National Party (SNP)",
       "ward": "Linn",
       "email": "margaret.morgan@glasgow.gov.uk"
     },
     {
-      "name": "Marie Garrity",
-      "party": "Labour Party",
-      "ward": "Maryhill",
-      "email": "marie.garrity2@glasgow.gov.uk"
-    },
-    {
-      "name": "Marie Garrity",
-      "party": "Labour Party",
-      "ward": "Maryhill",
-      "email": "marie.garrity2@glasgow.gov.uk"
-    },
-    {
-      "name": "Martha Wardrop",
-      "party": "Scottish Green Party",
-      "ward": "Hillhead",
-      "email": "martha.wardrop@glasgow.gov.uk"
-    },
-    {
-      "name": "Matt Kerr",
-      "party": "Labour Party",
-      "ward": "Cardonald",
-      "email": "matthew.kerr@glasgow.gov.uk"
-    },
-    {
-      "name": "Mhairi Hunter",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Southside Central",
-      "email": "mhairi.hunter@glasgow.gov.uk"
-    },
-    {
-      "name": "Norman MacLeod",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Pollokshields",
-      "email": "norman.macleod@glasgow.gov.uk"
-    },
-    {
-      "name": "Paul Carey",
-      "party": "Labour Party",
-      "ward": "Drumchapel/Anniesland",
-      "email": "paul.carey@glasgow.gov.uk"
-    },
-    {
-      "name": "Paul Leinster",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Langside",
-      "email": "paul.leinster@glasgow.gov.uk"
-    },
-    {
       "name": "Paul McCabe",
       "party": "Scottish National Party (SNP)",
       "ward": "Linn",
       "email": "paul.mccabe@glasgow.gov.uk"
-    },
+    }
+  ],
+  "calton": [
     {
-      "name": "Philip Braat",
-      "party": "Independent / Other",
-      "ward": "Anderston/City/Yorkhill",
-      "email": "philip.braat@glasgow.gov.uk"
-    },
-    {
-      "name": "Rashid Hussain",
+      "name": "Cecilia O\\'Lone",
       "party": "Labour Party",
-      "ward": "Greater Pollok",
-      "email": "rashid.hussain@glasgow.gov.uk"
+      "ward": "Calton",
+      "email": "cecilia.o'lone@glasgow.gov.uk"
+    },
+    {
+      "name": "George Redmond",
+      "party": "Labour Party",
+      "ward": "Calton",
+      "email": "george.redmond@glasgow.gov.uk"
+    },
+    {
+      "name": "Greg Hepburn",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Calton",
+      "email": "greg.hepburn@glasgow.gov.uk"
+    },
+    {
+      "name": "Linda Pike",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Calton",
+      "email": "linda.pike@glasgow.gov.uk"
+    }
+  ],
+  "govan": [
+    {
+      "name": "Dan Hutchison",
+      "party": "Scottish Green Party",
+      "ward": "Govan",
+      "email": "dan.hutchison@glasgow.gov.uk"
+    },
+    {
+      "name": "Imran Alam",
+      "party": "Labour Party",
+      "ward": "Govan",
+      "email": "imran.alam@glasgow.gov.uk"
     },
     {
       "name": "Richard Bell",
@@ -3701,94 +3943,76 @@
       "email": "richard.bell@glasgow.gov.uk"
     },
     {
-      "name": "Robert Mooney",
-      "party": "Labour Party",
-      "ward": "Canal",
-      "email": "robert.mooney@glasgow.gov.uk"
-    },
-    {
-      "name": "Roza Salih",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Greater Pollok",
-      "email": "roza.salih@glasgow.gov.uk"
-    },
-    {
-      "name": "Ruairi Kelly",
-      "party": "Scottish National Party (SNP)",
-      "ward": "North East",
-      "email": "ruairi.kelly@glasgow.gov.uk"
-    },
-    {
-      "name": "Saqib Ahmed",
-      "party": "Labour Party",
-      "ward": "Greater Pollok",
-      "email": "saqib.ahmed@glasgow.gov.uk"
-    },
-    {
-      "name": "Sean Ferguson",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Newlands/Auldburn",
-      "email": "sean.ferguson@glasgow.gov.uk"
-    },
-    {
-      "name": "Seonad Hoy",
-      "party": "Scottish Green Party",
-      "ward": "Hillhead",
-      "email": "seonad.hoy@glasgow.gov.uk"
-    },
-    {
-      "name": "Sharon Greer",
-      "party": "Labour Party",
-      "ward": "North East",
-      "email": "sharon.greer@glasgow.gov.uk"
-    },
-    {
-      "name": "Soryia Siddique",
-      "party": "Labour Party",
-      "ward": "Southside Central",
-      "email": "soryia.siddique@glasgow.gov.uk"
-    },
-    {
-      "name": "Stephen Curran",
-      "party": "Labour Party",
-      "ward": "Newlands/Auldburn",
-      "email": "stephen.curran@glasgow.gov.uk"
-    },
-    {
-      "name": "Stephen Docherty",
-      "party": "Labour Party",
-      "ward": "Langside",
-      "email": "stephen.docherty@glasgow.gov.uk"
-    },
-    {
       "name": "Stephen Dornan",
       "party": "Scottish National Party (SNP)",
       "ward": "Govan",
       "email": "stephen.dornan@glasgow.gov.uk"
+    }
+  ],
+  "victoriapark": [
+    {
+      "name": "Eunis Jassemi",
+      "party": "Labour Party",
+      "ward": "Victoria Park",
+      "email": "eunis.jassemi@glasgow.gov.uk"
     },
     {
-      "name": "Susan Aitken",
+      "name": "Feargal Dalton",
+      "party": "Independent / Other",
+      "ward": "Victoria Park",
+      "email": "feargal.dalton@glasgow.gov.uk"
+    },
+    {
+      "name": "Lana Reid-McConnell",
+      "party": "Scottish Green Party",
+      "ward": "Victoria Park",
+      "email": "lana.reidmcconnell@glasgow.gov.uk"
+    }
+  ],
+  "shettleston": [
+    {
+      "name": "Frank McAveety",
+      "party": "Independent / Other",
+      "ward": "Shettleston",
+      "email": "frank.mcaveety@glasgow.gov.uk"
+    },
+    {
+      "name": "Jill Pidgeon",
+      "party": "Labour Party",
+      "ward": "Shettleston",
+      "email": "jill.pidgeon@glasgow.gov.uk"
+    },
+    {
+      "name": "Laura Doherty",
       "party": "Scottish National Party (SNP)",
-      "ward": "Langside",
-      "email": "susan.aitken@glasgow.gov.uk"
+      "ward": "Shettleston",
+      "email": "laura.doherty@glasgow.gov.uk"
     },
     {
       "name": "Thomas Kerr",
       "party": "Reform UK",
       "ward": "Shettleston",
       "email": "thomas.kerr2@glasgow.gov.uk"
-    },
+    }
+  ],
+  "pollokshields": [
     {
-      "name": "Thomas Rannachan",
+      "name": "Hanif Raja",
       "party": "Labour Party",
-      "ward": "Springburn/Robroyston",
-      "email": "thomas.rannachan@glasgow.gov.uk"
+      "ward": "Pollokshields",
+      "email": "hanif.raja@glasgow.gov.uk"
     },
     {
-      "name": "William Graham",
+      "name": "Jon Molyneux",
+      "party": "Scottish Green Party",
+      "ward": "Pollokshields",
+      "email": "jon.molyneux@glasgow.gov.uk"
+    },
+    {
+      "name": "Norman MacLeod",
       "party": "Scottish National Party (SNP)",
-      "ward": "Greater Pollok",
-      "email": "william.graham2@glasgow.gov.uk"
+      "ward": "Pollokshields",
+      "email": "norman.macleod@glasgow.gov.uk"
     },
     {
       "name": "Zen Ghani",
@@ -3797,42 +4021,104 @@
       "email": "zen.ghani@glasgow.gov.uk"
     }
   ],
-  "highland": [
+  "langside": [
+    {
+      "name": "Holly Bruce",
+      "party": "Scottish Green Party",
+      "ward": "Langside",
+      "email": "holly.bruce@glasgow.gov.uk"
+    },
+    {
+      "name": "Paul Leinster",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Langside",
+      "email": "paul.leinster@glasgow.gov.uk"
+    },
+    {
+      "name": "Stephen Docherty",
+      "party": "Labour Party",
+      "ward": "Langside",
+      "email": "stephen.docherty@glasgow.gov.uk"
+    },
+    {
+      "name": "Susan Aitken",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Langside",
+      "email": "susan.aitken@glasgow.gov.uk"
+    }
+  ],
+  "hillhead": [
+    {
+      "name": "Ken Andrew",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Hillhead",
+      "email": "ken.andrew@glasgow.gov.uk"
+    },
+    {
+      "name": "Martha Wardrop",
+      "party": "Scottish Green Party",
+      "ward": "Hillhead",
+      "email": "martha.wardrop@glasgow.gov.uk"
+    },
+    {
+      "name": "Seonad Hoy",
+      "party": "Scottish Green Party",
+      "ward": "Hillhead",
+      "email": "seonad.hoy@glasgow.gov.uk"
+    }
+  ],
+  "newlandsauldburn": [
+    {
+      "name": "Leodhas Massie",
+      "party": "Scottish Green Party",
+      "ward": "Newlands/Auldburn",
+      "email": "leodhas.massie@glasgow.gov.uk"
+    },
+    {
+      "name": "Sean Ferguson",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Newlands/Auldburn",
+      "email": "sean.ferguson@glasgow.gov.uk"
+    },
+    {
+      "name": "Stephen Curran",
+      "party": "Labour Party",
+      "ward": "Newlands/Auldburn",
+      "email": "stephen.curran@glasgow.gov.uk"
+    }
+  ],
+  "greaterpollok": [
+    {
+      "name": "Rashid Hussain",
+      "party": "Labour Party",
+      "ward": "Greater Pollok",
+      "email": "rashid.hussain@glasgow.gov.uk"
+    },
+    {
+      "name": "Roza Salih",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Greater Pollok",
+      "email": "roza.salih@glasgow.gov.uk"
+    },
+    {
+      "name": "Saqib Ahmed",
+      "party": "Labour Party",
+      "ward": "Greater Pollok",
+      "email": "saqib.ahmed@glasgow.gov.uk"
+    },
+    {
+      "name": "William Graham",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Greater Pollok",
+      "email": "william.graham2@glasgow.gov.uk"
+    }
+  ],
+  "invernessnessside": [
     {
       "name": "Alasdair Christie",
       "party": "Liberal Democrats",
       "ward": "Inverness Ness-side",
       "email": "alasdair.christie.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Alex Graham",
-      "party": "Liberal Democrats",
-      "ward": "Inverness West",
-      "email": "alex.graham.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Andrew Baldrey",
-      "party": "Scottish Green Party",
-      "ward": "Caol and Mallaig",
-      "email": "andrew.baldrey.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Andrew Baxter",
-      "party": "Liberal Democrats",
-      "ward": "Fort William and Ardnamurchan",
-      "email": "andrew.baxter2.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Andrew Jarvie",
-      "party": "Independent / Other",
-      "ward": "Wick and East Caithness",
-      "email": "andrew.jarvie.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Andrew Jarvie",
-      "party": "Independent / Other",
-      "ward": "Wick and East Caithness",
-      "email": "andrew.jarvie.cllr@highland.gov.uk"
     },
     {
       "name": "Andrew MacKintosh",
@@ -3841,28 +4127,18 @@
       "email": "andrew.mackintosh.cllr@highland.gov.uk"
     },
     {
-      "name": "Andrew Sinclair",
-      "party": "Independent / Other",
-      "ward": "Inverness South",
-      "email": "andrew.sinclair.cllr@highland.gov.uk"
-    },
+      "name": "Jackie Hendry",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Inverness Ness-side",
+      "email": "jackie.hendry.cllr@highland.gov.uk"
+    }
+  ],
+  "invernesswest": [
     {
-      "name": "Andrew Sinclair",
-      "party": "Independent / Other",
-      "ward": "Inverness South",
-      "email": "andrew.sinclair.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Angela MacLean",
+      "name": "Alex Graham",
       "party": "Liberal Democrats",
-      "ward": "Dingwall and Seaforth",
-      "email": "angela.maclean.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Barbara Jarvie",
-      "party": "Conservative and Unionist",
-      "ward": "Nairn and Cawdor",
-      "email": "barbara.jarvie.cllr@highland.gov.uk"
+      "ward": "Inverness West",
+      "email": "alex.graham.cllr@highland.gov.uk"
     },
     {
       "name": "Bill Boyd",
@@ -3871,46 +4147,102 @@
       "email": "bill.boyd.cllr@highland.gov.uk"
     },
     {
-      "name": "Bill Lobban",
-      "party": "Independent / Other",
-      "ward": "Badenoch and Strathspey",
-      "email": "bill.lobban.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Chris Ballance",
+      "name": "Ryan MacKintosh",
       "party": "Scottish Green Party",
-      "ward": "Aird and Loch Ness",
-      "email": "chris.ballance.cllr@highland.gov.uk"
+      "ward": "Inverness West",
+      "email": "ryan.mackintosh.cllr@highland.gov.uk"
+    }
+  ],
+  "caolandmallaig": [
+    {
+      "name": "Andrew Baldrey",
+      "party": "Scottish Green Party",
+      "ward": "Caol and Mallaig",
+      "email": "andrew.baldrey.cllr@highland.gov.uk"
     },
     {
-      "name": "Chris Birt",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Wester Ross, Strathpeffer and Lochalsh",
-      "email": "chris.birt.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Christine Gillies",
-      "party": "Independent / Other",
-      "ward": "Eilean \u00e1 Ch\u00e8o",
-      "email": "christine.gillies.cllr@highland.gov.uk"
-    },
-    {
-      "name": "David Fraser",
-      "party": "Independent / Other",
-      "ward": "Aird and Loch Ness",
-      "email": "david.fraser.cllr@highland.gov.uk"
-    },
-    {
-      "name": "David Gregg",
+      "name": "John Grafton",
       "party": "Liberal Democrats",
-      "ward": "Inverness Millburn",
-      "email": "david.gregg.cllr@highland.gov.uk"
+      "ward": "Caol and Mallaig",
+      "email": "john.grafton.cllr@highland.gov.uk"
     },
     {
-      "name": "Drew Millar",
+      "name": "Liz Saggers",
+      "party": "Conservative and Unionist",
+      "ward": "Caol and Mallaig",
+      "email": "liz.saggers.cllr@highland.gov.uk"
+    }
+  ],
+  "fortwilliamandardnamurchan": [
+    {
+      "name": "Andrew Baxter",
+      "party": "Liberal Democrats",
+      "ward": "Fort William and Ardnamurchan",
+      "email": "andrew.baxter2.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Kate Willis",
+      "party": "Scottish Green Party",
+      "ward": "Fort William and Ardnamurchan",
+      "email": "kate.willis.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Sarah Fanet",
       "party": "Scottish National Party (SNP)",
-      "ward": "Eilean \u00e1 Ch\u00e8o",
-      "email": "drew.millar.cllr@highland.gov.uk"
+      "ward": "Fort William and Ardnamurchan",
+      "email": "sarah.fanet.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Thomas MacLennan",
+      "party": "Independent / Other",
+      "ward": "Fort William and Ardnamurchan",
+      "email": "thomas.maclennan.cllr@highland.gov.uk"
+    }
+  ],
+  "wickandeastcaithness": [
+    {
+      "name": "Andrew Jarvie",
+      "party": "Independent / Other",
+      "ward": "Wick and East Caithness",
+      "email": "andrew.jarvie.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Andrew Jarvie",
+      "party": "Independent / Other",
+      "ward": "Wick and East Caithness",
+      "email": "andrew.jarvie.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Jan McEwan",
+      "party": "Liberal Democrats",
+      "ward": "Wick and East Caithness",
+      "email": "jan.mcewan.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Raymond Bremner",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Wick and East Caithness",
+      "email": "raymond.bremner.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Willie MacKay",
+      "party": "Independent / Other",
+      "ward": "Wick and East Caithness",
+      "email": "willie.mackay.cllr@highland.gov.uk"
+    }
+  ],
+  "invernesssouth": [
+    {
+      "name": "Andrew Sinclair",
+      "party": "Independent / Other",
+      "ward": "Inverness South",
+      "email": "andrew.sinclair.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Andrew Sinclair",
+      "party": "Independent / Other",
+      "ward": "Inverness South",
+      "email": "andrew.sinclair.cllr@highland.gov.uk"
     },
     {
       "name": "Duncan Macpherson",
@@ -3925,16 +4257,18 @@
       "email": "duncan.mcdonald.cllr@highland.gov.uk"
     },
     {
-      "name": "Emma Knox",
+      "name": "Ken Gowans",
       "party": "Scottish National Party (SNP)",
-      "ward": "Aird and Loch Ness",
-      "email": "emma.knox.cllr@highland.gov.uk"
-    },
+      "ward": "Inverness South",
+      "email": "ken.gowans.cllr@highland.gov.uk"
+    }
+  ],
+  "dingwallandseaforth": [
     {
-      "name": "Glynis Sinclair",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Culloden and Ardersier",
-      "email": "glynis.sinclair.cllr@highland.gov.uk"
+      "name": "Angela MacLean",
+      "party": "Liberal Democrats",
+      "ward": "Dingwall and Seaforth",
+      "email": "angela.maclean.cllr@highland.gov.uk"
     },
     {
       "name": "Graham MacKenzie",
@@ -3943,106 +4277,24 @@
       "email": "graham.mackenzie.cllr@highland.gov.uk"
     },
     {
-      "name": "Helen Crawford",
+      "name": "Margaret Paterson",
+      "party": "Independent / Other",
+      "ward": "Dingwall and Seaforth",
+      "email": "margaret.paterson.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Sean Kennedy",
+      "party": "Independent / Other",
+      "ward": "Dingwall and Seaforth",
+      "email": "sean.kennedy.cllr@highland.gov.uk"
+    }
+  ],
+  "nairnandcawdor": [
+    {
+      "name": "Barbara Jarvie",
       "party": "Conservative and Unionist",
-      "ward": "Aird and Loch Ness",
-      "email": "helen.crawford.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Hugh Morrison",
-      "party": "Independent / Other",
-      "ward": "North, West and Central Sutherland",
-      "email": "hugh.morrison.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Ian Brown",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverness Millburn",
-      "email": "ian.brown2.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Isabelle Campbell",
-      "party": "Independent / Other",
-      "ward": "Wester Ross, Strathpeffer and Lochalsh",
-      "email": "isabelle.campbell.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Isabelle MacKenzie",
-      "party": "Conservative and Unionist",
-      "ward": "Inverness Millburn",
-      "email": "isabelle.mackenzie.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Jackie Hendry",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverness Ness-side",
-      "email": "jackie.hendry.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Jan McEwan",
-      "party": "Liberal Democrats",
-      "ward": "Wick and East Caithness",
-      "email": "jan.mcewan.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Jim McGillivray",
-      "party": "Independent / Other",
-      "ward": "East Sutherland and Edderton",
-      "email": "jim.mcgillivray.cllr@highland.gov.uk"
-    },
-    {
-      "name": "John Bruce",
-      "party": "Conservative and Unionist",
-      "ward": "Badenoch and Strathspey",
-      "email": "john.bruce.cllr@highland.gov.uk"
-    },
-    {
-      "name": "John Edmondson",
-      "party": "Liberal Democrats",
-      "ward": "Cromarty Firth",
-      "email": "john.edmondson.cllr@highland.gov.uk"
-    },
-    {
-      "name": "John Finlayson",
-      "party": "Independent / Other",
-      "ward": "Eilean \u00e1 Ch\u00e8o",
-      "email": "john.finlayson.cllr@highland.gov.uk"
-    },
-    {
-      "name": "John Grafton",
-      "party": "Liberal Democrats",
-      "ward": "Caol and Mallaig",
-      "email": "john.grafton.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Karl Rosie",
-      "party": "Alba Party",
-      "ward": "Thurso and Northwest Caithness",
-      "email": "karl.rosie.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Kate MacLean",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverness Central",
-      "email": "kate.maclean.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Kate Willis",
-      "party": "Scottish Green Party",
-      "ward": "Fort William and Ardnamurchan",
-      "email": "kate.willis.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Ken Gowans",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverness South",
-      "email": "ken.gowans.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Laura Dundas",
-      "party": "Independent / Other",
-      "ward": "Tain and Easter Ross",
-      "email": "laura.dundas.cllr@highland.gov.uk"
+      "ward": "Nairn and Cawdor",
+      "email": "barbara.jarvie.cllr@highland.gov.uk"
     },
     {
       "name": "Laurie Fraser",
@@ -4051,88 +4303,30 @@
       "email": "laurie.fraser.cllr@highland.gov.uk"
     },
     {
-      "name": "Leslie-Anne Niven",
-      "party": "Scottish National Party (SNP)",
-      "ward": "East Sutherland and Edderton",
-      "email": "leslie-anne.niven.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Liz Kraft",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Wester Ross, Strathpeffer and Lochalsh",
-      "email": "liz.kraft.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Liz Saggers",
-      "party": "Conservative and Unionist",
-      "ward": "Caol and Mallaig",
-      "email": "liz.saggers.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Lyndsey Johnston",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Black Isle",
-      "email": "lyndsey.johnston.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Margaret Paterson",
-      "party": "Independent / Other",
-      "ward": "Dingwall and Seaforth",
-      "email": "margaret.paterson.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Marianne Hutchison",
-      "party": "Scottish National Party (SNP)",
-      "ward": "North, West and Central Sutherland",
-      "email": "marianne.hutchison.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Matthew Reiss",
-      "party": "Independent / Other",
-      "ward": "Thurso and Northwest Caithness",
-      "email": "matthew.reiss.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Maureen Ross",
-      "party": "Independent / Other",
-      "ward": "Tain and Easter Ross",
-      "email": "maureen.ross.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Michael Baird",
-      "party": "Liberal Democrats",
-      "ward": "North, West and Central Sutherland",
-      "email": "michael.baird.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Michael Cameron",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Inverness Central",
-      "email": "michael.cameron.cllr@highland.gov.uk"
-    },
-    {
       "name": "Michael Green",
       "party": "Independent / Other",
       "ward": "Nairn and Cawdor",
       "email": "michael.green.cllr@highland.gov.uk"
     },
     {
-      "name": "Michael Gregson",
-      "party": "Labour Party",
-      "ward": "Inverness Central",
-      "email": "michael.gregson.cllr@highland.gov.uk"
-    },
+      "name": "Paul Oldham",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Nairn and Cawdor",
+      "email": "paul.oldham.cllr@highland.gov.uk"
+    }
+  ],
+  "badenochandstrathspey": [
     {
-      "name": "Morven Reid",
+      "name": "Bill Lobban",
       "party": "Independent / Other",
-      "ward": "Culloden and Ardersier",
-      "email": "morven.reid.cllr@highland.gov.uk"
+      "ward": "Badenoch and Strathspey",
+      "email": "bill.lobban.cllr@highland.gov.uk"
     },
     {
-      "name": "Morven-May MacCallum",
-      "party": "Liberal Democrats",
-      "ward": "Black Isle",
-      "email": "morven-may.maccallum.cllr@highland.gov.uk"
+      "name": "John Bruce",
+      "party": "Conservative and Unionist",
+      "ward": "Badenoch and Strathspey",
+      "email": "john.bruce.cllr@highland.gov.uk"
     },
     {
       "name": "Muriel Cockburn",
@@ -4141,22 +4335,176 @@
       "email": "muriel.cockburn.cllr@highland.gov.uk"
     },
     {
+      "name": "Russell Jones",
+      "party": "Independent / Other",
+      "ward": "Badenoch and Strathspey",
+      "email": "russell.jones.cllr@highland.gov.uk"
+    }
+  ],
+  "airdandlochness": [
+    {
+      "name": "Chris Ballance",
+      "party": "Scottish Green Party",
+      "ward": "Aird and Loch Ness",
+      "email": "chris.ballance.cllr@highland.gov.uk"
+    },
+    {
+      "name": "David Fraser",
+      "party": "Independent / Other",
+      "ward": "Aird and Loch Ness",
+      "email": "david.fraser.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Emma Knox",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Aird and Loch Ness",
+      "email": "emma.knox.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Helen Crawford",
+      "party": "Conservative and Unionist",
+      "ward": "Aird and Loch Ness",
+      "email": "helen.crawford.cllr@highland.gov.uk"
+    }
+  ],
+  "westerross,strathpefferandlochalsh": [
+    {
+      "name": "Chris Birt",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Wester Ross, Strathpeffer and Lochalsh",
+      "email": "chris.birt.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Isabelle Campbell",
+      "party": "Independent / Other",
+      "ward": "Wester Ross, Strathpeffer and Lochalsh",
+      "email": "isabelle.campbell.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Liz Kraft",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Wester Ross, Strathpeffer and Lochalsh",
+      "email": "liz.kraft.cllr@highland.gov.uk"
+    },
+    {
       "name": "Patrick Logue",
       "party": "Liberal Democrats",
       "ward": "Wester Ross, Strathpeffer and Lochalsh",
       "email": "patrick.logue.cllr@highland.gov.uk"
+    }
+  ],
+  "eilean\u00e1ch\u00e8o": [
+    {
+      "name": "Christine Gillies",
+      "party": "Independent / Other",
+      "ward": "Eilean \u00e1 Ch\u00e8o",
+      "email": "christine.gillies.cllr@highland.gov.uk"
     },
     {
-      "name": "Paul Oldham",
+      "name": "Drew Millar",
       "party": "Scottish National Party (SNP)",
-      "ward": "Nairn and Cawdor",
-      "email": "paul.oldham.cllr@highland.gov.uk"
+      "ward": "Eilean \u00e1 Ch\u00e8o",
+      "email": "drew.millar.cllr@highland.gov.uk"
     },
     {
-      "name": "Raymond Bremner",
+      "name": "John Finlayson",
+      "party": "Independent / Other",
+      "ward": "Eilean \u00e1 Ch\u00e8o",
+      "email": "john.finlayson.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Ruraidh Stewart",
+      "party": "Conservative and Unionist",
+      "ward": "Eilean \u00e1 Ch\u00e8o",
+      "email": "ruraidh.stewart.cllr@highland.gov.uk"
+    }
+  ],
+  "invernessmillburn": [
+    {
+      "name": "David Gregg",
+      "party": "Liberal Democrats",
+      "ward": "Inverness Millburn",
+      "email": "david.gregg.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Ian Brown",
       "party": "Scottish National Party (SNP)",
-      "ward": "Wick and East Caithness",
-      "email": "raymond.bremner.cllr@highland.gov.uk"
+      "ward": "Inverness Millburn",
+      "email": "ian.brown2.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Isabelle MacKenzie",
+      "party": "Conservative and Unionist",
+      "ward": "Inverness Millburn",
+      "email": "isabelle.mackenzie.cllr@highland.gov.uk"
+    }
+  ],
+  "cullodenandardersier": [
+    {
+      "name": "Glynis Sinclair",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Culloden and Ardersier",
+      "email": "glynis.sinclair.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Morven Reid",
+      "party": "Independent / Other",
+      "ward": "Culloden and Ardersier",
+      "email": "morven.reid.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Trish Robertson",
+      "party": "Liberal Democrats",
+      "ward": "Culloden and Ardersier",
+      "email": "trish.robertson.cllr@highland.gov.uk"
+    }
+  ],
+  "north,westandcentralsutherland": [
+    {
+      "name": "Hugh Morrison",
+      "party": "Independent / Other",
+      "ward": "North, West and Central Sutherland",
+      "email": "hugh.morrison.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Marianne Hutchison",
+      "party": "Scottish National Party (SNP)",
+      "ward": "North, West and Central Sutherland",
+      "email": "marianne.hutchison.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Michael Baird",
+      "party": "Liberal Democrats",
+      "ward": "North, West and Central Sutherland",
+      "email": "michael.baird.cllr@highland.gov.uk"
+    }
+  ],
+  "eastsutherlandandedderton": [
+    {
+      "name": "Jim McGillivray",
+      "party": "Independent / Other",
+      "ward": "East Sutherland and Edderton",
+      "email": "jim.mcgillivray.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Leslie-Anne Niven",
+      "party": "Scottish National Party (SNP)",
+      "ward": "East Sutherland and Edderton",
+      "email": "leslie-anne.niven.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Richard Gale",
+      "party": "Liberal Democrats",
+      "ward": "East Sutherland and Edderton",
+      "email": "richard.gale.cllr@highland.gov.uk"
+    }
+  ],
+  "cromartyfirth": [
+    {
+      "name": "John Edmondson",
+      "party": "Liberal Democrats",
+      "ward": "Cromarty Firth",
+      "email": "john.edmondson.cllr@highland.gov.uk"
     },
     {
       "name": "Richard Cross",
@@ -4165,10 +4513,30 @@
       "email": "richard.cross.cllr@highland.gov.uk"
     },
     {
-      "name": "Richard Gale",
-      "party": "Liberal Democrats",
-      "ward": "East Sutherland and Edderton",
-      "email": "richard.gale.cllr@highland.gov.uk"
+      "name": "Sinclair Coghill",
+      "party": "Independent / Other",
+      "ward": "Cromarty Firth",
+      "email": "sinclair.coghill.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Tamala Collier",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Cromarty Firth",
+      "email": "tamala.collier.cllr@highland.gov.uk"
+    }
+  ],
+  "thursoandnorthwestcaithness": [
+    {
+      "name": "Karl Rosie",
+      "party": "Alba Party",
+      "ward": "Thurso and Northwest Caithness",
+      "email": "karl.rosie.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Matthew Reiss",
+      "party": "Independent / Other",
+      "ward": "Thurso and Northwest Caithness",
+      "email": "matthew.reiss.cllr@highland.gov.uk"
     },
     {
       "name": "Ron Gunn",
@@ -4177,79 +4545,67 @@
       "email": "ron.gunn.cllr@highland.gov.uk"
     },
     {
-      "name": "Ruraidh Stewart",
-      "party": "Conservative and Unionist",
-      "ward": "Eilean \u00e1 Ch\u00e8o",
-      "email": "ruraidh.stewart.cllr@highland.gov.uk"
+      "name": "Struan Mackie",
+      "party": "Liberal Democrats",
+      "ward": "Thurso and Northwest Caithness",
+      "email": "struan.mackie.cllr@highland.gov.uk"
+    }
+  ],
+  "invernesscentral": [
+    {
+      "name": "Kate MacLean",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Inverness Central",
+      "email": "kate.maclean.cllr@highland.gov.uk"
     },
     {
-      "name": "Russell Jones",
+      "name": "Michael Cameron",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Inverness Central",
+      "email": "michael.cameron.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Michael Gregson",
+      "party": "Labour Party",
+      "ward": "Inverness Central",
+      "email": "michael.gregson.cllr@highland.gov.uk"
+    }
+  ],
+  "tainandeasterross": [
+    {
+      "name": "Laura Dundas",
       "party": "Independent / Other",
-      "ward": "Badenoch and Strathspey",
-      "email": "russell.jones.cllr@highland.gov.uk"
+      "ward": "Tain and Easter Ross",
+      "email": "laura.dundas.cllr@highland.gov.uk"
     },
     {
-      "name": "Ryan MacKintosh",
-      "party": "Scottish Green Party",
-      "ward": "Inverness West",
-      "email": "ryan.mackintosh.cllr@highland.gov.uk"
+      "name": "Maureen Ross",
+      "party": "Independent / Other",
+      "ward": "Tain and Easter Ross",
+      "email": "maureen.ross.cllr@highland.gov.uk"
+    }
+  ],
+  "blackisle": [
+    {
+      "name": "Lyndsey Johnston",
+      "party": "Scottish National Party (SNP)",
+      "ward": "Black Isle",
+      "email": "lyndsey.johnston.cllr@highland.gov.uk"
+    },
+    {
+      "name": "Morven-May MacCallum",
+      "party": "Liberal Democrats",
+      "ward": "Black Isle",
+      "email": "morven-may.maccallum.cllr@highland.gov.uk"
     },
     {
       "name": "Sarah Atkin",
       "party": "Independent / Other",
       "ward": "Black Isle",
       "email": "sarah.atkin.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Sarah Fanet",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Fort William and Ardnamurchan",
-      "email": "sarah.fanet.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Sean Kennedy",
-      "party": "Independent / Other",
-      "ward": "Dingwall and Seaforth",
-      "email": "sean.kennedy.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Sinclair Coghill",
-      "party": "Independent / Other",
-      "ward": "Cromarty Firth",
-      "email": "sinclair.coghill.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Struan Mackie",
-      "party": "Liberal Democrats",
-      "ward": "Thurso and Northwest Caithness",
-      "email": "struan.mackie.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Tamala Collier",
-      "party": "Scottish National Party (SNP)",
-      "ward": "Cromarty Firth",
-      "email": "tamala.collier.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Thomas MacLennan",
-      "party": "Independent / Other",
-      "ward": "Fort William and Ardnamurchan",
-      "email": "thomas.maclennan.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Trish Robertson",
-      "party": "Liberal Democrats",
-      "ward": "Culloden and Ardersier",
-      "email": "trish.robertson.cllr@highland.gov.uk"
-    },
-    {
-      "name": "Willie MacKay",
-      "party": "Independent / Other",
-      "ward": "Wick and East Caithness",
-      "email": "willie.mackay.cllr@highland.gov.uk"
     }
   ],
-  "inverclyde": [
+  "inverclydecentral": [
     {
       "name": "Pam Armstrong",
       "party": "Scottish National Party (SNP)",
@@ -4267,7 +4623,9 @@
       "party": "Labour Party",
       "ward": "Inverclyde Central",
       "email": "colin.jackson@inverclyde.gov"
-    },
+    }
+  ],
+  "inverclydeeast": [
     {
       "name": "Chris Curley",
       "party": "Scottish National Party (SNP)",
@@ -4285,7 +4643,9 @@
       "party": "Labour Party",
       "ward": "Inverclyde East",
       "email": "stephen.mccabe@inverclyde.gov"
-    },
+    }
+  ],
+  "inverclydeeastcentral": [
     {
       "name": "Robert Moran",
       "party": "Labour Party",
@@ -4303,7 +4663,9 @@
       "party": "Independent / Other",
       "ward": "Inverclyde East Central",
       "email": "drew.mckenzie@inverclyde.gov"
-    },
+    }
+  ],
+  "inverclydenorth": [
     {
       "name": "Graeme Brooks",
       "party": "Conservative and Unionist",
@@ -4327,7 +4689,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Inverclyde North",
       "email": "elizabeth.robertson@inverclyde.gov"
-    },
+    }
+  ],
+  "inverclydesouth": [
     {
       "name": "Natasha McGuire",
       "party": "Labour Party",
@@ -4345,7 +4709,9 @@
       "party": "Independent / Other",
       "ward": "Inverclyde South",
       "email": "tommy.mcvey@inverclyde.gov"
-    },
+    }
+  ],
+  "inverclydesouthwest": [
     {
       "name": "Paul Cassidy",
       "party": "Labour Party",
@@ -4363,7 +4729,9 @@
       "party": "Independent / Other",
       "ward": "Inverclyde South West",
       "email": "innes.nelson@inverclyde.gov.uk"
-    },
+    }
+  ],
+  "inverclydewest": [
     {
       "name": "Sandra Reynolds",
       "party": "Scottish National Party (SNP)",
@@ -4383,7 +4751,7 @@
       "email": "innes.nelson@inverclyde.gov"
     }
   ],
-  "midlothian": [
+  "bonnyrigg": [
     {
       "name": "David Virgo",
       "party": "Conservative and Unionist",
@@ -4401,7 +4769,9 @@
       "party": "Labour Party",
       "ward": "Bonnyrigg",
       "email": "derek.milligan@midlothian.gov"
-    },
+    }
+  ],
+  "dalkeith": [
     {
       "name": "Margot Russell",
       "party": "Labour Party",
@@ -4419,7 +4789,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Dalkeith",
       "email": "colin.cassidy@midlothian.gov"
-    },
+    }
+  ],
+  "midlothianeast": [
     {
       "name": "Peter Smaill",
       "party": "Conservative and Unionist",
@@ -4437,7 +4809,9 @@
       "party": "Independent / Other",
       "ward": "Midlothian East",
       "email": "bryan.pottinger@midlothian.gov"
-    },
+    }
+  ],
+  "midlothiansouth": [
     {
       "name": "Ellen Scott",
       "party": "Scottish National Party (SNP)",
@@ -4455,7 +4829,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Midlothian South",
       "email": "douglas.bowen@midlothian.gov"
-    },
+    }
+  ],
+  "midlothianwest": [
     {
       "name": "Russell Imrie",
       "party": "Labour Party",
@@ -4473,7 +4849,9 @@
       "party": "Conservative and Unionist",
       "ward": "Midlothian West",
       "email": "pauline.winchester@midlothian.gov"
-    },
+    }
+  ],
+  "penicuik": [
     {
       "name": "Debbi McCall",
       "party": "Scottish National Party (SNP)",
@@ -4493,7 +4871,7 @@
       "email": "willie.mcewan@midlothian.gov"
     }
   ],
-  "moray": [
+  "buckie": [
     {
       "name": "Sonya Warren",
       "party": "Scottish National Party (SNP)",
@@ -4511,7 +4889,9 @@
       "party": "Independent / Other",
       "ward": "Buckie",
       "email": "john.stuart@moray.gov"
-    },
+    }
+  ],
+  "elgincitynorth": [
     {
       "name": "Amber Dunbar",
       "party": "Conservative and Unionist",
@@ -4535,7 +4915,9 @@
       "party": "Labour Party",
       "ward": "Elgin City North",
       "email": "sandy.keith@moray.gov"
-    },
+    }
+  ],
+  "elgincitysouth": [
     {
       "name": "Elaine Kirby",
       "party": "Conservative and Unionist",
@@ -4547,7 +4929,9 @@
       "party": "Labour Party",
       "ward": "Elgin City South",
       "email": "john.divers@moray.gov.uk"
-    },
+    }
+  ],
+  "fochaberslhanbryde": [
     {
       "name": "Ben Williams",
       "party": "Labour Party",
@@ -4565,7 +4949,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Fochabers Lhanbryde",
       "email": "shona.morrison@moray.gov.uk"
-    },
+    }
+  ],
+  "forres": [
     {
       "name": "Kathleen Robertson",
       "party": "Conservative and Unionist",
@@ -4589,7 +4975,9 @@
       "party": "Conservative and Unionist",
       "ward": "Forres",
       "email": "paul.mcbain@moray.gov"
-    },
+    }
+  ],
+  "heldonandlaich": [
     {
       "name": "John Cowe",
       "party": "Independent / Other",
@@ -4613,7 +5001,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Heldon and Laich",
       "email": "neil.cameron@moray.gov"
-    },
+    }
+  ],
+  "keithandcullen": [
     {
       "name": "Tracy Colyer",
       "party": "Conservative and Unionist",
@@ -4631,7 +5021,9 @@
       "party": "Conservative and Unionist",
       "ward": "Keith and Cullen",
       "email": "donald.gatt@moray.gov"
-    },
+    }
+  ],
+  "speysideglenlivet": [
     {
       "name": "Juli Harris",
       "party": "Scottish National Party (SNP)",
@@ -4651,7 +5043,7 @@
       "email": "david.gordon@moray.gov"
     }
   ],
-  "naheileanansiar": [
+  "antaobhsiaragusnis": [
     {
       "name": "Kenneth Macleod",
       "party": "Independent / Other",
@@ -4669,7 +5061,9 @@
       "party": "Independent / Other",
       "ward": "An Taobh Siar agus Nis",
       "email": "finlay.stewart@cne-siar.gov"
-    },
+    }
+  ],
+  "barraighagusbhatarsaigh": [
     {
       "name": "Kenneth J Maclean",
       "party": "Independent / Other",
@@ -4681,7 +5075,9 @@
       "party": "Independent / Other",
       "ward": "Barraigh agus Bhatarsaigh",
       "email": "iain.macneil@cne-siar.gov"
-    },
+    }
+  ],
+  "lochatuath": [
     {
       "name": "Donald Crichton",
       "party": "Independent / Other",
@@ -4699,7 +5095,9 @@
       "party": "Independent / Other",
       "ward": "Loch a Tuath",
       "email": "calum.maclean@cne-siar.gov"
-    },
+    }
+  ],
+  "nahearadh": [
     {
       "name": "Kenny Macleod",
       "party": "Independent / Other",
@@ -4711,7 +5109,9 @@
       "party": "Independent / Other",
       "ward": "Na Hearadh",
       "email": "gordon.murray@cne-siar.gov"
-    },
+    }
+  ],
+  "sg\u00ecr\u00f9igeagusc\u00e0rlabhagh": [
     {
       "name": "Norman Macdonald",
       "party": "Independent / Other",
@@ -4723,7 +5123,9 @@
       "party": "Conservative and Unionist",
       "ward": "Sg\u00ecr \u00d9ige agus C\u00e0rlabhagh",
       "email": "iainm.macaulay@cne-siar.gov"
-    },
+    }
+  ],
+  "sg\u00ecreanrubha": [
     {
       "name": "Norman Macdonald",
       "party": "Independent / Other",
@@ -4735,7 +5137,9 @@
       "party": "Independent / Other",
       "ward": "Sg\u00ecre an Rubha",
       "email": "jnmacleod@cne-siar.gov"
-    },
+    }
+  ],
+  "sg\u00ecrenanloch": [
     {
       "name": "Robert Mackenzie",
       "party": "Independent / Other",
@@ -4747,7 +5151,9 @@
       "party": "Independent / Other",
       "ward": "Sg\u00ecre nan Loch",
       "email": "angus.morrison@cne-siar.gov"
-    },
+    }
+  ],
+  "ste\u00f2rnabhaghadeas": [
     {
       "name": "George Murray",
       "party": "Independent / Other",
@@ -4771,7 +5177,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Ste\u00f2rnabhagh a Deas",
       "email": "frances.murray@cne-siar.gov"
-    },
+    }
+  ],
+  "ste\u00f2rnabhaghatuath": [
     {
       "name": "Malcolm K MacDonald",
       "party": "Liberal Democrats",
@@ -4795,7 +5203,9 @@
       "party": "Independent / Other",
       "ward": "Ste\u00f2rnabhagh a Tuath",
       "email": "duncan.macinnes@cne-siar.gov"
-    },
+    }
+  ],
+  "uibhistadeas,\u00e8irisgeighagusbeinnnafaoghla": [
     {
       "name": "Iain M Macleod",
       "party": "Independent / Other",
@@ -4813,7 +5223,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Uibhist a Deas, \u00c8irisgeigh agus Beinn na Faoghla",
       "email": "susan.thomson@cne-siar.gov"
-    },
+    }
+  ],
+  "uibhistatuath": [
     {
       "name": "Mustapha Hocine",
       "party": "Independent / Other",
@@ -4827,7 +5239,7 @@
       "email": "u.robertson@cne-siar.gov"
     }
   ],
-  "northayrshire": [
+  "ardrossan": [
     {
       "name": "Stewart Ferguson",
       "party": "Reform UK",
@@ -4845,13 +5257,17 @@
       "party": "Labour Party",
       "ward": "Ardrossan",
       "email": "amandakerr@north-ayrshire.gov"
-    },
+    }
+  ],
+  "arran": [
     {
       "name": "Charles Currie",
       "party": "Labour Party",
       "ward": "Arran",
       "email": "charlescurrie@north-ayrshire.gov"
-    },
+    }
+  ],
+  "garnockvalley": [
     {
       "name": "Ronnie Stalker",
       "party": "Conservative and Unionist",
@@ -4887,7 +5303,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Garnock Valley",
       "email": "margaretjohnson@north-ayrshire.gov"
-    },
+    }
+  ],
+  "irvineeast": [
     {
       "name": "Nairn Angus-McDonald",
       "party": "Labour Party",
@@ -4905,7 +5323,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Irvine East",
       "email": "marieburns@north-ayrshire.gov"
-    },
+    }
+  ],
+  "irvinesouth": [
     {
       "name": "Christina Larsen",
       "party": "Scottish National Party (SNP)",
@@ -4923,7 +5343,9 @@
       "party": "Reform UK",
       "ward": "Irvine South",
       "email": "matthewmclean@north-ayrshire.gov"
-    },
+    }
+  ],
+  "irvinewest": [
     {
       "name": "Chloe Robertson",
       "party": "Scottish National Party (SNP)",
@@ -4947,7 +5369,9 @@
       "party": "Conservative and Unionist",
       "ward": "Irvine West",
       "email": "scottgallacher@north-ayrshire.gov"
-    },
+    }
+  ],
+  "kilwinning": [
     {
       "name": "Mary Hume",
       "party": "Labour Party",
@@ -4971,7 +5395,9 @@
       "party": "Labour Party",
       "ward": "Kilwinning",
       "email": "joecullinane@north-ayrshire.gov"
-    },
+    }
+  ],
+  "northcoast": [
     {
       "name": "Todd Ferguson",
       "party": "Independent / Other",
@@ -5013,7 +5439,9 @@
       "party": "Conservative and Unionist",
       "ward": "North Coast",
       "email": "tommarshall@north-ayrshire.gov"
-    },
+    }
+  ],
+  "saltcoatsandstevenston": [
     {
       "name": "John Sweeney",
       "party": "Labour Party",
@@ -5051,7 +5479,7 @@
       "email": "jeanmcclung@north-ayrshire.gov"
     }
   ],
-  "northlanarkshire": [
+  "airdriecentral": [
     {
       "name": "Jim Logue",
       "party": "Labour Party",
@@ -5075,7 +5503,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Airdrie Central",
       "email": "jarviele@northlan.gov"
-    },
+    }
+  ],
+  "airdrienorth": [
     {
       "name": "Richard Sullivan",
       "party": "Scottish National Party (SNP)",
@@ -5099,7 +5529,9 @@
       "party": "Independent / Other",
       "ward": "Airdrie North",
       "email": "beveridgeal@northlan.gov"
-    },
+    }
+  ],
+  "airdriesouth": [
     {
       "name": "Michael McBride",
       "party": "Labour Party",
@@ -5123,7 +5555,9 @@
       "party": "Independent / Other",
       "ward": "Airdrie South",
       "email": "coyles@northlan.gov"
-    },
+    }
+  ],
+  "bellshill": [
     {
       "name": "Angela Campbell",
       "party": "Independent / Other",
@@ -5147,7 +5581,9 @@
       "party": "Labour Party",
       "ward": "Bellshill",
       "email": "pattonpa@northlan.gov"
-    },
+    }
+  ],
+  "coatbridgenorth": [
     {
       "name": "William Shields",
       "party": "Independent / Other",
@@ -5171,7 +5607,9 @@
       "party": "Labour Party",
       "ward": "Coatbridge North",
       "email": "brannan-mcveyh@northlan.gov"
-    },
+    }
+  ],
+  "coatbridgesouth": [
     {
       "name": "Andrew Bustard",
       "party": "Labour Party",
@@ -5195,7 +5633,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Coatbridge South",
       "email": "macgregorfe@northlan.gov"
-    },
+    }
+  ],
+  "coatbridgewest": [
     {
       "name": "Lesley Mitchell",
       "party": "Scottish National Party (SNP)",
@@ -5225,7 +5665,9 @@
       "party": "Labour Party",
       "ward": "Coatbridge West",
       "email": "dochertyke@northlan.gov"
-    },
+    }
+  ],
+  "cumbernauldeast": [
     {
       "name": "Adam Smith",
       "party": "Scottish National Party (SNP)",
@@ -5249,7 +5691,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Cumbernauld East",
       "email": "barclaycl@northlan.gov"
-    },
+    }
+  ],
+  "cumbernauldnorth": [
     {
       "name": "Tom Fisher",
       "party": "Labour Party",
@@ -5273,7 +5717,9 @@
       "party": "Conservative and Unionist",
       "ward": "Cumbernauld North",
       "email": "curriego@northlan.gov"
-    },
+    }
+  ],
+  "cumbernauldsouth": [
     {
       "name": "Ann Ballinger",
       "party": "Scottish National Party (SNP)",
@@ -5297,7 +5743,9 @@
       "party": "Labour Party",
       "ward": "Cumbernauld South",
       "email": "mcdadepe@northlan.gov"
-    },
+    }
+  ],
+  "fortissat": [
     {
       "name": "Martin McCulloch",
       "party": "Labour Party",
@@ -5321,7 +5769,9 @@
       "party": "British Unionist Party",
       "ward": "Fortissat",
       "email": "leckiejoh@northlan.gov"
-    },
+    }
+  ],
+  "gartcosh,glenboigandmoodiesburn": [
     {
       "name": "Joanne Keltie",
       "party": "Scottish National Party (SNP)",
@@ -5339,7 +5789,9 @@
       "party": "Labour Party",
       "ward": "Gartcosh, Glenboig and Moodiesburn",
       "email": "mcpakemi@northlan.gov"
-    },
+    }
+  ],
+  "kilsyth": [
     {
       "name": "Denis Johnston",
       "party": "Scottish National Party (SNP)",
@@ -5357,7 +5809,9 @@
       "party": "Labour Party",
       "ward": "Kilsyth",
       "email": "jonesj@northlan.gov"
-    },
+    }
+  ],
+  "mossendandholytown": [
     {
       "name": "Jim Reddin",
       "party": "Labour Party",
@@ -5375,7 +5829,9 @@
       "party": "Labour Party",
       "ward": "Mossend and Holytown",
       "email": "grayhel@northlan.gov"
-    },
+    }
+  ],
+  "motherwellnorth": [
     {
       "name": "Andrew Duffy-Lawson",
       "party": "Independent / Other",
@@ -5399,7 +5855,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Motherwell North",
       "email": "thomasan@northlan.gov"
-    },
+    }
+  ],
+  "motherwellsoutheastandravenscraig": [
     {
       "name": "Kenneth Duffy",
       "party": "Labour Party",
@@ -5423,7 +5881,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Motherwell South East and Ravenscraig",
       "email": "robbda@northlan.gov"
-    },
+    }
+  ],
+  "motherwellwest": [
     {
       "name": "Paul Kelly",
       "party": "Labour Party",
@@ -5441,7 +5901,9 @@
       "party": "Independent / Other",
       "ward": "Motherwell West",
       "email": "crichtonda@northlan.gov"
-    },
+    }
+  ],
+  "murdostoun": [
     {
       "name": "Nicky Shevlin",
       "party": "Labour Party",
@@ -5465,7 +5927,9 @@
       "party": "Independent / Other",
       "ward": "Murdostoun",
       "email": "mckendrickro@northlan.gov"
-    },
+    }
+  ],
+  "stepps,chrystonandmuirhead": [
     {
       "name": "Claire Williams",
       "party": "Scottish Green Party",
@@ -5483,7 +5947,9 @@
       "party": "Labour Party",
       "ward": "Stepps, Chryston and Muirhead",
       "email": "mclarenjohn@northlan.gov"
-    },
+    }
+  ],
+  "thorniewood": [
     {
       "name": "Helen Loughran",
       "party": "Labour Party",
@@ -5501,7 +5967,9 @@
       "party": "Labour Party",
       "ward": "Thorniewood",
       "email": "boydmar@northlan.gov"
-    },
+    }
+  ],
+  "wishaw": [
     {
       "name": "Frank McKay",
       "party": "Labour Party",
@@ -5527,7 +5995,7 @@
       "email": "burgessb@northlan.gov"
     }
   ],
-  "orkneyislands": [
+  "eastmainland,southronaldsayandburray": [
     {
       "name": "Gillian Skuse",
       "party": "Independent / Other",
@@ -5545,7 +6013,9 @@
       "party": "Independent / Other",
       "ward": "East Mainland, South Ronaldsay and Burray",
       "email": "james.moar@orkney.gov"
-    },
+    }
+  ],
+  "kirkwalleast": [
     {
       "name": "David Dawson",
       "party": "Independent / Other",
@@ -5569,7 +6039,9 @@
       "party": "Independent / Other",
       "ward": "Kirkwall East",
       "email": "johnross.scott@orkney.gov.uk"
-    },
+    }
+  ],
+  "kirkwallwestandorphir": [
     {
       "name": "Leslie Manson",
       "party": "Independent / Other",
@@ -5593,7 +6065,9 @@
       "party": "Scottish Green Party",
       "ward": "Kirkwall West and Orphir",
       "email": "kristopher.leask@orkney.gov"
-    },
+    }
+  ],
+  "northisles": [
     {
       "name": "Mellissa Thomson",
       "party": "Independent / Other",
@@ -5613,6 +6087,26 @@
       "email": "heather.woodbridge@orkney.gov"
     },
     {
+      "name": "Duncan Anderson",
+      "party": "Independent / Other",
+      "ward": "North Isles",
+      "email": "duncan.anderson@shetland.gov"
+    },
+    {
+      "name": "Ryan Thomson",
+      "party": "Independent / Other",
+      "ward": "North Isles",
+      "email": "ryan.thomson@shetland.gov.uk"
+    },
+    {
+      "name": "Robert Thomson",
+      "party": "Independent / Other",
+      "ward": "North Isles",
+      "email": "robert.thomson@shetland.gov"
+    }
+  ],
+  "stromnessandsouthisles": [
+    {
       "name": "Janette Park",
       "party": "Independent / Other",
       "ward": "Stromness and South Isles",
@@ -5629,7 +6123,9 @@
       "party": "Independent / Other",
       "ward": "Stromness and South Isles",
       "email": "cllr.lindsay.hall@orkney.gov"
-    },
+    }
+  ],
+  "westmainland": [
     {
       "name": "Rachael King",
       "party": "Independent / Other",
@@ -5655,7 +6151,7 @@
       "email": "owen.tierney@orkney.gov"
     }
   ],
-  "perthandkinross": [
+  "almondandearn": [
     {
       "name": "Frank Smith",
       "party": "Conservative and Unionist",
@@ -5673,7 +6169,9 @@
       "party": "Conservative and Unionist",
       "ward": "Almond and Earn",
       "email": "dillingworth@pkc.gov"
-    },
+    }
+  ],
+  "blairgowrieandglens": [
     {
       "name": "Tom McEwan",
       "party": "Scottish National Party (SNP)",
@@ -5691,7 +6189,9 @@
       "party": "Conservative and Unionist",
       "ward": "Blairgowrie and Glens",
       "email": "bbrawn@pkc.gov"
-    },
+    }
+  ],
+  "carseofgowrie": [
     {
       "name": "Ken Harvey",
       "party": "Scottish National Party (SNP)",
@@ -5709,7 +6209,9 @@
       "party": "Conservative and Unionist",
       "ward": "Carse of Gowrie",
       "email": "aforbes@pkc.gov"
-    },
+    }
+  ],
+  "highland": [
     {
       "name": "John Duff",
       "party": "Conservative and Unionist",
@@ -5727,7 +6229,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Highland",
       "email": "mwilliamson@pkc.gov.uk"
-    },
+    }
+  ],
+  "kinrossshire": [
     {
       "name": "Richard Watters",
       "party": "Scottish National Party (SNP)",
@@ -5751,7 +6255,9 @@
       "party": "Independent / Other",
       "ward": "Kinross-shire",
       "email": "dcuthbert@pkc.gov"
-    },
+    }
+  ],
+  "perthcitycentre": [
     {
       "name": "Eric Drysdale",
       "party": "Scottish National Party (SNP)",
@@ -5775,7 +6281,9 @@
       "party": "Liberal Democrats",
       "ward": "Perth City Centre",
       "email": "lbarrett@pkc.gov"
-    },
+    }
+  ],
+  "perthcitynorth": [
     {
       "name": "Carol Mair",
       "party": "Scottish National Party (SNP)",
@@ -5793,7 +6301,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Perth City North",
       "email": "jrebbeck@pkc.gov"
-    },
+    }
+  ],
+  "perthcitysouth": [
     {
       "name": "Iain MacPherson",
       "party": "Scottish National Party (SNP)",
@@ -5817,7 +6327,9 @@
       "party": "Independent / Other",
       "ward": "Perth City South",
       "email": "achan@pkc.gov"
-    },
+    }
+  ],
+  "strathallan": [
     {
       "name": "Steven Carr",
       "party": "Scottish National Party (SNP)",
@@ -5835,7 +6347,9 @@
       "party": "Conservative and Unionist",
       "ward": "Strathallan",
       "email": "keithallan@pkc.gov"
-    },
+    }
+  ],
+  "strathearn": [
     {
       "name": "Noah Khogali",
       "party": "Conservative and Unionist",
@@ -5853,7 +6367,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Strathearn",
       "email": "sdonaldson@pkc.gov"
-    },
+    }
+  ],
+  "strathmore": [
     {
       "name": "Grant Stewart",
       "party": "Scottish National Party (SNP)",
@@ -5877,7 +6393,9 @@
       "party": "Independent / Other",
       "ward": "Strathmore",
       "email": "cestewart@pkc.gov"
-    },
+    }
+  ],
+  "strathtay": [
     {
       "name": "Claire McLaren",
       "party": "Liberal Democrats",
@@ -5897,7 +6415,7 @@
       "email": "glaing@pkc.gov"
     }
   ],
-  "renfrewshire": [
+  "bishopton,bridgeofweirandlangbank": [
     {
       "name": "James MacLaren",
       "party": "Conservative and Unionist",
@@ -5915,7 +6433,9 @@
       "party": "Labour Party",
       "ward": "Bishopton, Bridge of Weir and Langbank",
       "email": "cllr.colin.mcculloch@renfrewshire.gov"
-    },
+    }
+  ],
+  "erskineandinchinnan": [
     {
       "name": "Michelle Campbell",
       "party": "Scottish National Party (SNP)",
@@ -5939,7 +6459,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Erskine and Inchinnan",
       "email": "cllr.fiona.airlie-nicolson@renfrewshire.gov"
-    },
+    }
+  ],
+  "houston,crossleeandlinwood": [
     {
       "name": "Alison Ann-Dowling",
       "party": "Labour Party",
@@ -5963,7 +6485,9 @@
       "party": "Conservative and Unionist",
       "ward": "Houston, Crosslee and Linwood",
       "email": "cllr.david.mcgonigle@renfrewshire.gov"
-    },
+    }
+  ],
+  "johnstonenorth,kilbarchan,howwoodandlochwinnoch": [
     {
       "name": "Andy Doig",
       "party": "Independent / Other",
@@ -5987,7 +6511,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Johnstone North, Kilbarchan, Howwood and Lochwinnoch",
       "email": "cllr.emma.rodden@renfrewshire.gov.uk"
-    },
+    }
+  ],
+  "johnstonesouthandelderslie": [
     {
       "name": "Jacqueline Cameron",
       "party": "Scottish National Party (SNP)",
@@ -6011,7 +6537,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Johnstone South and Elderslie",
       "email": "cllr.andy.steel@renfrewshire.gov.uk"
-    },
+    }
+  ],
+  "paisleyeastandcentral": [
     {
       "name": "Carolann Davidson",
       "party": "Labour Party",
@@ -6029,7 +6557,9 @@
       "party": "Independent / Other",
       "ward": "Paisley East and Central",
       "email": "cllr.will.mylet@renfrewshire.gov"
-    },
+    }
+  ],
+  "paisleynortheastandralston": [
     {
       "name": "Jennifer Adam",
       "party": "Scottish National Party (SNP)",
@@ -6047,7 +6577,9 @@
       "party": "Conservative and Unionist",
       "ward": "Paisley Northeast and Ralston",
       "email": "cllr.gillian.graham@renfrewshire.gov"
-    },
+    }
+  ],
+  "paisleynorthwest": [
     {
       "name": "Kenny MacLaren",
       "party": "Scottish National Party (SNP)",
@@ -6071,7 +6603,9 @@
       "party": "Labour Party",
       "ward": "Paisley Northwest",
       "email": "cllr.ben.smith@renfrewshire.gov"
-    },
+    }
+  ],
+  "paisleysoutheast": [
     {
       "name": "Bruce MacFarlane",
       "party": "Scottish National Party (SNP)",
@@ -6089,7 +6623,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Paisley Southeast",
       "email": "cllr.marie.mcgurk@renfrewshire.gov"
-    },
+    }
+  ],
+  "paisleysouthwest": [
     {
       "name": "Stephen Burns",
       "party": "Scottish National Party (SNP)",
@@ -6113,7 +6649,9 @@
       "party": "Liberal Democrats",
       "ward": "Paisley Southwest",
       "email": "cllr.anne.hannigan@renfrewshire.gov"
-    },
+    }
+  ],
+  "renfrewnorthandbraehead": [
     {
       "name": "John Gray",
       "party": "Reform UK",
@@ -6137,7 +6675,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Renfrew North and Braehead",
       "email": "cllr.john.shaw@renfrewshire.gov"
-    },
+    }
+  ],
+  "renfrewsouthandgallowhill": [
     {
       "name": "Edward Grady",
       "party": "Labour Party",
@@ -6157,7 +6697,7 @@
       "email": "cllr.jim.paterson@renfrewshire.gov"
     }
   ],
-  "scottishborders": [
+  "eastberwickshire": [
     {
       "name": "James Anderson",
       "party": "Independent / Other",
@@ -6175,7 +6715,9 @@
       "party": "Conservative and Unionist",
       "ward": "East Berwickshire",
       "email": "carol.hamilton@scotborders.gov.uk"
-    },
+    }
+  ],
+  "galashielsanddistrict": [
     {
       "name": "Hannah Steel",
       "party": "Liberal Democrats",
@@ -6205,7 +6747,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Galashiels and District",
       "email": "fay.sinclair@scotborders.gov.uk"
-    },
+    }
+  ],
+  "hawickanddenholm": [
     {
       "name": "Clair Ramage",
       "party": "Independent / Other",
@@ -6223,7 +6767,9 @@
       "party": "Conservative and Unionist",
       "ward": "Hawick and Denholm",
       "email": "neil.richards@scotborders.gov.uk"
-    },
+    }
+  ],
+  "hawickandhermitage": [
     {
       "name": "Watson McAteer",
       "party": "Independent / Other",
@@ -6241,7 +6787,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Hawick and Hermitage",
       "email": "annette.smart@scotborders.gov.uk"
-    },
+    }
+  ],
+  "jedburghanddistrict": [
     {
       "name": "Scott Hamilton",
       "party": "Conservative and Unionist",
@@ -6259,7 +6807,9 @@
       "party": "Conservative and Unionist",
       "ward": "Jedburgh and District",
       "email": "john.bathgate@scotborders.gov.uk"
-    },
+    }
+  ],
+  "kelsoanddistrict": [
     {
       "name": "Euan Robson",
       "party": "Liberal Democrats",
@@ -6277,7 +6827,9 @@
       "party": "Conservative and Unionist",
       "ward": "Kelso and District",
       "email": "tweatherston@scotborders.gov.uk"
-    },
+    }
+  ],
+  "leaderdaleandmelrose": [
     {
       "name": "Jenny Linehan",
       "party": "Conservative and Unionist",
@@ -6295,7 +6847,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Leaderdale and Melrose",
       "email": "John.patonday@scotborders.gov.uk"
-    },
+    }
+  ],
+  "midberwickshire": [
     {
       "name": "John Greenwell",
       "party": "Conservative and Unionist",
@@ -6313,7 +6867,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Mid Berwickshire",
       "email": "dmoffat@scotborders.gov.uk"
-    },
+    }
+  ],
+  "selkirkshire": [
     {
       "name": "Elaine Thornton-Nicol",
       "party": "Scottish National Party (SNP)",
@@ -6331,7 +6887,9 @@
       "party": "Independent / Other",
       "ward": "Selkirkshire",
       "email": "caroline.cochrane@scotborders.gov.uk"
-    },
+    }
+  ],
+  "tweeddaleeast": [
     {
       "name": "Marshall Douglas",
       "party": "Scottish National Party (SNP)",
@@ -6349,7 +6907,9 @@
       "party": "Conservative and Unionist",
       "ward": "Tweeddale East",
       "email": "julie.pirone@scotborders.gov.uk"
-    },
+    }
+  ],
+  "tweeddalewest": [
     {
       "name": "Drummond Begg",
       "party": "Liberal Democrats",
@@ -6369,7 +6929,7 @@
       "email": "eric.small@scotborders.gov.uk"
     }
   ],
-  "shetlandislands": [
+  "lerwicknorthandbressay": [
     {
       "name": "Stephen Leask",
       "party": "Independent / Other",
@@ -6399,7 +6959,9 @@
       "party": "Independent / Other",
       "ward": "Lerwick North and Bressay",
       "email": "arwed.wenger@shetland.gov"
-    },
+    }
+  ],
+  "lerwicksouth": [
     {
       "name": "John Fraser",
       "party": "Independent / Other",
@@ -6423,25 +6985,9 @@
       "party": "Independent / Other",
       "ward": "Lerwick South",
       "email": "neil.pearson@shetland.gov"
-    },
-    {
-      "name": "Duncan Anderson",
-      "party": "Independent / Other",
-      "ward": "North Isles",
-      "email": "duncan.anderson@shetland.gov"
-    },
-    {
-      "name": "Ryan Thomson",
-      "party": "Independent / Other",
-      "ward": "North Isles",
-      "email": "ryan.thomson@shetland.gov.uk"
-    },
-    {
-      "name": "Robert Thomson",
-      "party": "Independent / Other",
-      "ward": "North Isles",
-      "email": "robert.thomson@shetland.gov"
-    },
+    }
+  ],
+  "shetlandcentral": [
     {
       "name": "Ian Scott",
       "party": "Independent / Other",
@@ -6465,7 +7011,9 @@
       "party": "Independent / Other",
       "ward": "Shetland Central",
       "email": "catherine.hughson@shetland.gov"
-    },
+    }
+  ],
+  "shetlandnorth": [
     {
       "name": "Andrea Manson",
       "party": "Independent / Other",
@@ -6483,7 +7031,9 @@
       "party": "Independent / Other",
       "ward": "Shetland North",
       "email": "emma.macdonald@shetland.gov"
-    },
+    }
+  ],
+  "shetlandsouth": [
     {
       "name": "Robbie McGregor",
       "party": "Scottish National Party (SNP)",
@@ -6507,7 +7057,9 @@
       "party": "Independent / Other",
       "ward": "Shetland South",
       "email": "allison.duncan@shetland.gov"
-    },
+    }
+  ],
+  "shetlandwest": [
     {
       "name": "Liz Peterson",
       "party": "Independent / Other",
@@ -6521,7 +7073,7 @@
       "email": "gary.robinson@shetland.gov"
     }
   ],
-  "southayrshire": [
+  "ayreast": [
     {
       "name": "Brian McGinley",
       "party": "Labour Party",
@@ -6539,7 +7091,9 @@
       "party": "Independent / Other",
       "ward": "Ayr East",
       "email": "mary.kilpatrick@south-ayrshire.gov"
-    },
+    }
+  ],
+  "ayrnorth": [
     {
       "name": "Ian Cavana",
       "party": "Labour Party",
@@ -6563,7 +7117,9 @@
       "party": "Conservative and Unionist",
       "ward": "Ayr North",
       "email": "ian.davis@south-ayrshire.gov"
-    },
+    }
+  ],
+  "ayrwest": [
     {
       "name": "Martin Dowey",
       "party": "Conservative and Unionist",
@@ -6587,7 +7143,9 @@
       "party": "Conservative and Unionist",
       "ward": "Ayr West",
       "email": "lee.lyons@south-ayrshire.gov.uk"
-    },
+    }
+  ],
+  "girvanandsouthcarrick": [
     {
       "name": "Alan Lamont",
       "party": "Conservative and Unionist",
@@ -6605,7 +7163,9 @@
       "party": "Independent / Other",
       "ward": "Girvan and South Carrick",
       "email": "gavin.scott@south-ayrshire.gov"
-    },
+    }
+  ],
+  "kyle": [
     {
       "name": "Julie Dettbarn",
       "party": "Scottish National Party (SNP)",
@@ -6623,7 +7183,9 @@
       "party": "Labour Party",
       "ward": "Kyle",
       "email": "duncan.townson@south-ayrshire.gov"
-    },
+    }
+  ],
+  "maybole,northcarrickandcoylton": [
     {
       "name": "Iain Campbell",
       "party": "Independent / Other",
@@ -6641,7 +7203,9 @@
       "party": "Independent / Other",
       "ward": "Maybole, North Carrick and Coylton",
       "email": "brian.connolly@south-ayrshire.gov"
-    },
+    }
+  ],
+  "prestwick": [
     {
       "name": "Cameron Ramsay",
       "party": "Labour Party",
@@ -6665,7 +7229,9 @@
       "party": "Conservative and Unionist",
       "ward": "Prestwick",
       "email": "martin.kilbride@south-ayrshire.gov"
-    },
+    }
+  ],
+  "troon": [
     {
       "name": "Philip Saxton",
       "party": "Labour Party",
@@ -6691,7 +7257,7 @@
       "email": "iain.campbell@south-ayrshire.gov"
     }
   ],
-  "southlanarkshire": [
+  "avondaleandstonehouse": [
     {
       "name": "Margaret Cooper",
       "party": "Independent / Other",
@@ -6709,7 +7275,9 @@
       "party": "Labour Party",
       "ward": "Avondale and Stonehouse",
       "email": "susan.kerr@southlanarkshire.gov"
-    },
+    }
+  ],
+  "blantyre": [
     {
       "name": "Bert Thomson",
       "party": "Labour Party",
@@ -6727,7 +7295,9 @@
       "party": "Labour Party",
       "ward": "Blantyre",
       "email": "mo.razzaq@southlanarkshire.gov"
-    },
+    }
+  ],
+  "bothwellanduddingston": [
     {
       "name": "Cal Johnston-Dempsey",
       "party": "Scottish National Party (SNP)",
@@ -6745,7 +7315,9 @@
       "party": "Conservative and Unionist",
       "ward": "Bothwell and Uddingston",
       "email": "kenny.mccreary@southlanarkshire.gov"
-    },
+    }
+  ],
+  "cambuslangeast": [
     {
       "name": "Katy Loudon",
       "party": "Scottish National Party (SNP)",
@@ -6763,7 +7335,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Cambuslang East",
       "email": "alistair.fulton@southlanarkshire.gov"
-    },
+    }
+  ],
+  "cambuslangwest": [
     {
       "name": "Margaret Walker",
       "party": "Labour Party",
@@ -6781,7 +7355,9 @@
       "party": "Liberal Democrats",
       "ward": "Cambuslang West",
       "email": "norman.rae@southlanarkshire.gov"
-    },
+    }
+  ],
+  "clydesdaleeast": [
     {
       "name": "Alex Allison",
       "party": "Conservative and Unionist",
@@ -6799,7 +7375,9 @@
       "party": "Labour Party",
       "ward": "Clydesdale East",
       "email": "ralph.barker@southlanarkshire.gov"
-    },
+    }
+  ],
+  "clydesdalenorth": [
     {
       "name": "Richard Lockhart",
       "party": "Conservative and Unionist",
@@ -6817,7 +7395,9 @@
       "party": "Labour Party",
       "ward": "Clydesdale North",
       "email": "catherine.mcclymont@southlanarkshire.gov"
-    },
+    }
+  ],
+  "clydesdalesouth": [
     {
       "name": "Mark Horsham",
       "party": "Independent / Other",
@@ -6835,7 +7415,9 @@
       "party": "Reform UK",
       "ward": "Clydesdale South",
       "email": "ross.lambie@southlanarkshire.gov"
-    },
+    }
+  ],
+  "clydesdalewest": [
     {
       "name": "Poppy Corbett",
       "party": "Reform UK",
@@ -6859,7 +7441,9 @@
       "party": "Labour Party",
       "ward": "Clydesdale West",
       "email": "eileen.logan@southlanarkshire.gov"
-    },
+    }
+  ],
+  "eastkilbridecentralnorth": [
     {
       "name": "Joe Fagan",
       "party": "Labour Party",
@@ -6877,7 +7461,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "East Kilbride Central North",
       "email": "hugh.macdonald@southlanarkshire.gov"
-    },
+    }
+  ],
+  "eastkilbridecentralsouth": [
     {
       "name": "Gerry Convery",
       "party": "Labour Party",
@@ -6895,7 +7481,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "East Kilbride Central South",
       "email": "j.anderson@southlanarkshire.gov"
-    },
+    }
+  ],
+  "eastkilbrideeast": [
     {
       "name": "Gladys Ferguson-Miller",
       "party": "Scottish National Party (SNP)",
@@ -6913,7 +7501,9 @@
       "party": "Scottish Green Party",
       "ward": "East Kilbride East",
       "email": "kirsten.robb@southlanarkshire.gov"
-    },
+    }
+  ],
+  "eastkilbridesouth": [
     {
       "name": "Geri Gray",
       "party": "Scottish National Party (SNP)",
@@ -6931,7 +7521,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "East Kilbride South",
       "email": "archie.buchanan@southlanarkshire.gov"
-    },
+    }
+  ],
+  "eastkilbridewest": [
     {
       "name": "Kirsty Williams",
       "party": "Labour Party",
@@ -6949,7 +7541,9 @@
       "party": "Independent / Other",
       "ward": "East Kilbride West",
       "email": "david.watson@southlanarkshire.gov"
-    },
+    }
+  ],
+  "hamiltonnorthandeast": [
     {
       "name": "Martin Hose",
       "party": "Conservative and Unionist",
@@ -6967,7 +7561,9 @@
       "party": "Labour Party",
       "ward": "Hamilton North and East",
       "email": "davie.mclachlan@southlanarkshire.gov"
-    },
+    }
+  ],
+  "hamiltonsouth": [
     {
       "name": "Helen Toner",
       "party": "Scottish National Party (SNP)",
@@ -6991,7 +7587,9 @@
       "party": "Labour Party",
       "ward": "Hamilton South",
       "email": "celine.handibode@southlanarkshire.gov"
-    },
+    }
+  ],
+  "hamiltonwestandearnock": [
     {
       "name": "Mark McGeever",
       "party": "Liberal Democrats",
@@ -7015,7 +7613,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Hamilton West and Earnock",
       "email": "mary.donnelly@southlanarkshire.gov"
-    },
+    }
+  ],
+  "larkhall": [
     {
       "name": "Richard Nelson",
       "party": "Conservative and Unionist",
@@ -7039,7 +7639,9 @@
       "party": "Labour Party",
       "ward": "Larkhall",
       "email": "andy.carmichael@southlanarkshire.gov"
-    },
+    }
+  ],
+  "rutherglencentralandnorth": [
     {
       "name": "Janine Calikes",
       "party": "Scottish National Party (SNP)",
@@ -7057,7 +7659,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Rutherglen Central and North",
       "email": "janine.calikes@southlanarkshire.gov"
-    },
+    }
+  ],
+  "rutherglensouth": [
     {
       "name": "Robert Brown",
       "party": "Liberal Democrats",
@@ -7077,7 +7681,7 @@
       "email": "carol.nugent@southlanarkshire.gov"
     }
   ],
-  "stirling": [
+  "bannockburn": [
     {
       "name": "Alasdair MacPherson",
       "party": "Independent / Other",
@@ -7095,7 +7699,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Bannockburn",
       "email": "hamblyb@stirling.gov"
-    },
+    }
+  ],
+  "dunblaneandbridgeofallan": [
     {
       "name": "Alasdair Tollemache",
       "party": "Scottish Green Party",
@@ -7119,7 +7725,9 @@
       "party": "Labour Party",
       "ward": "Dunblane and Bridge of Allan",
       "email": "wilsondav@stirling.gov"
-    },
+    }
+  ],
+  "forthandendrick": [
     {
       "name": "Paul Henke",
       "party": "Conservative and Unionist",
@@ -7137,7 +7745,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Forth and Endrick",
       "email": "fraserro@stirling.gov"
-    },
+    }
+  ],
+  "stirlingeast": [
     {
       "name": "Gerry McLaughlan",
       "party": "Scottish National Party (SNP)",
@@ -7155,7 +7765,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Stirling East",
       "email": "fergusonw@stirling.gov"
-    },
+    }
+  ],
+  "stirlingnorth": [
     {
       "name": "Rachel Nunn",
       "party": "Conservative and Unionist",
@@ -7179,7 +7791,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Stirling North",
       "email": "mcgills@stirling.gov"
-    },
+    }
+  ],
+  "stirlingwest": [
     {
       "name": "Neil Benny",
       "party": "Conservative and Unionist",
@@ -7197,7 +7811,9 @@
       "party": "Labour Party",
       "ward": "Stirling West",
       "email": "prestonj@stirling.gov"
-    },
+    }
+  ],
+  "trossachsandteith": [
     {
       "name": "Elaine Watterson",
       "party": "Conservative and Unionist",
@@ -7217,7 +7833,7 @@
       "email": "maxwellg@stirling.gov"
     }
   ],
-  "westdunbartonshire": [
+  "clydebankcentral": [
     {
       "name": "Clare Steel",
       "party": "Labour Party",
@@ -7241,7 +7857,9 @@
       "party": "Labour Party",
       "ward": "Clydebank Central",
       "email": "fiona.hennebry@west-dunbarton.gov"
-    },
+    }
+  ],
+  "clydebankwaterfront": [
     {
       "name": "Lauren Oxley",
       "party": "Scottish National Party (SNP)",
@@ -7265,7 +7883,9 @@
       "party": "Independent / Other",
       "ward": "Clydebank Waterfront",
       "email": "daniel.lennie@west-dunbarton.gov"
-    },
+    }
+  ],
+  "dumbarton": [
     {
       "name": "Gurpreet Johal",
       "party": "Labour Party",
@@ -7289,7 +7909,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Dumbarton",
       "email": "karen.conaghan2@west-dunbarton.gov.uk"
-    },
+    }
+  ],
+  "kilpatrick": [
     {
       "name": "William Rooney",
       "party": "Labour Party",
@@ -7307,7 +7929,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Kilpatrick",
       "email": "karen.murrayconaghan@west-dunbarton.gov"
-    },
+    }
+  ],
+  "leven": [
     {
       "name": "Michelle McGinty",
       "party": "Labour Party",
@@ -7331,7 +7955,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Leven",
       "email": "ian.dickson@west-dunbarton.gov"
-    },
+    }
+  ],
+  "lomond": [
     {
       "name": "Jonathan McColl",
       "party": "Independent / Other",
@@ -7351,7 +7977,7 @@
       "email": "hazel.sorrell@west-dunbarton.gov"
     }
   ],
-  "westlothian": [
+  "armadaleandblackridge": [
     {
       "name": "Lynda Kenna",
       "party": "Scottish National Party (SNP)",
@@ -7369,7 +7995,9 @@
       "party": "Labour Party",
       "ward": "Armadale and Blackridge",
       "email": "susan.manion@westlothian.gov"
-    },
+    }
+  ],
+  "bathgate": [
     {
       "name": "Tony Pearson",
       "party": "Labour Party",
@@ -7393,7 +8021,9 @@
       "party": "Labour Party",
       "ward": "Bathgate",
       "email": "harry.cartmill@westlothian.gov"
-    },
+    }
+  ],
+  "broxburn,uphallandwinchburgh": [
     {
       "name": "Tony Boyle",
       "party": "Labour Party",
@@ -7417,7 +8047,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Broxburn, Uphall and Winchburgh",
       "email": "janet.campbell@westlothian.gov"
-    },
+    }
+  ],
+  "eastlivingstonandeastcalder": [
     {
       "name": "Damian Doran-Timson",
       "party": "Conservative and Unionist",
@@ -7441,7 +8073,9 @@
       "party": "Labour Party",
       "ward": "East Livingston and East Calder",
       "email": "danny.logue@westlothian.gov"
-    },
+    }
+  ],
+  "fauldhouseandthebreichvalley": [
     {
       "name": "Craig Meek",
       "party": "Labour Party",
@@ -7459,7 +8093,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Fauldhouse and the Breich Valley",
       "email": "pauline.clark@westlothian.gov"
-    },
+    }
+  ],
+  "linlithgow": [
     {
       "name": "Sally Pattle",
       "party": "Liberal Democrats",
@@ -7477,7 +8113,9 @@
       "party": "Scottish National Party (SNP)",
       "ward": "Linlithgow",
       "email": "pauline.orr@westlothian.gov"
-    },
+    }
+  ],
+  "livingstonnorth": [
     {
       "name": "Andrew Miller",
       "party": "Scottish National Party (SNP)",
@@ -7501,7 +8139,9 @@
       "party": "Conservative and Unionist",
       "ward": "Livingston North",
       "email": "alison.adamson@westlothian.gov"
-    },
+    }
+  ],
+  "livingstonsouth": [
     {
       "name": "Maria MacAuley",
       "party": "Scottish National Party (SNP)",
@@ -7525,7 +8165,9 @@
       "party": "Conservative and Unionist",
       "ward": "Livingston South",
       "email": "peter.heggie@westlothian.gov.uk"
-    },
+    }
+  ],
+  "whitburnandblackburn": [
     {
       "name": "David Russell",
       "party": "Labour Party",
