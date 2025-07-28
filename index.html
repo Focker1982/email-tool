@@ -346,6 +346,7 @@ async function getEmailsFromPostcode(postcode) {
 
 console.log("DIW:", diw, "Normalized:", normalize(diw));
 console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
+console.log("Councillors found:", councillors);
 
 return {
   msps: [msp, ...regionalMSPs].filter(Boolean),
