@@ -303,7 +303,11 @@
     const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
     const mspData = await fetch('mspContacts.json').then(res => res.json());
-    const cllrData = await fetch('councillors.json').then(res => res.json());
+const rawCllrData = await fetch('councillors.json').then(res => res.json());
+const cllrData = {};
+Object.keys(rawCllrData).forEach(key => {
+  cllrData[key.toLowerCase().replace(/[^a-z0-9]/g, '').trim()] = rawCllrData[key];
+});
 
     const normalizedRegions = {};
     Object.keys(mspData.regions).forEach(regionName => {
