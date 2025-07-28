@@ -344,10 +344,13 @@ async function getEmailsFromPostcode(postcode) {
   const wardKey = normalize(diw);
   const councillors = cllrData[wardKey] || [];
 
-  return {
-    msps: [msp, ...regionalMSPs].filter(Boolean),
-    councillors
-  };
+console.log("DIW:", diw, "Normalized:", normalize(diw));
+console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
+
+return {
+  msps: [msp, ...regionalMSPs].filter(Boolean),
+  councillors
+};
 }
 
     window.generateEmail = async function () {
