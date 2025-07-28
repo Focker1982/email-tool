@@ -341,8 +341,7 @@ Object.keys(rawCllrData).forEach(key => {
       const msp = mspKey ? mspData.constituencies[mspKey] : null;
       const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
-const wardKey = normalize(diw);
-const councillors = cllrData[wardKey] || [];
+const cllrData = await fetch('councillors.json').then(res => res.json());
 
       return {
         msps: [msp, ...regionalMSPs].filter(Boolean),
