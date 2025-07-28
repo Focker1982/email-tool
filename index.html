@@ -341,17 +341,17 @@ async function getEmailsFromPostcode(postcode) {
   const msp = mspKey ? mspData.constituencies[mspKey] : null;
   const regionalMSPs = mspData.regions[normalize(spe)] || [];
 
-  const wardKey = normalize(diw);
+  const wardKey = normalize(diw || uta); // fallback to UTA
   const councillors = cllrData[wardKey] || [];
 
-console.log("DIW:", diw, "Normalized:", normalize(diw));
-console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
-console.log("Councillors found:", councillors);
+  console.log("DIW:", diw, "UTA:", uta, "Using key:", wardKey);
+  console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
+  console.log("Councillors found:", councillors);
 
-return {
-  msps: [msp, ...regionalMSPs].filter(Boolean),
-  councillors
-};
+  return {
+    msps: [msp, ...regionalMSPs].filter(Boolean),
+    councillors
+  };
 }
 
     window.generateEmail = async function () {
