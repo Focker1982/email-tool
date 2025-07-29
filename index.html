@@ -351,9 +351,10 @@ async function getEmailsFromPostcode(postcode) {
 const wardKey = window.normalize((uta || '') + (diw || ''));
 const councillors = window.cllrData[wardKey] || [];
 
-  console.log("DIW:", diw, "UTA:", uta, "Using key:", wardKey);
-  console.log("cllrData keys:", Object.keys(window.cllrData).slice(0, 10));
-  console.log("Councillors found:", councillors);
+console.log("DIW:", diw, "UTA:", uta);
+console.log("Normalized lookup key:", wardKey);
+console.log("Councillors found:", councillors);
+console.log("Available cllrData keys (sample):", Object.keys(window.cllrData).slice(0, 20));
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
