@@ -348,8 +348,8 @@ async function getEmailsFromPostcode(postcode) {
   const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
   const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
 
-  const wardKey = window.normalize(diw || uta);
-  const councillors = window.cllrData[wardKey] || [];
+const wardKey = window.normalize((uta || '') + (diw || ''));
+const councillors = window.cllrData[wardKey] || [];
 
   console.log("DIW:", diw, "UTA:", uta, "Using key:", wardKey);
   console.log("cllrData keys:", Object.keys(window.cllrData).slice(0, 10));
