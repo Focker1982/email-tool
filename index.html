@@ -298,15 +298,15 @@
 </script>
 <script>
   async function init() {
-    const apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
-    const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
-
-    const mspData = await fetch('mspContacts.json').then(res => res.json());
+const mspData = await fetch('mspContacts.json').then(res => res.json());
 const rawCllrData = await fetch('councillors.json').then(res => res.json());
-const cllrData = {};
+
+window.cllrData = {};
 Object.keys(rawCllrData).forEach(key => {
-  cllrData[key.toLowerCase().replace(/[^a-z0-9]/g, '').trim()] = rawCllrData[key];
+  cllrData[normalize(key)] = rawCllrData[key];
 });
 
     const normalizedRegions = {};
@@ -314,11 +314,23 @@ Object.keys(rawCllrData).forEach(key => {
       normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
     });
     mspData.regions = normalizedRegions;
-  }
+
+    Object.keys(cllrData).forEach(originalKey => {
+      const cleaned = normalize(originalKey);
+      if (cleaned !== originalKey) {
+        cllrData[cleaned] = cllrData[originalKey];
+      }
     });
 
+    window._mspData = mspData;
+window.mspData = mspData;
+window.cllrData = cllrData;
+    window._cllrData = cllrData;
+  }
+init();
+
 async function getEmailsFromPostcode(postcode) {
-  const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${apiKey}`;
+  const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${window.apiKey}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error("Postcode lookup failed.");
   const data = await res.json();
@@ -332,23 +344,15 @@ async function getEmailsFromPostcode(postcode) {
     if (area.type === "SPE") spe = area.name;
   }
 
-  const mspKey = Object.keys(mspData.constituencies).find(key => normalize(key) === normalize(spc));
-  const msp = mspKey ? mspData.constituencies[mspKey] : null;
-  const regionalMSPs = mspData.regions[normalize(spe)] || [];
+  const mspKey = Object.keys(window.mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
+  const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
+  const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
 
-  const wardKey = normalize(diw || uta);  // 👈 fallback to UTA
-  const councillors = cllrData[wardKey] || [];
+  const wardKey = window.normalize(diw || uta);
+  const councillors = window.cllrData[wardKey] || [];
 
   console.log("DIW:", diw, "UTA:", uta, "Using key:", wardKey);
-  console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
-  console.log("Councillors found:", councillors);
-
-  return {
-    msps: [msp, ...regionalMSPs].filter(Boolean),
-    councillors
-  };
-  console.log("DIW:", diw, "UTA:", uta, "Using key:", wardKey);
-  console.log("cllrData keys:", Object.keys(cllrData).slice(0, 10));
+  console.log("cllrData keys:", Object.keys(window.cllrData).slice(0, 10));
   console.log("Councillors found:", councillors);
 
   return {
@@ -432,7 +436,6 @@ async function getEmailsFromPostcode(postcode) {
         if (cb.id !== 'selectAll') cb.checked = isChecked;
       });
     });
-  }
 
   init();
 </script>
