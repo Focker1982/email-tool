@@ -305,10 +305,14 @@ window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 const mspData = await fetch('mspContacts.json').then(res => res.json());
 const rawCllrData = await fetch('councillors.json').then(res => res.json());
 
-window.cllrData = {};
+const normalizedCllrData = {};
 Object.keys(rawCllrData).forEach(key => {
-  cllrData[normalize(key)] = rawCllrData[key];
+  const normKey = normalize(key);
+  normalizedCllrData[normKey] = rawCllrData[key];
 });
+
+window.cllrData = normalizedCllrData;
+window._cllrData = normalizedCllrData;
 
     const normalizedRegions = {};
     Object.keys(mspData.regions).forEach(regionName => {
@@ -316,17 +320,8 @@ Object.keys(rawCllrData).forEach(key => {
     });
     mspData.regions = normalizedRegions;
 
-    Object.keys(cllrData).forEach(originalKey => {
-      const cleaned = normalize(originalKey);
-      if (cleaned !== originalKey) {
-        cllrData[cleaned] = cllrData[originalKey];
-      }
-    });
-
     window._mspData = mspData;
 window.mspData = mspData;
-window.cllrData = cllrData;
-    window._cllrData = cllrData;
 window.isReady = true;
   }
 init();
