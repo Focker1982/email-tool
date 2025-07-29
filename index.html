@@ -357,9 +357,11 @@ const possibleKeys = [
 ];
 
 let councillors = [];
+let wardKey = null;
 for (const key of possibleKeys) {
   if (key && window._cllrData[key]) {
     councillors = window._cllrData[key];
+    wardKey = key;
     console.log("✅ Found councillors using key:", key);
     break;
   }
@@ -370,10 +372,7 @@ console.log("Final councillors found:", councillors);
 console.log("DIW:", diw);
 console.log("UTA:", uta);
 console.log("Using wardKey:", wardKey);
-console.log("Councillors found:", councillors);
 console.log("Available cllrData keys (sample):", Object.keys(window.cllrData).slice(0, 20));
-console.log("Normalized wardKey:", wardKey);
-console.log("Councillors for ward:", window._cllrData[wardKey]);
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
