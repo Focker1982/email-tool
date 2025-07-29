@@ -350,6 +350,10 @@ const possibleKeys = [
   window.normalize(`${strippedUTA}${diw || ''}`),
   window.normalize(diw),
   window.normalize(strippedUTA)
+  window.normalize(diw),
+window.normalize(diw?.replace(' Ward', '')),
+window.normalize(`${strippedUTA}${diw || ''}`)
+
 ];
 
 let councillors = [];
