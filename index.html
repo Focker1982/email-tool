@@ -345,21 +345,51 @@ async function getEmailsFromPostcode(postcode) {
   const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
   const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
 
-const strippedUTA = uta?.replace(/ council$/i, '') || '';
-const possibleKeys = [
-  window.normalize(`${strippedUTA}${diw || ''}`),
-  window.normalize(diw),
-  window.normalize(strippedUTA)
-];
-
-let councillors = [];
 let wardKey = null;
-for (const key of possibleKeys) {
-  if (key && window._cllrData[key]) {
-    councillors = window._cllrData[key];
-    wardKey = key;
-    console.log("✅ Found councillors using key:", key);
-    break;
+let councillors = [];
+
+const wardGuess = spc?.toLowerCase().includes("bearsden") ? "bearsdennorth" : null;  // 👈 expand as needed
+if (wardGuess && window._cllrData[wardGuess]) {
+  wardKey = wardGuess;
+  councillors = window._cllrData[wardGuess];
+  console.log("✅ Using manually matched ward key:", wardKey);
+} else {
+  const fallbackKeys = [
+    window.normalize(`${uta || ''}${diw || ''}`),
+    window.normalize(diw),
+    window.normalize(uta?.replace(/ council$/i, ''))
+  ];
+  for (const key of fallbackKeys) {
+    if (key && window._cllrData[key]) {
+      wardKey = key;
+      councillors = window._cllrData[key];
+      console.log("✅ Fallback key used:", key);
+      break;
+    }
+  }
+}
+
+let wardKey = null;
+let councillors = [];
+
+const wardGuess = spc?.toLowerCase().includes("bearsden") ? "bearsdennorth" : null;
+if (wardGuess && window._cllrData[wardGuess]) {
+  wardKey = wardGuess;
+  councillors = window._cllrData[wardGuess];
+  console.log("✅ Using manually matched ward key:", wardKey);
+} else {
+  const fallbackKeys = [
+    window.normalize(`${uta || ''}${diw || ''}`),
+    window.normalize(diw),
+    window.normalize(uta?.replace(/ council$/i, ''))
+  ];
+  for (const key of fallbackKeys) {
+    if (key && window._cllrData[key]) {
+      wardKey = key;
+      councillors = window._cllrData[key];
+      console.log("✅ Fallback key used:", key);
+      break;
+    }
   }
 }
 
