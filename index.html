@@ -345,29 +345,30 @@ async function getEmailsFromPostcode(postcode) {
   const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
   const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
 
-let wardKey = null;
-let councillors = [];
+  let wardKey = null;
+  let councillors = [];
 
 const wardGuess = spc?.toLowerCase().includes("bearsden") ? "bearsdennorth" : null;  // 👈 expand as needed
-if (wardGuess && window._cllrData[wardGuess]) {
-  wardKey = wardGuess;
-  councillors = window._cllrData[wardGuess];
-  console.log("✅ Using manually matched ward key:", wardKey);
-} else {
-  const fallbackKeys = [
-    window.normalize(`${uta || ''}${diw || ''}`),
-    window.normalize(diw),
-    window.normalize(uta?.replace(/ council$/i, ''))
-  ];
-  for (const key of fallbackKeys) {
-    if (key && window._cllrData[key]) {
-      wardKey = key;
-      councillors = window._cllrData[key];
-      console.log("✅ Fallback key used:", key);
-      break;
+  if (spc?.toLowerCase().includes("bearsden")) {
+    wardKey = "bearsdennorth";
+    councillors = window._cllrData[wardKey] || [];
+    console.log("✅ Using manual wardKey:", wardKey);
+  } else {
+    // 🔄 Fallback lookup logic
+    const fallbackKeys = [
+      window.normalize(`${uta || ''}${diw || ''}`),
+      window.normalize(diw),
+      window.normalize(uta?.replace(/ council$/i, ''))
+    ];
+    for (const key of fallbackKeys) {
+      if (key && window._cllrData[key]) {
+        wardKey = key;
+        councillors = window._cllrData[key];
+        console.log("✅ Found fallback wardKey:", key);
+        break;
+      }
     }
   }
-}
 
 let wardKey = null;
 let councillors = [];
@@ -393,12 +394,12 @@ if (wardGuess && window._cllrData[wardGuess]) {
   }
 }
 
-console.log("Tried keys:", possibleKeys);
-console.log("Councillors found:", councillors);
-console.log("DIW:", diw);
-console.log("UTA:", uta);
-console.log("Using wardKey:", wardKey);
-console.log("Available cllrData keys (sample):", Object.keys(window.cllrData).slice(0, 20));
+  console.log("Tried keys:", [wardKey, ...fallbackKeys]);
+  console.log("Councillors found:", councillors);
+  console.log("DIW:", diw);
+  console.log("UTA:", uta);
+  console.log("Using wardKey:", wardKey);
+  console.log("Available cllrData keys (sample):", Object.keys(window.cllrData).slice(0, 20));
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
