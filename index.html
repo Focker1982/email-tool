@@ -344,12 +344,12 @@ async function getEmailsFromPostcode(postcode) {
     if (area.type === "SPE") spe = area.name;
   }
 
-  const mspKey = Object.keys(window.mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
+  const mspKey = Object.keys(window._mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
   const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
   const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
 
 const wardKey = window.normalize((uta || '') + (diw || ''));
-const councillors = window.cllrData[wardKey] || [];
+const councillors = window._cllrData[wardKey] || [];
 
 console.log("DIW:", diw, "UTA:", uta);
 console.log("Normalized lookup key:", wardKey);
