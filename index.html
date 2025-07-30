@@ -347,6 +347,7 @@ async function getEmailsFromPostcode(postcode) {
 
 let wardKey = null;
 let councillors = [];
+let fallbackKeys = []; // <-- ✅ Add this here so it’s always defined
 
 if (diw) {
   const normalizedWard = window.normalize(diw);
@@ -359,7 +360,7 @@ if (diw) {
 
 // fallback if ward not found by DIW
 if (!councillors.length) {
-  const fallbackKeys = [
+  fallbackKeys = [
     window.normalize(`${uta || ''}${diw || ''}`),
     window.normalize(diw),
     window.normalize(uta?.replace(/ council$/i, ''))
