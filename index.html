@@ -348,11 +348,12 @@ async function getEmailsFromPostcode(postcode) {
   let wardKey = null;
   let councillors = [];
 
-  const fallbackKeys = [
-    window.normalize(`${uta || ''}${diw || ''}`),
-    window.normalize(diw),
-    window.normalize(uta?.replace(/ council$/i, ''))
-  ];
+const fallbackKeys = [
+  window.normalize(`${uta || ''}${diw || ''}`),
+  window.normalize(`${uta || ''}${spc || ''}`),
+  window.normalize(diw),
+  window.normalize(uta?.replace(/ council$/i, ''))
+];
   for (const key of fallbackKeys) {
     if (key && window._cllrData[key]) {
       wardKey = key;
