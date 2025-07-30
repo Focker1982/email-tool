@@ -348,23 +348,18 @@ async function getEmailsFromPostcode(postcode) {
 let wardKey = null;
 let councillors = [];
 
-if (spc?.toLowerCase().includes("bearsden")) {
-  wardKey = "bearsdennorth";
-  councillors = window._cllrData[wardKey] || [];
-  console.log("✅ Using manual wardKey:", wardKey);
-} else {
-  const fallbackKeys = [
-    window.normalize(`${uta || ''}${diw || ''}`),
-    window.normalize(diw),
-    window.normalize(uta?.replace(/ council$/i, ''))
-  ];
-  for (const key of fallbackKeys) {
-    if (key && window._cllrData[key]) {
-      wardKey = key;
-      councillors = window._cllrData[key];
-      console.log("✅ Found fallback wardKey:", key);
-      break;
-    }
+const fallbackKeys = [
+  window.normalize(`${uta || ''}${diw || ''}`),
+  window.normalize(diw),
+  window.normalize(uta?.replace(/ council$/i, ''))
+];
+
+for (const key of fallbackKeys) {
+  if (key && window._cllrData[key]) {
+    wardKey = key;
+    councillors = window._cllrData[key];
+    console.log("✅ Found wardKey via fallback:", key);
+    break;
   }
 }
 
