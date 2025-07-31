@@ -361,14 +361,16 @@ async function getEmailsFromPostcode(postcode) {
   let councillors = [];
 
   // Try exact DIW match first
-  if (diw) {
-    const normalizedWard = window.normalize(diw);
-    if (window._cllrData[normalizedWard]) {
-      wardKey = normalizedWard;
-      councillors = window._cllrData[wardKey];
-      console.log("✅ Used exact DIW ward key:", wardKey);
-    }
+if (diw && uta) {
+  const normalizedWard = window.normalize(diw);
+  const normalizedCouncil = window.normalize(uta);
+  const keyWithWard = normalizedCouncil + normalizedWard;
+  if (window._cllrData[keyWithWard]) {
+    wardKey = keyWithWard;
+    councillors = window._cllrData[wardKey];
+    console.log("✅ Used council+ward key:", wardKey);
   }
+}
 
   // Fallback if DIW fails or isn’t found in cllr data
   if (!councillors.length) {
