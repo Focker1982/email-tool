@@ -362,13 +362,13 @@ async function getEmailsFromPostcode(postcode) {
 
   // Try exact DIW match first
 if (diw && uta) {
-  const normalizedWard = window.normalize(diw);
-  const normalizedCouncil = window.normalize(uta);
-  const keyWithWard = normalizedCouncil + normalizedWard;
-  if (window._cllrData[keyWithWard]) {
-    wardKey = keyWithWard;
+  const combinedKey = window.normalize(`${uta}${diw}`);
+  if (window._cllrData[combinedKey]) {
+    wardKey = combinedKey;
     councillors = window._cllrData[wardKey];
-    console.log("✅ Used council+ward key:", wardKey);
+    console.log("✅ Used combined council+ward key:", wardKey);
+  } else {
+    console.log("⚠️ Combined key not found, trying fallbacks...");
   }
 }
 
