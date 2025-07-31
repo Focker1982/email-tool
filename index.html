@@ -362,7 +362,7 @@ async function getEmailsFromPostcode(postcode) {
 
   // Try exact DIW match first
 if (diw && uta) {
-  const combinedKey = window.normalize(`${uta}${diw}`);
+  const combinedKey = window.normalize(`${uta?.replace(/ council$/i, '')}${diw}`);
   if (window._cllrData[combinedKey]) {
     wardKey = combinedKey;
     councillors = window._cllrData[wardKey];
