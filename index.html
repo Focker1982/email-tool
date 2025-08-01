@@ -137,7 +137,7 @@
 
   <div class="intro" style="background: #f0f5ff; border-left: 5px solid #003f7d; margin-top: 40px;">
     <strong>Why does this tool exist?</strong><br><br>
-    This tool makes it easy to add your voice to the campaign — without needing to write from scratch. Every message it creates is unique, personal, and harder for MSPs and councillors to ignore or dismiss as copy-and-paste. That’s intentional. We want them to feel the pressure, hear the variety of real-life concerns, and see the volume of opposition that’s building.
+    This tool makes it easy to add your voice to the campaign — without needing to write from scratch. Every message it creates is unique, personal, and harder for MSPs and  to ignore or dismiss as copy-and-paste. That’s intentional. We want them to feel the pressure, hear the variety of real-life concerns, and see the volume of opposition that’s building.
   </div>
   <form>
     <label for="name">Your Name:</label>
@@ -303,16 +303,8 @@ window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
 window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
 const mspData = await fetch('mspContacts.json').then(res => res.json());
-const rawCllrData = await fetch('councillors.json').then(res => res.json());
-
-const normalizedCllrData = {};
-Object.keys(rawCllrData).forEach(key => {
-  const normKey = normalize(key);
-  normalizedCllrData[normKey] = rawCllrData[key];
-});
-
-window.cllrData = normalizedCllrData;
-window._cllrData = normalizedCllrData;
+window.postcodeToWardKey = await fetch('postcode_to_wardkey.json').then(res => res.json());
+window.cllrData = await fetch('councillors_by_wardkey.json').then(res => res.json());
 
     const normalizedRegions = {};
     Object.keys(mspData.regions).forEach(regionName => {
@@ -333,69 +325,19 @@ async function getEmailsFromPostcode(postcode) {
   const data = await res.json();
   const areas = data.areas;
 
-  let spc = null, diw = null, uta = null, spe = null;
+  let spc = null, spe = null;
   for (const area of Object.values(areas)) {
     if (area.type === "SPC") spc = area.name;
-    if (area.type === "DIW") diw = area.name;
-    if (area.type === "UTA") uta = area.name;
     if (area.type === "SPE") spe = area.name;
   }
 
-  // 🔧 Manual postcode ward overrides for rare cases with missing DIW
-  const postcodeWardOverrides = {
-    "g613jp": "bearsdennorth"
-    // Add more as needed in format: "normalized_postcode": "normalized_ward"
-  };
+  const mspKey = Object.keys(window._mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
+  const msp = mspKey ? window._mspData.constituencies[mspKey] : null;
+  const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
 
   const normalizedPostcode = window.normalize(postcode);
-  if (!diw && postcodeWardOverrides[normalizedPostcode]) {
-    diw = postcodeWardOverrides[normalizedPostcode];
-    console.log("🛠️ Using manual DIW override for postcode:", normalizedPostcode, "→", diw);
-  }
-
-  const mspKey = Object.keys(window._mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
-  const msp = mspKey ? window.mspData.constituencies[mspKey] : null;
-  const regionalMSPs = window.mspData.regions[window.normalize(spe)] || [];
-
-  let wardKey = null;
-  let councillors = [];
-
-  // Try exact DIW match first
-if (diw && uta) {
-  const combinedKey = window.normalize(`${uta?.replace(/ council$/i, '')}${diw}`);
-  if (window._cllrData[combinedKey]) {
-    wardKey = combinedKey;
-    councillors = window._cllrData[wardKey];
-    console.log("✅ Used combined council+ward key:", wardKey);
-  } else {
-    console.log("⚠️ Combined key not found, trying fallbacks...");
-  }
-}
-
-  // Fallback if DIW fails or isn’t found in cllr data
-  if (!councillors.length) {
-    const fallbackKeys = [
-      window.normalize(`${uta || ''}${diw || ''}`),
-      window.normalize(diw),
-      window.normalize(uta?.replace(/ council$/i, ''))
-    ];
-    for (const key of fallbackKeys) {
-      if (key && window._cllrData[key]) {
-        wardKey = key;
-        councillors = window._cllrData[key];
-        console.log("✅ Fallback key used:", key);
-        break;
-      }
-    }
-
-    console.log("Tried keys:", fallbackKeys);
-  }
-
-  console.log("Councillors found:", councillors);
-  console.log("DIW:", diw);
-  console.log("UTA:", uta);
-  console.log("Using wardKey:", wardKey);
-  console.log("Available cllrData keys (sample):", Object.keys(window.cllrData).slice(0, 20));
+  const wardKey = postcodeToWardKey[normalizedPostcode];
+  const councillors = wardKey ? cllrData[wardKey] || [] : [];
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
@@ -446,9 +388,9 @@ if (diw && uta) {
         if (repData.msps?.length) {
           repData.msps.forEach(msp => { if (msp.email) emails.push(msp.email); });
         }
-        if (repData.councillors?.length) {
-          repData.councillors.forEach(c => { if (c.email) emails.push(c.email); });
-        }
+if (repData.councillors?.length) {
+  repData.councillors.forEach(c => { if (c.email) emails.push(c.email); });
+}
 
         if (emails.length === 0) {
           alert("We couldn’t find any email contacts for that postcode.");
