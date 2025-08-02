@@ -9445,5 +9445,22 @@
       "ward": "Whitburn and Blackburn"
     }
   ],
-  "cityofedinburghcitycentre": []
+  "cityofedinburghcitycentre": [],
+  "cityofedinburghcitycentreeast": [
+    {
+      "name": "Margaret Graham",
+      "email": "margaret.graham@edinburgh.gov.uk",
+      "party": "Labour"
+    },
+    {
+      "name": "Finlay McFarlane",
+      "email": "finlay.mcfarlane@edinburgh.gov.uk",
+      "party": "SNP"
+    },
+    {
+      "name": "Angus Millar",
+      "email": "angus.millar@edinburgh.gov.uk",
+      "party": "Green"
+    }
+  ]
 }
