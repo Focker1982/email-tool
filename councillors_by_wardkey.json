@@ -9444,5 +9444,557 @@
       "council": "West Lothian",
       "email": "jim.dickson@westlothian.gov"
     }
+  ],
+  "cityofedinburghfountainbridgecraiglockhart": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiarsg\u00ecreanrubha": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghleithwalk": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghleith": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghsighthillgorgie": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghcitycentre": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghlibertongilmerton": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiarste\u00f2rnabhaghadeas": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghforth": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghsouthsidenewington": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghdrumbraegyle": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghalmond": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghcorstorphinemurrayfield": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiarste\u00f2rnabhaghatuath": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghpentlandhills": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghmorningside": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiaruibhistadeas\u00e8irisgeighagusbeinnnafaoghla": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghinverleith": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghcraigentinnyduddingston": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiarsg\u00ecrenanloch": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "naheileanansiarsg\u00ecr\u00f9igeagusc\u00e0rlabhagh": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghportobellocraigmillar": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "cityofedinburghcolintonfairmilehead": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
+  ],
+  "highlandeilean\u00e1ch\u00e8o": [
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    },
+    {
+      "name": "Example Councillor",
+      "party": "Example Party",
+      "ward": "Example Ward",
+      "council": "Example Council",
+      "email": "example@example.com"
+    }
   ]
 }
