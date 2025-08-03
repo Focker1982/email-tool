@@ -347,11 +347,18 @@ const normalizedPostcode = window.normalize(postcode);
 const postcodePrefix = postcode.trim().toUpperCase().split(' ')[0];
 let councillors = [];
 
+const jsPath = `data/${postcodePrefix}.js`;
 try {
-  const data = await fetch(`data/${postcodePrefix}.json`).then(res => res.json());
-  councillors = data[normalizedPostcode] || [];
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = jsPath;
+    script.onload = () => resolve();
+    script.onerror = () => reject(`Failed to load script: ${jsPath}`);
+    document.head.appendChild(script);
+  });
+  councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
 } catch (err) {
-  console.warn(`No data found for prefix: ${postcodePrefix}`);
+  console.warn(err);
 }
 
 
