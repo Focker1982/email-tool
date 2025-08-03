@@ -297,30 +297,33 @@
   ];
 </script>
 <script>
-  async function init() {
-window.isReady = false;
+async function init() {
+  window.isReady = false;
 
-const mspData = await fetch('mspContacts.json').then(res => res.json());
-const councillorDataUrl = "https://drive.google.com/uc?export=download&id=1mfIOi6joZmI7CB_B0YjE7fJ4PP8MicUc";
-const postcodeToCouncillors = await fetch(councillorDataUrl).then(res => res.json());
+  const mspData = await fetch('mspContacts.json').then(res => res.json());
 
-window.mspData = mspData;
-window.postcodeToCouncillors = postcodeToCouncillors;
-window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
-window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
-window.isReady = true;
+  // Normalise postcode prefix (e.g. EH2 4DR → eh)
+  const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+  window.normalize = normalize;
 
-    const normalizedRegions = {};
-    Object.keys(mspData.regions).forEach(regionName => {
-      normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
-    });
-    mspData.regions = normalizedRegions;
+  window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+  window._mspData = mspData;
 
-    window._mspData = mspData;
-window.mspData = mspData;
-window.isReady = true;
-  }
-init();
+  const normalizedRegions = {};
+  Object.keys(mspData.regions).forEach(regionName => {
+    normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
+  });
+  mspData.regions = normalizedRegions;
+
+  window.mspData = mspData;
+  window.isReady = true;
+}
+function toggleAllIssues(source) {
+  const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+  checkboxes.forEach(cb => {
+    if (cb.id !== 'selectAll') cb.checked = source.checked;
+  });
+}
 
 async function getEmailsFromPostcode(postcode) {
   const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${window.apiKey}`;
@@ -340,7 +343,24 @@ async function getEmailsFromPostcode(postcode) {
   const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
 
 const normalizedPostcode = window.normalize(postcode);
-const councillors = window.postcodeToCouncillors[normalizedPostcode] || [];
+
+const postcodePrefix = postcode.trim().toUpperCase().split(' ')[0];
+let councillors = [];
+
+const jsPath = `data/${postcodePrefix}.js`;
+try {
+  await new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = jsPath;
+    script.onload = () => resolve();
+    script.onerror = () => reject(`Failed to load script: ${jsPath}`);
+    document.head.appendChild(script);
+  });
+  councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
+} catch (err) {
+  console.warn(err);
+}
+
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
