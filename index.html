@@ -299,12 +299,16 @@
 <script>
   async function init() {
 window.isReady = false;
-window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
-window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
 
 const mspData = await fetch('mspContacts.json').then(res => res.json());
-window.postcodeToWardKey = await fetch('postcode_to_wardkey.json').then(res => res.json());
-window.cllrData = await fetch('councillors_by_wardkey.json').then(res => res.json());
+const councillorDataUrl = "https://drive.google.com/uc?export=download&id=1mfIOi6joZmI7CB_B0YjE7fJ4PP8MicUc";
+const postcodeToCouncillors = await fetch(councillorDataUrl).then(res => res.json());
+
+window.mspData = mspData;
+window.postcodeToCouncillors = postcodeToCouncillors;
+window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+window.isReady = true;
 
     const normalizedRegions = {};
     Object.keys(mspData.regions).forEach(regionName => {
@@ -335,9 +339,8 @@ async function getEmailsFromPostcode(postcode) {
   const msp = mspKey ? window._mspData.constituencies[mspKey] : null;
   const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
 
-  const normalizedPostcode = window.normalize(postcode);
-  const wardKey = postcodeToWardKey[normalizedPostcode];
-  const councillors = wardKey ? cllrData[wardKey] || [] : [];
+const normalizedPostcode = window.normalize(postcode);
+const councillors = window.postcodeToCouncillors[normalizedPostcode] || [];
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
