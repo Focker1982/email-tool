@@ -318,7 +318,12 @@ async function init() {
   window.mspData = mspData;
   window.isReady = true;
 }
-init();
+function toggleAllIssues(source) {
+  const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+  checkboxes.forEach(cb => {
+    if (cb.id !== 'selectAll') cb.checked = source.checked;
+  });
+}
 
 async function getEmailsFromPostcode(postcode) {
   const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${window.apiKey}`;
@@ -339,7 +344,7 @@ async function getEmailsFromPostcode(postcode) {
 
 const normalizedPostcode = window.normalize(postcode);
 
-const postcodePrefix = normalizedPostcode.slice(0, 2).toUpperCase(); // e.g. EH2 4DR → EH
+const postcodePrefix = postcode.trim().toUpperCase().split(' ')[0];
 let councillors = [];
 
 try {
