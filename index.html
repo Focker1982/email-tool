@@ -297,28 +297,27 @@
   ];
 </script>
 <script>
-  async function init() {
-window.isReady = false;
+async function init() {
+  window.isReady = false;
 
-const mspData = await fetch('mspContacts.json').then(res => res.json());
-const councillorDataUrl = "https://drive.google.com/uc?export=download&id=1mfIOi6joZmI7CB_B0YjE7fJ4PP8MicUc";
-const postcodeToCouncillors = await fetch(councillorDataUrl).then(res => res.json());
+  const mspData = await fetch('mspContacts.json').then(res => res.json());
 
-window.mspData = mspData;
-window.postcodeToCouncillors = postcodeToCouncillors;
-window.normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
-window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
-window.isReady = true;
+  // Normalise postcode prefix (e.g. EH2 4DR → eh)
+  const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+  window.normalize = normalize;
 
-    const normalizedRegions = {};
-    Object.keys(mspData.regions).forEach(regionName => {
-      normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
-    });
-    mspData.regions = normalizedRegions;
+  window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+  window._mspData = mspData;
 
-    window._mspData = mspData;
-window.mspData = mspData;
-window.isReady = true;
+  const normalizedRegions = {};
+  Object.keys(mspData.regions).forEach(regionName => {
+    normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
+  });
+  mspData.regions = normalizedRegions;
+
+  window.mspData = mspData;
+  window.isReady = true;
+}
   }
 init();
 
@@ -340,7 +339,17 @@ async function getEmailsFromPostcode(postcode) {
   const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
 
 const normalizedPostcode = window.normalize(postcode);
-const councillors = window.postcodeToCouncillors[normalizedPostcode] || [];
+
+const postcodePrefix = normalizedPostcode.slice(0, 2).toUpperCase(); // e.g. EH2 4DR → EH
+let councillors = [];
+
+try {
+  const data = await fetch(`data/${postcodePrefix}.json`).then(res => res.json());
+  councillors = data[normalizedPostcode] || [];
+} catch (err) {
+  console.warn(`No data found for prefix: ${postcodePrefix}`);
+}
+
 
   return {
     msps: [msp, ...regionalMSPs].filter(Boolean),
