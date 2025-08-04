@@ -177,26 +177,26 @@
   </footer>
 <script>
   const issues = {
-    emergency: [
-      "I’m seriously concerned we’ll see delays for emergency vehicles if this layout continues. Our street is narrow, and full on-road parking leaves little room for larger vehicles to manoeuvre. If someone needed urgent help, seconds could matter — and this policy increases that risk.",
-      "Emergency access is being compromised. When cars are forced fully onto the road, services like ambulances and fire engines may struggle to reach homes in time. It’s not alarmist — just a real-world consequence of reducing space on already tight residential streets.",
-      "By shifting all vehicles onto the road, this policy unintentionally narrows access for emergency responders. It introduces serious risk in critical situations, and I don’t believe that was the intention — but it is now the reality."
-    ],
-    accessibility: [
-      "Many residents, including the elderly and those recovering from injury, rely on being able to park near their homes. With limited legal alternatives, the ban makes daily life more difficult for people who already face mobility challenges.",
-      "This policy creates unfair barriers for anyone with reduced mobility. There are no practical nearby alternatives for those who can’t easily walk longer distances, and the result is a less accessible environment — not a more inclusive one.",
-      "The pavement parking ban overlooks the people it claims to protect. Those with walking aids, temporary injuries, or pushchairs now face longer, more difficult routes between their car and their door — often with no safe option."
-    ],
+emergency: [
+  "I’m seriously concerned we’ll see delays for emergency vehicles if this layout continues. Our street is narrow, and full on-road parking leaves little room for larger vehicles to manoeuvre. If someone needed urgent help, seconds could matter — and this policy increases that risk.",
+  "Emergency access is being compromised. When cars are forced fully onto the road, services like ambulances and fire engines may struggle to reach homes in time. It’s not alarmist — just a real-world consequence of reducing space on already tight residential streets.",
+  "By shifting all vehicles onto the road, this policy unintentionally narrows access for emergency responders. It introduces serious risk in critical situations, and I don’t believe that was the intention — but it is now the reality.",
+],
+accessibility: [
+  "Many residents, including the elderly and those recovering from injury, rely on being able to park near their homes. With limited legal alternatives, the ban makes daily life more difficult for people who already face mobility challenges.",
+  "This policy creates unfair barriers for anyone with reduced mobility. There are no practical nearby alternatives for those who can’t easily walk longer distances, and the result is a less accessible environment — not a more inclusive one.",
+  "The pavement parking ban overlooks the people it claims to protect. Those with walking aids, temporary injuries, or pushchairs now face longer, more difficult routes between their car and their door — often with no safe option.",
+],
     prams: [
-      "On streets where pavements are already obstructed or uneven, walking on the road has been the only practical option for families — especially during poor weather. But full on-road parking now forces prams and young children into much narrower, more dangerous spaces.",
-      "Families used to navigate our street safely with prams or young kids by sharing space carefully. Now, with cars parked entirely on the road and pavements still blocked by bins and clutter, the route for pedestrians is riskier than ever.",
-      "Rather than protecting families, this policy makes journeys more hazardous for those with young children. The usable space has shrunk, and prams now move through traffic where there used to be a safer workaround."
-    ],
-    bins: [
-      "The current setup makes waste collection harder, not easier. Large vehicles have to squeeze through narrow gaps or mount the kerb — increasing the risk of scrapes, delays, and missed collections.",
-      "It’s obvious this layout puts bin collection at risk. Narrowed roads and awkward angles force council vehicles into difficult positions — often driving up onto pavements to get past. That’s not safer or more sustainable.",
-      "This ban affects not just residents but essential services too. Bin lorries will have more difficulty accessing streets fully occupied by on-road parking, and damage to parked cars becomes more likely as a result."
-    ],
+  "On streets where pavements are already obstructed or uneven, walking on the road has been the only practical option for families — especially during poor weather. But full on-road parking now forces prams and young children into much narrower, more dangerous spaces.",
+  "Families used to navigate our street safely with prams or young kids by sharing space carefully. Now, with cars parked entirely on the road and pavements still blocked by bins and clutter, the route for pedestrians is riskier than ever.",
+  "Rather than protecting families, this policy makes journeys more hazardous for those with young children. The usable space has shrunk, and prams now move through traffic where there used to be a safer workaround.",
+],
+bins: [
+  "The current setup makes waste collection harder, not easier. Large vehicles have to squeeze through narrow gaps or mount the kerb — increasing the risk of scrapes, delays, and missed collections.",
+  "It’s obvious this layout puts bin collection at risk. Narrowed roads and awkward angles force council vehicles into difficult positions — often driving up onto pavements to get past. That’s not safer or more sustainable.",
+  "This ban affects not just residents but essential services too. Bin lorries will have more difficulty accessing streets fully occupied by on-road parking, and damage to parked cars becomes more likely as a result.",
+],
     elderly: [
       "For older residents, having to walk further with shopping or mobility issues is a serious challenge. The policy ignores this reality and forces a level of physical strain that many simply can’t manage day-to-day.",
       "The distance between car and home now matters more than ever — and for elderly people, that extra walk isn’t just inconvenient, it’s a real obstacle. We should be supporting them, not sidelining their needs.",
@@ -420,7 +420,7 @@ if (repData.councillors?.length) {
           return;
         }
 
-        const ccAddress = "pavementparkingwatch@gmail.com";
+        const ccAddress = "thepavementtrap@gmail.com";
         const body = message.replace(/\n/g, '%0D%0A');
         const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${body}`;
 
