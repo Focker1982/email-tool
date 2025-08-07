@@ -174,7 +174,7 @@
   </form>
 
   <footer>
-    <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban. You can personalise the content further once it opens in your email client.</p>
+    <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban on your street. You can personalise the content further once it opens in your email client.</p>
   </footer>
 <script>
   const issues = {
@@ -404,8 +404,8 @@ try {
 
       if (other) chosenLines.push(other);
 
-      const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable.";
-      const message = `Dear MSPs and Councillors,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
+      const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable. I urge you to pause this policy and engage in an open, evidence-led consultation that addresses both the practical impacts and the ideological concerns residents now have — including the wider “20-minute city” agenda driving these changes.";
+      const message = `Dear MSPs and Councillors,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}I am writing to raise concerns about the pavement parking ban and related road changes being rolled out in East Dunbartonshire. These measures are being introduced without proper local consultation and appear to be driven more by national transport ideology — including elements of the “20-minute city” agenda — than by evidence from our own streets. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
       const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
       try {
