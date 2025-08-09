@@ -25,7 +25,7 @@
       border: 1px solid #ccc; border-radius: 5px; font-family: inherit; min-height: 44px;
     }
     textarea { resize: vertical; }
-    input:focus, textarea:focus, button:focus, select:focus { outline: 2px solid #005fa3; outline-offset: 2px; }
+    input:focus, textarea:focus, button:focus { outline: 2px solid #005fa3; outline-offset: 2px; }
     .issue-list {
       border: 1px solid #ccc; background: #f1f1f1; padding: 15px 20px; margin-top: 20px; border-radius: 5px;
     }
@@ -42,7 +42,6 @@
     footer { margin-top: 30px; border-top: 1px solid #ddd; padding-top: 16px; font-size: 0.95em; color: #444; }
     .sr-only { position: absolute; left: -9999px; }
     #preview { background:#fff7e6; border-left:5px solid #ff9900; }
-    select#tone { padding: 8px 10px; border-radius: 6px; border: 1px solid #ccc; }
     @media (max-width: 600px) {
       body { padding: 20px; }
       label { font-size: 1.05em; }
@@ -95,14 +94,7 @@
     </fieldset>
 
     <div class="row" style="margin-top: 14px;">
-      <label for="tone">Tone:</label>
-      <select id="tone" aria-label="Email tone">
-        <option value="neutral" selected>Neutral</option>
-        <option value="formal">Super‑formal</option>
-        <option value="plain">Plain‑English</option>
-        <option value="stronger">Stronger (still polite)</option>
-      </select>
-      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about transport policy and ideology (e.g. national strategy / “20‑minute city”)</label>
+      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about national transport policy (e.g. strategy / “20‑minute city”)</label>
     </div>
 
     <label for="other" style="margin-top: 12px;">Write your own concerns:</label>
@@ -123,7 +115,7 @@
   </footer>
 
 <script>
-  // --- Issue text bank (street-agnostic variants) ---
+  // --- Strong, street-agnostic issue paragraphs ---
   const issues = {
     emergency: [
       "I’m concerned emergency vehicles may be delayed when all parking is pushed fully onto the carriageway. On many residential streets, that reduces manoeuvring space at the very moment seconds matter.",
@@ -192,21 +184,13 @@
 </script>
 
 <script>
-  // --- Subject lines (neutral & toned) ---
+  // --- Subject lines (assertive set) ---
   const subjectLines = [
-    "Local impacts of parking rules",
-    "Resident feedback on pavement parking ban",
-    "Evidence-led adjustments requested",
-    "Access and safety: unintended effects",
-    "Please review local outcomes",
-    "Street-level issues and options",
-    "One size doesn’t fit our street",
-    "Safer access needs flexibility",
-    "Consult residents before enforcing",
-    "Seeking proportionate enforcement",
     "This policy isn’t working here",
-    "Please pause and review the parking ban",
-    "The policy isn’t achieving its aims"
+    "Please pause and repeal the pavement parking ban",
+    "Local impacts of the pavement parking rules",
+    "Residents need action: pause → repeal",
+    "Street‑level evidence the ban is failing"
   ];
 </script>
 
@@ -244,48 +228,19 @@
     return s.slice(0, -3) + ' ' + s.slice(-3);
   }
 
-  function stripEmojis(s){ return s.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').replace(/\s{2,}/g,' ').trim(); }
-
-  // Tone banks
-  const toneOpeners = {
-    neutral: [
-      (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day‑to‑day effects are creating avoidable problems.`,
-      (n,a,p)=>`I’m ${n} at ${a}, ${p}. I support safer access, but the current approach is creating avoidable problems on our street.`,
-      (n,a,p)=>`${n} here from ${a}, ${p}. The intention behind the ban is clear; the outcomes on our street are not working as hoped.`
-    ],
-    formal: [
-      (n,a,p)=>`${n}, ${a}, ${p}. I write to set out specific concerns regarding the practical operation of the pavement‑parking provisions within our area.`,
-      (n,a,p)=>`I am ${n} of ${a}, ${p}. I respectfully request that you review the implementation of the pavement‑parking prohibitions in light of the impacts described below.`
-    ],
-    plain: [
-      (n,a,p)=>`I’m ${n} at ${a}, ${p}. Here’s what isn’t working with the pavement‑parking rules on our street.`,
-      (n,a,p)=>`${n} from ${a}, ${p}. The rules make day‑to‑day life harder in the ways listed below.`
-    ],
-    stronger: [
-      (n,a,p)=>`${n} here from ${a}, ${p}. The current approach isn’t working on our street, and we need proportionate, practical fixes.`,
-      (n,a,p)=>`I’m ${n} at ${a}, ${p}. The policy outcomes below need urgent attention and adjustment.`
-    ]
-  };
-
-  const mitigationAgendaOptional =
-    "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
-
-  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, tone='neutral' }) {
-    const newline = '\n\n'; // JS interprets 
- as real newline
+  // Single strong voice
+  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false }) {
+    const NL = '\\n\\n';
     const greeting = 'Dear MSPs and Councillors,';
-    const bank = toneOpeners[tone] || toneOpeners.neutral;
-    const opening = bank[Math.floor(Math.random()*bank.length)](name,address,postcode);
-    const concerns = `Specific concerns from our area include:${newline}${chosenLines.join(newline)}`;
-    const ask = "We ask that you pause enforcement on residential streets immediately and proceed to a full repeal of the pavement‑parking ban.";
-    const asks = includeAgenda ? (ask + ' ' + mitigationAgendaOptional) : ask;
-    const close = (tone==='formal')
-      ? 'I would appreciate your response detailing interim steps and the route to repeal.'
-      : 'I’d appreciate a response on immediate steps and the route to repeal.';
+    const opening =
+      `I’m ${name} at ${address}, ${postcode}. We support safe access for everyone, but the current pavement‑parking policy is making residential streets less workable and less safe in practice.`;
+    const concerns = `Specific concerns from our area include:${NL}${chosenLines.join(NL)}`;
+    const askCore = "Please pause enforcement on residential streets immediately and proceed to a full repeal of the pavement‑parking ban.";
+    const agenda = " If wider transport‑policy aims are driving these decisions, discuss them openly with residents rather than imposing them without consent.";
+    const asks = includeAgenda ? (askCore + agenda) : askCore;
+    const close = 'Please respond with what you will do now to relieve these pressures and the route and timetable to repeal.';
 
-    let body = `${greeting}${newline}${opening}${newline}${concerns}${newline}${asks}${newline}${close}${newline}${(tone==='formal'?'Yours sincerely,':'Kind regards,')}${newline}${name}`;
-    if (tone==='formal' || tone==='plain') body = stripEmojis(body);
-    return body;
+    return `${greeting}${NL}${opening}${NL}${concerns}${NL}${asks}${NL}${close}${NL}Kind regards,${NL}${name}`;
   }
 
   async function getEmailsFromPostcode(postcode) {
@@ -327,7 +282,10 @@
   }
 
   window.generateEmail = async function () {
-    if (!window.isReady) { alert('Still loading data. Please wait a moment and try again.'); return; }
+    if (!window.isReady) {
+      alert('Still loading data. Please wait a moment and try again.');
+      return;
+    }
 
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
@@ -335,7 +293,6 @@
     const postcode = normalisePostcode(postcodeRaw);
     const other = document.getElementById('other').value.trim();
     const includeAgenda = document.getElementById('includeAgenda').checked;
-    const tone = document.getElementById('tone').value;
 
     const allCheckboxes = document.querySelectorAll('.issue-list input[type="checkbox"]');
     const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
@@ -344,10 +301,13 @@
     if (checkboxes.length === 0 && !other) { alert('Please select at least one concern or fill in the other box.'); showStatus('No concerns selected.'); return; }
 
     const selectedSubjects = checkboxes.map(cb => cb.value);
-    let chosenLines = selectedSubjects.map(issue => { const options = issues[issue]; return options[Math.floor(Math.random() * options.length)]; });
+    let chosenLines = selectedSubjects.map(issue => {
+      const options = issues[issue];
+      return options[Math.floor(Math.random() * options.length)];
+    });
     if (other) chosenLines.push(other);
 
-    const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda, tone });
+    const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
     // Preview (non-blocking)
@@ -355,7 +315,7 @@
     document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
 
-    // Build recipient list from lookup only
+    // Lookup recipients
     let toEmails = [];
     try {
       const repData = await getEmailsFromPostcode(postcode);
@@ -371,17 +331,23 @@
       alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
     }
 
-    // Always CC campaign inbox.
-    // IMPORTANT: Encode AFTER building, then normalize %0A => %0D%0A
+    // Build mailto with proper CRLF
     const bodyParam = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
     const subjectParam = encodeURIComponent(subject);
     const toParam = toEmails.join(',');
     const ccParam = encodeURIComponent('thepavementtrap@gmail.com');
-
     const mailto = `mailto:${toParam}?subject=${subjectParam}&cc=${ccParam}&body=${bodyParam}`;
 
-    const a = document.createElement('a'); a.href = mailto; a.style.display = 'none'; document.body.appendChild(a);
-    a.click(); document.body.removeChild(a);
+    const a = document.createElement('a');
+    a.href = mailto;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    setTimeout(() => {
+      alert('If your email app didn’t open, please check your browser settings or copy the text from the preview.');
+    }, 700);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
