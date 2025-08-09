@@ -236,14 +236,6 @@
     return [...new Set((list || []).map(e => String(e||'').trim()).filter(Boolean))];
   }
 
-  function buildMailto(toList, subject, body, ccList=[]) {
-    const MAX_TO = 30;
-    const to = uniqueEmails(toList).slice(0, MAX_TO).join(',');
-    const cc = uniqueEmails(ccList).join(',');
-    const enc = s => encodeURIComponent(s.replace(/\\n/g, '\\r\\n'));
-    return `mailto:${to}?subject=${enc(subject)}${cc ? `&cc=${encodeURIComponent(cc)}`:''}&body=${enc(body)}`;
-  }
-
   function showStatus(msg){ const el=document.getElementById('statusMsg'); el.textContent = msg; }
 
   function normalisePostcode(pc){
@@ -254,6 +246,7 @@
 
   function stripEmojis(s){ return s.replace(/[\\p{Emoji_Presentation}\\p{Extended_Pictographic}]/gu, '').replace(/\\s{2,}/g,' ').trim(); }
 
+  // Tone banks
   const toneOpeners = {
     neutral: [
       (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day‑to‑day effects are creating avoidable problems.`,
@@ -278,7 +271,8 @@
     "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
 
   function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, tone='neutral' }) {
-    const newline = '\\n\\n';
+    // IMPORTANT: real line breaks here (not literal \\n)
+    const newline = '\n\n';
     const greeting = 'Dear MSPs and Councillors,';
     const bank = toneOpeners[tone] || toneOpeners.neutral;
     const opening = bank[Math.floor(Math.random()*bank.length)](name,address,postcode);
@@ -356,7 +350,7 @@
     const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda, tone });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview (non-blocking)
+    // Preview (non-blocking) — keep real newlines
     document.getElementById('previewSubject').textContent = subject;
     document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
@@ -377,15 +371,17 @@
       alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
     }
 
-    // Always CC campaign inbox
-    const mailto = (function(toList, subject, body){
-      const cc = ['thepavementtrap@gmail.com'];
-      const enc = s => encodeURIComponent(s.replace(/\\n/g, '\\r\\n'));
-      return `mailto:${(toList||[]).join(',')}?subject=${enc(subject)}&cc=${encodeURIComponent(cc.join(','))}&body=${enc(body)}`;
-    })(toEmails, subject, message);
+    // Prepare body for mailto: convert real newlines -> CRLF and URL-encode
+    const bodyForMailto = encodeURIComponent(message.replace(/\r?\n/g, '\r\n'));
+    const subjectEnc = encodeURIComponent(subject);
+    const ccEnc = encodeURIComponent('thepavementtrap@gmail.com');
 
-    const a = document.createElement('a'); a.href = mailto; a.style.display = 'none'; document.body.appendChild(a);
-    a.click(); document.body.removeChild(a);
+    const a = document.createElement('a');
+    a.href = `mailto:${(toEmails||[]).join(',')}?subject=${subjectEnc}&cc=${ccEnc}&body=${bodyForMailto}`;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
