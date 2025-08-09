@@ -244,7 +244,7 @@
     return s.slice(0, -3) + ' ' + s.slice(-3);
   }
 
-  function stripEmojis(s){ return s.replace(/[\\p{Emoji_Presentation}\\p{Extended_Pictographic}]/gu, '').replace(/\\s{2,}/g,' ').trim(); }
+  function stripEmojis(s){ return s.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').replace(/\s{2,}/g,' ').trim(); }
 
   // Tone banks
   const toneOpeners = {
@@ -271,8 +271,8 @@
     "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
 
   function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, tone='neutral' }) {
-    // IMPORTANT: real line breaks here (not literal \\n)
-    const newline = '\n\n';
+    const newline = '\n\n'; // JS interprets 
+ as real newline
     const greeting = 'Dear MSPs and Councillors,';
     const bank = toneOpeners[tone] || toneOpeners.neutral;
     const opening = bank[Math.floor(Math.random()*bank.length)](name,address,postcode);
@@ -350,7 +350,7 @@
     const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda, tone });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview (non-blocking) — keep real newlines
+    // Preview (non-blocking)
     document.getElementById('previewSubject').textContent = subject;
     document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
@@ -371,17 +371,17 @@
       alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
     }
 
-    // Prepare body for mailto: convert real newlines -> CRLF and URL-encode
-    const bodyForMailto = encodeURIComponent(message.replace(/\r?\n/g, '\r\n'));
-    const subjectEnc = encodeURIComponent(subject);
-    const ccEnc = encodeURIComponent('thepavementtrap@gmail.com');
+    // Always CC campaign inbox.
+    // IMPORTANT: Encode AFTER building, then normalize %0A => %0D%0A
+    const bodyParam = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
+    const subjectParam = encodeURIComponent(subject);
+    const toParam = toEmails.join(',');
+    const ccParam = encodeURIComponent('thepavementtrap@gmail.com');
 
-    const a = document.createElement('a');
-    a.href = `mailto:${(toEmails||[]).join(',')}?subject=${subjectEnc}&cc=${ccEnc}&body=${bodyForMailto}`;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    const mailto = `mailto:${toParam}?subject=${subjectParam}&cc=${ccParam}&body=${bodyParam}`;
+
+    const a = document.createElement('a'); a.href = mailto; a.style.display = 'none'; document.body.appendChild(a);
+    a.click(); document.body.removeChild(a);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
