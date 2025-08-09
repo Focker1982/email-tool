@@ -35,13 +35,15 @@
     .row > label { margin: 0; }
     .hint { font-size: 0.95em; color: #555; margin-top: 6px; }
     button {
-      margin-top: 25px; padding: 14px 24px; font-size: 1.1em; background-color: #0077cc; color: white;
+      margin-top: 10px; padding: 14px 24px; font-size: 1.1em; background-color: #0077cc; color: white;
       border: none; cursor: pointer; border-radius: 6px; transition: background-color 0.3s ease; min-height: 44px; font-family: inherit;
     }
     button:hover { background-color: #005fa3; }
     footer { margin-top: 30px; border-top: 1px solid #ddd; padding-top: 16px; font-size: 0.95em; color: #444; }
     .sr-only { position: absolute; left: -9999px; }
     #preview { background:#fff7e6; border-left:5px solid #ff9900; }
+    #statusArea { margin-top: 10px; font-size: 0.95em; color:#0051a3; }
+    #statusArea.error { color:#a32020; }
     @media (max-width: 600px) {
       body { padding: 20px; }
       label { font-size: 1.05em; }
@@ -94,13 +96,14 @@
     </fieldset>
 
     <div class="row" style="margin-top: 14px;">
-      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about national transport policy (e.g. strategy / “20‑minute city”)</label>
+      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about national transport policy / ideology (e.g. strategy / “20‑minute city”)</label>
     </div>
 
     <label for="other" style="margin-top: 12px;">Write your own concerns:</label>
     <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
 
     <button type="button" id="openBtn">Open Email</button>
+    <div id="statusArea" role="status" aria-live="polite"></div>
   </form>
 
   <div id="preview" class="intro" style="display:none;margin-top:18px">
@@ -115,7 +118,7 @@
   </footer>
 
 <script>
-  // --- Strong, street-agnostic issue paragraphs ---
+  // --- Issue text bank (street-agnostic variants) ---
   const issues = {
     emergency: [
       "I’m concerned emergency vehicles may be delayed when all parking is pushed fully onto the carriageway. On many residential streets, that reduces manoeuvring space at the very moment seconds matter.",
@@ -184,26 +187,24 @@
 </script>
 
 <script>
-  // --- Subject lines (assertive set) ---
+  // --- Subject lines (firm‑polite) ---
   const subjectLines = [
-    "This policy isn’t working here",
-    "Please pause and repeal the pavement parking ban",
-    "Local impacts of the pavement parking rules",
-    "Residents need action: pause → repeal",
-    "Street‑level evidence the ban is failing"
+    "Local impacts of the pavement‑parking rules",
+    "Please pause and repeal the pavement‑parking ban",
+    "This approach isn’t working on our street",
+    "Residents need a practical, proportionate fix"
   ];
 </script>
 
 <script>
-  // --- Setup & helpers ---
+  // --- Helpers & setup ---
   async function init() {
     window.isReady = false;
-
     const mspData = await fetch('mspContacts.json').then(res => res.json());
     const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
     window.normalize = normalize;
 
-    window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b"; // MapIt key
+    window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
     window._mspData = mspData;
 
     const normalizedRegions = {};
@@ -216,31 +217,36 @@
     window.isReady = true;
   }
 
-  function uniqueEmails(list) {
-    return [...new Set((list || []).map(e => String(e||'').trim()).filter(Boolean))];
-  }
-
-  function showStatus(msg){ const el=document.getElementById('statusMsg'); el.textContent = msg; }
-
   function normalisePostcode(pc){
     const s = pc.replace(/[^A-Za-z0-9]/g,'').toUpperCase();
     if (s.length < 5) return pc.toUpperCase().trim();
     return s.slice(0, -3) + ' ' + s.slice(-3);
   }
 
-  // Single strong voice
-  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false }) {
-    const NL = '\\n\\n';
-    const greeting = 'Dear MSPs and Councillors,';
-    const opening =
-      `I’m ${name} at ${address}, ${postcode}. We support safe access for everyone, but the current pavement‑parking policy is making residential streets less workable and less safe in practice.`;
-    const concerns = `Specific concerns from our area include:${NL}${chosenLines.join(NL)}`;
-    const askCore = "Please pause enforcement on residential streets immediately and proceed to a full repeal of the pavement‑parking ban.";
-    const agenda = " If wider transport‑policy aims are driving these decisions, discuss them openly with residents rather than imposing them without consent.";
-    const asks = includeAgenda ? (askCore + agenda) : askCore;
-    const close = 'Please respond with what you will do now to relieve these pressures and the route and timetable to repeal.';
+  function setStatus(msg, isError=false){
+    const el = document.getElementById('statusArea');
+    el.textContent = msg || '';
+    el.className = isError ? 'error' : '';
+  }
 
-    return `${greeting}${NL}${opening}${NL}${concerns}${NL}${asks}${NL}${close}${NL}Kind regards,${NL}${name}`;
+  const openersFirmPolite = [
+    (n,a,p)=>`I’m ${n} at ${a}, ${p}. We support safe access for everyone, but the current pavement‑parking policy is making residential streets less workable and less safe in practice.`,
+    (n,a,p)=>`${n} from ${a}, ${p}. The intention behind the ban is understood; the real‑world effects on our street are not working as hoped.`
+  ];
+
+  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false }) {
+    const newline = '\\r\\n\\r\\n'; // CRLF between paragraphs (appears correctly in most clients)
+    const greeting = 'Dear MSPs and Councillors,';
+    const opening = openersFirmPolite[Math.floor(Math.random()*openersFirmPolite.length)](name,address,postcode);
+    const concerns = `Specific concerns from our area include:${newline}${chosenLines.join(newline)}`;
+    const ask = "We ask that you pause enforcement on residential streets immediately and proceed to a full repeal of the pavement‑parking ban.";
+    const agenda = includeAgenda
+      ? " Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed."
+      : "";
+    const close = "I’d appreciate a response on immediate steps and the route to repeal.";
+
+    const body = `${greeting}${newline}${opening}${newline}${concerns}${newline}${ask}${agenda}${newline}${close}${newline}Kind regards,${newline}${name}`;
+    return body;
   }
 
   async function getEmailsFromPostcode(postcode) {
@@ -282,10 +288,7 @@
   }
 
   window.generateEmail = async function () {
-    if (!window.isReady) {
-      alert('Still loading data. Please wait a moment and try again.');
-      return;
-    }
+    if (!window.isReady) { setStatus('Still loading data. Please wait a moment.', true); return; }
 
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
@@ -297,8 +300,8 @@
     const allCheckboxes = document.querySelectorAll('.issue-list input[type="checkbox"]');
     const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
 
-    if (!name || !address || !postcode) { alert('Please fill in your name, address, and postcode.'); showStatus('Missing required fields.'); return; }
-    if (checkboxes.length === 0 && !other) { alert('Please select at least one concern or fill in the other box.'); showStatus('No concerns selected.'); return; }
+    if (!name || !address || !postcode) { setStatus('Please fill in your name, address, and postcode.', true); return; }
+    if (checkboxes.length === 0 && !other) { setStatus('Please tick at least one concern or add your own.', true); return; }
 
     const selectedSubjects = checkboxes.map(cb => cb.value);
     let chosenLines = selectedSubjects.map(issue => {
@@ -310,10 +313,12 @@
     const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview (non-blocking)
+    // Preview
     document.getElementById('previewSubject').textContent = subject;
     document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
+
+    setStatus('Opening your email app…');
 
     // Lookup recipients
     let toEmails = [];
@@ -324,30 +329,26 @@
       if (repData.councillors?.length) repData.councillors.forEach(c => { if (c?.email) looked.push(c.email); });
       toEmails = [...new Set(looked.map(e=>String(e||'').trim()).filter(Boolean))].slice(0,30);
     } catch (e) {
-      console.warn('Lookup failed; opening email with CC only.');
+      console.warn('Lookup failed; opening with CC only.');
     }
 
     if (!toEmails.length) {
-      alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
+      setStatus('We couldn’t find contacts for that postcode. Use the preview to copy & send manually if your mail app doesn’t open.');
     }
 
-    // Build mailto with proper CRLF
+    // Always CC campaign inbox (obfuscated)
+    const ccAddress = ['thepavementtrap','@','gmail','.com'].join('');
+
+    // Proper CRLF encoding for body
     const bodyParam = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
     const subjectParam = encodeURIComponent(subject);
     const toParam = toEmails.join(',');
-    const ccParam = encodeURIComponent('thepavementtrap@gmail.com');
+    const ccParam = encodeURIComponent(ccAddress);
+
     const mailto = `mailto:${toParam}?subject=${subjectParam}&cc=${ccParam}&body=${bodyParam}`;
 
-    const a = document.createElement('a');
-    a.href = mailto;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-
-    setTimeout(() => {
-      alert('If your email app didn’t open, please check your browser settings or copy the text from the preview.');
-    }, 700);
+    const a = document.createElement('a'); a.href = mailto; a.style.display = 'none'; document.body.appendChild(a);
+    a.click(); document.body.removeChild(a);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
@@ -358,8 +359,13 @@
 
   document.getElementById('openBtn')?.addEventListener('click', () => window.generateEmail());
   document.getElementById('copyBtn')?.addEventListener('click', async ()=>{
-    try { await navigator.clipboard.writeText(document.getElementById('previewBody').value); alert('Copied. Paste into your email app.'); }
-    catch { const ta=document.getElementById('previewBody'); ta.select(); document.execCommand('copy'); alert('Copied (legacy).'); }
+    try {
+      await navigator.clipboard.writeText(document.getElementById('previewBody').value);
+      setStatus('Copied to clipboard. Paste into your email app.');
+    } catch {
+      const ta=document.getElementById('previewBody'); ta.select(); document.execCommand('copy');
+      setStatus('Copied (legacy). Paste into your email app.');
+    }
   });
 
   init();
