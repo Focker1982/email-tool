@@ -60,7 +60,7 @@
 
   <div class="intro">
     <strong>Why does this tool exist?</strong><br><br>
-    This tool helps you send a clear, personal email about how the pavement parking ban is working in practice on your street—without writing from scratch. Every message is unique and harder to dismiss. Add your details, tick the issues that apply, and we’ll open a ready-to-send email to your representatives.
+    This tool helps you send a clear, personal email about how the pavement parking ban is working in practice on your street—without writing from scratch. Every message is unique and harder to dismiss. Add your details, tick the issues that apply, and we’ll open a ready‑to‑send email to your representatives.
   </div>
 
   <form aria-describedby="statusMsg" novalidate>
@@ -240,7 +240,7 @@
     const MAX_TO = 30;
     const to = uniqueEmails(toList).slice(0, MAX_TO).join(',');
     const cc = uniqueEmails(ccList).join(',');
-    const enc = s => encodeURIComponent(s.replace(/\n/g, '\r\n'));
+    const enc = s => encodeURIComponent(s.replace(/\\n/g, '\\r\\n'));
     return `mailto:${to}?subject=${enc(subject)}${cc ? `&cc=${encodeURIComponent(cc)}`:''}&body=${enc(body)}`;
   }
 
@@ -252,9 +252,8 @@
     return s.slice(0, -3) + ' ' + s.slice(-3);
   }
 
-  function stripEmojis(s){ return s.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').replace(/\s{2,}/g,' ').trim(); }
+  function stripEmojis(s){ return s.replace(/[\\p{Emoji_Presentation}\\p{Extended_Pictographic}]/gu, '').replace(/\\s{2,}/g,' ').trim(); }
 
-  // Tone banks
   const toneOpeners = {
     neutral: [
       (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day‑to‑day effects are creating avoidable problems.`,
@@ -291,7 +290,6 @@
       : 'I’d appreciate a response on immediate steps and the route to repeal.';
 
     let body = `${greeting}${newline}${opening}${newline}${concerns}${newline}${asks}${newline}${close}${newline}${(tone==='formal'?'Yours sincerely,':'Kind regards,')}${newline}${name}`;
-    // Strip emojis automatically for formal/plain to keep it clean regardless of issue text
     if (tone==='formal' || tone==='plain') body = stripEmojis(body);
     return body;
   }
@@ -335,10 +333,7 @@
   }
 
   window.generateEmail = async function () {
-    if (!window.isReady) {
-      alert('Still loading data. Please wait a moment and try again.');
-      return;
-    }
+    if (!window.isReady) { alert('Still loading data. Please wait a moment and try again.'); return; }
 
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
@@ -351,71 +346,46 @@
     const allCheckboxes = document.querySelectorAll('.issue-list input[type="checkbox"]');
     const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
 
-    if (!name || !address || !postcode) {
-      alert('Please fill in your name, address, and postcode.');
-      showStatus('Missing required fields.');
-      return;
-    }
-
-    if (checkboxes.length === 0 && !other) {
-      alert('Please select at least one concern or fill in the other box.');
-      showStatus('No concerns selected.');
-      return;
-    }
+    if (!name || !address || !postcode) { alert('Please fill in your name, address, and postcode.'); showStatus('Missing required fields.'); return; }
+    if (checkboxes.length === 0 && !other) { alert('Please select at least one concern or fill in the other box.'); showStatus('No concerns selected.'); return; }
 
     const selectedSubjects = checkboxes.map(cb => cb.value);
-    let chosenLines = selectedSubjects.map(issue => {
-      const options = issues[issue];
-      return options[Math.floor(Math.random() * options.length)];
-    });
-
+    let chosenLines = selectedSubjects.map(issue => { const options = issues[issue]; return options[Math.floor(Math.random() * options.length)]; });
     if (other) chosenLines.push(other);
 
-    const message = buildMessage({
-      name, address, postcode, chosenLines, includeAgenda, tone
-    });
-
+    const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda, tone });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview first
+    // Preview (non-blocking)
     document.getElementById('previewSubject').textContent = subject;
-    const ta = document.getElementById('previewBody');
-    ta.value = message;
+    document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
 
+    // Build recipient list from lookup only
+    let toEmails = [];
     try {
       const repData = await getEmailsFromPostcode(postcode);
-
-      const emails = [];
-      if (repData.msps?.length) repData.msps.forEach(msp => { if (msp?.email) emails.push(msp.email); });
-      if (repData.councillors?.length) repData.councillors.forEach(c => { if (c?.email) emails.push(c.email); });
-
-      const toEmails = [...new Set(emails.map(e=>String(e||'').trim()).filter(Boolean))].slice(0,30);
-      if (toEmails.length === 0) {
-        alert('We couldn’t find any email contacts for that postcode. You can still copy the preview and send it manually.');
-        showStatus('No contacts found for that postcode.');
-        return;
-      }
-
-      // Always CC campaign inbox
-      const cc = ['thepavementtrap@gmail.com'];
-      const mailtoLink = buildMailto(toEmails, subject, message, cc);
-
-      const tempLink = document.createElement('a');
-      tempLink.href = mailtoLink;
-      tempLink.style.display = 'none';
-      document.body.appendChild(tempLink);
-      tempLink.click();
-      document.body.removeChild(tempLink);
-
-      setTimeout(() => {
-        alert('If your email app didn’t open, please check your browser settings or copy the text from the preview.');
-      }, 800);
-    } catch (error) {
-      console.error('Error fetching representatives:', error);
-      alert('Something went wrong looking up your representatives. Use the preview to copy and send manually.');
-      showStatus('Lookup error. Try again later.');
+      const looked = [];
+      if (repData.msps?.length) repData.msps.forEach(m => { if (m?.email) looked.push(m.email); });
+      if (repData.councillors?.length) repData.councillors.forEach(c => { if (c?.email) looked.push(c.email); });
+      toEmails = [...new Set(looked.map(e=>String(e||'').trim()).filter(Boolean))].slice(0,30);
+    } catch (e) {
+      console.warn('Lookup failed; opening email with CC only.');
     }
+
+    if (!toEmails.length) {
+      alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
+    }
+
+    // Always CC campaign inbox
+    const mailto = (function(toList, subject, body){
+      const cc = ['thepavementtrap@gmail.com'];
+      const enc = s => encodeURIComponent(s.replace(/\\n/g, '\\r\\n'));
+      return `mailto:${(toList||[]).join(',')}?subject=${enc(subject)}&cc=${encodeURIComponent(cc.join(','))}&body=${enc(body)}`;
+    })(toEmails, subject, message);
+
+    const a = document.createElement('a'); a.href = mailto; a.style.display = 'none'; document.body.appendChild(a);
+    a.click(); document.body.removeChild(a);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
