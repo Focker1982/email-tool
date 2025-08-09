@@ -230,7 +230,7 @@
 
   // Single strong voice
   function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false }) {
-    const NL = '\n\n';
+    const NL = '\\n\\n'; // internal, later converted to CRLF for mailto
     const greeting = 'Dear MSPs and Councillors,';
     const opening =
       `I’m ${name} at ${address}, ${postcode}. We support safe access for everyone, but the current pavement‑parking policy is making residential streets less workable and less safe in practice.`;
@@ -282,10 +282,7 @@
   }
 
   window.generateEmail = async function () {
-    if (!window.isReady) {
-      alert('Still loading data. Please wait a moment and try again.');
-      return;
-    }
+    if (!window.isReady) { alert('Still loading data. Please wait a moment and try again.'); return; }
 
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
@@ -310,7 +307,7 @@
     const message = buildMessage({ name, address, postcode, chosenLines, includeAgenda });
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview (non-blocking)
+    // Preview
     document.getElementById('previewSubject').textContent = subject;
     document.getElementById('previewBody').value = message;
     document.getElementById('preview').style.display = 'block';
@@ -324,19 +321,19 @@
       if (repData.councillors?.length) repData.councillors.forEach(c => { if (c?.email) looked.push(c.email); });
       toEmails = [...new Set(looked.map(e=>String(e||'').trim()).filter(Boolean))].slice(0,30);
     } catch (e) {
-      console.warn('Lookup failed; opening email with CC only.');
+      console.warn('Lookup failed; opening email without recipients.');
     }
 
     if (!toEmails.length) {
-      alert('We couldn’t find any email contacts for that postcode. We’ll still open your email with the campaign CC’d—use the preview to copy and send manually.');
+      alert('We couldn’t find any email contacts for that postcode. Use the preview to copy and send manually.');
     }
 
-    // Build mailto with proper CRLF
-    const bodyParam = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
+    // Build mailto with proper CRLF and NO CC (lets the user's email client choose the right From account)
+    const bodyParam = encodeURIComponent(message).replace(/%5Cn/g, '%0D%0A').replace(/%0A/g, '%0D%0A');
     const subjectParam = encodeURIComponent(subject);
     const toParam = toEmails.join(',');
-    const ccParam = encodeURIComponent('thepavementtrap@gmail.com');
-    const mailto = `mailto:${toParam}?subject=${subjectParam}&cc=${ccParam}&body=${bodyParam}`;
+
+    const mailto = `mailto:${toParam}?subject=${subjectParam}&body=${bodyParam}`;
 
     const a = document.createElement('a');
     a.href = mailto;
@@ -344,10 +341,6 @@
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-
-    setTimeout(() => {
-      alert('If your email app didn’t open, please check your browser settings or copy the text from the preview.');
-    }, 700);
   };
 
   document.getElementById('selectAll').addEventListener('click', function () {
