@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,19 +17,8 @@
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h1 {
-      text-align: center;
-      font-size: 2.5em;
-      color: #cc0000;
-      margin-bottom: 20px;
-    }
-    .intro {
-      background: #f0f5ff;
-      padding: 15px 20px;
-      border-left: 5px solid #003f7d;
-      border-radius: 5px;
-      margin-bottom: 25px;
-    }
+    h1 { text-align: center; font-size: 2.5em; color: #cc0000; margin-bottom: 20px; }
+    .intro { background: #f0f5ff; padding: 15px 20px; border-left: 5px solid #003f7d; border-radius: 5px; margin-bottom: 25px; }
     label { display: block; margin: 12px 0 6px; font-weight: 600; }
     input[type="text"], textarea {
       width: 100%; padding: 10px; font-size: 1em; margin-bottom: 15px;
@@ -114,9 +102,8 @@
         <option value="plain">Plain‑English</option>
         <option value="stronger">Stronger (still polite)</option>
       </select>
-      <label><input type="checkbox" id="plainMode"> Plain email (no emojis)</label>
-      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about transport policy and ideology</label>
-      </div>
+      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about transport policy and ideology (e.g. national strategy / “20‑minute city”)</label>
+    </div>
 
     <label for="other" style="margin-top: 12px;">Write your own concerns:</label>
     <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
@@ -136,7 +123,7 @@
   </footer>
 
 <script>
-  // --- Generic, hedged variants (street-agnostic) ---
+  // --- Issue text bank (street-agnostic variants) ---
   const issues = {
     emergency: [
       "I’m concerned emergency vehicles may be delayed when all parking is pushed fully onto the carriageway. On many residential streets, that reduces manoeuvring space at the very moment seconds matter.",
@@ -205,10 +192,9 @@
 </script>
 
 <script>
-  // --- Subject lines (neutrals + toned-down) ---
+  // --- Subject lines (neutral & toned) ---
   const subjectLines = [
     "Local impacts of parking rules",
-    "Practical fixes needed on our street",
     "Resident feedback on pavement parking ban",
     "Evidence-led adjustments requested",
     "Access and safety: unintended effects",
@@ -217,7 +203,6 @@
     "One size doesn’t fit our street",
     "Safer access needs flexibility",
     "Consult residents before enforcing",
-    "Let’s trial workable alternatives",
     "Seeking proportionate enforcement",
     "This policy isn’t working here",
     "Please pause and review the parking ban",
@@ -226,12 +211,11 @@
 </script>
 
 <script>
-  // --- Data loading & helpers ---
+  // --- Setup & helpers ---
   async function init() {
     window.isReady = false;
 
     const mspData = await fetch('mspContacts.json').then(res => res.json());
-
     const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
     window.normalize = normalize;
 
@@ -253,7 +237,7 @@
   }
 
   function buildMailto(toList, subject, body, ccList=[]) {
-    const MAX_TO = 30; // client safety cap
+    const MAX_TO = 30;
     const to = uniqueEmails(toList).slice(0, MAX_TO).join(',');
     const cc = uniqueEmails(ccList).join(',');
     const enc = s => encodeURIComponent(s.replace(/\n/g, '\r\n'));
@@ -294,7 +278,7 @@
   const mitigationAgendaOptional =
     "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
 
-  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, plain=false, tone='neutral' }) {
+  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, tone='neutral' }) {
     const newline = '\\n\\n';
     const greeting = 'Dear MSPs and Councillors,';
     const bank = toneOpeners[tone] || toneOpeners.neutral;
@@ -307,7 +291,8 @@
       : 'I’d appreciate a response on immediate steps and the route to repeal.';
 
     let body = `${greeting}${newline}${opening}${newline}${concerns}${newline}${asks}${newline}${close}${newline}${(tone==='formal'?'Yours sincerely,':'Kind regards,')}${newline}${name}`;
-    if (plain || tone==='formal' || tone==='plain') body = stripEmojis(body);
+    // Strip emojis automatically for formal/plain to keep it clean regardless of issue text
+    if (tone==='formal' || tone==='plain') body = stripEmojis(body);
     return body;
   }
 
@@ -339,7 +324,7 @@
         script.src = jsPath;
         script.onload = () => resolve();
         script.onerror = () => reject(`Failed to load script: ${jsPath}`);
-      document.head.appendChild(script);
+        document.head.appendChild(script);
       });
       councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
     } catch (err) {
@@ -361,7 +346,6 @@
     const postcode = normalisePostcode(postcodeRaw);
     const other = document.getElementById('other').value.trim();
     const includeAgenda = document.getElementById('includeAgenda').checked;
-    const plainMode = document.getElementById('plainMode').checked;
     const tone = document.getElementById('tone').value;
 
     const allCheckboxes = document.querySelectorAll('.issue-list input[type="checkbox"]');
@@ -386,16 +370,14 @@
     });
 
     if (other) chosenLines.push(other);
-    if (plainMode) chosenLines = chosenLines.map(stripEmojis);
 
     const message = buildMessage({
-      name, address, postcode, chosenLines,
-      includeAgenda, plain: plainMode, tone
+      name, address, postcode, chosenLines, includeAgenda, tone
     });
 
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview first (helps when mail client is blocked)
+    // Preview first
     document.getElementById('previewSubject').textContent = subject;
     const ta = document.getElementById('previewBody');
     ta.value = message;
@@ -415,9 +397,9 @@
         return;
       }
 
-      const cc = document.getElementById('ccCampaign').checked ? ['thepavementtrap@gmail.com'] : [];
-      const enc = s => encodeURIComponent(s.replace(/\n/g, '\r\n'));
-      const mailtoLink = `mailto:${toEmails.join(',')}?subject=${enc(subject)}${cc.length?`&cc=${encodeURIComponent(cc.join(','))}`:''}&body=${enc(message)}`;
+      // Always CC campaign inbox
+      const cc = ['thepavementtrap@gmail.com'];
+      const mailtoLink = buildMailto(toEmails, subject, message, cc);
 
       const tempLink = document.createElement('a');
       tempLink.href = mailtoLink;
