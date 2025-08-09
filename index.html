@@ -6,381 +6,417 @@
   <title>Tell Them This Isn’t Working</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --brand:#0051a3;
-      --brand-2:#0077cc;
-      --accent:#005fa3;
-      --surface:#ffffff;
-      --bg:#f6f7f9;
-      --ink:#222;
-      --muted:#666;
-      --error:#b00020;
-      --ok:#0b6b2e;
-      --shadow:0 0 10px rgba(0,0,0,.06);
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    *{box-sizing:border-box}
-    body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);max-width:900px;margin:40px auto;padding:0 16px 40px;}
-    header.hero{background: linear-gradient(90deg, var(--brand), var(--brand-2));padding: 32px 20px;border-radius: 14px;text-align: center;box-shadow: 0 6px 16px rgba(0,0,0,.12);margin-bottom: 24px;}
-    header.hero h1{color:#fff;font-size:2.4rem;margin:0}
-    header.hero p{color:#e0f0ff;margin:.5rem 0 0;font-size:1.1rem}
-    main{background:var(--surface);border-radius:12px;padding:24px;box-shadow:var(--shadow);}
-    .intro{background:#f0f5ff;padding:14px 18px;border-left:5px solid #003f7d;border-radius:6px;margin-bottom:18px;}
-    label{display:block;margin:12px 0 6px;font-weight:600}
-    .input{width:100%;padding:12px 12px;font-size:1rem;border:1px solid #cfd3d7;border-radius:8px;min-height:44px;background:#fff;}
-    .input:focus{outline:2px solid var(--accent);outline-offset:2px}
-    .hint{font-size:.9rem;color:var(--muted);margin-top:4px}
-    .error{font-size:.9rem;color:var(--error);margin-top:6px}
-    fieldset{border:1px solid #dcdfe3;background:#f7f8fa;padding:16px 16px 8px;border-radius:10px;margin-top:18px;}
-    legend{padding:0 6px;font-weight:700}
-    .issue-item{display:flex;align-items:flex-start;gap:10px;margin:8px 0;font-size:1.03rem}
-    .issue-item input{margin-top:4px;transform:scale(1.2)}
-    .issue-emoji{margin-right:2px} .issue-emoji[aria-hidden="true"]{display:inline-block}
-    .controls{display:flex;align-items:center;gap:12px;justify-content:space-between;margin-top:12px;flex-wrap:wrap}
-    .action-row{display:flex;align-items:center;gap:12px;justify-content:flex-start;margin-top:16px;flex-wrap:wrap}
-    .btn{appearance:none;border:0;border-radius:10px;min-height:44px;padding:12px 20px;font-size:1.05rem;font-weight:700;cursor:pointer;background:var(--brand-2);color:#fff;transition:background .2s ease,opacity .2s ease}
-    .btn:hover{background:var(--accent)}
-    .btn[disabled]{opacity:.6;cursor:not-allowed}
-    .status{font-size:.95rem;color:#555}
-    .status.ok{color:var(--ok)}
-    .status.err{color:var(--error)}
-    footer{margin-top:22px;color:#444;font-size:.95rem}
-    .fineprint{margin-top:10px;color:#666}
-    @media (max-width: 640px){main{padding:18px}}
-    .sr-only{position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important;overflow:hidden !important; clip:rect(1px,1px,1px,1px) !important; white-space:nowrap !important;}
-    #postcode{ text-transform: uppercase; }
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #cc0000;
+      margin-bottom: 20px;
+    }
+    .intro {
+      background: #e7f1fc;
+      padding: 15px 20px;
+      border-left: 5px solid #0051a3;
+      border-radius: 5px;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+      min-height: 44px;
+    }
+    textarea { resize: vertical; }
+    input:focus, textarea:focus, button:focus {
+      outline: 2px solid #005fa3; outline-offset: 2px;
+    }
+    .issue-list {
+      border: 1px solid #ccc; background: #f1f1f1; padding: 15px 20px; margin-top: 20px; border-radius: 5px;
+    }
+    .issue-list label { font-weight: 600; margin: 8px 0; font-size: 1.05em; display: flex; align-items: center; }
+    .issue-list input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+    button {
+      margin-top: 25px; padding: 14px 24px; font-size: 1.1em; background-color: #0077cc; color: white; border: none; cursor: pointer; border-radius: 6px; transition: background-color 0.3s ease; min-height: 44px; font-family: inherit;
+    }
+    button:hover { background-color: #005fa3; }
+    #mailtoLink {
+      display: inline-block; margin-top: 30px; font-weight: bold; font-size: 1.1em; background-color: #0077cc; color: white; padding: 12px 18px; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease;
+    }
+    #mailtoLink:hover { background-color: #005fa3; }
+    footer { margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 0.95em; color: #444; }
+    @media (max-width: 600px) {
+      body { padding: 20px; }
+      label { font-size: 1.05em; }
+      input[type="text"], textarea { font-size: 1em; padding: 12px; }
+      button { font-size: 1em; padding: 12px 20px; }
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Tell Them This Isn’t Working</h1>
-    <p>Real Voices. Real Streets. Real Problems.</p>
-  </header>
+  <div style="background: linear-gradient(90deg, #0051a3, #0077cc); padding: 30px 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <h1 style="color: white; font-size: 2.5em; margin: 0;">Tell Them This Isn’t Working</h1>
+    <p style="color: #e0f0ff; font-size: 1.1em; margin-top: 8px;">Real Voices. Real Streets. Real Problems.</p>
+  </div>
 
-  <main role="main">
-    <div id="formStatus" role="status" aria-live="polite" class="sr-only"></div>
+  <div class="intro" style="background: #f0f5ff; border-left: 5px solid #003f7d; margin-top: 40px;">
+    <strong>Why does this tool exist?</strong><br><br>
+    This tool helps you send a clear, personal email about the pavement parking ban—without writing from scratch. Every message is unique and harder for MSPs and councillors to dismiss. Add your details, tick the issues that apply, and we’ll open a ready‑to‑send email to your representatives.
+  </div>
 
-    <section class="intro" aria-label="Why this tool exists">
-      <strong>Why does this tool exist?</strong><br><br>
-      This tool helps you send a clear, personal email about the pavement parking ban—without writing from scratch. Every message is unique and harder for MSPs and councillors to dismiss. Add your details, tick the issues that apply, and we’ll open a ready‑to‑send email to your representatives.
-    </section>
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="e.g. Robert Bruce" autocomplete="name" required>
 
-    <form id="emailForm" novalidate>
-      <label for="name">Your Name</label>
-      <input class="input" id="name" name="name" autocomplete="name" required placeholder="e.g. Robert Bruce" />
-      <div class="error" id="err-name" aria-live="polite"></div>
+    <label for="address">Your Address:</label>
+    <input type="text" id="address" placeholder="e.g. 6 Charlotte Square" autocomplete="street-address" required>
 
-      <label for="address">Your Address</label>
-      <input class="input" id="address" name="address" autocomplete="street-address" required placeholder="e.g. 6 Charlotte Square" />
-      <div class="error" id="err-address" aria-live="polite"></div>
+    <label for="postcode">Postcode:</label>
+    <input type="text" id="postcode" placeholder="e.g. EH2 4DR" autocomplete="postal-code" required>
 
-      <label for="postcode">Postcode</label>
-      <input class="input" id="postcode" name="postcode" autocomplete="postal-code" required placeholder="e.g. EH2 4DR" inputmode="text" />
-      <div class="hint">Format like “EH2 4DR”. We’ll tidy it for you.</div>
-      <div class="error" id="err-postcode" aria-live="polite"></div>
+    <div class="issue-list">
+      <strong>Select the concerns that affect your street:</strong>
+      <label><input type="checkbox" id="selectAll" onclick="toggleAllIssues(this)"> 🔘 Select all</label>
+      <label><input type="checkbox" value="emergency"> 🚑 Emergency vehicle access could be made more difficult</label>
+      <label><input type="checkbox" value="accessibility"> ♿️ Accessibility needs may not be fully accommodated</label>
+      <label><input type="checkbox" value="prams"> 🧒 Prams and young children may be left with narrower, less comfortable space</label>
+      <label><input type="checkbox" value="bins"> 🚮 Bin collections may be missed or disrupted</label>
+      <label><input type="checkbox" value="elderly"> 🧓 Older residents may struggle with distance to car</label>
+      <label><input type="checkbox" value="visitors"> 🏠 Visitors and tradespeople may find it difficult to park</label>
+      <label><input type="checkbox" value="danger"> ⚠️ Safety and visibility may not have improved in practice</label>
+      <label><input type="checkbox" value="blocked"> 🗑️ Pavements are often blocked by council bins</label>
+      <label><input type="checkbox" value="gardens"> 🌱 Pressure is leading to paving over front gardens</label>
+      <label><input type="checkbox" value="blanket"> ❌ One-size-fits-all enforcement lacks flexibility</label>
+      <label><input type="checkbox" value="consultation"> 🧾 Limited consultation with residents</label>
+      <label><input type="checkbox" value="cohesion"> 🧱 Potential for increased complaints or disagreements</label>
+      <label><input type="checkbox" value="opposeIdeology"> 🛑 Oppose pavement ban & 20‑minute city ideology</label>
+      <label><input type="checkbox" value="blanket20mph"> 🚗 Blanket 20mph limit being applied without local tailoring</label>
+    </div>
 
-      <fieldset id="issueFieldset" aria-describedby="issueHelp">
-        <legend>Select the concerns that affect your street</legend>
-        <div class="controls">
-          <label class="issue-item" for="selectAll">
-            <input type="checkbox" id="selectAll" aria-controls="issueList" />
-            <span><span class="issue-emoji" aria-hidden="true">🔘</span> Select all</span>
-          </label>
-          <div id="issueHelp" class="small">Choose as many as you like.</div>
-        </div>
+    <label for="other">Write your own concerns:</label>
+    <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
 
-        <div id="issueList" role="group" aria-label="Issues">
-          <label class="issue-item"><input type="checkbox" value="emergency" /><span><span class="issue-emoji" aria-hidden="true">🚑</span> Emergency vehicles could be blocked</span></label>
-          <label class="issue-item"><input type="checkbox" value="accessibility" /><span><span class="issue-emoji" aria-hidden="true">♿️</span> Accessibility needs not considered</span></label>
-          <label class="issue-item"><input type="checkbox" value="prams" /><span><span class="issue-emoji" aria-hidden="true">🧒</span> Children and prams forced to share reduced road space</span></label>
-          <label class="issue-item"><input type="checkbox" value="bins" /><span><span class="issue-emoji" aria-hidden="true">🚮</span> Bin collections missed or disrupted</span></label>
-          <label class="issue-item"><input type="checkbox" value="elderly" /><span><span class="issue-emoji" aria-hidden="true">🧓</span> Elderly residents struggling with distance to car</span></label>
-          <label class="issue-item"><input type="checkbox" value="visitors" /><span><span class="issue-emoji" aria-hidden="true">🏠</span> Visitors and tradespeople can’t park</span></label>
-          <label class="issue-item"><input type="checkbox" value="danger" /><span><span class="issue-emoji" aria-hidden="true">⚠️</span> Danger now worse than before</span></label>
-          <label class="issue-item"><input type="checkbox" value="blocked" /><span><span class="issue-emoji" aria-hidden="true">🗑️</span> Pavements already blocked by council bins</span></label>
-          <label class="issue-item"><input type="checkbox" value="gardens" /><span><span class="issue-emoji" aria-hidden="true">🌱</span> People paving over gardens due to pressure for parking</span></label>
-          <label class="issue-item"><input type="checkbox" value="blanket" /><span><span class="issue-emoji" aria-hidden="true">❌</span> Blanket enforcement punishes everyone</span></label>
-          <label class="issue-item"><input type="checkbox" value="consultation" /><span><span class="issue-emoji" aria-hidden="true">🧾</span> No consultation with residents</span></label>
-          <label class="issue-item"><input type="checkbox" value="cohesion" /><span><span class="issue-emoji" aria-hidden="true">🧱</span> Policy damaging social cohesion</span></label>
-          <label class="issue-item"><input type="checkbox" value="blanket20mph" /><span><span class="issue-emoji" aria-hidden="true">🚗</span> Blanket 20mph limit being imposed</span></label>
-          <label class="issue-item"><input type="checkbox" value="twentymin" /><span><span class="issue-emoji" aria-hidden="true">🏙️</span> Concern about “20‑minute city” agenda</span></label>
-        </div>
-      </fieldset>
+    <button type="button" onclick="generateEmail()">Open Email</button>
+  </form>
 
-      <label for="other">Write your own concerns (optional)</label>
-      <textarea class="input" id="other" name="other" rows="4" placeholder="Add anything else you want to include…"></textarea>
+  <footer>
+    <p>This tool helps you contact your MSP or councillor about the practical effects of the pavement parking ban on your street. You can personalise the content further once it opens in your email client.</p>
+  </footer>
 
-      <div class="action-row">
-        <button id="submitBtn" type="submit" class="btn">Open Email</button>
-        <span id="submitStatus" class="status" aria-live="polite"></span>
-      </div>
+<script>
+  // ===== Postcode helpers (uppercase, tolerant of spaces/junk) =====
+  function formatPostcodeForDisplay(raw) {
+    const cleaned = String(raw || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (cleaned.length <= 3) return cleaned; // too short to split
+    return cleaned.slice(0, -3) + ' ' + cleaned.slice(-3);
+  }
+  function sanitizePostcode(raw) {
+    return String(raw || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  }
+  function outwardFromSanitized(sanitized) {
+    if (sanitized.length <= 3) return sanitized;
+    return sanitized.slice(0, sanitized.length - 3);
+  }
+</script>
+<script>
+  // ===== Issues text (softened, professional tone) =====
+  const issues = {
+    emergency: [
+      "I’m concerned that emergency access could be made more difficult where roads are narrowed by full on‑road parking. On tight residential streets, even small delays can matter in urgent situations.",
+      "Emergency vehicles may face unnecessary delays when manoeuvring through streets with reduced passing space. This is a practical risk we should seek to avoid.",
+      "By shifting all vehicles onto the road, access for larger response vehicles could be tightened, potentially slowing attendance when it matters most."
+    ],
+    accessibility: [
+      "Many residents, including older people and those recovering from injury, rely on being able to park near their homes. With limited legal alternatives, the ban may create unintended barriers to everyday life.",
+      "Accessibility needs may not be fully accommodated. For people with reduced mobility, longer walks to and from legal parking can be a genuine obstacle.",
+      "The policy may not fully meet the needs of those it aims to help. People using walking aids or with temporary injuries can find routine journeys more difficult."
+    ],
+    prams: [
+      "On streets with narrow or cluttered pavements, prams and young children may now be left with narrower, less comfortable space due to full on‑road parking.",
+      "Families may find that careful sharing of space has become harder, with pavements still obstructed in places and the road space tighter than before.",
+      "Instead of feeling easier for families, the route can feel more constrained for prams and young children where visibility and space are limited."
+    ],
+    bins: [
+      "This layout may put bin collection at risk. Large vehicles have to navigate tighter gaps, increasing the chance of delays or missed collections.",
+      "Narrowed passing space makes collection more difficult and increases the chance of minor damage to parked cars.",
+      "Essential services such as waste collection can become harder to deliver reliably on constrained streets."
+    ],
+    elderly: [
+      "For older residents, walking further with shopping or mobility issues can be a significant challenge. The current approach may not have taken this fully into account.",
+      "Extra distance between car and home can be more than an inconvenience for many older people — it can be a real limitation.",
+      "Removing nearby parking options can make it harder for some older residents to remain independent day to day."
+    ],
+    visitors: [
+      "The ban can make it more difficult for visitors, tradespeople, and support workers to park close by, complicating basic home repairs and essential visits.",
+      "Without practical local parking, it’s harder for tradespeople, carers, or delivery workers to stop — particularly on tight residential streets.",
+      "Hosting visitors or getting help from tradespeople becomes more complex where local, short‑stay parking options are limited."
+    ],
+    danger: [
+      "Safety and visibility may not have improved in practice. Narrower lanes and reduced passing space can increase stress for drivers and pedestrians alike.",
+      "On some streets, tighter road space and limited visibility could increase the chance of close calls, especially at pinch points.",
+      "Where visibility is already constrained, concentrating all parking on the carriageway may not lead to safer outcomes."
+    ],
+    blocked: [
+      "Pavements are often blocked by council bins — especially on collection days — which already reduces usable space for pedestrians. This seems inconsistent with the aims of the policy.",
+      "In many places, bins left on narrow pavements make access difficult several days a week. Residents notice this alongside the new parking rules.",
+      "The stated goal is pedestrian access, yet council bins regularly impede pavements. Addressing this alongside parking would be helpful."
+    ],
+    gardens: [
+      "The pressure to find legal parking is leading some neighbours to pave over front gardens. This can reduce greenery and worsen local drainage.",
+      "We’re seeing more garden‑to‑driveway conversions as people try to comply. It’s an unfortunate trade‑off for local character and biodiversity.",
+      "Driveway conversions appear to be increasing not out of preference, but due to pressure to create legal parking space."
+    ],
+    blanket: [
+      "Applying the same rule to every street, regardless of layout or history, can make it harder for residents who have parked responsibly for years.",
+      "A one‑size‑fits‑all approach limits discretion and flexibility where local context matters most.",
+      "Enforcement would work better with room for proportionate, context‑sensitive judgement rather than a blanket rule."
+    ],
+    consultation: [
+      "Engagement with residents appears to have been limited. A more thorough local consultation would help identify workable, street‑level solutions.",
+      "A major change like this benefits from early, practical input from those who live on affected streets.",
+      "A more open consultation process would capture local evidence and everyday impacts before decisions are finalised."
+    ],
+    cohesion: [
+      "There is potential for more complaints or disagreements between neighbours as people try to adapt to reduced parking flexibility.",
+      "Informal arrangements that worked previously may become harder, which can add avoidable friction on the street.",
+      "Where on‑street space is tight, new constraints can unintentionally put pressure on neighbourly relations."
+    ],
+    opposeIdeology: [
+      "I do not support the use of the 20‑minute city approach or similar centralised planning ideologies in shaping local transport policy. These frameworks can prioritise theoretical models over lived experience, accessibility for all, and the functioning of local transport and the economy. They should be removed from government policy in favour of measures that are practical, locally tested, and focused on safe, inclusive, and economically viable streets."
+    ],
+    blanket20mph: [
+      "A blanket 20mph limit is being applied widely, with limited tailoring to local conditions. Targeted speed management at genuine risk points would better support safety without creating new challenges when combined with reduced parking flexibility.",
+      "Slower speeds can help in the right places, but a universal setting may not reflect real‑world traffic levels and street layouts.",
+      "A more context‑sensitive approach to speed limits would better balance safety with everyday movement and access."
+    ]
+  };
+</script>
+<script>
+  // ===== Subject lines (unchanged) =====
+  const subjectLines = [
+    "Real concerns from my street",
+    "This policy isn’t working here",
+    "The pavement ban is making things worse",
+    "Please pause and review the parking ban",
+    "We need practical solutions, not blanket rules",
+    "Local voices are being ignored",
+    "Parking changes have gone too far",
+    "A dangerous shift on our street",
+    "Why this ban isn’t helping our community",
+    "The unintended harm of the pavement ban",
+    "Enforcement without flexibility is failing us",
+    "This is hurting vulnerable residents",
+    "Please look again at this policy",
+    "My community needs a rethink",
+    "This ban makes our road more dangerous",
+    "The council’s bins block pavements too",
+    "Parking reform, not punishment",
+    "Consult us — don’t ignore us",
+    "This doesn’t work for real people",
+    "The policy isn’t achieving its aims",
+    "It’s not safer — just harder",
+    "Where’s the balance for residents?",
+    "Bad policy, good intentions",
+    "Everyday life is harder now",
+    "The policy forgot about us",
+    "Parking is now a daily problem",
+    "Rethink needed — urgently",
+    "It’s hurting people who follow the rules",
+    "My street is worse off",
+    "Too much enforcement, not enough sense",
+    "No room for bin lorries, no room for help",
+    "Why is this being forced on us?",
+    "I support access — this isn’t it",
+    "What about real safety?",
+    "This isn’t working on our street",
+    "You need to see what’s happening here",
+    "Your constituents are struggling",
+    "Council created this mess",
+    "Practical parking is gone",
+    "This needs fixed before more harm is done",
+    "Please rethink this ban",
+    "Not all streets are the same",
+    "A blanket rule is the wrong tool",
+    "You must hear our concerns",
+    "Look at the real world impacts",
+    "This causes division, not safety",
+    "Parking policy gone wrong",
+    "Stop treating us all the same",
+    "We were not consulted",
+    "I support access — but not this way"
+  ];
+</script>
+<script>
+  // ===== Data init and normalise helpers =====
+  async function init() {
+    window.isReady = false;
 
-      <p class="fineprint">
-        We don’t send your details to a server. Everything happens in your browser, and your email opens in your own mail app so you stay in control.
-      </p>
-    </form>
+    const mspData = await fetch('mspContacts.json').then(res => res.json());
 
-    <footer>
-      <p>This tool helps you contact your MSPs and councillors about the practical effects of the pavement parking ban on your street. You can personalise the content once it opens in your email client.</p>
-    </footer>
-  </main>
+    // Normalise helper
+    const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+    window.normalize = normalize;
 
-  <script defer>
-    const ukPostcodeRe = /^([A-Z]{1,2}\d[A-Z\d]?)\s?(\d[A-Z]{2})$/i;
-    const $ = (sel, root=document) => root.querySelector(sel);
+    window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
+    window._mspData = mspData;
 
-    function normalizePostcode(p){
-      const t = (p||'').trim().toUpperCase();
-      const m = t.match(ukPostcodeRe);
-      return m ? \`\${m[1]} \${m[2]}\` : t;
-    }
-
-    function showError(inputEl, msg){
-      const errEl = document.getElementById(\`err-\${inputEl.id}\`);
-      if(errEl){ errEl.textContent = msg || ''; }
-      inputEl.setAttribute('aria-invalid', msg ? 'true' : 'false');
-      if(msg){ inputEl.focus(); }
-    }
-
-    function clearErrors(){
-      ['name','address','postcode'].forEach(id=>{
-        const el = document.getElementById(\`err-\${id}\`);
-        if(el) el.textContent = '';
-        const inp = document.getElementById(id);
-        if(inp) inp.removeAttribute('aria-invalid');
-      });
-      const s = document.getElementById('submitStatus');
-      s.textContent = '';
-      s.className = 'status';
-    }
-
-    function toast(msg, type='info'){
-      const s = document.getElementById('submitStatus');
-      s.textContent = msg;
-      s.className = 'status ' + (type==='ok' ? 'ok' : type==='err' ? 'err' : '');
-    }
-
-    // ---- Issue text (same as previous clean version) ----
-    const issues = {
-      emergency: ["I’m seriously concerned we’ll see delays for emergency vehicles if this layout continues. Our street is narrow, and full on-road parking leaves little room for larger vehicles to manoeuvre. If someone needed urgent help, seconds could matter — and this policy increases that risk.",
-                  "Emergency access is being compromised. When cars are forced fully onto the road, services like ambulances and fire engines may struggle to reach homes in time. It’s not alarmist — just a real-world consequence of reducing space on already tight residential streets.",
-                  "By shifting all vehicles onto the road, this policy unintentionally narrows access for emergency responders. It introduces serious risk in critical situations, and I don’t believe that was the intention — but it is now the reality."],
-      accessibility: ["Many residents, including the elderly and those recovering from injury, rely on being able to park near their homes. With limited legal alternatives, the ban makes daily life more difficult for people who already face mobility challenges.",
-                      "This policy creates unfair barriers for anyone with reduced mobility. There are no practical nearby alternatives for those who can’t easily walk longer distances, and the result is a less accessible environment — not a more inclusive one.",
-                      "The pavement parking ban overlooks the people it claims to protect. Those with walking aids, temporary injuries, or pushchairs now face longer, more difficult routes between their car and their door — often with no safe option."],
-      prams: ["On streets where pavements are already obstructed or uneven, walking on the road has been the only practical option for families — especially during poor weather. But full on-road parking now forces prams and young children into much narrower, more dangerous spaces.",
-              "Families used to navigate our street safely with prams or young kids by sharing space carefully. Now, with cars parked entirely on the road and pavements still blocked by bins and clutter, the route for pedestrians is riskier than ever.",
-              "Rather than protecting families, this policy makes journeys more hazardous for those with young children. The usable space has shrunk, and prams now move through traffic where there used to be a safer workaround."],
-      bins: ["The current setup makes waste collection harder, not easier. Large vehicles have to squeeze through narrow gaps or mount the kerb — increasing the risk of scrapes, delays, and missed collections.",
-             "It’s obvious this layout puts bin collection at risk. Narrowed roads and awkward angles force council vehicles into difficult positions — often driving up onto pavements to get past. That’s not safer or more sustainable.",
-             "This ban affects not just residents but essential services too. Bin lorries will have more difficulty accessing streets fully occupied by on-road parking, and damage to parked cars becomes more likely as a result."],
-      elderly: ["For older residents, having to walk further with shopping or mobility issues is a serious challenge. The policy ignores this reality and forces a level of physical strain that many simply can’t manage day-to-day.",
-                "The distance between car and home now matters more than ever — and for elderly people, that extra walk isn’t just inconvenient, it’s a real obstacle. We should be supporting them, not sidelining their needs.",
-                "If you live with limited mobility, even a short walk can be daunting. Removing nearby parking makes it harder for older residents to stay independent — and that doesn’t feel like progress."],
-      visitors: ["The pavement parking ban will make it difficult for visitors, tradespeople, and home support workers because there’s nowhere practical to park. This makes basic home repairs, health check-ins, or even family visits more complicated than they should be.",
-                 "Essential services are being disrupted. Without local parking, it's harder for tradespeople, carers or delivery workers to stop — especially on tight streets with time-sensitive work.",
-                 "The new rules create practical problems for everyday life. Hosting visitors or getting help from tradespeople now requires negotiating a maze of restrictions — how is this an improvement?"],
-      danger: ["Instead of improving safety, the new layout has increased tension on the road. Visibility is worse, space is tighter, and what used to be a calm residential route now feels more stressful for drivers and pedestrians alike.",
-               "This policy hasn’t made our street safer. It’s created narrower lanes, reduced escape space for pedestrians, and made passing or reversing more dangerous than before.",
-               "By forcing all parking onto the road, the policy increases the chance of collisions and close calls — particularly where visibility is already limited. That’s not what safer streets look like."],
-      blocked: ["Pavements in our area are regularly obstructed by council bins — especially on collection days. It’s frustrating to be told we’re creating access issues when the pavement isn’t usable in the first place.",
-                "Even before the ban, residents had to navigate around multiple council bins left out on narrow pavements. Penalising residents while ignoring that reality feels inconsistent and unfair.",
-                "The ban claims to protect pedestrian access, yet bins — placed or left by the council — already make many pavements impassable several days a week. This double standard needs to be addressed."],
-      gardens: ["The pressure to find legal parking is leading some neighbours to pave over their front gardens. This damages local drainage, reduces greenery, and creates a colder, less inviting street environment.",
-                "We’ve seen more gardens replaced with concrete as people try to comply. It’s an unfortunate environmental trade-off that hurts biodiversity and increases flood risk — and it’s a direct result of inflexible policy.",
-                "Driveway conversions are becoming more common, not because residents want them, but because they feel forced. That’s not a sustainable outcome for our communities or the climate."],
-      blanket: ["The same rule is being applied to all streets, no matter their layout or history of issues. That’s not enforcement — that’s automation. Residents deserve better than one-size-fits-all punishment.",
-                "By criminalising parking that worked safely for years, this policy alienates responsible residents. Enforcement should be focused on real obstructions — not routine, practical parking.",
-                "A universal ban treats all situations the same, regardless of context. We need flexibility and discretion — not robotic enforcement that ignores lived experience."],
-      consultation: ["This policy was introduced without meaningful consultation at the street level. Residents like us have been left out of the discussion entirely, despite being directly affected.",
-                     "There’s been no honest engagement with our community. People were not asked how the ban would impact them — they were simply told after the fact.",
-                     "A major change like this should include local voices. Instead, it’s been rolled out from the top down, with no opportunity to raise concerns before it hit the ground."],
-      cohesion: ["Where neighbours once worked things out informally, we can already foresee complaints, arguments, and resentment. The sense of community is being eroded by forced restrictions.",
-                 "This policy has created conflict between neighbours for available parking space as people try to work within a poor policy. That’s not how strong neighbourhoods are built.",
-                 "Something as basic as parking used to be managed with common sense and courtesy. Now it’s turning into a wedge between people who live side-by-side."],
-      blanket20mph: ["The council is rolling out a blanket 20mph speed limit, applied to all roads regardless of actual risk, traffic levels, or local need. Slowing traffic in genuinely high‑risk areas makes sense. But applying the same rule everywhere, without context or enforcement, doesn’t improve safety — it creates new problems. It adds to congestion, increases frustration, and worsens visibility when combined with the pavement parking ban. These aren’t isolated policies. They’re part of a pattern of top‑down decisions that ignore how streets actually function — and the people who live on them."],
-      twentymin: ["I’m also concerned about how elements of the “20‑minute city” agenda are being applied without genuine consultation. Policies feel driven by ideology rather than evidence from our own streets."]
-    };
-
-    const subjectLines = ["Real concerns from my street","This policy isn’t working here","The pavement ban is making things worse",
-      "Please pause and review the parking ban","We need practical solutions, not blanket rules","Local voices are being ignored",
-      "Parking changes have gone too far","A dangerous shift on our street","Why this ban isn’t helping our community",
-      "The unintended harm of the pavement ban","Enforcement without flexibility is failing us","This is hurting vulnerable residents",
-      "Please look again at this policy","My community needs a rethink","This ban makes our road more dangerous",
-      "The council’s bins block pavements too","Parking reform, not punishment","Consult us — don’t ignore us",
-      "This doesn’t work for real people","The policy isn’t achieving its aims","It’s not safer — just harder",
-      "Where’s the balance for residents?","Bad policy, good intentions","Everyday life is harder now",
-      "The policy forgot about us","Parking is now a daily problem","Rethink needed — urgently",
-      "It’s hurting people who follow the rules","My street is worse off","Too much enforcement, not enough sense",
-      "No room for bin lorries, no room for help","Why is this being forced on us?","I support access — this isn’t it",
-      "What about real safety?","This isn’t working on our street","You need to see what’s happening here",
-      "Your constituents are struggling","Council created this mess","Practical parking is gone",
-      "This needs fixed before more harm is done","Please rethink this ban","Not all streets are the same",
-      "A blanket rule is the wrong tool","You must hear our concerns","Look at the real world impacts",
-      "This causes division, not safety","Parking policy gone wrong","Stop treating us all the same",
-      "We were not consulted","I support access — but not this way"];
-
-    const state = { ready:false, apiKey:"6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b", mspData:null, regionsNormalized:null };
-
-    async function loadJSON(url){
-      const res = await fetch(url, {cache:'no-store'});
-      if(!res.ok) throw new Error('fetch failed');
-      return res.json();
-    }
-
-    function normalizeKeyMap(mspData){
-      const normalize = s => s?.toLowerCase().replace(/[^a-z0-9]/g,'').trim();
-      const regions = {};
-      Object.keys(mspData.regions).forEach(name=>{ regions[normalize(name)] = mspData.regions[name]; });
-      return {normalize, regions};
-    }
-
-    async function init(){
-      try{
-        const mspData = await loadJSON('mspContacts.json');
-        state.mspData = mspData;
-        state.regionsNormalized = normalizeKeyMap(mspData);
-        state.ready = true;
-      }catch(e){
-        console.warn('Rep data missing; compose will still work.');
-      }
-    }
-
-    async function getEmailsFromPostcode(postcode){
-      if(!state.ready) return { msps: [], councillors: [] };
-      const p = normalizePostcode(postcode);
-      const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(p)}?api_key=${encodeURIComponent(state.apiKey)}`;
-      const res = await fetch(url);
-      if(!res.ok) throw new Error('Postcode lookup failed.');
-      const data = await res.json();
-      let spc=null,spe=null;
-      for(const a of Object.values(data.areas||{})){ if(a.type==='SPC') spc=a.name; if(a.type==='SPE') spe=a.name; }
-      const norm = state.regionsNormalized.normalize;
-      const mspKey = Object.keys(state.mspData.constituencies).find(k => norm(k) === norm(spc||''));
-      const constituency = mspKey ? state.mspData.constituencies[mspKey] : null;
-      const regional = state.regionsNormalized.regions[norm(spe||'')] || [];
-      const msps = [constituency, ...regional].filter(Boolean);
-
-      const prefix = p.split(' ')[0];
-      let councillors = [];
-      try{
-        await new Promise((resolve, reject)=>{
-          const script = document.createElement('script');
-          script.src = `data/${prefix}.js`;
-          script.async = true;
-          script.onload = () => resolve();
-          script.onerror = () => reject();
-          document.head.appendChild(script);
-        });
-        const normalizedKey = p.replace(/[^A-Z0-9]/g,'').toLowerCase();
-        councillors = (window.postcodeToWardKey?.[normalizedKey]) || [];
-      }catch{}
-      return { msps, councillors };
-    }
-
-    function rfcEncode(str){
-      // Convert newlines to CRLF and percent-encode (spaces as %20, not '+')
-      const withCRLF = str.replace(/\r?\n/g, '\r\n');
-      return encodeURIComponent(withCRLF).replace(/%20/g, '%20');
-    }
-
-    function openEmailWithFallback(to, subject, bodyText){
-      const uniqueTo = Array.from(new Set((to||[]).filter(Boolean)));
-      const toList = uniqueTo.join(',');
-      const bodyParam = rfcEncode(bodyText);
-      const subjectParam = encodeURIComponent(subject);
-
-      const mailto = `mailto:${encodeURIComponent(toList)}?subject=${subjectParam}&body=${bodyParam}`;
-      const MAX_LEN = 1800;
-
-      if(mailto.length > MAX_LEN){
-        navigator.clipboard?.writeText(bodyText).catch(()=>{});
-        // Open with just subject; user pastes body
-        window.location.href = `mailto:${encodeURIComponent(toList)}?subject=${subjectParam}`;
-        toast('Text was long — copied to clipboard. Paste it into your email.', 'ok');
-        return;
-      }
-
-      const a = document.createElement('a');
-      a.href = mailto;
-      a.style.display='none';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(()=>{ toast('If the body looks empty, paste — it’s on your clipboard.', 'info'); }, 700);
-    }
-
-    function validateForm(){
-      clearErrors();
-      const name = document.getElementById('name');
-      const address = document.getElementById('address');
-      const postcode = document.getElementById('postcode');
-
-      if(!name.value.trim()){ showError(name,'Please enter your name.'); return false; }
-      if(!address.value.trim()){ showError(address,'Please enter your address.'); return false; }
-      const normPC = normalizePostcode(postcode.value);
-      if(!ukPostcodeRe.test(normPC)){ showError(postcode,'Please enter a valid UK postcode (e.g., EH2 4DR).'); return false; }
-      postcode.value = normPC;
-      return true;
-    }
-
-    function buildMessage(){
-      const name = document.getElementById('name').value.trim();
-      const address = document.getElementById('address').value.trim();
-      const postcode = document.getElementById('postcode').value.trim();
-      const other = document.getElementById('other').value.trim();
-      const selected = Array.from(document.querySelectorAll('#issueList input[type="checkbox"]:checked')).map(cb=>cb.value);
-      const newline = '\n\n';
-
-      const chosenLines = selected.map(key=>{
-        const options = issues[key] || [];
-        return options[Math.floor(Math.random()*options.length)];
-      });
-      if(other){ chosenLines.push(other); }
-
-      const mitigation = "The proposed mitigations being discussed do not resolve these core problems. Either the legislation must be amended to allow workable solutions for residential streets, or it should be repealed altogether as unworkable. I urge you to pause this policy and engage in an open, evidence‑led consultation that addresses both the practical impacts and the concerns residents now have.";
-      const body = `Dear MSPs and Councillors,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}I am writing to raise concerns about the pavement parking ban and related road changes being rolled out in my area. Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
-      const subject = subjectLines[Math.floor(Math.random()*subjectLines.length)];
-      return { subject, body, meta:{postcode} };
-    }
-
-    document.addEventListener('DOMContentLoaded', ()=>{
-      init();
-
-      const selectAllEl = document.getElementById('selectAll');
-      if(selectAllEl){
-        selectAllEl.addEventListener('change', (e)=>{
-          const checked = e.target.checked;
-          document.querySelectorAll('#issueList input[type="checkbox"]').forEach(cb => { cb.checked = checked; });
-        });
-      }
-
-      document.getElementById('postcode').addEventListener('blur', (e)=>{
-        e.target.value = normalizePostcode(e.target.value);
-      });
-
-      document.getElementById('emailForm').addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        if(!validateForm()) return;
-
-        const {subject, body, meta} = buildMessage();
-        const btn = document.getElementById('submitBtn');
-        btn.disabled = true; btn.textContent = 'Preparing…';
-
-        try{
-          const reps = await getEmailsFromPostcode(meta.postcode);
-          const emails = [];
-          (reps.msps||[]).forEach(p=>{ if(p?.email) emails.push(p.email); });
-          (reps.councillors||[]).forEach(c=>{ if(c?.email) emails.push(c.email); });
-
-          openEmailWithFallback(emails, subject, body);
-        }catch(err){
-          console.error(err);
-          openEmailWithFallback([], subject, body);
-        }finally{
-          btn.disabled = false; btn.textContent = 'Open Email';
-        }
-      });
+    // Normalise region keys
+    const normalizedRegions = {};
+    Object.keys(mspData.regions).forEach(regionName => {
+      normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
     });
-  </script>
+    mspData.regions = normalizedRegions;
+
+    window.mspData = mspData;
+    window.isReady = true;
+  }
+
+  function toggleAllIssues(source) {
+    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    checkboxes.forEach(cb => { if (cb.id !== 'selectAll') cb.checked = source.checked; });
+  }
+
+  async function getEmailsFromPostcode(postcodeInput) {
+    // Prepare postcode variants
+    const sanitized = sanitizePostcode(postcodeInput);          // e.g. "EH24DR"
+    const formatted = formatPostcodeForDisplay(postcodeInput);  // e.g. "EH2 4DR"
+    const outward   = outwardFromSanitized(sanitized);          // e.g. "EH2"
+
+    // MapIt accepts spaced, uppercase postcodes
+    const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(formatted)}?api_key=${window.apiKey}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Postcode lookup failed.");
+    const data = await res.json();
+    const areas = data.areas;
+
+    let spc = null, spe = null;
+    for (const area of Object.values(areas)) {
+      if (area.type === "SPC") spc = area.name;
+      if (area.type === "SPE") spe = area.name;
+    }
+
+    const mspKey = Object.keys(window._mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
+    const msp = mspKey ? window._mspData.constituencies[mspKey] : null;
+    const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
+
+    // Councillors by outward code file, map to normalized full postcode key
+    const normalizedPostcode = window.normalize(formatted);
+    const postcodePrefix = outward.toUpperCase();
+
+    let councillors = [];
+    const jsPath = `data/${postcodePrefix}.js`;
+    try {
+      await new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = jsPath;
+        script.onload = () => resolve();
+        script.onerror = () => reject(`Failed to load script: ${jsPath}`);
+        document.head.appendChild(script);
+      });
+      councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
+    } catch (err) {
+      console.warn(err);
+    }
+
+    return { msps: [msp, ...regionalMSPs].filter(Boolean), councillors };
+  }
+
+  window.generateEmail = async function () {
+    if (!window.isReady) { alert("Still loading data. Please wait a moment and try again."); return; }
+
+    const name = document.getElementById("name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const rawPostcode = document.getElementById("postcode").value.trim();
+    const other = document.getElementById("other").value.trim();
+
+    const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
+
+    const sanitized = sanitizePostcode(rawPostcode);
+    const formattedPostcode = formatPostcodeForDisplay(rawPostcode);
+
+    if (!name || !address || !sanitized) { alert("Please fill in your name, address, and postcode."); return; }
+    if (checkboxes.length === 0 && !other) { alert("Please select at least one concern or fill in the other box."); return; }
+
+    const newline = '\n\n';
+    const selectedSubjects = checkboxes.map(cb => cb.value);
+    const isOpposeIdeology = selectedSubjects.includes('opposeIdeology');
+
+    const chosenLines = selectedSubjects.map(issue => {
+      const options = issues[issue];
+      return options[Math.floor(Math.random() * options.length)];
+    });
+    if (other) chosenLines.push(other);
+
+    // Header and mitigation that adapt to ideology selection
+    const headerText =
+      "I am writing to share concerns about the pavement parking ban and related road changes being introduced in my area. From what I’ve seen locally, these measures may not be delivering the intended benefits in practice. My aim is to ensure decisions reflect clear local evidence and support accessibility for all, a well‑functioning transport network, and the local economy.";
+
+    const mitigationNoIdeology =
+      "I would welcome a short pause and an evidence‑based review that allows context‑sensitive solutions for residential streets. Updating the legislation and guidance to enable proportionate, locally tested measures would help achieve safe, accessible streets without unintended harms to mobility or local businesses.";
+
+    const mitigationWithIdeology =
+      "I would welcome a short pause and an evidence‑based review that enables flexible, locally tested solutions for residential streets. Policies should prioritise accessibility for all, a functioning transport system, and the local economy. Where national frameworks — such as the ‘20‑minute city’ approach — conflict with these aims, they should be set aside in favour of practical, locally evidenced measures.";
+
+    const mitigation = isOpposeIdeology ? mitigationWithIdeology : mitigationNoIdeology;
+
+    const message = `Dear MSPs and Councillors,${newline}My name is ${name}, and I live at ${address}, ${formattedPostcode}.${newline}${headerText}${newline}Specific concerns include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
+    const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
+
+    try {
+      const repData = await getEmailsFromPostcode(rawPostcode);
+      const emails = [];
+      if (repData.msps?.length) repData.msps.forEach(msp => { if (msp.email) emails.push(msp.email); });
+      if (repData.councillors?.length) repData.councillors.forEach(c => { if (c.email) emails.push(c.email); });
+
+      if (emails.length === 0) { alert("We couldn’t find any email contacts for that postcode."); return; }
+
+      const ccAddress = "thepavementtrap@gmail.com";
+      const body = message.replace(/\n/g, '%0D%0A');
+      const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      const tempLink = document.createElement("a");
+      tempLink.href = mailtoLink; tempLink.style.display = "none"; document.body.appendChild(tempLink);
+      tempLink.click(); document.body.removeChild(tempLink);
+
+      setTimeout(() => { alert("If your email app didn’t open, please check your browser settings or copy the text manually."); }, 1000);
+    } catch (error) {
+      console.error("Error fetching representatives:", error);
+      alert("Something went wrong looking up your representatives. Please double-check the postcode.");
+    }
+  };
+
+  // Select‑all toggle (duplicate safety)
+  document.getElementById("selectAll").addEventListener("click", function () {
+    const isChecked = this.checked;
+    const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+    checkboxes.forEach(cb => { if (cb.id !== 'selectAll') cb.checked = isChecked; });
+  });
+
+  // Postcode field behaviour: live uppercase; format on blur
+  const pcInput = document.getElementById("postcode");
+  pcInput.addEventListener("input", () => { pcInput.value = pcInput.value.toUpperCase(); });
+  pcInput.addEventListener("blur", () => { pcInput.value = formatPostcodeForDisplay(pcInput.value); });
+
+  init();
+</script>
 </body>
 </html>
