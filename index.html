@@ -12,7 +12,7 @@
       --accent:#005fa3;
       --surface:#ffffff;
       --bg:#f6f7f9;
-      --ink:#333;
+      --ink:#222;
       --muted:#666;
       --error:#b00020;
       --ok:#0b6b2e;
@@ -79,8 +79,8 @@
     .controls{
       display:flex;align-items:center;gap:12px;justify-content:space-between;margin-top:12px;flex-wrap:wrap
     }
-    .action-bar{
-      display:flex;align-items:center;gap:12px;justify-content:flex-end;margin-top:18px
+    .action-row{
+      display:flex;align-items:center;gap:12px;justify-content:flex-start;margin-top:16px;flex-wrap:wrap
     }
     .btn{
       appearance:none;border:0;border-radius:10px;min-height:44px;
@@ -89,17 +89,14 @@
     }
     .btn:hover{background:var(--accent)}
     .btn[disabled]{opacity:.6;cursor:not-allowed}
-    .status{margin:14px 0 0;font-size:.95rem}
+    .status{font-size:.95rem;color:#555}
     .status.ok{color:var(--ok)}
     .status.err{color:var(--error)}
     footer{margin-top:22px;color:#444;font-size:.95rem}
     small, .small{font-size:.9rem;color:#555}
+    .fineprint{margin-top:10px;color:#666}
     @media (max-width: 640px){
       main{padding:18px}
-      .sticky-bar{
-        position: sticky; bottom: 0; background: #fff; padding: 12px;
-        box-shadow: 0 -6px 14px rgba(0,0,0,.08); border-radius: 12px; margin: 12px -6px -6px;
-      }
     }
     .sr-only{
       position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important;
@@ -167,14 +164,12 @@
       <label for="other">Write your own concerns (optional)</label>
       <textarea class="input" id="other" name="other" rows="4" placeholder="Add anything else you want to include…"></textarea>
 
-      <div class="sticky-bar">
-        <div class="action-bar">
-          <button id="submitBtn" type="submit" class="btn" disabled>Loading data…</button>
-        </div>
-        <div id="submitStatus" class="status" aria-live="polite"></div>
+      <div class="action-row">
+        <button id="submitBtn" type="submit" class="btn">Open Email</button>
+        <span id="submitStatus" class="status" aria-live="polite"></span>
       </div>
 
-      <p class="small" style="margin-top:14px">
+      <p class="fineprint">
         We don’t send your details to a server. Everything happens in your browser, and your email opens in your own mail app so you stay in control.
       </p>
     </form>
@@ -192,10 +187,10 @@
     function normalizePostcode(p){
       const t = (p||'').trim().toUpperCase();
       const m = t.match(ukPostcodeRe);
-      return m ? \`\${m[1]} \${m[2]}\` : t;
+      return m ? `${m[1]} ${m[2]}` : t;
     }
     function showError(inputEl, msg){
-      const errEl = document.getElementById(\`err-\${inputEl.id}\`);
+      const errEl = document.getElementById(`err-${inputEl.id}`);
       if(errEl){ errEl.textContent = msg || ''; }
       inputEl.setAttribute('aria-invalid', msg ? 'true' : 'false');
       if(msg){ inputEl.focus(); }
@@ -204,7 +199,7 @@
     }
     function clearErrors(){
       ['name','address','postcode'].forEach(id=>{
-        const el = document.getElementById(\`err-\${id}\`);
+        const el = document.getElementById(`err-${id}`);
         if(el) el.textContent = '';
         const inp = document.getElementById(id);
         if(inp) inp.removeAttribute('aria-invalid');
@@ -214,10 +209,10 @@
       s.textContent = '';
       s.className = 'status';
     }
-    function toast(msg, ok=false){
+    function toast(msg, type='info'){
       const s = document.getElementById('submitStatus');
       s.textContent = msg;
-      s.className = 'status ' + (ok ? 'ok' : 'err');
+      s.className = 'status ' + (type==='ok' ? 'ok' : type==='err' ? 'err' : '');
     }
 
     const issues = {
@@ -282,7 +277,7 @@
         "Something as basic as parking used to be managed with common sense and courtesy. Now it’s turning into a wedge between people who live side-by-side."
       ],
       blanket20mph: [
-        "The council is rolling out a blanket 20mph speed limit, applied to all roads regardless of actual risk, traffic levels, or local need. Slowing traffic in genuinely high-risk areas makes sense. But applying the same rule everywhere, without context or enforcement, doesn’t improve safety — it creates new problems. It adds to congestion, increases frustration, and worsens visibility when combined with the pavement parking ban. These aren’t isolated policies. They’re part of a pattern of top-down decisions that ignore how streets actually function — and the people who live on them."
+        "The council is rolling out a blanket 20mph speed limit, applied to all roads regardless of actual risk, traffic levels, or local need. Slowing traffic in genuinely high‑risk areas makes sense. But applying the same rule everywhere, without context or enforcement, doesn’t improve safety — it creates new problems. It adds to congestion, increases frustration, and worsens visibility when combined with the pavement parking ban. These aren’t isolated policies. They’re part of a pattern of top‑down decisions that ignore how streets actually function — and the people who live on them."
       ],
       twentymin: [
         "I’m also concerned about how elements of the “20‑minute city” agenda are being applied without genuine consultation. Policies feel driven by ideology rather than evidence from our own streets."
@@ -318,7 +313,7 @@
 
     async function loadJSON(url){
       const res = await fetch(url, {cache:'no-store'});
-      if(!res.ok) throw new Error(\`Failed to fetch \${url}\`);
+      if(!res.ok) throw new Error(`Failed to fetch ${url}`);
       return res.json();
     }
 
@@ -332,30 +327,29 @@
     }
 
     async function init(){
+      // No scary message at load-time; keep UI clean.
       try{
         const mspData = await loadJSON('mspContacts.json');
         state.mspData = mspData;
         const n = normalizeKeyMap(mspData);
         state.regionsNormalized = n;
         state.ready = true;
-        const btn = document.getElementById('submitBtn');
-        btn.disabled = false;
-        btn.textContent = 'Open Email';
       }catch(e){
-        toast('Could not load representative data. You can still write your email body.', false);
+        console.warn("Rep data did not load at init. Will still allow compose.", e);
       }
     }
 
     async function getEmailsFromPostcode(postcode){
+      if(!state.ready) return { msps: [], councillors: [] };
       const p = normalizePostcode(postcode);
-      const cacheKey = \`mapit:\${p}\`;
+      const cacheKey = `mapit:${p}`;
       const cached = sessionStorage.getItem(cacheKey);
       let data;
       if(cached){
         try{ data = JSON.parse(cached); }catch{}
       }
       if(!data){
-        const url = \`https://mapit.mysociety.org/postcode/\${encodeURIComponent(p)}?api_key=\${encodeURIComponent(state.apiKey)}\`;
+        const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(p)}?api_key=${encodeURIComponent(state.apiKey)}`;
         const res = await fetch(url);
         if(!res.ok) throw new Error('Postcode lookup failed.');
         data = await res.json();
@@ -380,10 +374,10 @@
       try{
         await new Promise((resolve, reject)=>{
           const script = document.createElement('script');
-          script.src = \`data/\${prefix}.js\`;
+          script.src = `data/${prefix}.js`;
           script.async = true;
           script.onload = () => resolve();
-          script.onerror = () => reject(new Error(\`Failed to load council data for \${prefix}\`));
+          script.onerror = () => reject(new Error(`Failed to load council data for ${prefix}`));
           document.head.appendChild(script);
         });
         const normalizedKey = p.replace(/[^A-Z0-9]/g,'').toLowerCase();
@@ -394,20 +388,19 @@
       return { msps, councillors };
     }
 
-    function openEmailWithFallback(to, cc, subject, bodyText){
+    function openEmailWithFallback(to, subject, bodyText){
       const uniqueTo = Array.from(new Set((to||[]).filter(Boolean)));
       const params = new URLSearchParams();
-      if(cc) params.set('cc', cc);
       params.set('subject', subject);
       params.set('body', bodyText);
 
-      const mailto = \`mailto:\${encodeURIComponent(uniqueTo.join(','))}?\${params.toString()}\`;
+      const mailto = `mailto:${encodeURIComponent(uniqueTo.join(','))}?${params.toString()}`;
       const MAX_LEN = 1800;
 
       if(mailto.length > MAX_LEN){
         navigator.clipboard?.writeText(bodyText).catch(()=>{});
-        window.location.href = \`mailto:\${encodeURIComponent(uniqueTo.join(','))}?subject=\${encodeURIComponent(subject)}\`;
-        toast('Your message was long, so we copied the full text to your clipboard. If it’s missing in the compose window, just paste it.', true);
+        window.location.href = `mailto:?subject=${encodeURIComponent(subject)}`;
+        toast('Text was long — copied to clipboard. Paste it into your email.', 'ok');
         return;
       }
       const a = document.createElement('a');
@@ -418,7 +411,7 @@
       a.remove();
 
       setTimeout(()=>{
-        toast('If your email app didn’t open, check your browser settings or paste the copied text.', true);
+        toast('If your email app didn’t open, check your browser settings or paste the copied text.', 'info');
       }, 800);
     }
 
@@ -479,10 +472,13 @@ ${name}`;
     document.addEventListener('DOMContentLoaded', ()=>{
       init();
 
-      document.getElementById('selectAll').addEventListener('change', (e)=>{
-        const checked = e.target.checked;
-        Array.from(document.querySelectorAll('#issueList input[type="checkbox"]')).forEach(cb => cb.checked = checked);
-      });
+      const selectAllEl = document.getElementById('selectAll');
+      if(selectAllEl){
+        selectAllEl.addEventListener('change', (e)=>{
+          const checked = e.target.checked;
+          document.querySelectorAll('#issueList input[type="checkbox"]').forEach(cb => { cb.checked = checked; });
+        });
+      }
 
       document.getElementById('postcode').addEventListener('blur', (e)=>{
         e.target.value = normalizePostcode(e.target.value);
@@ -490,16 +486,12 @@ ${name}`;
 
       document.getElementById('emailForm').addEventListener('submit', async (e)=>{
         e.preventDefault();
-        if(!state.ready){
-          toast('Still loading representative data—please try again in a moment.');
-          return;
-        }
         if(!validateForm()) return;
 
         const {subject, body, meta} = buildMessage();
         const btn = document.getElementById('submitBtn');
         btn.disabled = true;
-        btn.textContent = 'Preparing email…';
+        btn.textContent = 'Preparing…';
 
         try{
           const reps = await getEmailsFromPostcode(meta.postcode);
@@ -508,18 +500,18 @@ ${name}`;
           (reps.councillors||[]).forEach(c=>{ if(c?.email) emails.push(c.email); });
 
           if(emails.length === 0){
-            toast('We couldn’t find representative emails for that postcode. We copied your message—open your mail app and paste it.', false);
             navigator.clipboard?.writeText(body).catch(()=>{});
-            openEmailWithFallback([], '', subject, body);
+            openEmailWithFallback([], subject, body);
+            toast('Couldn’t load contacts — message copied. Paste if the body looks empty.', 'err');
           }else{
-            const cc = ''; // No CC since checkbox removed
-            openEmailWithFallback(emails, cc, subject, body);
-            toast('Opening your email app…', true);
+            openEmailWithFallback(emails, subject, body);
+            toast('Opening your email app…', 'ok');
           }
         }catch(err){
           console.error(err);
-          toast('Something went wrong looking up your representatives. We copied your message—open your mail app and paste it.', false);
           navigator.clipboard?.writeText(body).catch(()=>{});
+          openEmailWithFallback([], subject, body);
+          toast('Lookup error — message copied for you to paste.', 'err');
         }finally{
           btn.disabled = false;
           btn.textContent = 'Open Email';
