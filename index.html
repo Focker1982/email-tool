@@ -20,7 +20,7 @@
     }
     h1 {
       text-align: center;
-      font-size: 2.8em;
+      font-size: 2.5em;
       color: #cc0000;
       margin-bottom: 20px;
     }
@@ -37,12 +37,12 @@
       border: 1px solid #ccc; border-radius: 5px; font-family: inherit; min-height: 44px;
     }
     textarea { resize: vertical; }
-    input:focus, textarea:focus, button:focus { outline: 2px solid #005fa3; outline-offset: 2px; }
-    .issue-list, fieldset.picker {
+    input:focus, textarea:focus, button:focus, select:focus { outline: 2px solid #005fa3; outline-offset: 2px; }
+    .issue-list {
       border: 1px solid #ccc; background: #f1f1f1; padding: 15px 20px; margin-top: 20px; border-radius: 5px;
     }
-    .issue-list label, .picker label { font-weight: 600; margin: 8px 0; font-size: 1.05em; display: flex; align-items: center; }
-    .issue-list input[type="checkbox"], .picker input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+    .issue-list label { font-weight: 600; margin: 8px 0; font-size: 1.05em; display: flex; align-items: center; }
+    .issue-list input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
     .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
     .row > label { margin: 0; }
     .hint { font-size: 0.95em; color: #555; margin-top: 6px; }
@@ -51,11 +51,10 @@
       border: none; cursor: pointer; border-radius: 6px; transition: background-color 0.3s ease; min-height: 44px; font-family: inherit;
     }
     button:hover { background-color: #005fa3; }
-    #mailtoLink { display: inline-block; margin-top: 30px; font-weight: bold; font-size: 1.1em; background-color: #0077cc; color: white; padding: 12px 18px; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease; }
-    #mailtoLink:hover { background-color: #005fa3; }
     footer { margin-top: 30px; border-top: 1px solid #ddd; padding-top: 16px; font-size: 0.95em; color: #444; }
     .sr-only { position: absolute; left: -9999px; }
     #preview { background:#fff7e6; border-left:5px solid #ff9900; }
+    select#tone { padding: 8px 10px; border-radius: 6px; border: 1px solid #ccc; }
     @media (max-width: 600px) {
       body { padding: 20px; }
       label { font-size: 1.05em; }
@@ -107,16 +106,8 @@
       <div id="issuesHint" class="hint">Tick only the points that actually apply to your street.</div>
     </fieldset>
 
-    <fieldset class="picker" aria-labelledby="asksHeading">
-      <legend id="asksHeading"><strong>What should they do? (choose any)</strong></legend>
-      <label><input type="checkbox" value="partialKerb" class="ask"> Trial marked partial-kerb tolerances on suitable streets</label>
-      <label><input type="checkbox" value="bays" class="ask"> Provide signed on-street bays where pavements remain passable</label>
-      <label><input type="checkbox" value="timeWindows" class="ask"> Allow time-limited exemptions for carers and essential trades</label>
-      <label><input type="checkbox" value="pause" class="ask"> Pause blanket enforcement pending consultation</label>
-    </fieldset>
-
     <div class="row" style="margin-top: 14px;">
-      <label for="tone"><span class="sr-only">Tone</span></label>
+      <label for="tone">Tone:</label>
       <select id="tone" aria-label="Email tone">
         <option value="neutral" selected>Neutral</option>
         <option value="formal">Super‑formal</option>
@@ -124,9 +115,8 @@
         <option value="stronger">Stronger (still polite)</option>
       </select>
       <label><input type="checkbox" id="plainMode"> Plain email (no emojis)</label>
-      <label><input type="checkbox" id="includeAgenda"> Include wider policy concerns</label>
-      <label><input type="checkbox" id="ccCampaign" checked> CC the campaign inbox</label>
-    </div>
+      <label><input type="checkbox" id="includeAgenda"> Include wider concerns about transport policy and ideology</label>
+      </div>
 
     <label for="other" style="margin-top: 12px;">Write your own concerns:</label>
     <textarea id="other" rows="4" placeholder="Write anything else you want to include..."></textarea>
@@ -215,7 +205,7 @@
 </script>
 
 <script>
-  // --- Subject lines (neutrals added) ---
+  // --- Subject lines (neutrals + toned-down) ---
   const subjectLines = [
     "Local impacts of parking rules",
     "Practical fixes needed on our street",
@@ -229,7 +219,6 @@
     "Consult residents before enforcing",
     "Let’s trial workable alternatives",
     "Seeking proportionate enforcement",
-    // keep a few of your originals, toned down
     "This policy isn’t working here",
     "Please pause and review the parking ban",
     "The policy isn’t achieving its aims"
@@ -281,24 +270,19 @@
 
   function stripEmojis(s){ return s.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').replace(/\s{2,}/g,' ').trim(); }
 
-  const mitigationCore =
-    "Please pause enforcement on residential streets where the rules are clearly creating practical problems, and open an evidence-led consultation with residents. Either amend the legislation and guidance to allow workable, signposted solutions on suitable streets (e.g., marked partial-kerb tolerances, designated bays, time-based allowances), or accept that a blanket approach is unworkable and repeal it.";
-
-  const mitigationAgendaOptional =
-    "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
-
+  // Tone banks
   const toneOpeners = {
     neutral: [
-      (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day-to-day effects are creating avoidable problems.`,
+      (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day‑to‑day effects are creating avoidable problems.`,
       (n,a,p)=>`I’m ${n} at ${a}, ${p}. I support safer access, but the current approach is creating avoidable problems on our street.`,
       (n,a,p)=>`${n} here from ${a}, ${p}. The intention behind the ban is clear; the outcomes on our street are not working as hoped.`
     ],
     formal: [
-      (n,a,p)=>`${n}, ${a}, ${p}. I write to set out specific concerns regarding the practical operation of the pavement parking provisions within our area.`,
-      (n,a,p)=>`I am ${n} of ${a}, ${p}. I respectfully request that you review the implementation of the pavement parking prohibitions in light of the impacts described below.`
+      (n,a,p)=>`${n}, ${a}, ${p}. I write to set out specific concerns regarding the practical operation of the pavement‑parking provisions within our area.`,
+      (n,a,p)=>`I am ${n} of ${a}, ${p}. I respectfully request that you review the implementation of the pavement‑parking prohibitions in light of the impacts described below.`
     ],
     plain: [
-      (n,a,p)=>`I’m ${n} at ${a}, ${p}. Here’s what isn’t working with the new pavement parking rules on our street.`,
+      (n,a,p)=>`I’m ${n} at ${a}, ${p}. Here’s what isn’t working with the pavement‑parking rules on our street.`,
       (n,a,p)=>`${n} from ${a}, ${p}. The rules make day‑to‑day life harder in the ways listed below.`
     ],
     stronger: [
@@ -307,25 +291,23 @@
     ]
   };
 
-const openers = [
-    (n,a,p)=>`My name is ${n}, and I live at ${a}, ${p}. I’m writing about how the pavement parking ban is working in practice on residential streets like ours. The intention is understood, but the day-to-day effects are creating avoidable problems.`,
-    (n,a,p)=>`I’m ${n} at ${a}, ${p}. I support safer access, but the current approach is creating avoidable problems on our street.`,
-    (n,a,p)=>`${n} here from ${a}, ${p}. The intention behind the ban is clear; the outcomes on our street are not working as hoped.`
-  ];
+  const mitigationAgendaOptional =
+    "Some of us are also concerned about the wider policy direction behind these changes. If wider aims are influencing local decisions, that should be discussed openly with residents rather than assumed.";
 
-  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, plain=false, chosenAsks=[], tone='neutral' }) {
-    const newline = '\n\n';
-    const greeting = (tone==='formal') ? 'Dear MSPs and Councillors,' : 'Dear MSPs and Councillors,';
-    const bank = (toneOpeners[tone] || toneOpeners.neutral);
+  function buildMessage({ name, address, postcode, chosenLines, includeAgenda=false, plain=false, tone='neutral' }) {
+    const newline = '\\n\\n';
+    const greeting = 'Dear MSPs and Councillors,';
+    const bank = toneOpeners[tone] || toneOpeners.neutral;
     const opening = bank[Math.floor(Math.random()*bank.length)](name,address,postcode);
     const concerns = `Specific concerns from our area include:${newline}${chosenLines.join(newline)}`;
-    const asksExtras = chosenAsks.length ? (' ' + chosenAsks.join(' ')) : '';
-    const asks = mitigationCore + (includeAgenda ? (' ' + mitigationAgendaOptional) : '') + asksExtras;
-    const close = 'I’d appreciate a response on what you can do in the short term to relieve these pressures, and how residents will be involved in shaping a practical, fair, and safe approach.';
+    const ask = "We ask that you pause enforcement on residential streets immediately and proceed to a full repeal of the pavement‑parking ban.";
+    const asks = includeAgenda ? (ask + ' ' + mitigationAgendaOptional) : ask;
+    const close = (tone==='formal')
+      ? 'I would appreciate your response detailing interim steps and the route to repeal.'
+      : 'I’d appreciate a response on immediate steps and the route to repeal.';
 
     let body = `${greeting}${newline}${opening}${newline}${concerns}${newline}${asks}${newline}${close}${newline}${(tone==='formal'?'Yours sincerely,':'Kind regards,')}${newline}${name}`;
-    if (tone==='formal' || tone==='plain') plain = true;
-    if (plain) body = stripEmojis(body);
+    if (plain || tone==='formal' || tone==='plain') body = stripEmojis(body);
     return body;
   }
 
@@ -357,7 +339,7 @@ const openers = [
         script.src = jsPath;
         script.onload = () => resolve();
         script.onerror = () => reject(`Failed to load script: ${jsPath}`);
-        document.head.appendChild(script);
+      document.head.appendChild(script);
       });
       councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
     } catch (err) {
@@ -380,6 +362,7 @@ const openers = [
     const other = document.getElementById('other').value.trim();
     const includeAgenda = document.getElementById('includeAgenda').checked;
     const plainMode = document.getElementById('plainMode').checked;
+    const tone = document.getElementById('tone').value;
 
     const allCheckboxes = document.querySelectorAll('.issue-list input[type="checkbox"]');
     const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
@@ -405,19 +388,14 @@ const openers = [
     if (other) chosenLines.push(other);
     if (plainMode) chosenLines = chosenLines.map(stripEmojis);
 
-    // collect chosen asks
     const message = buildMessage({
-      name, address, postcode,
-      chosenLines,
-      includeAgenda,
-      plain: plainMode,
-      chosenAsks: asksChosen,
-      tone: (document.getElementById('tone')?.value || 'neutral')
+      name, address, postcode, chosenLines,
+      includeAgenda, plain: plainMode, tone
     });
 
     const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
-    // Preview first
+    // Preview first (helps when mail client is blocked)
     document.getElementById('previewSubject').textContent = subject;
     const ta = document.getElementById('previewBody');
     ta.value = message;
@@ -438,7 +416,8 @@ const openers = [
       }
 
       const cc = document.getElementById('ccCampaign').checked ? ['thepavementtrap@gmail.com'] : [];
-      const mailtoLink = buildMailto(toEmails, subject, message, cc);
+      const enc = s => encodeURIComponent(s.replace(/\n/g, '\r\n'));
+      const mailtoLink = `mailto:${toEmails.join(',')}?subject=${enc(subject)}${cc.length?`&cc=${encodeURIComponent(cc.join(','))}`:''}&body=${enc(message)}`;
 
       const tempLink = document.createElement('a');
       tempLink.href = mailtoLink;
