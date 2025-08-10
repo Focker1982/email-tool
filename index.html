@@ -469,7 +469,6 @@ const bridge = pick(bridges);
 const signoff = pick(signoffs);
 
 // Joint-action closer
-// Dynamic wrappers
       const greet = pick(greetings);
       const bridge = pick(bridges);
       const signoff = pick(signoffs);
@@ -478,7 +477,7 @@ const signoff = pick(signoffs);
       const mitigation = "I am asking Councillors and MSPs to work together to fix this quickly. Please pause enforcement where it creates risk or reduces access, lead a rapid, evidence‑led review with residents and essential services, and make the necessary changes in both arenas — update local traffic orders, exemptions and enforcement practice, and press Ministers for national amendments so legislation and guidance reflect real‑world conditions. The aim is simple: safe, genuinely accessible streets without avoidable harm to residents, services or the street environment.";
 
       const message = `${greet}${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}${pick(impactOpeners)} Residents have adapted over the years to keep streets workable for everyone, but these changes risk undoing that balance. ${bridge}${newline}${lines.join(newline)}${newline}${mitigation}${newline}${signoff}${newline}${name}`;
-      const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
+      const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)]; subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
       try {
         const repData = await getEmailsFromPostcode(postcode);
