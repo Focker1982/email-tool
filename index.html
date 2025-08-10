@@ -405,24 +405,61 @@ function fuseShort(lines, maxLen=220, chance=0.35){
       const newline = '\n\n';
       const selectedSubjects = checkboxes.map(cb => cb.value);
 
-      // Build & polish narrative from your existing issue text
-      let lines = selectedSubjects.map(issue => {
-        const options = issues[issue] || [];
-        return options.length ? options[Math.floor(Math.random()*options.length)] : null;
-      }).filter(Boolean);
+// Build in a consistent, natural order for flow
+const priority = [
+  "emergency","danger",
+  "accessibility","prams","elderly",
+  "visitors",
+  "bins","blocked",
+  "gardens",
+  "blanket","consultation","cohesion",
+  "opposeIdeology","blanket20mph"
+];
+const orderedSubjects = [
+  ...priority.filter(k => selectedSubjects.includes(k)),
+  ...selectedSubjects.filter(k => !priority.includes(k))
+];
 
-      if (other && other.trim()) {
-        lines.push("In addition, " + other.trim());
-      }
+// Pick one sentence per selected subject
+let lines = orderedSubjects.map(issue => {
+  const options = issues[issue] || [];
+  return options.length ? options[Math.floor(Math.random()*options.length)] : null;
+}).filter(Boolean);
 
-      // Flow polish
-      lines = dedupeByStem(lines);
-      shuffle(lines);
-      lines = fuseShort(lines);
-      const MAX_PARAS = 8;
-      lines = lines.slice(0, MAX_PARAS);
+// Clean and add user's extra evidence
+function cleanOther(text) {
+  let t = (text || "").trim();
+  if(!t) return "";
+  // collapse whitespace
+  t = t.replace(/\s+/g,' ').trim();
+  // strip leading/trailing punctuation
+  t = t.replace(/^[\.!?,;:]+|[\.!?,;:]+$/g,'');
+  // Soften shouty ALL CAPS words of length >=4 but keep common acronyms
+  const keepCaps = new Set(["MSP","MSPs","NHS","HGV","EV","EVs","DYL"]);
+  t = t.replace(/\b([A-Z]{4,})\b/g, (m) => keepCaps.has(m) ? m : m[0] + m.slice(1).toLowerCase());
+  // Ensure sentence end
+  if(!/[\.!?]$/.test(t)) t += ".";
+  return "In addition, " + t;
+}
+if (other && other.trim()) {
+  lines.push(cleanOther(other));
+}
 
-      // Dynamic wrappers
+// Flow polish (dedupe + light fusing, no global shuffle to keep narrative arc)
+lines = dedupeByStem(lines);
+lines = fuseShort(lines);
+
+// Keep it punchy
+const MAX_PARAS = 8;
+lines = lines.slice(0, MAX_PARAS);
+
+// Dynamic wrappers
+const greet = pick(greetings);
+const bridge = pick(bridges);
+const signoff = pick(signoffs);
+
+// Joint-action closer
+// Dynamic wrappers
       const greet = pick(greetings);
       const bridge = pick(bridges);
       const signoff = pick(signoffs);
