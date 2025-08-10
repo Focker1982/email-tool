@@ -345,6 +345,40 @@ try {
   };
 }
 
+// === Micro-variations and flow helpers (keeps content, improves flow) ===
+const bridges = [
+  "Based on what we’re seeing, the real‑world impacts are:",
+  "In practice on our street, this has meant:",
+  "Day to day, the effects are clear:"
+];
+const joiners = ["In addition,", "Meanwhile,", "At the same time,"];
+const greetings = ["Dear MSPs and Councillors,", "Dear Councillors and MSPs,"];
+const signoffs = ["Regards,", "Yours sincerely,", "Kind regards,"];
+
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
+function dedupeByStem(lines){
+  const seen=new Set();
+  return lines.filter(l=>{
+    const key=l.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).slice(0,12).join(' ');
+    if(seen.has(key)) return false; seen.add(key); return true;
+  });
+}
+function fuseShort(lines, maxLen=220, chance=0.35){
+  const out=[];
+  for(let i=0;i<lines.length;i++){
+    if(i<lines.length-1 && Math.random()<chance &&
+       lines[i].length<=maxLen && lines[i+1].length<=maxLen){
+      out.push(lines[i] + " " + pick(joiners) + " " + lines[i+1]);
+      i++;
+    } else {
+      out.push(lines[i]);
+    }
+  }
+  return out;
+}
+
+// === Dynamic email builder ===
     window.generateEmail = async function () {
       if (!window.isReady) {
   alert("Still loading data. Please wait a moment and try again.");
@@ -370,15 +404,33 @@ try {
 
       const newline = '\n\n';
       const selectedSubjects = checkboxes.map(cb => cb.value);
-      const chosenLines = selectedSubjects.map(issue => {
-        const options = issues[issue];
-        return options[Math.floor(Math.random() * options.length)];
-      });
 
-      if (other) chosenLines.push('In addition, ' + other.trim());
+      // Build & polish narrative from your existing issue text
+      let lines = selectedSubjects.map(issue => {
+        const options = issues[issue] || [];
+        return options.length ? options[Math.floor(Math.random()*options.length)] : null;
+      }).filter(Boolean);
 
-      const mitigation = "I urge you to take action now to prevent avoidable risk, disruption, and loss of public confidence. A short pause, combined with a rapid, evidence‑led review, would allow councils and communities to adapt the legislation so it works in real‑world conditions — delivering safe, accessible streets without unintended harm to residents, services, or local environments.";
-      const message = `Dear MSPs and Councillors,${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Residents have adapted over the years to keep streets workable for everyone, but these changes risk undoing that balance. The impacts being reported include:${newline}${chosenLines.join(newline)}${newline}${mitigation}${newline}Regards,${newline}${name}`;
+      if (other && other.trim()) {
+        lines.push("In addition, " + other.trim());
+      }
+
+      // Flow polish
+      lines = dedupeByStem(lines);
+      shuffle(lines);
+      lines = fuseShort(lines);
+      const MAX_PARAS = 8;
+      lines = lines.slice(0, MAX_PARAS);
+
+      // Dynamic wrappers
+      const greet = pick(greetings);
+      const bridge = pick(bridges);
+      const signoff = pick(signoffs);
+
+      // Joint-action closer
+      const mitigation = "I am asking Councillors and MSPs to work together to fix this quickly. Please pause enforcement where it creates risk or reduces access, lead a rapid, evidence‑led review with residents and essential services, and make the necessary changes in both arenas — update local traffic orders, exemptions and enforcement practice, and press Ministers for national amendments so legislation and guidance reflect real‑world conditions. The aim is simple: safe, genuinely accessible streets without avoidable harm to residents, services or the street environment.";
+
+      const message = `${greet}${newline}My name is ${name}, and I live at ${address}, ${postcode}.${newline}Our street is or would be seriously affected by the pavement parking ban. Residents have adapted over the years to keep streets workable for everyone, but these changes risk undoing that balance. ${bridge}${newline}${lines.join(newline)}${newline}${mitigation}${newline}${signoff}${newline}${name}`;
       const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
       try {
