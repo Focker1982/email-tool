@@ -178,7 +178,7 @@
     <p>This tool helps you contact your MSPs and councillors about the practical effects of the pavement parking ban on your street. You can personalise the content once it opens in your email client. Every email it generates is dynamic — the subject line, the phrasing, and the examples all change each time you use it.</p>
   </footer>
 <script>
-  const issues = {
+  var issues = {
     emergency: [
       "I’m seriously concerned we’ll see delays for emergency vehicles if this layout continues. Our street is narrow, and full on-road parking leaves little room for larger vehicles to manoeuvre. If someone needed urgent help, seconds could matter — and this policy increases that risk.",
       "Emergency access is being compromised. When cars are forced fully onto the road, services like ambulances and fire engines may struggle to reach homes in time. It’s not alarmist — just a real-world consequence of reducing space on already tight residential streets.",
@@ -256,7 +256,7 @@ cohesion: [
   });
 
   
-const impactOpeners = [
+var impactOpeners = [
   "The pavement parking changes are making our street harder to use safely and practically.",
   "On our street, the pavement parking changes aren’t working as intended.",
   "These rules are affecting everyday access and safety on our street.",
@@ -265,7 +265,7 @@ const impactOpeners = [
   "In practice, this policy isn’t achieving safer, more accessible conditions on our street."
 ];
 
-const subjectLines = [
+var subjectLines = [
   "Request for review of pavement parking policy",
   "Pause and review to improve street access",
   "Local impacts and needed adjustments to parking rules",
@@ -287,17 +287,17 @@ const subjectLines = [
 async function init() {
   window.isReady = false;
 
-  const mspData = await fetch('mspContacts.json').then(res => res.json());
+  var mspData = await fetch('mspContacts.json').then(res function res.json());
 
   // Normalise postcode prefix (e.g. EH2 4DR → eh)
-  const normalize = str => str?.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+  var normalize = str function (str && str.toLowerCase)().replace(/[^a-z0-9]/g, '').trim();
   window.normalize = normalize;
 
   window.apiKey = "6946df58f97fd1b9aad7493a65c4cf8cbc8ddb3b";
   window._mspData = mspData;
 
-  const normalizedRegions = {};
-  Object.keys(mspData.regions).forEach(regionName => {
+  var normalizedRegions = {};
+  Object.keys(mspData.regions).forEach(regionName function {
     normalizedRegions[normalize(regionName)] = mspData.regions[regionName];
   });
   mspData.regions = normalizedRegions;
@@ -306,41 +306,41 @@ async function init() {
   window.isReady = true;
 }
 function toggleAllIssues(source) {
-  const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-  checkboxes.forEach(cb => {
+  var checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+  checkboxes.forEach(cb function {
     if (cb.id !== 'selectAll') cb.checked = source.checked;
   });
 }
 
 async function getEmailsFromPostcode(postcode) {
-  const url = `https://mapit.mysociety.org/postcode/${encodeURIComponent(postcode)}?api_key=${window.apiKey}`;
-  const res = await fetch(url);
+  var url = "https://mapit.mysociety.org/postcode/" + encodeURIComponent(postcode) + "?api_key=" + window.apiKey;
+  var res = await fetch(url);
   if (!res.ok) throw new Error("Postcode lookup failed.");
-  const data = await res.json();
-  const areas = data.areas;
+  var data = await res.json();
+  var areas = data.areas;
 
-  let spc = null, spe = null;
-  for (const area of Object.values(areas)) {
+  var spc = null, spe = null;
+  for (var area of Object.values(areas)) {
     if (area.type === "SPC") spc = area.name;
     if (area.type === "SPE") spe = area.name;
   }
 
-  const mspKey = Object.keys(window._mspData.constituencies).find(key => window.normalize(key) === window.normalize(spc));
-  const msp = mspKey ? window._mspData.constituencies[mspKey] : null;
-  const regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
+  var mspKey = Object.keys(window._mspData.constituencies).find(key function window.normalize(key) === window.normalize(spc));
+  var msp = mspKey ? window._mspData.constituencies[mspKey] : null;
+  var regionalMSPs = window._mspData.regions[window.normalize(spe)] || [];
 
-const normalizedPostcode = window.normalize(postcode);
+var normalizedPostcode = window.normalize(postcode);
 
-const postcodePrefix = postcode.trim().toUpperCase().split(' ')[0];
-let councillors = [];
+var postcodePrefix = postcode.trim().toUpperCase().split(' ')[0];
+var councillors = [];
 
-const jsPath = `data/${postcodePrefix}.js`;
+var jsPath = "data/" + postcodePrefix + ".js";
 try {
-  await new Promise((resolve, reject) => {
-    const script = document.createElement("script");
+  await new Promise((resolve, reject) {
+    var script = document.createElement("script");
     script.src = jsPath;
-    script.onload = () => resolve();
-    script.onerror = () => reject(`Failed to load script: ${jsPath}`);
+    script.onload = () function resolve();
+    script.onerror = function(){ reject("Failed to load script: " + jsPath); };
     document.head.appendChild(script);
   });
   councillors = window.postcodeToWardKey?.[normalizedPostcode] || [];
@@ -356,27 +356,27 @@ try {
 }
 
 // === Micro-variations and flow helpers (keeps content, improves flow) ===
-const bridges = [
+var bridges = [
   "Based on what we’re seeing, the real‑world impacts are:",
   "In practice on our street, this has meant:",
   "Day to day, the effects are clear:"
 ];
-const joiners = ["In addition,", "Meanwhile,", "At the same time,"];
-const greetings = ["Dear MSPs and Councillors,", "Dear Councillors and MSPs,"];
-const signoffs = ["Regards,", "Yours sincerely,", "Kind regards,"];
+var joiners = ["In addition,", "Meanwhile,", "At the same time,"];
+var greetings = ["Dear MSPs and Councillors,", "Dear Councillors and MSPs,"];
+var signoffs = ["Regards,", "Yours sincerely,", "Kind regards,"];
 
 function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-function shuffle(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
+function shuffle(arr){ for(var i=arr.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
 function dedupeByStem(lines){
-  const seen=new Set();
-  return lines.filter(l=>{
-    const key=l.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).slice(0,12).join(' ');
+  var seen=new Set();
+  return lines.filter(lfunction{
+    var key=l.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).slice(0,12).join(' ');
     if(seen.has(key)) return false; seen.add(key); return true;
   });
 }
 function fuseShort(lines, maxLen=220, chance=0.35){
-  const out=[];
-  for(let i=0;i<lines.length;i++){
+  var out=[];
+  for(var i=0;i<lines.length;i++){
     if(i<lines.length-1 && Math.random()<chance &&
        lines[i].length<=maxLen && lines[i+1].length<=maxLen){
       out.push(lines[i] + " " + pick(joiners) + " " + lines[i+1]);
@@ -389,18 +389,18 @@ function fuseShort(lines, maxLen=220, chance=0.35){
 }
 
 // === Dynamic email builder ===
-    window.generateEmail = async function () {
+    window.generateEmail = async function() {
       if (!window.isReady) {
   alert("Still loading data. Please wait a moment and try again.");
   return;
 }
-      const name = document.getElementById("name").value.trim();
-      const address = document.getElementById("address").value.trim();
-      const postcode = document.getElementById("postcode").value.trim();
-      const other = document.getElementById("other").value.trim();
+      var name = document.getElementById("name").value.trim();
+      var address = document.getElementById("address").value.trim();
+      var postcode = document.getElementById("postcode").value.trim();
+      var other = document.getElementById("other").value.trim();
 
-      const allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-      const checkboxes = Array.from(allCheckboxes).filter(cb => cb.checked && cb.id !== 'selectAll');
+      var allCheckboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+      var checkboxes = Array.from(allCheckboxes).filter(cb function cb.checked && cb.id !== 'selectAll');
 
       if (!name || !address || !postcode) {
         alert("Please fill in your name, address, and postcode.");
@@ -412,11 +412,11 @@ function fuseShort(lines, maxLen=220, chance=0.35){
         return;
       }
 
-      const newline = '\n\n';
-      const selectedSubjects = checkboxes.map(cb => cb.value);
+      var newline = '\n\n';
+      var selectedSubjects = checkboxes.map(cb function cb.value);
 
 // Build in a consistent, natural order for flow
-const priority = [
+var priority = [
   "emergency","danger",
   "accessibility","prams","elderly",
   "visitors",
@@ -425,28 +425,25 @@ const priority = [
   "blanket","consultation","cohesion",
   "opposeIdeology","blanket20mph"
 ];
-const orderedSubjects = [
-  ...priority.filter(k => selectedSubjects.includes(k)),
-  ...selectedSubjects.filter(k => !priority.includes(k))
-];
+var orderedSubjects = priority.filter(k function selectedSubjects.indexOf(k)).concat(selectedSubjects.filter(k function !priority.indexOf(k)));
 
 // Pick one sentence per selected subject
-let lines = orderedSubjects.map(issue => {
-  const options = issues[issue] || [];
+var lines = orderedSubjects.map(issue function {
+  var options = issues[issue] || [];
   return options.length ? options[Math.floor(Math.random()*options.length)] : null;
 }).filter(Boolean);
 
 // Clean and add user's extra evidence
 function cleanOther(text) {
-  let t = (text || "").trim();
+  var t = (text || "").trim();
   if(!t) return "";
   // collapse whitespace
   t = t.replace(/\s+/g,' ').trim();
   // strip leading/trailing punctuation
   t = t.replace(/^[\.!?,;:]+|[\.!?,;:]+$/g,'');
   // Soften shouty ALL CAPS words of length >=4 but keep common acronyms
-  const keepCaps = new Set(["MSP","MSPs","NHS","HGV","EV","EVs","DYL"]);
-  t = t.replace(/\b([A-Z]{4,})\b/g, (m) => keepCaps.has(m) ? m : m[0] + m.slice(1).toLowerCase());
+  var keepCaps = {'MSP':1,'MSPs':1,'NHS':1,'HGV':1,'EV':1,'EVs':1,'DYL':1};
+  t = t.replace(/\b([A-Z]{4,})\b/g, (m) function (keepCaps[m]===1) ? m : m[0] + m.slice(1).toLowerCase());
   // Ensure sentence end
   if(!/[\.!?]$/.test(t)) t += ".";
   return "In addition, " + t;
@@ -460,33 +457,33 @@ lines = dedupeByStem(lines);
 lines = fuseShort(lines);
 
 // Keep it punchy
-const MAX_PARAS = 8;
+var MAX_PARAS = 8;
 lines = lines.slice(0, MAX_PARAS);
 
 // Dynamic wrappers
-const greet = pick(greetings);
-const bridge = pick(bridges);
-const signoff = pick(signoffs);
+var greet = pick(greetings);
+var bridge = pick(bridges);
+var signoff = pick(signoffs);
 
 // Joint-action closer
-      const greet = pick(greetings);
-      const bridge = pick(bridges);
-      const signoff = pick(signoffs);
+      var greet = pick(greetings);
+      var bridge = pick(bridges);
+      var signoff = pick(signoffs);
 
       // Joint-action closer
-      const mitigation = "I am asking Councillors and MSPs to work together to fix this quickly. Please pause enforcement where it creates risk or reduces access, lead a rapid, evidence‑led review with residents and essential services, and make the necessary changes in both arenas — update local traffic orders, exemptions and enforcement practice, and press Ministers for national amendments so legislation and guidance reflect real‑world conditions. The aim is simple: safe, genuinely accessible streets without avoidable harm to residents, services or the street environment.";
+      var mitigation = "I am asking Councillors and MSPs to work together to fix this quickly. Please pause enforcement where it creates risk or reduces access, lead a rapid, evidence‑led review with residents and essential services, and make the necessary changes in both arenas — update local traffic orders, exemptions and enforcement practice, and press Ministers for national amendments so legislation and guidance reflect real‑world conditions. The aim is simple: safe, genuinely accessible streets without avoidable harm to residents, services or the street environment.";
 
-      const intro = greet + newline + "My name is " + name + ", and I live at " + address + ", " + postcode + "." + newline;const opener = pick(impactOpeners) + " Residents have adapted over the years to keep streets workable for everyone, but these changes risk undoing that balance.";const header = intro + opener + " " + bridge + newline;const message = header + lines.join(newline) + newline + mitigation + newline + signoff + newline + name;      const subject = subjectLines[Math.floor(Math.random() * subjectLines.length)]; subjectLines[Math.floor(Math.random() * subjectLines.length)]; subjectLines[Math.floor(Math.random() * subjectLines.length)];
+      var intro = greet + newline + "My name is " + name + ", and I live at " + address + ", " + postcode + "." + newline;var opener = pick(impactOpeners) + " Residents have adapted over the years to keep streets workable for everyone, but these changes risk undoing that balance.";var header = intro + opener + " " + bridge + newline;var message = header + lines.join(newline) + newline + mitigation + newline + signoff + newline + name;      var subject = subjectLines[Math.floor(Math.random() * subjectLines.length)]; subjectLines[Math.floor(Math.random() * subjectLines.length)]; subjectLines[Math.floor(Math.random() * subjectLines.length)];
 
       try {
-        const repData = await getEmailsFromPostcode(postcode);
+        var repData = await getEmailsFromPostcode(postcode);
 
-        const emails = [];
-        if (repData.msps?.length) {
-          repData.msps.forEach(msp => { if (msp.email) emails.push(msp.email); });
+        var emails = [];
+        if (repData.(msps && msps.length)) {
+          repData.msps.forEach(msp function { if (msp.email) emails.push(msp.email); });
         }
-if (repData.councillors?.length) {
-  repData.councillors.forEach(c => { if (c.email) emails.push(c.email); });
+if (repData.(councillors && councillors.length)) {
+  repData.councillors.forEach(c function { if (c.email) emails.push(c.email); });
 }
 
         if (emails.length === 0) {
@@ -494,18 +491,18 @@ if (repData.councillors?.length) {
           return;
         }
 
-        const ccAddress = "thepavementtrap@gmail.com";
-        const body = message.replace(/\n/g, '%0D%0A');
-        const mailtoLink = `mailto:${emails.join(",")}?cc=${encodeURIComponent(ccAddress)}&subject=${encodeURIComponent(subject)}&body=${body}`;
+        var ccAddress = "thepavementtrap@gmail.com";
+        var body = message.replace(/\n/g, '%0D%0A');
+        var mailtoLink = "mailto:" + emails.join(",") + "?cc=" + encodeURIComponent(ccAddress) + "&subject=" + encodeURIComponent(subject) + "&body=" + body;
 
-        const tempLink = document.createElement("a");
+        var tempLink = document.createElement("a");
         tempLink.href = mailtoLink;
         tempLink.style.display = "none";
         document.body.appendChild(tempLink);
         tempLink.click();
         document.body.removeChild(tempLink);
 
-        setTimeout(() => {
+        setTimeout(() {
           alert("If your email app didn’t open, please check your browser settings or copy the text manually.");
         }, 1000);
       } catch (error) {
@@ -514,10 +511,10 @@ if (repData.councillors?.length) {
       }
     };
 
-    document.getElementById("selectAll").addEventListener("click", function () {
-      const isChecked = this.checked;
-      const checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
-      checkboxes.forEach(cb => {
+    document.getElementById("selectAll").addEventListener("click", function() {
+      var isChecked = this.checked;
+      var checkboxes = document.querySelectorAll(".issue-list input[type='checkbox']");
+      checkboxes.forEach(cb function {
         if (cb.id !== 'selectAll') cb.checked = isChecked;
       });
     });
