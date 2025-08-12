@@ -34,10 +34,10 @@
     .hero p { color: #e0f0ff; font-size: 1.05em; margin: 8px 0 0; }
     .intro {
       background: #f0f5ff;
-      padding: 16px 18px;           /* a touch more padding */
+      padding: 16px 18px;
       border-left: 5px solid #003f7d;
       border-radius: 5px;
-      margin-bottom: 18px;          /* tighter spacing below */
+      margin-bottom: 18px;
       line-height: 1.4;
     }
     label {
@@ -49,7 +49,7 @@
       width: 100%;
       padding: 10px;
       font-size: 1em;
-      margin-bottom: 12px;          /* slightly tighter */
+      margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-family: inherit;
@@ -236,7 +236,7 @@ var issues = {
   ]
 };
 
-/* ===== Subjects, openers, bridges ===== */
+/* ===== Subjects, openers, bridges, dynamic closers ===== */
 var subjectLines = [
   "Request for review of pavement parking policy",
   "Pause and review to improve street access",
@@ -259,10 +259,24 @@ var openers = [
   "Moving all parking onto the carriageway creates tighter conditions while pavement usability remains largely unchanged."
 ];
 
+var balanceBridges = [
+  "Residents have adapted over the years to keep streets workable for everyone, but this change risks undoing that balance — replacing workable compromises with new obstacles.",
+  "For years, people made our street function with common‑sense compromises; the new setup upends that without solving the real access problems.",
+  "Local routines evolved to make things work; this shift disrupts them and introduces new risks."
+];
+
 var generalLeadIns = [
   "Here’s how this is playing out day‑to‑day where we live:",
   "In practice, residents are experiencing the impacts below:",
   "These are the real‑world effects we’re seeing:"
+];
+
+var dynamicClosers = [
+  "Please act now: pause enforcement where it causes more harm than good, gather street‑level evidence, and make the local and national changes needed so the policy delivers safety and accessibility in reality — not just on paper.",
+  "I’m asking you to pause enforcement in problem areas, engage directly with residents and essential services, and adjust both guidance and law so streets are safe and genuinely accessible in practice.",
+  "A short pause, a rapid, evidence‑led review, and targeted amendments to exemptions and enforcement would let councils deliver safety and access without avoidable harm to residents or services.",
+  "Please halt enforcement where it reduces access or increases risk, co‑design fixes with affected streets, and press Ministers to amend the framework so it fits real‑world conditions.",
+  "I’m asking for a pragmatic reset: pause, review with data from our streets, and update exemptions/enforcement so the outcomes match the intention — safer, more accessible streets."
 ];
 
 var sectionLeadIns = {
@@ -358,7 +372,7 @@ async function getEmailsFromPostcode(postcode) {
   return { msps: [msp, ...regionalMSPs].filter(Boolean), councillors };
 }
 
-/* ===== Email builder (tighter spacing) ===== */
+/* ===== Email builder (tighter spacing + dynamic bridge/closer) ===== */
 window.generateEmail = async function () {
   if (!window.isReady) {
     alert("Still loading data. Please wait a moment and try again.");
@@ -384,11 +398,12 @@ window.generateEmail = async function () {
     return;
   }
 
-  const nl = '\n';                  // tighter spacing: single newlines
-  const dbl = '\n\n';               // sparingly used
+  const nl = '\n';
+  const dbl = '\n\n';
   const greet = "Dear MSPs and Councillors,";
   const intro = `My name is ${name}, and I live at ${address}, ${postcode}.`;
   const opener = pick(openers);
+  const balance = pick(balanceBridges);     // dynamic balance bridge
   const general = pick(generalLeadIns);
 
   function pickLines(keys) {
@@ -410,7 +425,8 @@ window.generateEmail = async function () {
     greet, '',
     intro,
     opener,
-    general,
+    balance,
+    general
   ].join(nl) + dbl;
 
   function addSection(leadIns, lines) {
@@ -427,7 +443,7 @@ window.generateEmail = async function () {
     body += "Other:" + nl + "— In addition, " + other.trim() + dbl;
   }
 
-  const closer = "Please act now: pause enforcement where it causes more harm than good, gather street‑level evidence, and make the necessary local and national changes so the policy delivers safety and accessibility in reality — not just on paper.";
+  const closer = pick(dynamicClosers);      // dynamic closer
   const signOff = `Yours sincerely,${nl}${name}`;
 
   const message = body + closer + dbl + signOff;
