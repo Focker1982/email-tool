@@ -20,7 +20,7 @@
     h1 {
       text-align: center;
       font-size: 2.5em;
-      color: white; /* header back to white */
+      color: white;
       margin: 0;
     }
     .hero {
@@ -28,31 +28,28 @@
       padding: 30px 20px;
       border-radius: 12px;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .hero p {
-      color: #e0f0ff;
-      font-size: 1.05em;
-      margin-top: 8px;
-    }
+    .hero p { color: #e0f0ff; font-size: 1.05em; margin: 8px 0 0; }
     .intro {
       background: #f0f5ff;
-      padding: 15px 20px;
+      padding: 16px 18px;           /* a touch more padding */
       border-left: 5px solid #003f7d;
       border-radius: 5px;
-      margin-bottom: 25px;
+      margin-bottom: 18px;          /* tighter spacing below */
+      line-height: 1.4;
     }
     label {
       display: block;
-      margin: 12px 0 6px;
+      margin: 10px 0 6px;
       font-weight: 600;
     }
     input[type="text"], textarea {
       width: 100%;
       padding: 10px;
       font-size: 1em;
-      margin-bottom: 15px;
+      margin-bottom: 12px;          /* slightly tighter */
       border: 1px solid #ccc;
       border-radius: 5px;
       font-family: inherit;
@@ -66,13 +63,13 @@
     .issue-list {
       border: 1px solid #ccc;
       background: #f7f7f7;
-      padding: 15px 20px;
-      margin-top: 20px;
+      padding: 14px 18px;
+      margin-top: 14px;
       border-radius: 5px;
     }
     .issue-list label {
       font-weight: 600;
-      margin: 8px 0;
+      margin: 6px 0;
       font-size: 1.05em;
       display: flex;
       align-items: center;
@@ -82,9 +79,9 @@
       transform: scale(1.2);
     }
     button {
-      margin-top: 25px;
-      padding: 14px 24px;
-      font-size: 1.1em;
+      margin-top: 18px;
+      padding: 12px 22px;
+      font-size: 1.06em;
       background-color: #0077cc;
       color: white;
       border: none;
@@ -96,11 +93,12 @@
     }
     button:hover { background-color: #005fa3; }
     footer {
-      margin-top: 40px;
+      margin-top: 28px;
       border-top: 1px solid #ddd;
-      padding-top: 18px;
+      padding-top: 14px;
       font-size: 0.95em;
       color: #444;
+      line-height: 1.45;
     }
     @media (max-width: 600px) {
       body { padding: 20px; }
@@ -116,8 +114,8 @@
   </div>
 
   <div class="intro">
-    <strong>Why does this tool exist?</strong><br><br>
-    This tool makes it easy to add your voice — without having to write from scratch. Every message is unique, personal, and harder for MSPs and councillors to dismiss as copy‑and‑paste.
+    <strong>Why this exists</strong><br>
+    Create a clear, personal email in seconds. Each send varies the phrasing so it isn’t dismissed as copy‑and‑paste.
   </div>
 
   <form>
@@ -160,11 +158,11 @@
   </form>
 
   <footer>
-    <p>This launches an email to your MSPs and councillors with your selected points. You can still edit it before sending.</p>
+    <p>This launches an email to your MSPs and councillors with your selected points. You can edit it before sending.</p>
   </footer>
 
 <script>
-/* ===== Issue variants (kept long and specific) ===== */
+/* ===== Issue variants (long, tuned; kerb -> pavement) ===== */
 var issues = {
   emergency: [
     "Forcing all cars onto the road removes passing and turning space when seconds matter for blue‑light access.",
@@ -184,7 +182,7 @@ var issues = {
   prams: [
     "On streets where pavements are already obstructed or uneven, full on‑road parking forces prams and young children into the carriageway, making every journey riskier.",
     "Families who used to share space carefully now find less road width and no safe workaround once all parking is pushed on‑road.",
-    "Rather than protecting families, this policy pushes children and prams into live traffic where partial kerb parking once gave them a buffer."
+    "Rather than protecting families, this policy pushes children and prams into live traffic where partial pavement parking once gave them a buffer."
   ],
   elderly: [
     "For older residents, having to walk further with shopping or mobility issues is a serious challenge; removing nearby parking undermines independence.",
@@ -238,7 +236,7 @@ var issues = {
   ]
 };
 
-/* ===== Subject lines ===== */
+/* ===== Subjects, openers, bridges ===== */
 var subjectLines = [
   "Request for review of pavement parking policy",
   "Pause and review to improve street access",
@@ -255,31 +253,30 @@ var subjectLines = [
   "Practical solutions for safer local streets"
 ];
 
-/* ===== Dynamic bridges & openers ===== */
 var openers = [
-  "Pushing every car fully onto the road narrows lanes and removes turning space. That’s not safer, and it’s not more accessible.",
-  "Moving all parking onto the carriageway creates tighter conditions without a clear gain in accessibility.",
-  "Concentrating parking on the road removes the buffer partial‑kerb parking provided — with little improvement to pavement usability."
+  "Concentrating parking on the road removes the buffer partial‑pavement parking provided — with little improvement to actual pavement usability.",
+  "Pushing every car fully onto the road narrows lanes and removes turning space — without a clear gain in pavement access.",
+  "Moving all parking onto the carriageway creates tighter conditions while pavement usability remains largely unchanged."
 ];
 
 var generalLeadIns = [
-  "The following points reflect what this change means in real terms on our street:",
   "Here’s how this is playing out day‑to‑day where we live:",
-  "In practice, residents are experiencing the impacts below:"
+  "In practice, residents are experiencing the impacts below:",
+  "These are the real‑world effects we’re seeing:"
 ];
 
 var sectionLeadIns = {
   safety: [
-    "On safety and emergency access:",
-    "For emergency access and general safety:"
+    "For emergency access and general safety:",
+    "On safety and emergency access:"
   ],
   mobility: [
     "On everyday access and mobility:",
     "For day‑to‑day journeys and access:"
   ],
   community: [
-    "Wider knock‑on effects in the community:",
-    "Beyond individual journeys, the wider impacts include:"
+    "Beyond individual journeys, the wider impacts include:",
+    "Wider knock‑on effects in the community:"
   ],
   policy: [
     "At a policy level:",
@@ -361,7 +358,7 @@ async function getEmailsFromPostcode(postcode) {
   return { msps: [msp, ...regionalMSPs].filter(Boolean), councillors };
 }
 
-/* ===== Email builder ===== */
+/* ===== Email builder (tighter spacing) ===== */
 window.generateEmail = async function () {
   if (!window.isReady) {
     alert("Still loading data. Please wait a moment and try again.");
@@ -387,13 +384,13 @@ window.generateEmail = async function () {
     return;
   }
 
-  const nl = '\n\n';
+  const nl = '\n';                  // tighter spacing: single newlines
+  const dbl = '\n\n';               // sparingly used
   const greet = "Dear MSPs and Councillors,";
   const intro = `My name is ${name}, and I live at ${address}, ${postcode}.`;
   const opener = pick(openers);
   const general = pick(generalLeadIns);
 
-  // Build category -> bullet lines (one variant per selected issue)
   function pickLines(keys) {
     const out = [];
     keys.forEach(k => {
@@ -409,35 +406,31 @@ window.generateEmail = async function () {
   const communityLines = pickLines(categories.community);
   const policyLines = pickLines(categories.policy);
 
-  // Compose body with bridges so sparse selections still flow
-  let body = `${greet}${nl}${intro}${nl}${opener}${nl}${general}${nl}`;
+  let body = [
+    greet, '',
+    intro,
+    opener,
+    general,
+  ].join(nl) + dbl;
 
-  if (safetyLines.length) {
-    body += sectionLeadIns.safety ? pick(sectionLeadIns.safety) + nl : "";
-    body += safetyLines.join('\n') + nl;
-  }
-  if (mobilityLines.length) {
-    body += nl + (sectionLeadIns.mobility ? pick(sectionLeadIns.mobility) + nl : "");
-    body += mobilityLines.join('\n') + nl;
-  }
-  if (communityLines.length) {
-    body += nl + (sectionLeadIns.community ? pick(sectionLeadIns.community) + nl : "");
-    body += communityLines.join('\n') + nl;
-  }
-  if (policyLines.length) {
-    body += nl + (sectionLeadIns.policy ? pick(sectionLeadIns.policy) + nl : "");
-    body += policyLines.join('\n') + nl;
+  function addSection(leadIns, lines) {
+    if (!lines.length) return '';
+    return pick(leadIns) + nl + lines.join(nl) + dbl;
   }
 
-  // Add user's own note if present
+  body += addSection(sectionLeadIns.safety, safetyLines);
+  body += addSection(sectionLeadIns.mobility, mobilityLines);
+  body += addSection(sectionLeadIns.community, communityLines);
+  body += addSection(sectionLeadIns.policy, policyLines);
+
   if (other) {
-    body += nl + "Other:" + nl + "— In addition, " + other.trim() + nl;
+    body += "Other:" + nl + "— In addition, " + other.trim() + dbl;
   }
 
   const closer = "Please act now: pause enforcement where it causes more harm than good, gather street‑level evidence, and make the necessary local and national changes so the policy delivers safety and accessibility in reality — not just on paper.";
   const signOff = `Yours sincerely,${nl}${name}`;
 
-  const message = body + nl + closer + nl + nl + signOff;
+  const message = body + closer + dbl + signOff;
   const subject = pick(subjectLines);
 
   try {
@@ -467,12 +460,12 @@ window.generateEmail = async function () {
   }
 };
 
-/* ===== Select all listener ===== */
+/* Select all */
 document.getElementById("selectAll").addEventListener("click", function () {
   toggleAllIssues(this);
 });
 
-/* Init on load */
+/* Init */
 init();
 </script>
 </body>
